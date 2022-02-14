@@ -31,6 +31,7 @@ export default class Level extends Phaser.Scene {
     new Platform(this, this.player, this.bases, 150, 100);
     new Platform(this, this.player, this.bases, 850, 100);
     this.spawn();
+    this.spawnCalavera();
   }
 
   /**
@@ -38,18 +39,21 @@ export default class Level extends Phaser.Scene {
    * @param {Array<Base>} from Lista de bases sobre las que se puede crear una estrella
    * Si es null, entonces se crea aleatoriamente sobre cualquiera de las bases existentes
    */
+  
   spawn(from = null) {
-    Phaser.Math.RND.pick(from || this.bases.children.entries).spawn();
+    Phaser.Math.RND.pick(from || this.bases.children.entries).spawn();
   }
-
+  spawnCalavera(from = null) {
+    Phaser.Math.RND.pick(from || this.bases.children.entries).spawnCalavera();
+  }
   /**
    * Método que se ejecuta al coger una estrella. Se pasa la base
    * sobre la que estaba la estrella cogida para evitar repeticiones
    * @param {Base} base La base sobre la que estaba la estrella que se ha cogido
    */
   starPickt (base) {
-    this.player.point();
-      if (this.player.score == this.stars) {
+    this.player.point();    
+    if (this.player.score == this.stars) {
         this.scene.start('end');
       }
       else {
@@ -57,5 +61,16 @@ export default class Level extends Phaser.Scene {
         this.spawn(s.filter(o => o !== base));
 
       }
+  }
+ calaveraPickt (base) {
+    this.player.pierdeVida();
+    if (this.player.life == 0) {
+      this.scene.start('end');
+    }
+    else {
+      let s = this.bases.children.entries;
+      this.spawnCalavera(s.filter(o => o !== base));
+
+    }
   }
 }

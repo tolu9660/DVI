@@ -16,14 +16,23 @@ export default class Player extends Phaser.GameObjects.Sprite {
     this.score = 0;
     this.scene.add.existing(this);
     this.scene.physics.add.existing(this);
+    //Creacion de contador de vida
+    this.life = 3;
+    this.scene.add.existing(this);
+    this.scene.physics.add.existing(this);
     // Queremos que el jugador no se salga de los límites del mundo
     this.body.setCollideWorldBounds();
     this.speed = 300;
     this.jumpSpeed = -400;
     // Esta label es la UI en la que pondremos la puntuación del jugador
-    this.label = this.scene.add.text(10, 10, "");
+    this.labelPuntos= this.scene.add.text(10, 10, "");
+    this.labelLife = this.scene.add.text(10, 40, "");
     this.cursors = this.scene.input.keyboard.createCursorKeys();
-    this.updateScore();
+    this.updateGemas();
+  
+  
+
+    this.updateLife();
   }
 
   /**
@@ -32,16 +41,23 @@ export default class Player extends Phaser.GameObjects.Sprite {
    */
   point() {
     this.score++;
-    this.updateScore();
+    this.updateGemas();
+   
+}
+  pierdeVida(){
+    this.life--;
+    this.updateLife();
   }
   
   /**
    * Actualiza la UI con la puntuación actual
    */
-  updateScore() {
-    this.label.text = 'Score: ' + this.score;
+  updateGemas() {
+    this.labelPuntos.text = 'Gemas: ' + this.score;
   }
-
+  updateLife() {
+    this.labelLife.text = 'Vida: ' + this.life;
+  }
   /**
    * Métodos preUpdate de Phaser. En este caso solo se encarga del movimiento del jugador.
    * Como se puede ver, no se tratan las colisiones con las estrellas, ya que estas colisiones 

@@ -1,4 +1,5 @@
 import Star from './star.js';
+import Calavera from './calavera.js';
 
 /**
  * Clase que representa la base sobre la que se sitúan las estrellas que aparecen en el juego
@@ -24,8 +25,13 @@ export default class Base extends Phaser.GameObjects.Sprite {
   /**
    * Método para que la base instancie una estrella sobre ella
    */
+  
   spawn() {
     this.scene.add.existing(new Star(this.scene, this, this.x, this.y));
+   }
+   
+  spawnCalavera() {
+    this.scene.add.existing(new Calavera(this.scene, this, this.x, this.y));
+  
   }
-
 }
