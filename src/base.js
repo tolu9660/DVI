@@ -20,6 +20,7 @@ export default class Base extends Phaser.GameObjects.Sprite {
     this.scene.physics.add.existing(this, true);
     baseGroup.add(this);
     this.y -= this.height / 2 + platform.height / 2;
+    
   }
 
   /**
