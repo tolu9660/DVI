@@ -25,8 +25,8 @@ export default class Boot extends Phaser.Scene {
     this.load.image('star', 'star.png');
     this.load.image('player', 'player.png');
     this.load.image('fondo', 'background.png');
-     this.load.tilemapTiledJSON('map', 'assets/tilemaps/level1.json');
-  
+    this.load.tilemapTiledJSON('map', '/tilemaps/mapa1.json');
+    this.load.image('walls',"/tilemaps/wall.png");  
    }
 
 
@@ -37,5 +37,6 @@ export default class Boot extends Phaser.Scene {
   create() {
     
     this.scene.start('level');
+    
       }
 }
