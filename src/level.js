@@ -39,7 +39,7 @@ export default class Level extends Phaser.Scene {
    * Si es null, entonces se crea aleatoriamente sobre cualquiera de las bases existentes
    */
   spawn(from = null) {
-    Phaser.Math.RND.pick(from || this.bases.children.entries).spawn();
+    Phaser.Math.RND.pick(from || this.bases.children.entries).spawn();
   }
 
   /**
