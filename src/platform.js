@@ -1,4 +1,5 @@
-import Base from './base.js';
+//import Base from './base.js';
+//import piedra from './piedra.js';
 /**
  * Clase que representa las plataformas que aparecen en el escenario de juego.
  * Cada plataforma es responsable de crear la base que aparece sobre ella y en la 
@@ -14,12 +15,13 @@ export default class Platform extends Phaser.GameObjects.Sprite {
    * @param {number} x Coordenada x
    * @param {number} y Coordenada y
    */
-  constructor(scene, player, baseGroup, x, y) {
+  constructor(scene, player, x, y){
     super(scene, x, y, 'platform');
     this.scene.add.existing(this);
     this.scene.physics.add.existing(this, true);
-    new Base(scene, this, x, y, baseGroup);
-    this.scene.physics.add.collider(this, player);    
+    //new Base(scene, this, x, y, baseGroup);
+    this.scene.physics.add.collider(this, player); 
+    //new piedra(scene, this, x, y, baseGroup);   
   }
 
 }
