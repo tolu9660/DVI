@@ -12,7 +12,7 @@ export default class piedra extends Phaser.GameObjects.Sprite{
         super(scene, x, y, 'piedra');
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this, true);
-        this.scene.physics.add.collider(this, player); 
+        this.scene.physics.add.collider(this, player); //comentario
     }
 
 }
