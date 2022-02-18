@@ -22,7 +22,8 @@ export default class Level extends Phaser.Scene {
    * Creación de los elementos de la escena principal de juego
    */
   create() {
-     this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'fondo');
+    this.scene.run('game-ui');
+    this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'fondo');
    //const map = this.make.tilemap({key: 'map'});
     //const tileset = map.addTilesetImage('walls', 'walls');//imagen
     //this.backgroundLayer = map.createStaticLayer('capa plataformas', tileset, 0, 0);

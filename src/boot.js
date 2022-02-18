@@ -29,6 +29,8 @@ export default class Boot extends Phaser.Scene {
     this.load.image('fondo', 'background.png');
     this.load.tilemapTiledJSON('map', '/tilemaps/mapa1.json');
     this.load.image('walls',"/tilemaps/wall.png");  
+    this.load.image('ui-heart-empty', 'ui_heart_empty.png')
+		this.load.image('ui-heart-full', 'ui_heart_full.png')
    }
 
 
@@ -40,5 +42,5 @@ export default class Boot extends Phaser.Scene {
     
     this.scene.start('level');
     
-      }
+  }
 }
