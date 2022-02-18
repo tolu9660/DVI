@@ -24,6 +24,11 @@ export default class Player extends Phaser.GameObjects.Sprite {
     this.label = this.scene.add.text(10, 10, "");
     this.cursors = this.scene.input.keyboard.createCursorKeys();
     this.updateScore();
+    //Configuracion teclas A W S D
+    this.keyA=this.scene.input.keyboard.addKey('A');
+    this.keyS=this.scene.input.keyboard.addKey('S');
+    this.keyD=this.scene.input.keyboard.addKey('D');
+    this.keyW=this.scene.input.keyboard.addKey('W');
   }
 
   /**
@@ -50,7 +55,20 @@ export default class Player extends Phaser.GameObjects.Sprite {
    */
   preUpdate(t,dt) {
     super.preUpdate(t,dt);
-    if (this.cursors.up.isDown && this.body.onFloor()) {
+    //Teclado A W S D
+    /*if (this.keyW.isDown&& this.body.onFloor()) {
+      this.body.setVelocityY(this.jumpSpeed);
+    }
+    if (this.keyD.isDown) {
+      this.body.setVelocityX(-this.speed);
+    }
+    else if (this.keyA.isDown) {
+      this.body.setVelocityX(this.speed);
+    }
+    else {
+      this.body.setVelocityX(0);
+    }*/
+    if (this.cursors.space.isDown && this.body.onFloor()) {
       this.body.setVelocityY(this.jumpSpeed);
     }
     if (this.cursors.left.isDown) {
@@ -62,6 +80,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
     else {
       this.body.setVelocityX(0);
     }
-  }
+  
+}
   
 }

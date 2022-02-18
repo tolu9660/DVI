@@ -34,7 +34,7 @@ export default class Star extends Phaser.GameObjects.Sprite {
         // haber cogido una estrella
         this.scene.starPickt(this.base);
         this.destroy();
-        // esto es una prueba 
+        
     }
   }
 }
