@@ -70,31 +70,18 @@ export default class Player extends Phaser.GameObjects.Sprite {
    */
   preUpdate(t,dt) {
     super.preUpdate(t,dt);
-        //Teclado A W S D
-    if (this.keyW.isDown&& this.body.onFloor()) {
+
+    if (this.cursors.space.isDown || this.keyW.isDown && this.body.onFloor()) {
       this.body.setVelocityY(this.jumpSpeed);
     }
-    if (this.keyD.isDown) {
+    if (this.cursors.left.isDown || this.keyA.isDown) {
       this.body.setVelocityX(-this.speed);
     }
-    else if (this.keyA.isDown) {
-      this.body.setVelocityX(this.speed);
-    }
-    else {
-      this.body.setVelocityX(0);
-    }
-    if (this.cursors.space.isDown && this.body.onFloor()) {
-      this.body.setVelocityY(this.jumpSpeed);
-    }
-    if (this.cursors.left.isDown) {
-      this.body.setVelocityX(-this.speed);
-    }
-    else if (this.cursors.right.isDown) {
+    else if (this.cursors.right.isDown || this.keyD.isDown) {
       this.body.setVelocityX(this.speed);
     }
     else {
       this.body.setVelocityX(0);
     }
   }
-  //holaa
 }
