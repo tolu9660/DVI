@@ -1,5 +1,6 @@
 import Platform from './platform.js';
 import Player from './player.js';
+import piedra from './piedra.js';
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
