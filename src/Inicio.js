@@ -32,7 +32,11 @@ export default class inicio extends Phaser.Scene {
 
     // Settings button
     const opcionesButton = this.add.image(jugarButton.x, jugarButton.y + jugarButton.displayHeight + 10, 'azul')
-      .setDisplaySize(150, 50).setInteractive().on('pointerover', () => this.enterButtonHoverStateOpciones()).on('pointerout', () => this.enterButtonRestStateOpciones());
+      .setDisplaySize(150, 50)
+      .setInteractive()
+      .on('pointerover', () => this.enterButtonHoverStateOpciones())
+      .on('pointerout', () => this.enterButtonRestStateOpciones())
+      .on('pointerdown', () => this.scene.start('opciones') );
 
 
     this.opcionesButton = this.add.text(opcionesButton.x, opcionesButton.y, 'Opciones')
@@ -40,7 +44,11 @@ export default class inicio extends Phaser.Scene {
 
     // Credits button
     const creditosButton = this.add.image(opcionesButton.x, opcionesButton.y + opcionesButton.displayHeight + 10, 'azul')
-      .setDisplaySize(150, 50).setInteractive().on('pointerover', () => this.enterButtonHoverStateCreditos()).on('pointerout', () => this.enterButtonRestStateCreditos());
+      .setDisplaySize(150, 50)
+      .setInteractive()
+      .on('pointerover', () => this.enterButtonHoverStateCreditos())
+      .on('pointerout', () => this.enterButtonRestStateCreditos())
+      .on('pointerdown', () => this.scene.start('Creditos') )
     ;
 
     this.creditosButton = this.add.text(creditosButton.x, creditosButton.y, 'Creditos').setOrigin(0.5);
