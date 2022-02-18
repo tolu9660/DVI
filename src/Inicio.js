@@ -26,7 +26,7 @@ export default class inicio extends Phaser.Scene {
       .on('pointerout', () => this.enterButtonRestStateJugar())
       .on('pointerdown', () => this.scene.start('boot') )
 
-    this.jugarButton = this.add.text(jugarButton.x, jugarButton.y, 'Jugar',)
+    this.jugarButton = this.add.text(jugarButton.x, jugarButton.y , 'Jugar',)
       .setOrigin(0.5);
 
 
@@ -53,7 +53,9 @@ export default class inicio extends Phaser.Scene {
 
     this.creditosButton = this.add.text(creditosButton.x, creditosButton.y, 'Creditos').setOrigin(0.5);
 
-
+    const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 10, 'azul')
+    .setDisplaySize(150, 50)
+    this.SalirButton = this.add.text(SalirButton.x, SalirButton.y, 'Salir').setOrigin(0.5);
   }
 
 
