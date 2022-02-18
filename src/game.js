@@ -1,9 +1,6 @@
 import Boot from './boot.js';
 import End from './end.js';
 import Level from './level.js';
-import Inicio from './Inicio.js'
-import Opciones from './Opciones.js';
-import Creditos from './Creditos.js';
 
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
@@ -12,20 +9,20 @@ import Creditos from './Creditos.js';
 let config = {
     type: Phaser.AUTO,
     width: 1000,
-    height: 500,
+    height: 550,
     scale: {
         // mode: Phaser.Scale.FIT,  
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Inicio,Opciones,Creditos,Boot, Level, End],
+    scene: [Boot, Level, End],
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 400 },
+            gravity: { y: 300 },
             debug: false
         }
     }
 };
-//holaaaa
+
 new Phaser.Game(config);

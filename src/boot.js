@@ -21,18 +21,22 @@ export default class Boot extends Phaser.Scene {
     this.load.setPath('assets/sprites/');
     this.load.image('platform', 'platform.png');
     this.load.image('base', 'base.png');
+    this.load.image('calavera', 'calavera.png');
     this.load.image('star', 'star.png');
     this.load.image('player', 'player.png');
-    this.load.image('piedra', 'piedra.png');
-    this.load.image('azul','azul.jpg');
+    this.load.image('fondo', 'background.png');
+    this.load.tilemapTiledJSON('map', '/tilemaps/mapa1.json');
+    this.load.image('walls',"/tilemaps/wall.png");  
+   }
 
-  }
 
   /**
    * Creación de la escena. En este caso, solo cambiamos a la escena que representa el
    * nivel del juego
    */
   create() {
+    
     this.scene.start('level');
-  }
+    
+      }
 }
