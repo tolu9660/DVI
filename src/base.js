@@ -15,7 +15,7 @@ export default class Base extends Phaser.GameObjects.Sprite {
    * @param { Phaser.GameObjects.Group } baseGroup Grupo en el que se incluirá la base creada
    */
   constructor(scene, platform, x, y, baseGroup) {
-    super(scene, x, y, 'base');
+    super(scene, x, y, 'piedra');
     this.scene.add.existing(this);
     this.scene.physics.add.existing(this, true);
     baseGroup.add(this);
