@@ -10,7 +10,7 @@ import GameUI from './scenes/GameUI.js'
 
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
- * la clase Game de Phaser, encargada de crear e iniciar el juego.
+ * la clase Game de Phaser, encargada de crear e iniciar el juego. 
  */
 let config = {
     type: Phaser.AUTO,
@@ -33,4 +33,13 @@ let config = {
 };
 
 new Phaser.Game(config);
+<<<<<<< HEAD
 //Comentario JESUS
+=======
+
+//Hola que tal
+
+
+//comentario luis
+
+>>>>>>> develop
