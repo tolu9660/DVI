@@ -7,7 +7,7 @@ import Creditos from './Creditos.js';
 
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
- * la clase Game de Phaser, encargada de crear e iniciar el juego. Cambio
+ * la clase Game de Phaser, encargada de crear e iniciar el juego. 
  */
 let config = {
     type: Phaser.AUTO,
@@ -30,4 +30,8 @@ let config = {
 
 new Phaser.Game(config);
 
+//Hola que tal
+
+
 //comentario luis
+
