@@ -33,13 +33,13 @@ let config = {
 };
 
 new Phaser.Game(config);
-<<<<<<< HEAD
+
 //Comentario JESUS
-=======
+
 
 //Hola que tal
 
 
 //comentario luis
 
->>>>>>> develop
+
