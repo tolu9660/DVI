@@ -1,6 +1,6 @@
-import Platform from './platform.js';
+//import Platform from './platform.js';
 import Player from './player.js';
-import piedra from './piedra.js';
+//import piedra from './piedra.js';
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -22,24 +22,37 @@ export default class Level extends Phaser.Scene {
    * Creación de los elementos de la escena principal de juego
    */
   create() {
-     this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'fondo');
-   //const map = this.make.tilemap({key: 'map'});
-    //const tileset = map.addTilesetImage('walls', 'walls');//imagen
-    //this.backgroundLayer = map.createStaticLayer('capa plataformas', tileset, 0, 0);
- ;
-    this.stars = 10;
-    this.bases = this.add.group();
+    this.map = this.make.tilemap({ key: 'level1' });
+
+    const tileset1 = this.map.addTilesetImage('suelo','suelo');
+    const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
+
+    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
+
     this.player = new Player(this, 200, 300);
+
+    this.cameras.main.scrollY = 0;//por si queremos subir o bajar la camara
+
+
+
     
-    new Platform(this, this.player, this.bases, 150, 350);
+
+    //this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'fondo');
+   
+    
+    //this.stars = 10;
+    //this.bases = this.add.group();
+    
+    
+    /*new Platform(this, this.player, this.bases, 150, 350);
     new Platform(this, this.player, this.bases, 850, 350);
     new Platform(this, this.player, this.bases, 500, 200);
     new Platform(this, this.player, this.bases, 150, 100);
     new Platform(this, this.player, this.bases, 850, 100);
-    new piedra(this, this.player, 900, 450);
+    new piedra(this, this.player, 900, 450);*/
 
-    this.spawn();
-    this.spawnCalavera();
+    //this.spawn();
+    //this.spawnCalavera();
   }
 
   /**
@@ -48,18 +61,18 @@ export default class Level extends Phaser.Scene {
    * Si es null, entonces se crea aleatoriamente sobre cualquiera de las bases existentes
    */
   
-  spawn(from = null) {
-    Phaser.Math.RND.pick(from || this.bases.children.entries).spawn();
-  }
-  spawnCalavera(from = null) {
-    Phaser.Math.RND.pick(from || this.bases.children.entries).spawnCalavera();
-  }
+  //spawn(from = null) {
+    //Phaser.Math.RND.pick(from || this.bases.children.entries).spawn();
+  //}
+  //spawnCalavera(from = null) {
+    //Phaser.Math.RND.pick(from || this.bases.children.entries).spawnCalavera();
+  //}
   /**
    * Método que se ejecuta al coger una estrella. Se pasa la base
    * sobre la que estaba la estrella cogida para evitar repeticiones
    * @param {Base} base La base sobre la que estaba la estrella que se ha cogido
    */
-  starPickt (base) {
+  /*starPickt (base) {
     this.player.point();    
     if (this.player.score == this.stars) {
         this.scene.start('end');
@@ -80,5 +93,5 @@ export default class Level extends Phaser.Scene {
       this.spawnCalavera(s.filter(o => o !== base));
 
     }
-  }
+  }*/
 }
