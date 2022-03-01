@@ -26,6 +26,8 @@ export default class Level extends Phaser.Scene {
    */
   create() {
 
+    //this.createAlienAnimation();
+    
     //cosas de mapa
     this.map = this.make.tilemap({ key: 'level1' });
 
@@ -41,14 +43,14 @@ export default class Level extends Phaser.Scene {
 
 
     const { width, height } = this.scale;
-    this.alien = this.matter.add.sprite(width * 0.05, height * 0.8, 'alien').play('player-idle').setFixedRotation();
+    this.alien = this.matter.add.sprite(width * 0.05, height * 0.8, 'alien').play('player-idle');
 
     //this.spawn();
     //this.spawnCalavera();
   }
 
 
-  /*createAlienAnimation(){
+ /*createAlienAnimation(){
 
     this.anims.create({
       key:'player-idle',

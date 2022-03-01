@@ -13,6 +13,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
    */
   constructor(scene, x, y) {
     super(scene, x, y, 'alien');
+    
     this.score = 0;
     this.scene.add.existing(this);
     //this.scene.physics.add.existing(this);
@@ -39,6 +40,25 @@ export default class Player extends Phaser.GameObjects.Sprite {
     //this.updateLife();
   }
 
+  /*createAlienAnimation(){
+
+    this.anims.create({
+      key:'player-idle',
+      frames: [{key:'alien', frame:'predatormask__0000_idle_1.png'}]
+    })
+
+    this.anims.create({
+      key:'player-walk',
+      frameRate: 10,
+      frames:this.anims.generateFrameNames('alien', {
+        start: 1,
+        end: 6,
+        prefix: 'predatormask__0006_walk_',
+        suffix: '.png'
+      }),
+      repeat: -1
+    })
+  }*/
 
   /**
    * El jugador ha recogido una estrella por lo que este método añade un punto y
