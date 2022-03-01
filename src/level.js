@@ -11,6 +11,7 @@
  * @extends Phaser.Scene
  */
 export default class Level extends Phaser.Scene {
+
   /**
    * Constructor de la escena
    */
@@ -18,10 +19,14 @@ export default class Level extends Phaser.Scene {
     super({ key: 'level' });
   }
 
+
+
   /**
    * Creación de los elementos de la escena principal de juego
    */
   create() {
+
+    //cosas de mapa
     this.map = this.make.tilemap({ key: 'level1' });
 
     const tileset1 = this.map.addTilesetImage('suelo','suelo');
@@ -31,32 +36,39 @@ export default class Level extends Phaser.Scene {
     this.groundLayer.setCollisionByProperty({collides: true});
     this.matter.world.convertTilemapLayer(this.groundLayer);
 
-
-    //this.player = new Player(this, 200, 300);
-
-    this.cameras.main.scrollY = 0;//por si queremos subir o bajar la camara
+    //cosas de alien
+    //this.player = new Player(this, 200, 300);   
 
 
-
-
-
-    //this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'fondo');
-   
-    
-    //this.stars = 10;
-    //this.bases = this.add.group();
-    
-    
-    /*new Platform(this, this.player, this.bases, 150, 350);
-    new Platform(this, this.player, this.bases, 850, 350);
-    new Platform(this, this.player, this.bases, 500, 200);
-    new Platform(this, this.player, this.bases, 150, 100);
-    new Platform(this, this.player, this.bases, 850, 100);
-    new piedra(this, this.player, 900, 450);*/
+    const { width, height } = this.scale;
+    this.alien = this.matter.add.sprite(width * 0.05, height * 0.8, 'alien').play('player-idle').setFixedRotation();
 
     //this.spawn();
     //this.spawnCalavera();
   }
+
+
+  /*createAlienAnimation(){
+
+    this.anims.create({
+      key:'player-idle',
+      frames: [{key:'alien', frame:'predatormask__0000_idle_1.png'}]
+    })
+
+    this.anims.create({
+      key:'player-walk',
+      frameRate: 10,
+      frames:this.anims.generateFrameNames('alien', {
+        start: 1,
+        end: 6,
+        prefix: 'predatormask__0006_walk_',
+        suffix: '.png'
+      }),
+      repeat: -1
+    })
+  }*/
+
+  
 
   /**
    * Genera una estrella en una de las bases del escenario

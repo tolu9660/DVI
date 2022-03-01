@@ -29,6 +29,8 @@ export default class Boot extends Phaser.Scene {
     this.load.image('fondo', 'background.png');
     this.load.image('walls',"/tilemaps/wall.png");  
 
+    //cargamos el alien
+    this.load.spritesheet('alien','alien.png',{frameWidth: 40, frameHeight: 70});
 
     //SUELOS NIVEL 1 (imagenes del suelo)
     this.load.image('suelo',"/tilemaps/suelo.png");  
@@ -36,10 +38,7 @@ export default class Boot extends Phaser.Scene {
     //MAPA NIVEL 1 (nombre recusro cache, fichero json)
     this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
     
-    
-    
-   }
-
+  }
 
   /**
    * Creación de la escena. En este caso, solo cambiamos a la escena que representa el

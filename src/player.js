@@ -12,23 +12,23 @@ export default class Player extends Phaser.GameObjects.Sprite {
    * @param {number} y Coordenada Y
    */
   constructor(scene, x, y) {
-    super(scene, x, y, 'player');
+    super(scene, x, y, 'alien');
     this.score = 0;
     this.scene.add.existing(this);
     //this.scene.physics.add.existing(this);
     //Creacion de contador de vida
     this.life = 3;
     this.scene.add.existing(this);
-    this.scene.physics.add.existing(this);
+    //this.scene.physics.add.existing(this);
     // Queremos que el jugador no se salga de los límites del mundo
-    this.body.setCollideWorldBounds();
+    //this.body.setCollideWorldBounds();
     this.speed = 300;
     this.jumpSpeed = -400;
     // Esta label es la UI en la que pondremos la puntuación del jugador
     this.labelPuntos= this.scene.add.text(10, 10, "");
     this.labelLife = this.scene.add.text(10, 40, "");
     this.cursors = this.scene.input.keyboard.createCursorKeys();
-    this.updateGemas();
+    //this.updateGemas();
   
     //Configuracion teclas A W S D
     this.keyA=this.scene.input.keyboard.addKey('A');
@@ -36,8 +36,9 @@ export default class Player extends Phaser.GameObjects.Sprite {
     this.keyD=this.scene.input.keyboard.addKey('D');
     this.keyW=this.scene.input.keyboard.addKey('W');
 
-    this.updateLife();
+    //this.updateLife();
   }
+
 
   /**
    * El jugador ha recogido una estrella por lo que este método añade un punto y
@@ -75,13 +76,18 @@ export default class Player extends Phaser.GameObjects.Sprite {
       this.body.setVelocityY(this.jumpSpeed);
     }
     if (this.cursors.left.isDown || this.keyA.isDown) {
+      this.body.flipX = true;
       this.body.setVelocityX(-this.speed);
+      this.body.play('player-walk', true);
     }
     else if (this.cursors.right.isDown || this.keyD.isDown) {
+      this.body.flipX = false;
       this.body.setVelocityX(this.speed);
+      this.body.play('player-walk', true);
     }
     else {
       this.body.setVelocityX(0);
+      this.body.play('player-idle', true);
     }
   }
 }
