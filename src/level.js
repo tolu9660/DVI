@@ -1,5 +1,5 @@
 //import Platform from './platform.js';
-import Player from './player.js';
+//import Player from './player.js';
 //import piedra from './piedra.js';
 
 /**
@@ -28,14 +28,17 @@ export default class Level extends Phaser.Scene {
     const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
 
     this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
+    this.groundLayer.setCollisionByProperty({collides: true});
+    this.matter.world.convertTilemapLayer(this.groundLayer);
 
-    this.player = new Player(this, 200, 300);
+
+    //this.player = new Player(this, 200, 300);
 
     this.cameras.main.scrollY = 0;//por si queremos subir o bajar la camara
 
 
 
-    
+
 
     //this.background = this.add.image(this.sys.game.canvas.width / 2, this.sys.game.canvas.height / 2, 'fondo');
    

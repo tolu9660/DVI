@@ -20,10 +20,9 @@ let config = {
     pixelArt: true,
     scene: [Inicio, Opciones, Creditos, Boot, Level, End],
     physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 300 },
-            debug: false
+        default: 'matter',//cambiado el arcade
+        matter: {
+            debug: true
         }
     }
 };

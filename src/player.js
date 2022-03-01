@@ -15,7 +15,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
     super(scene, x, y, 'player');
     this.score = 0;
     this.scene.add.existing(this);
-    this.scene.physics.add.existing(this);
+    //this.scene.physics.add.existing(this);
     //Creacion de contador de vida
     this.life = 3;
     this.scene.add.existing(this);
