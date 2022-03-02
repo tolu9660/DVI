@@ -38,6 +38,14 @@ export default class Boot extends Phaser.Scene {
     //MAPA NIVEL 1 (nombre recusro cache, fichero json)
     this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
     
+    //SUELOS NIVEL 1 (imagenes del suelo)
+    this.load.image('tiles',"/tilemaps/level_jesus/ground.png");
+    //MAPA NIVEL 1 (nombre recusro cache, fichero json)
+    this.load.tilemapTiledJSON('tilemap', '/tilemaps/level_jesus/level_jesus.json');
+        
+
+
+
   }
 
   /**

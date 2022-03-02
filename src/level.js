@@ -23,6 +23,8 @@ export default class Level extends Phaser.Scene {
   init() {
     this.cursors = this.input.keyboard.createCursorKeys();
     //this.alien = this.physics.matter.sprite;
+    this.isTouchingGround = false;
+    this.data = this.matter.ICollisionPair;
   }
 
   /**
@@ -34,13 +36,17 @@ export default class Level extends Phaser.Scene {
     this.createAlienAnimation();
     
     //cosas de mapa
-    this.map = this.make.tilemap({ key: 'level1' });
-
-    const tileset1 = this.map.addTilesetImage('suelo','suelo');
-    const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
-
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
-    this.groundLayer.setCollisionByProperty({collides: true});
+    //this.map = this.make.tilemap({ key: 'level1' });
+    this.map = this.make.tilemap({ key: 'tilemap' });
+    //const tileset1 = this.map.addTilesetImage('suelo','suelo');
+    //const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
+    const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
+    //this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
+    //this.groundLayer.setCollisionByProperty({collides: true});
+    this.groundLayer = this.map.createLayer('ground', [tileset1])
+    this.groundLayer.setCollisionByProperty({collides : true})
+    
+    
     this.matter.world.convertTilemapLayer(this.groundLayer);
 
     //cosas de alien
@@ -59,22 +65,37 @@ export default class Level extends Phaser.Scene {
   }
 
   update(){
+
+    const speed = 5
+
     if (this.cursors.left.isDown) {
       console.log('left');
       this.alien.flipX = true;
-      this.alien.setVelocityX(-10);
+      this.alien.setVelocityX(-speed);
       this.alien.play('player-walk', true)
     }
     else if (this.cursors.right.isDown) {
       this.alien.flipX = false;
-      this.alien.setVelocityX(10);
+      this.alien.setVelocityX(speed);
       this.alien.play('player-walk', true)
     }
     else {
-     // this.alien.flipX = true;
       this.alien.setVelocityX(0);
       this.alien.play('player-idle', true)
     }
+
+    //con esto comprobamos que no esta en contacto con algo asi evitamos que cuando pulsemos espacio en el aire vuelva a saltar
+    //esto quiza nos interese en algun modo vuelo
+    this.alien.setOnCollide((data) => {
+     this.isTouchingGround = true;
+    })
+    
+    if (this.cursors.up.isDown && this.isTouchingGround) {
+      this.alien.setVelocityY(-9)
+      this.isTouchingGround = false
+    }
+
+
   }
 
 
@@ -82,7 +103,7 @@ export default class Level extends Phaser.Scene {
 
     this.anims.create({
       key:'player-idle',
-      frameRate: 9,
+      frameRate: 7,
       frames:this.anims.generateFrameNames('alien', {
         start: 1,
         end: 3,
