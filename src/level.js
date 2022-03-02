@@ -17,9 +17,13 @@ export default class Level extends Phaser.Scene {
    */
   constructor() {
     super({ key: 'level' });
+    
   }
 
-
+  init() {
+    this.cursors = this.input.keyboard.createCursorKeys();
+    //this.alien = this.physics.matter.sprite;
+  }
 
   /**
    * Creación de los elementos de la escena principal de juego
@@ -43,11 +47,34 @@ export default class Level extends Phaser.Scene {
     //this.player = new Player(this, 200, 300);   
 
     const { width, height } = this.scale;
-    this.matter.add.sprite(width * 0.05, height * 0.8, 'alien').play('player-idle');
-    
+    this.alien = this.matter.add.sprite(width * 0.05, height * 0.8, 'alien')
+      .play('player-idle')
+      .setFixedRotation();
+
+      //HAcemos que siga al personaje
+    this.cameras.main.startFollow(this.alien);
 
     //this.spawn();
     //this.spawnCalavera();
+  }
+
+  update(){
+    if (this.cursors.left.isDown) {
+      console.log('left');
+      this.alien.flipX = true;
+      this.alien.setVelocityX(-10);
+      this.alien.play('player-walk', true)
+    }
+    else if (this.cursors.right.isDown) {
+      this.alien.flipX = false;
+      this.alien.setVelocityX(10);
+      this.alien.play('player-walk', true)
+    }
+    else {
+     // this.alien.flipX = true;
+      this.alien.setVelocityX(0);
+      this.alien.play('player-idle', true)
+    }
   }
 
 
@@ -55,7 +82,14 @@ export default class Level extends Phaser.Scene {
 
     this.anims.create({
       key:'player-idle',
-      frames: [{key:'alien', frame:'predatormask__0000_idle_1.png'}]
+      frameRate: 9,
+      frames:this.anims.generateFrameNames('alien', {
+        start: 1,
+        end: 3,
+        prefix: 'predatormask_idle_',
+        suffix: '.png'
+      }),
+      repeat: -1
     })
 
     this.anims.create({
