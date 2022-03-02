@@ -36,16 +36,39 @@ export default class Level extends Phaser.Scene {
     this.createAlienAnimation();
     
     //cosas de mapa
-    //this.map = this.make.tilemap({ key: 'level1' });
-    this.map = this.make.tilemap({ key: 'tilemap' });
-    //const tileset1 = this.map.addTilesetImage('suelo','suelo');
-    //const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
-    const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
-    //this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
+    this.map = this.make.tilemap({ key: 'level1' });
+    //this.map = this.make.tilemap({ key: 'tilemap' });
+    const tileset1 = this.map.addTilesetImage('suelo','suelo');
+    const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
+    //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
+    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
+    
     //this.groundLayer.setCollisionByProperty({collides: true});
-    this.groundLayer = this.map.createLayer('ground', [tileset1])
+    //this.groundLayer = this.map.createLayer('ground', [tileset1])
     this.groundLayer.setCollisionByProperty({collides : true})
     
+    const objectsLayer = this.map.getObjectLayer('objects')
+
+    objectsLayer.objects.forEach(objData => {
+      const {x = 0, y = 0, name, width = 0} = objData
+      switch (name) {
+        case 'alien_spawn':
+         { this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
+            .play('player-idle')
+            .setFixedRotation();
+
+            this.alien.setOnCollide((data) => {
+              this.isTouchingGround = true;
+             })
+                //HAcemos que siga al personaje
+            this.cameras.main.startFollow(this.alien)
+            }
+          break;
+      
+        default:
+          break;
+      }
+    })
     
     this.matter.world.convertTilemapLayer(this.groundLayer);
 
@@ -53,12 +76,6 @@ export default class Level extends Phaser.Scene {
     //this.player = new Player(this, 200, 300);   
 
     const { width, height } = this.scale;
-    this.alien = this.matter.add.sprite(width * 0.05, height * 0.8, 'alien')
-      .play('player-idle')
-      .setFixedRotation();
-
-      //HAcemos que siga al personaje
-    this.cameras.main.startFollow(this.alien);
 
     //this.spawn();
     //this.spawnCalavera();
@@ -66,6 +83,9 @@ export default class Level extends Phaser.Scene {
 
   update(){
 
+    if (!this.alien) {
+      return
+    }
     const speed = 5
 
     if (this.cursors.left.isDown) {
@@ -86,9 +106,7 @@ export default class Level extends Phaser.Scene {
 
     //con esto comprobamos que no esta en contacto con algo asi evitamos que cuando pulsemos espacio en el aire vuelva a saltar
     //esto quiza nos interese en algun modo vuelo
-    this.alien.setOnCollide((data) => {
-     this.isTouchingGround = true;
-    })
+
     
     if (this.cursors.up.isDown && this.isTouchingGround) {
       this.alien.setVelocityY(-9)
