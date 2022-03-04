@@ -5,6 +5,8 @@ import Inicio from './Inicio.js'
 import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
 import parallaxScene from './parallaxScene.js';
+import GameUI from './GameUI.js'
+
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
  * la clase Game de Phaser, encargada de crear e iniciar el juego. 
@@ -18,7 +20,7 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Boot, Level, End],
+    scene: [Boot, Level,GameUI, End],
     physics: {
         default: 'matter',//cambiado el arcade
         matter: {

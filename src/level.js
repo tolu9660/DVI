@@ -1,6 +1,9 @@
 //import Platform from './platform.js';
 //import Player from './player.js';
-//import piedra from './piedra.js';
+////import piedra from './piedra.js';
+import PlayerControler from './PlayerController.js'
+
+import { sceneEvents } from './EventsCenter.js'; 
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -25,6 +28,7 @@ export default class Level extends Phaser.Scene {
     //this.alien = this.physics.matter.sprite;
     this.isTouchingGround = false;
     this.data = this.matter.ICollisionPair;
+    // this.playerController = new PlayerControler();
   }
 
   /**
@@ -32,39 +36,45 @@ export default class Level extends Phaser.Scene {
    */
   create() {
     
-    
-    this.createAlienAnimation();
+    this.scene.run('game-ui');
+
     
     //cosas de mapa
     this.map = this.make.tilemap({ key: 'level1' });
     //this.map = this.make.tilemap({ key: 'tilemap' });
     const tileset1 = this.map.addTilesetImage('suelo','suelo');
     const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
+ 
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
     this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
     
     //this.groundLayer.setCollisionByProperty({collides: true});
     //this.groundLayer = this.map.createLayer('ground', [tileset1])
     this.groundLayer.setCollisionByProperty({collides : true})
+
+    this.map.createLayer('obstacles',tileset1)
     
     const objectsLayer = this.map.getObjectLayer('objects')
 
     objectsLayer.objects.forEach(objData => {
-      const {x = 0, y = 0, name, width = 0} = objData
+      const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'alien_spawn':
          { this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
-            .play('player-idle')
             .setFixedRotation();
 
-            this.alien.setOnCollide((data) => {
-              this.isTouchingGround = true;
-             })
+            this.playerController = new PlayerControler(this.alien, this.cursors)
+
+ 
+
                 //HAcemos que siga al personaje
             this.cameras.main.startFollow(this.alien)
             }
           break;
-      
+          case 'spikes':{
+           console.log('pedo');
+          }
+          break;
         default:
           break;
       }
@@ -81,69 +91,16 @@ export default class Level extends Phaser.Scene {
     //this.spawnCalavera();
   }
 
-  update(){
-
-    if (!this.alien) {
+  update(t, dt){
+    //console.log(this.playerController.statesPlayer.state)
+    if (!this.playerController) {
       return
-    }
-    const speed = 5
-
-    if (this.cursors.left.isDown) {
-      console.log('left');
-      this.alien.flipX = true;
-      this.alien.setVelocityX(-speed);
-      this.alien.play('player-walk', true)
-    }
-    else if (this.cursors.right.isDown) {
-      this.alien.flipX = false;
-      this.alien.setVelocityX(speed);
-      this.alien.play('player-walk', true)
-    }
-    else {
-      this.alien.setVelocityX(0);
-      this.alien.play('player-idle', true)
-    }
-
-    //con esto comprobamos que no esta en contacto con algo asi evitamos que cuando pulsemos espacio en el aire vuelva a saltar
-    //esto quiza nos interese en algun modo vuelo
-
-    
-    if (this.cursors.up.isDown && this.isTouchingGround) {
-      this.alien.setVelocityY(-9)
-      this.isTouchingGround = false
-    }
-
-
+    }    
+    this.playerController.update(dt);
   }
 
 
- createAlienAnimation(){
-
-    this.anims.create({
-      key:'player-idle',
-      frameRate: 7,
-      frames:this.anims.generateFrameNames('alien', {
-        start: 1,
-        end: 3,
-        prefix: 'predatormask_idle_',
-        suffix: '.png'
-      }),
-      repeat: -1
-    })
-
-    this.anims.create({
-      key:'player-walk',
-      frameRate: 10,
-      frames:this.anims.generateFrameNames('alien', {
-        start: 1,
-        end: 6,
-        prefix: 'predatormask__0006_walk_',
-        suffix: '.png'
-      }),
-      repeat: -1
-    })
-  }
-
+ 
   
 
   /**
