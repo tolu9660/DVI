@@ -12,6 +12,7 @@ export default class PlayerController extends Phaser.Scene{
       super({ key: 'player-controller' });
         this.sprite = sprite;
         this.cursors = cursors;
+
         this.createAlienAnimation();
 
         this.NewStateMachine = new NewStateMachine(this, 'player');
@@ -22,7 +23,8 @@ export default class PlayerController extends Phaser.Scene{
         })
           .addState('walk', {
             onEnter: this.walkOnEnter,
-            onUpdate: this.walkOnUpdate
+            onUpdate: this.walkOnUpdate,
+            onExit: this.walkOnExit
           })
           .addState('jump', {
             onEnter: this.jumpOnEnter,
@@ -31,43 +33,20 @@ export default class PlayerController extends Phaser.Scene{
           .setState('idle');
 
           this.sprite.setOnCollide((data) => {
-           console.log('collid')
-            // this.isTouchingGround = true;
+            const body = data.bodyB;
+            const gameObject = body.gameObject
+            console.log(body);
+            console.log(data);
+            if (!gameObject) {
+              return
+            }
+            if (gameObject) {
+              
+            }
             if (this.NewStateMachine.isCurrentState('jump')) {
               this.NewStateMachine.setState('idle')
             }
-           })
-        // this.statesPlayer = new StateMachine({
-        //   init: 'idle',
-        //   transitions: [
-        //     { name: 'step', from: 'idle',    to: 'walk' },
-        //     { name: 'step', from: 'walk',    to: 'idle' },
-        //     { name: 'goto', from: '*', to: function(s) { return s } }
-        //   ],
-        //   methods: {
-        //     onWalk: function() { console.log('transition');         },
-        //     onStop: function() { console.log('transition');         },
-        //     onEnterIdle:    function() { 
-              
-        //       sprite.play('player-idle', true)
-        //       console.log('entered state A');
-        //      },
-        //     onEnterWalk:    function() { 
-        //       playCursors();
-        //       sprite.play('player-walk', true);
-        //       console.log('entered state B'); 
-
-            
-            
-        //     }
-
-              
-            
-        //     // onStop:    function() { console.log('entered state A'); }
-        //   }
-        // });
-
-        // this.statesPlayer.state;
+          })
     }
 
     idleOnEnter(){
@@ -85,11 +64,35 @@ export default class PlayerController extends Phaser.Scene{
       this.sprite.play('player-walk')
     }
     walkOnUpdate(){
-      console.log('pedossss')
       const speed = 5
 
       if (this.cursors.left.isDown) {
-        console.log('left');
+        this.sprite.flipX = true;
+        this.sprite.setVelocityX(-speed);
+      }
+      else if (this.cursors.right.isDown) {
+        this.sprite.flipX = false;
+        this.sprite.setVelocityX(speed);
+      }
+      else {
+        this.NewStateMachine.setState('idle')
+      }
+      if (this.cursors.up.isDown) {
+        this.NewStateMachine.setState('jump');
+      }
+    }
+    walkOnExit() {
+      this.sprite.stop();
+    }
+
+    jumpOnEnter(){
+      this.sprite.setVelocityY(-9)
+    }
+
+    jumpOnUpdate(){
+      const speed = 5
+
+      if (this.cursors.left.isDown) {
         this.sprite.flipX = true;
         this.sprite.setVelocityX(-speed);
         // this.alien.play('player-walk', true)
@@ -99,30 +102,11 @@ export default class PlayerController extends Phaser.Scene{
         this.sprite.setVelocityX(speed);
         // this.alien.play('player-walk', true)
       }
-      else {
-        // this.alien.setVelocityX(0);
-        // this.alien.play('player-idle', true)
-        this.NewStateMachine.setState('idle')
-      }
-
-      //con esto comprobamos que no esta en contacto con algo asi evitamos que cuando pulsemos espacio en el aire vuelva a saltar
-      //esto quiza nos interese en algun modo vuelo
-
-      
-      // if (this.cursors.up.isDown && this.isTouchingGround) {
-        if (this.cursors.up.isDown) {
-        // this.isTouchingGround = false
-          this.NewStateMachine.setState('jump');
-        }
-    }
-    jumpOnEnter(){
-      this.sprite.setVelocityY(-12)
     }
 
     update(dt){
       this.NewStateMachine.update(dt);
     }
-    
 
     createAlienAnimation(){
 

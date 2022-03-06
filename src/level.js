@@ -25,10 +25,6 @@ export default class Level extends Phaser.Scene {
 
   init() {
     this.cursors = this.input.keyboard.createCursorKeys();
-    //this.alien = this.physics.matter.sprite;
-    this.isTouchingGround = false;
-    this.data = this.matter.ICollisionPair;
-    // this.playerController = new PlayerControler();
   }
 
   /**
@@ -48,6 +44,8 @@ export default class Level extends Phaser.Scene {
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
     this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
     
+    this.load.image('star', 'assets/start.png')
+
     //this.groundLayer.setCollisionByProperty({collides: true});
     //this.groundLayer = this.map.createLayer('ground', [tileset1])
     this.groundLayer.setCollisionByProperty({collides : true})
@@ -59,22 +57,26 @@ export default class Level extends Phaser.Scene {
     objectsLayer.objects.forEach(objData => {
       const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
-        case 'alien_spawn':
-         { this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
+        case 'alien_spawn': { 
+          this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
             .setFixedRotation();
 
-            this.playerController = new PlayerControler(this.alien, this.cursors)
+          this.playerController = new PlayerControler(this.alien, this.cursors)
 
- 
+          //HAcemos que siga al personaje
+          this.cameras.main.startFollow(this.alien)
+          
+         // this.matter.add.sprite(x, y - 50, 'star')
 
-                //HAcemos que siga al personaje
-            this.cameras.main.startFollow(this.alien)
-            }
           break;
-          case 'spikes':{
-           console.log('pedo');
-          }
+        }
+        case 'star':{
+          this.matter.add.sprite(x, y, 'star',undefined,{
+            isStatic:true,
+            isSensor:true
+          })
           break;
+        }
         default:
           break;
       }
@@ -82,13 +84,6 @@ export default class Level extends Phaser.Scene {
     
     this.matter.world.convertTilemapLayer(this.groundLayer);
 
-    //cosas de alien
-    //this.player = new Player(this, 200, 300);   
-
-    const { width, height } = this.scale;
-
-    //this.spawn();
-    //this.spawnCalavera();
   }
 
   update(t, dt){

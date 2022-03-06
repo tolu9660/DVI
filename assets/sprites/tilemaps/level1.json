@@ -53,6 +53,17 @@
                  "width":61,
                  "x":419,
                  "y":436
+                }, 
+                {
+                 "height":29.5064377682403,
+                 "id":10,
+                 "name":"star",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":34.8712446351931,
+                 "x":287.017167381974,
+                 "y":333.512160228898
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -61,7 +72,7 @@
          "y":0
         }],
  "nextlayerid":9,
- "nextobjectid":10,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",

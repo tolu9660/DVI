@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="10">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="11">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
@@ -28,5 +28,6 @@
   <object id="3" name="alien_spawn" x="736" y="376" width="38" height="38"/>
   <object id="5" name="spikes" x="158" y="433" width="66" height="46"/>
   <object id="9" name="spikes" x="419" y="436" width="61" height="40"/>
+  <object id="10" name="star" x="287.017" y="333.512" width="34.8712" height="29.5064"/>
  </objectgroup>
 </map>
