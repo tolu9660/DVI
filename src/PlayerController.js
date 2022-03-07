@@ -35,17 +35,28 @@ export default class PlayerController extends Phaser.Scene{
           this.sprite.setOnCollide((data) => {
             const body = data.bodyB;
             const gameObject = body.gameObject
-            console.log(body);
-            console.log(data);
+            //console.log(gameObject);
+            console.log(gameObject.type);
             if (!gameObject) {
               return
             }
             if (gameObject) {
+              if (this.NewStateMachine.isCurrentState('jump')) {
+                this.NewStateMachine.setState('idle')
+              }
+              return
+            }
+              const sprite = gameObject;
+              const type = sprite.getData('type')
+              switch (type) {
+                case 'star':
+                  console.log('collyde with star')
+                  break;
               
-            }
-            if (this.NewStateMachine.isCurrentState('jump')) {
-              this.NewStateMachine.setState('idle')
-            }
+                default:
+                  break;
+              }
+              
           })
     }
 
