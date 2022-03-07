@@ -3,7 +3,8 @@
 ////import piedra from './piedra.js';
 import PlayerControler from './PlayerController.js'
 
-import { sceneEvents } from './EventsCenter.js'; 
+import { sceneEvents as events} from './EventsCenter.js'; 
+import ObstaclesController from './ObstaclesController.js';
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -25,6 +26,7 @@ export default class Level extends Phaser.Scene {
 
   init() {
     this.cursors = this.input.keyboard.createCursorKeys();
+    this.obstacles = new ObstaclesController()
   }
 
   /**
@@ -32,7 +34,7 @@ export default class Level extends Phaser.Scene {
    */
   create() {
     
-    this.scene.run('game-ui');
+    this.scene.launch('game-ui');
 
     
     //cosas de mapa
@@ -61,7 +63,12 @@ export default class Level extends Phaser.Scene {
           this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
             .setFixedRotation();
 
-          this.playerController = new PlayerControler(this.alien, this.cursors)
+          this.playerController = new PlayerControler(
+            this,
+            this.alien, 
+            this.cursors, 
+            this.obstacles
+            )
 
           //HAcemos que siga al personaje
           this.cameras.main.startFollow(this.alien)
@@ -70,14 +77,19 @@ export default class Level extends Phaser.Scene {
 
           break;
         }
-        case 'star':{
-          this.matter.add.sprite(x, y, 'star',undefined,{
+        case 'star': {
+          const star = this.matter.add.sprite(x, y, 'star',undefined,{
             isStatic:true,
             isSensor:true
           })
+          star.setData('type', 'star')
           break;
         }
-        default:
+        case 'spikes':
+          const spikes = this.matter.add.rectangle(x+ (width*0.5), y+(height*0.5), width, height, {
+            isStatic: true
+          })
+          this.obstacles.add('spikes', spikes)
           break;
       }
     })

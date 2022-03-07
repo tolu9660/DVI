@@ -1,17 +1,21 @@
 import Star from './star.js';
 
+import { sceneEvents as events } from './EventsCenter.js';
+
 import NewStateMachine from './newStateMachine.js';
 //import StateMachine from './StateMachine.js';
 /**
  * Clase que representa el jugador del juego. El jugador se mueve por el mundo usando los cursores.
  * También almacena la puntuación o número de estrellas que ha recogido hasta el momento.
  */
-export default class PlayerController extends Phaser.Scene{
+export default class PlayerController {
   
-    constructor(sprite, cursors){
-      super({ key: 'player-controller' });
+    constructor(scene,sprite, cursors, obstacles){
+      // super({ key: 'player-controller' });
+        this.scene = scene,
         this.sprite = sprite;
         this.cursors = cursors;
+        this.obstacles = obstacles;
 
         this.createAlienAnimation();
 
@@ -30,31 +34,42 @@ export default class PlayerController extends Phaser.Scene{
             onEnter: this.jumpOnEnter,
             onUpdate: this.jumpOnUpdate
           })
+          .addState('spike-hit', {
+            onEnter: this.spikeOnEnter,
+          })
           .setState('idle');
 
           this.sprite.setOnCollide((data) => {
             const body = data.bodyB;
             const gameObject = body.gameObject
-            //console.log(gameObject);
-            console.log(gameObject.type);
+            console.log(this.obstacles.is('spikes', body))
+            if (this.obstacles.is('spikes', body)) {
+              this.NewStateMachine.setState('spike-hit')
+              return
+            }
+
             if (!gameObject) {
               return
             }
-            if (gameObject) {
+            if (gameObject instanceof Phaser.Physics.Matter.TileBody) {
               if (this.NewStateMachine.isCurrentState('jump')) {
                 this.NewStateMachine.setState('idle')
               }
               return
             }
               const sprite = gameObject;
-              const type = sprite.getData('type')
+              const type = gameObject.getData('type')
               switch (type) {
                 case 'star':
+                  events.emit('star-collected')
+                  gameObject.destroy();
                   console.log('collyde with star')
                   break;
               
                 default:
                   break;
+
+                  
               }
               
           })
@@ -113,6 +128,37 @@ export default class PlayerController extends Phaser.Scene{
         this.sprite.setVelocityX(speed);
         // this.alien.play('player-walk', true)
       }
+    }
+
+    spikeOnEnter() {
+      this.sprite.setVelocityY(-6)
+
+      const startColor = Phaser.Display.Color.ValueToColor(0xffffff)
+      const endColor = Phaser.Display.Color.ValueToColor(0xff0000)
+
+      this.scene.tweens.addCounter({
+        from: 0,
+        to: 100,
+        duration: 100,
+        repeat: 2,
+        yoyo: true,
+        onUpdate: tween => {
+          const value = tween.getValue()
+          const colorObject = Phaser.Display.Color.Interpolate.ColorWithColor(
+            startColor,
+            endColor,
+            100,
+            value
+          )
+          const color = Phaser.Display.Color.GetColor(
+            colorObject.r,
+            colorObject.g,
+            colorObject.b
+          )
+          this.sprite.setTint(color)
+        }
+      })
+      this.NewStateMachine.setState('idle')
     }
 
     update(dt){
