@@ -168,8 +168,8 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":176,
-                 "x":1360,
+                 "width":136,
+                 "x":1400,
                  "y":1429
                 }, 
                 {
@@ -274,6 +274,24 @@
                         }]
                 }, 
                 {
+                 "id":6,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"string",
+                         "value":"false"
+                        }]
+                }, 
+                {
+                 "id":7,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"string",
+                         "value":"false"
+                        }]
+                }, 
+                {
                  "id":8,
                  "properties":[
                         {
@@ -351,7 +369,7 @@
                         {
                          "name":"collides",
                          "type":"string",
-                         "value":"true"
+                         "value":"false"
                         }]
                 }, 
                 {
@@ -387,7 +405,7 @@
                         {
                          "name":"collides",
                          "type":"string",
-                         "value":"true"
+                         "value":"false"
                         }]
                 }, 
                 {
@@ -414,7 +432,7 @@
                         {
                          "name":"collides",
                          "type":"string",
-                         "value":"true"
+                         "value":"false"
                         }]
                 }, 
                 {
@@ -441,7 +459,7 @@
                         {
                          "name":"collides",
                          "type":"string",
-                         "value":"true"
+                         "value":"false"
                         }]
                 }, 
                 {

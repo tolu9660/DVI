@@ -35,6 +35,16 @@
     <property name="collides" value="true"/>
    </properties>
   </tile>
+  <tile id="6">
+   <properties>
+    <property name="collides" value="false"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="collides" value="false"/>
+   </properties>
+  </tile>
   <tile id="8">
    <properties>
     <property name="collides" value="true"/>
@@ -77,7 +87,7 @@
   </tile>
   <tile id="17">
    <properties>
-    <property name="collides" value="true"/>
+    <property name="collides" value="false"/>
    </properties>
   </tile>
   <tile id="18">
@@ -97,7 +107,7 @@
   </tile>
   <tile id="25">
    <properties>
-    <property name="collides" value="true"/>
+    <property name="collides" value="false"/>
    </properties>
   </tile>
   <tile id="26">
@@ -112,7 +122,7 @@
   </tile>
   <tile id="33">
    <properties>
-    <property name="collides" value="true"/>
+    <property name="collides" value="false"/>
    </properties>
   </tile>
   <tile id="34">
@@ -127,7 +137,7 @@
   </tile>
   <tile id="41">
    <properties>
-    <property name="collides" value="true"/>
+    <property name="collides" value="false"/>
    </properties>
   </tile>
   <tile id="48">
@@ -193,7 +203,7 @@
   <object id="21" name="enemy" x="3333.33" y="1251.52" width="127.273" height="151.515"/>
   <object id="23" name="helecho" x="50" y="1252" width="184" height="42"/>
   <object id="26" name="helecho" x="864" y="1119" width="184" height="42"/>
-  <object id="28" name="helecho" x="1360" y="1429" width="176" height="42"/>
+  <object id="28" name="helecho" x="1400" y="1429" width="136" height="42"/>
   <object id="29" name="cueva" x="648" y="1476" width="888" height="64"/>
   <object id="32" name="hero" x="440" y="868" width="136" height="144"/>
  </objectgroup>
