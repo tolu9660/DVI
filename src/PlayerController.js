@@ -65,6 +65,18 @@ export default class PlayerController {
                   gameObject.destroy();
                   console.log('collyde with star')
                   break;
+
+                  case 'key':
+                    events.emit('key-collected')
+                    gameObject.destroy();
+                    console.log('collyde with key')
+                    break;
+
+                    case 'heart':
+                      events.emit('heart-collected')
+                      gameObject.destroy();
+                      console.log('collyde with key')
+                      break;
               
                 default:
                   break;
@@ -158,6 +170,7 @@ export default class PlayerController {
           this.sprite.setTint(color)
         }
       })
+      events.emit('minus-health')
       this.NewStateMachine.setState('idle')
     }
 

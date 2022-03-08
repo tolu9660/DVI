@@ -91,7 +91,26 @@ export default class Level extends Phaser.Scene {
           })
           this.obstacles.add('spikes', spikes)
           break;
+          case 'key': {
+            const key = this.matter.add.sprite(x, y, 'key',undefined,{
+              isStatic:true,
+              isSensor:true,
+            })
+            key.setScale('0.5', '0.5')
+            key.setData('type', 'key')
+            break;
+          }
+          case 'heart': {
+            const key = this.matter.add.sprite(x, y, 'ui-heart-full',undefined,{
+              isStatic:true,
+              isSensor:true,
+            })
+            key.setScale('2', '2')
+            key.setData('type', 'heart')
+            break;
+          }
       }
+      
     })
     
     this.matter.world.convertTilemapLayer(this.groundLayer);
