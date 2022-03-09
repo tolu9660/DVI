@@ -221,6 +221,12 @@ El protagonista tendrá una pistola la cual dispara tiros normales, podrá carga
 Los enemigos dispondrán de armas para atacar al protagonista.
 
 #### Objetos
+| **Objeto** | **Descripción** |
+| --- | --- |
+| **Corazón** | Este objeto le dará al jugador la capacidad de recuperar una vida por cada corazón recogido.  |
+| **Celula de energia** | Este objeto dará al jugador la posibilidad de disparar su arma |
+| **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. |
+| **Muro** | El jugador podrá encontrar muros los cuales podrá desplazar y usarlos como ventajas contra enemigos y obstáculos. |
 ##### Corazón: 
 Este objeto le dará al jugador la capacidad de recuperar una vida por cada corazón recogido. 
 ##### Celula de energia: 
