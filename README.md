@@ -201,7 +201,7 @@ El equipo dividió las funciones en tareas y las repartió a los miembros del eq
 MIEMBROS DEL EQUIPO
 |---------------------------------------------------------------------------------------|
 |Nombre                       | Diseño | Gestion | Arte | Comunicación | Implementación |
-|---------------------------------------------------------------------------------------|
+|-----------------------------|--------|---------|------|--------------|----------------|
 |Jesús Vélez Ayuso            |   22   |    25   |  10  |      25      |       40       |
 |Álvaro Gómez Morán           |   30   |    20   |  30  |      25      |       20       |
 |Luis Gabriel Román Santillán |   22   |    30   |  25  |      25      |       20       |
