@@ -20,59 +20,61 @@ Pc
 #### Sinopsis de Jugabilidad y Contenido: 
 Vivir la experiencia en distintos mundos de plataformas,  en donde tendrás que usar una llave para rescatar a los distintos miembros de la familia, y reunirlos a todos
 #### Público: Para todos los públicos
-HISTORIAL DE VERSIONES
-Hito 0:
+
+### HISTORIAL DE VERSIONES
+#### Hito 0:
 Añadir el rescate de la familia, al introducir una llave en el nivel el usuario la debe obtener para salvar al miembro de la familia, donde la familia está compuesta por 4 miembros y en el último la llave se obtendrá venciendo al boss
-VISIÓN GENERAL DEL JUEGO
-	El protagonista de la historia será un padre de familia la cual ha sido secuestrada por unos alienígenas. Este padre debe recorrer distintos mundos para recuperar a su familia al completo y donde se encontrará con distintos obstáculos y enemigos. 
- 
- 
-MECÁNICA DEL JUEGO 
-Mover
-	Haciendo uso de los controles del teclado el jugador podrá mover al personaje por los niveles del juego. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. Si el personaje se encuentra con un objeto movible podrá desplazar el objeto al moverse. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance. Podemos encontrar dentro de esta mecánica la mecánica derivada del salto. 
-Saltar: El personaje se impulsará hacia arriba  con un salto al pulsar el botón correspondiente. El personaje solo tiene las posibilidades de hacer doble salto y salto simple. El personaje debe volver a tocar una superficie para realizar alguno de los dos posibles saltos.
-Atacar
-	El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos o utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos.
-Interactuar
-	El personaje podrá interactuar con 3 objetos distintos. Los cuales serán los corazones, las células de energía y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
-Pausar el juego
-	Al pulsar el botón de pausa del juego, toda acción se paralizará. Aparecerá un menú con estas opciones:  
-Reanudar partida
-Configuración de sonido
-Configuración de musica 
-Salir 
-INTERFACES
-Pantalla de juego
 
+### VISIÓN GENERAL DEL JUEGO
+El protagonista de la historia será un padre de familia la cual ha sido secuestrada por unos alienígenas. Este padre debe recorrer distintos mundos para recuperar a su familia al completo y donde se encontrará con distintos obstáculos y enemigos. 
+ 
+### MECÁNICA DEL JUEGO 
+#### Mover
+Haciendo uso de los controles del teclado el jugador podrá mover al personaje por los niveles del juego. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. Si el personaje se encuentra con un objeto movible podrá desplazar el objeto al moverse. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance. Podemos encontrar dentro de esta mecánica la mecánica derivada del salto. 
+#### Saltar: 
+El personaje se impulsará hacia arriba  con un salto al pulsar el botón correspondiente. El personaje solo tiene las posibilidades de hacer doble salto y salto simple. El personaje debe volver a tocar una superficie para realizar alguno de los dos posibles saltos.
+#### Atacar
+El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos o utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos.
+#### Interactuar
+El personaje podrá interactuar con 3 objetos distintos. Los cuales serán los corazones, las células de energía y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
+#### Pausar el juego
+Al pulsar el botón de pausa del juego, toda acción se paralizará. Aparecerá un menú con estas opciones:  
+##### Reanudar partida
+##### Configuración de sonido
+##### Configuración de musica 
+##### Salir 
+
+### INTERFACES
+#### Pantalla de juego
 En la pantalla del juego podemos ver las vidas qué le quedan al jugador y las células de energía qué tiene.
-Pantalla de pausa
-
+#### Pantalla de pausa
 En esta pantalla tenemos 4 opciones:
-Reanudar partida
-Configuración de sonido
-Configuración de musica 
-Salir
-Menú principal
+##### Reanudar partida
+##### Configuración de sonido
+##### Configuración de musica 
+##### Salir
 
-Jugar: Comienza la partida.
-Opciones:
-Configuración de sonido y música
-Configuración de controles
-Creditos: Sale una lista de los creadores.
-Salir: Te mantiene en la pantalla principal.
+#### Menú principal
+##### Jugar: 
+Comienza la partida.
+##### Opciones:
+##### Configuración de sonido y música
+##### Configuración de controles
+##### Creditos: 
+Sale una lista de los creadores.
+##### Salir: 
+Te mantiene en la pantalla principal.
  
- 
- 
- 
-NIVELES
-Tutorial
-Encuentro: un tutorial, donde el jugador estará en un nivel básico para familiarizarse con los controles y objetivos
-Objetivos: Encontrar la llave para al final del nivel salvar al primer miembro de la familia
-Enemigos: 1 enemigo npc
-Items: Objetos de empujar, vidas y celulas de energia
-Personajes: Personaje principal y el marciano verde.
-Música y Efectos de Sonido: 
-Nivel 1
+### NIVELES
+#### Tutorial
+##### Encuentro: un tutorial, donde el jugador estará en un nivel básico para familiarizarse con los controles y objetivos
+##### Objetivos: Encontrar la llave para al final del nivel salvar al primer miembro de la familia
+##### Enemigos: 1 enemigo npc
+##### Items: Objetos de empujar, vidas y celulas de energia
+##### Personajes: Personaje principal y el marciano verde.
+##### Música y Efectos de Sonido: 
+
+##### Nivel 1
 Encuentro: Una pantalla en la cual el jugador debe ir aplicando las distintas acciones que ha ido aprendiendo a lo largo del tutorial. Al mismo tiempo debe enfrentarse a su primer enemigo, este se va a encargar de poner las cosas difíciles al personaje principal
 Objetivos:Encontrar la llave para al final del nivel salvar al miembro de la familia
 Enemigos: 1 enemigo npc
