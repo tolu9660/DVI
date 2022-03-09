@@ -142,80 +142,34 @@ En The kreephaser no hay posibilidad de elección del jugador. El protagonista s
 
 ##### Vadum
 Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma cuando obtenga células de energía para su funcionamiento.
+|    Nombre       |  Daño  |  Vida   |   Nivel   |                                       Imagen                                          |
+|    Vadum        |   1-2  |   6     |   Todos   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Hero-Boy-Run-Shoot1.png) |
+
 ##### ENEMIGOS
 En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mundo.
-Imagen
-Nombre
-Daño producido
-Niveles en los que aparecen
+|    Nombres      |  Daño  |   Nivel   |                                       Imagen                                          |
+|---|---|---|---|
+|    Jackal       |   1    | Tutorial  |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien1%20Walk1.png)      |
+|    Shangheli    |   1    | Nivel 1   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien2%20Walk1.png)      |                                                 
+|    Grunt        |   1    | Nivel 1   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien3%20Attack1_1.png)  |
+|    Sapien       |  1,5   | Nivel 1   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien4%20Attack1_01.png) |                                                 
+|    Feoña        |  1,5   | Nivel 2   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien5%20Walk1.png)      |                                                 
+|    Drago        |  1,5   | Nivel 2   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Attack_1.png)      |                                                 
+|    Ralp         |   2    | Nivel 2   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien7%20Death1.png)     |
+|    Bozapatilla  |   2    | Nivel 2   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien8-Idle01.png)       |                                                 
+|    Galrado      |  2,5   | Nivel 3-4 |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Idle_1.png)        |                                                 
+|    Laon         |   2    | Nivel 3   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Idle_2.png)        |                                                 
+|    Añatort      |   3    | Nivel 3-4 |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Idle_3.png)        |                                                 
+|    Cocodry      |   2    | Nivel 3   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Jump_2.png)        |                                                 
+|    Lobeznotird  |  2,5   | Nivel 4   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Jump_3.png)        |                                                 
+|    Marinavja    |   3    | Nivel 4   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Hit_1.png)         | 
 
-Jackal
-1 vida
-Tutorial
+#####BOSS
+Crawler, es el que tiene secuestrado a los miembros de la familia de Vadum, tiene a su disposicion a un equipo de alinigenas y mutantes para hacerle la vida imposible a nuestro protagonista en su mision de recuperar a su familia. 
+|    Nombre       |  Daño  |   Nivel   |                                       Imagen                                          |
+|    Crawler      |   4    |      4    | (https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Boss%20Run1.png)        |
 
-Shangheili
-1 vida
-Nivel 1
 
-Grunt
-1 vida
-Nivel 1
-
-Sapien
-1,5 vida
-Nivel 1
-
-Feoña
-1,5 vida
-Nivel 2
-
-Drago
-1,5 vida
-Nivel 2
-
-Ralph
-2 vida
-Nivel 2
-
-Bozapatilla
-2 vida
-Nivel 2
-
-Galrado
-2,5 vida
-Nivel 3-4
-
-Laon
-2 vida
-Nivel 3
-
-Añatort
-3 vida
-Nivel 3-4
-
-Cocodry
-2 vida
-Nivel 3
-
-Marinavaja
-3 vida
-Nivel 4
-
-Lobeznotrid
-2,5 vida
-Nivel 4
-
-Boss Final
-Imagen
-Nombre
-Daño
-Nivel que aparece
-
-Crawler
-4 vidas
-Nivel 4
-
- 
 #### Armas 
 El protagonista tendrá una pistola la cual dispara tiros normales, podrá cargar y disparar con más potencia si recolecta células de energía.
 Los enemigos dispondrán de armas para atacar al protagonista.
@@ -227,7 +181,7 @@ Los enemigos dispondrán de armas para atacar al protagonista.
 | **Celula de energia** | Este objeto dará al jugador la posibilidad de disparar su arma | ![célula de energía](https://github.com/tolu9660/DVI/blob/main/assets/sprites/energia.png)
 | **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. | ![llave](https://github.com/tolu9660/DVI/blob/main/assets/sprites/key.png)
 | **Muro** | El jugador podrá encontrar muros los cuales podrá desplazar y usarlos como ventajas contra enemigos y obstáculos. | ![muro](https://github.com/tolu9660/DVI/blob/main/assets/sprites/piedra.png)
- 
+
 #### LOGROS
 Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
 
