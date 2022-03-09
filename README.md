@@ -5,14 +5,21 @@ Este juego ha sido desarrollado por Carlos León Aznar. En este repositorio cont
 
 # GDD
 
-## Título:  The Kreephaser
-### Motor gráfico: Phaser 3
-#### Estilo gráfico: 2D	
-Género: Plataformas
-Plataforma: Pc
-Versión: 1
-Sinopsis de Jugabilidad y Contenido: Vivir la experiencia en distintos mundos de plataformas,  en donde tendrás que usar una llave para rescatar a los distintos miembros de la familia, y reunirlos a todos
-Público: Para todos los públicos
+#### Título:  
+The Kreephaser
+#### Motor gráfico: 
+Phaser 3
+#### Estilo gráfico: 
+2D	
+#### Género: 
+Plataformas
+#### Plataforma: 
+Pc
+#### Versión: 
+1
+#### Sinopsis de Jugabilidad y Contenido: 
+Vivir la experiencia en distintos mundos de plataformas,  en donde tendrás que usar una llave para rescatar a los distintos miembros de la familia, y reunirlos a todos
+#### Público: Para todos los públicos
 HISTORIAL DE VERSIONES
 Hito 0:
 Añadir el rescate de la familia, al introducir una llave en el nivel el usuario la debe obtener para salvar al miembro de la familia, donde la familia está compuesta por 4 miembros y en el último la llave se obtendrá venciendo al boss
