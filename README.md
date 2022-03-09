@@ -170,7 +170,7 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 Crawler, es el que tiene secuestrado a los miembros de la familia de Vadum, tiene a su disposicion a un equipo de alinigenas y mutantes para hacerle la vida imposible a nuestro protagonista en su mision de recuperar a su familia. 
 
 |    Nombre       |  Daño  |   Nivel   |                                       Imagen                                          |
-|    Crawler      |   4    |      4    | (https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Boss%20Run1.png)        |
+|    Crawler      |   4    |      4    | ![boss](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Boss%20Run1.png)        |
 |                 |        |           |                                                                                       |
 
 #### Armas 
