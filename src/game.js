@@ -20,7 +20,7 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Inicio,Opciones,Boot, Level,GameUI, Creditos, End],
+    scene: [Boot, Level,GameUI, Creditos, End],
     physics: {
         default: 'matter',//cambiado el arcade
         matter: {

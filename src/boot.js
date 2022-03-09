@@ -31,9 +31,9 @@ export default class Boot extends Phaser.Scene {
     // this.load.image('walls',"/tilemaps/wall.png");  
 
     //cargamos el alien
-    // this.load.atlas('alien','alien.png', 'alien.json');
+    this.load.atlas('alien','alien.png', 'alien.json');
     this.load.atlas('enemigo','enemigo.png', 'enemigo.json');
-    this.load.atlas('alien','hero.png', 'hero.json');
+    this.load.atlas('hero','hero.png', 'hero.json');
     
     //SUELOS NIVEL 1 (imagenes del suelo)
     this.load.image('suelo',"/tilemaps/suelo.png");  

@@ -2,6 +2,7 @@
 //import Player from './player.js';
 ////import piedra from './piedra.js';
 import PlayerController from './PlayerController.js'
+import enemyController from './EnemyController.js'
 import ObstaclesController from './ObstaclesController.js';
 
 /**
@@ -57,7 +58,7 @@ export default class Level extends Phaser.Scene {
       const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'alien_spawn': { 
-          this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
+          this.alien = this.matter.add.sprite(x + (width*0.5),y, 'hero')
           .setScale('0.5')  
           .setFixedRotation();
 
@@ -111,10 +112,15 @@ export default class Level extends Phaser.Scene {
             break;
           }
           case 'enemigo': { 
-            this.enemy = this.matter.add.sprite(x ,y, 'enemigo')
-              .setFixedRotation()
-              .setScale('0.7')
- 
+            this.enemy = this.matter.add.sprite(x ,y, 'alien')
+            .setScale('0.7')  
+            .setFixedRotation()
+              
+
+              this.enemyController = new enemyController(
+                this,
+                this.enemy
+                )
             break;
           }
       }
@@ -130,7 +136,7 @@ export default class Level extends Phaser.Scene {
       return
     }    
     this.playerController.update(dt);
-    
+    this.enemyController.update(dt);
   }
 
 

@@ -206,7 +206,7 @@ export default class PlayerController {
       this.sprite.anims.create({
         key:'player-idle',
         frameRate: 7,
-        frames:this.sprite.anims.generateFrameNames('alien', {
+        frames:this.sprite.anims.generateFrameNames('hero', {
           start: 1,
           end: 13,
           prefix: 'Hero_Boy_Idle',
@@ -218,7 +218,7 @@ export default class PlayerController {
       this.sprite.anims.create({
         key:'player-walk',
         frameRate: 5,
-        frames:this.sprite.anims.generateFrameNames('alien', {
+        frames:this.sprite.anims.generateFrameNames('hero', {
           start: 0,
           end: 5,
           prefix: 'Hero-Boy-Run-',
