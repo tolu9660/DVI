@@ -6,8 +6,8 @@ Este juego ha sido desarrollado por Carlos León Aznar. En este repositorio cont
 # GDD
 
 ## Título:  The Kreephaser
-Motor gráfico: Phaser 3
-Estilo gráfico: 2D	
+### Motor gráfico: Phaser 3
+#### Estilo gráfico: 2D	
 Género: Plataformas
 Plataforma: Pc
 Versión: 1
