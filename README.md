@@ -142,8 +142,10 @@ En The kreephaser no hay posibilidad de elección del jugador. El protagonista s
 
 ##### Vadum
 Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma cuando obtenga células de energía para su funcionamiento.
+
 |    Nombre       |  Daño  |  Vida   |   Nivel   |                                       Imagen                                          |
 |    Vadum        |   1-2  |   6     |   Todos   |(https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Hero-Boy-Run-Shoot1.png) |
+|                 |        |         |           |                                                                                       |
 
 ##### ENEMIGOS
 En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mundo.
@@ -166,9 +168,10 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 
 #####BOSS
 Crawler, es el que tiene secuestrado a los miembros de la familia de Vadum, tiene a su disposicion a un equipo de alinigenas y mutantes para hacerle la vida imposible a nuestro protagonista en su mision de recuperar a su familia. 
+
 |    Nombre       |  Daño  |   Nivel   |                                       Imagen                                          |
 |    Crawler      |   4    |      4    | (https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Boss%20Run1.png)        |
-
+|                 |        |           |                                                                                       |
 
 #### Armas 
 El protagonista tendrá una pistola la cual dispara tiros normales, podrá cargar y disparar con más potencia si recolecta células de energía.
