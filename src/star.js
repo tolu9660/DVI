@@ -40,3 +40,4 @@ export default class Star extends Phaser.GameObjects.Sprite {
   }
 }
 //hola
+//hola esta es una prueba para comprobar que todo funciona 
