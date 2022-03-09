@@ -1,9 +1,8 @@
-import Star from './star.js';
+
 
 import { sceneEvents as events } from './EventsCenter.js';
 
 import NewStateMachine from './newStateMachine.js';
-//import StateMachine from './StateMachine.js';
 /**
  * Clase que representa el jugador del juego. El jugador se mueve por el mundo usando los cursores.
  * También almacena la puntuación o número de estrellas que ha recogido hasta el momento.
@@ -60,19 +59,19 @@ export default class PlayerController {
               const sprite = gameObject;
               const type = gameObject.getData('type')
               switch (type) {
-                case 'star':
+                case 'energia':
                   events.emit('star-collected')
                   gameObject.destroy();
                   console.log('collyde with star')
                   break;
 
-                  case 'key':
+                  case 'llave':
                     events.emit('key-collected')
                     gameObject.destroy();
                     console.log('collyde with key')
                     break;
 
-                    case 'heart':
+                    case 'corazon':
                       events.emit('heart-collected')
                       gameObject.destroy();
                       console.log('collyde with key')
@@ -105,11 +104,11 @@ export default class PlayerController {
       const speed = 5
 
       if (this.cursors.left.isDown) {
-        this.sprite.flipX = true;
+        this.sprite.flipX = false;
         this.sprite.setVelocityX(-speed);
       }
       else if (this.cursors.right.isDown) {
-        this.sprite.flipX = false;
+        this.sprite.flipX = true;
         this.sprite.setVelocityX(speed);
       }
       else {
@@ -131,12 +130,12 @@ export default class PlayerController {
       const speed = 5
 
       if (this.cursors.left.isDown) {
-        this.sprite.flipX = true;
+        this.sprite.flipX = false;
         this.sprite.setVelocityX(-speed);
         // this.alien.play('player-walk', true)
       }
       else if (this.cursors.right.isDown) {
-        this.sprite.flipX = false;
+        this.sprite.flipX = true;
         this.sprite.setVelocityX(speed);
         // this.alien.play('player-walk', true)
       }
@@ -180,13 +179,37 @@ export default class PlayerController {
 
     createAlienAnimation(){
 
+      // this.sprite.anims.create({
+      //   key:'player-idle',
+      //   frameRate: 7,
+      //   frames:this.sprite.anims.generateFrameNames('alien', {
+      //     start: 1,
+      //     end: 3,
+      //     prefix: 'predatormask_idle_',
+      //     suffix: '.png'
+      //   }),
+      //   repeat: -1
+      // })
+  
+      // this.sprite.anims.create({
+      //   key:'player-walk',
+      //   frameRate: 10,
+      //   frames:this.sprite.anims.generateFrameNames('alien', {
+      //     start: 1,
+      //     end: 6,
+      //     prefix: 'predatormask__0006_walk_',
+      //     suffix: '.png'
+      //   }),
+      //   repeat: -1
+      // })
+
       this.sprite.anims.create({
         key:'player-idle',
         frameRate: 7,
         frames:this.sprite.anims.generateFrameNames('alien', {
           start: 1,
-          end: 3,
-          prefix: 'predatormask_idle_',
+          end: 13,
+          prefix: 'Hero_Boy_Idle',
           suffix: '.png'
         }),
         repeat: -1
@@ -194,15 +217,16 @@ export default class PlayerController {
   
       this.sprite.anims.create({
         key:'player-walk',
-        frameRate: 10,
+        frameRate: 5,
         frames:this.sprite.anims.generateFrameNames('alien', {
-          start: 1,
-          end: 6,
-          prefix: 'predatormask__0006_walk_',
+          start: 0,
+          end: 5,
+          prefix: 'Hero-Boy-Run-',
           suffix: '.png'
         }),
         repeat: -1
       })
+
     }
   
 

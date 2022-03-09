@@ -1,9 +1,7 @@
 //import Platform from './platform.js';
 //import Player from './player.js';
 ////import piedra from './piedra.js';
-import PlayerControler from './PlayerController.js'
-
-import { sceneEvents as events} from './EventsCenter.js'; 
+import PlayerController from './PlayerController.js'
 import ObstaclesController from './ObstaclesController.js';
 
 /**
@@ -46,7 +44,6 @@ export default class Level extends Phaser.Scene {
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
     this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
     
-    this.load.image('star', 'assets/start.png')
 
     //this.groundLayer.setCollisionByProperty({collides: true});
     //this.groundLayer = this.map.createLayer('ground', [tileset1])
@@ -61,9 +58,12 @@ export default class Level extends Phaser.Scene {
       switch (name) {
         case 'alien_spawn': { 
           this.alien = this.matter.add.sprite(x + (width*0.5),y, 'alien')
-            .setFixedRotation();
+          .setScale('0.5')  
+          .setFixedRotation();
 
-          this.playerController = new PlayerControler(
+          
+
+          this.playerController = new PlayerController(
             this,
             this.alien, 
             this.cursors, 
@@ -77,12 +77,13 @@ export default class Level extends Phaser.Scene {
 
           break;
         }
-        case 'star': {
-          const star = this.matter.add.sprite(x, y, 'star',undefined,{
+        case 'energia': {
+          const star = this.matter.add.sprite(x, y, 'energia',undefined,{
             isStatic:true,
             isSensor:true
           })
-          star.setData('type', 'star')
+          star.setScale('0.5','0.5')
+          star.setData('type', 'energia')
           break;
         }
         case 'spikes':
@@ -91,22 +92,29 @@ export default class Level extends Phaser.Scene {
           })
           this.obstacles.add('spikes', spikes)
           break;
-          case 'key': {
-            const key = this.matter.add.sprite(x, y, 'key',undefined,{
+          case 'llave': {
+            const key = this.matter.add.sprite(x, y, 'llave',undefined,{
               isStatic:true,
               isSensor:true,
             })
             key.setScale('0.5', '0.5')
-            key.setData('type', 'key')
+            key.setData('type', 'llave')
             break;
           }
-          case 'heart': {
-            const key = this.matter.add.sprite(x, y, 'ui-heart-full',undefined,{
+          case 'corazon': {
+            const key = this.matter.add.sprite(x, y, 'corazon',undefined,{
               isStatic:true,
               isSensor:true,
             })
-            key.setScale('2', '2')
-            key.setData('type', 'heart')
+            key.setScale('0.5', '0.5')
+            key.setData('type', 'corazon')
+            break;
+          }
+          case 'enemigo': { 
+            this.enemy = this.matter.add.sprite(x ,y, 'enemigo')
+              .setFixedRotation()
+              .setScale('0.7')
+ 
             break;
           }
       }
@@ -118,11 +126,11 @@ export default class Level extends Phaser.Scene {
   }
 
   update(t, dt){
-    //console.log(this.playerController.statesPlayer.state)
     if (!this.playerController) {
       return
     }    
     this.playerController.update(dt);
+    
   }
 
 

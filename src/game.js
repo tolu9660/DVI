@@ -16,11 +16,11 @@ let config = {
     width: 1000,
     height: 480,
     scale: {
-        // mode: Phaser.Scale.FIT,  
+        mode: Phaser.Scale.FIT,  
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Boot, Level,GameUI, End],
+    scene: [Inicio,Opciones,Boot, Level,GameUI, Creditos, End],
     physics: {
         default: 'matter',//cambiado el arcade
         matter: {
