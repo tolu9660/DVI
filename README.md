@@ -199,12 +199,11 @@ DETALLES DE PRODUCCIÓN
 El equipo dividió las funciones en tareas y las repartió a los miembros del equipo en forma de spring semanales. En estas imágenes podemos observar las funciones definidas desde el principio hasta el momento.
 
 MIEMBROS DEL EQUIPO
-----------------------------------------------------------------------------------------
-Nombre                       | Diseño | Gestion | Arte | Comunicación | Implementación |
-Jesús Vélez Ayuso            |   22   |    25   |  10  |      25      |       40       |
-Álvaro Gómez Morán           |   30   |    20   |  30  |      25      |       20       |
-Luis Gabriel Román Santillán |   22   |    30   |  25  |      25      |       20       |
-David Domínguez Gutiérrez    |   26   |    25   |  35  |      25      |       20       |
-----------------------------------------------------------------------------------------
-
-
+|---------------------------------------------------------------------------------------|
+|Nombre                       | Diseño | Gestion | Arte | Comunicación | Implementación |
+|---------------------------------------------------------------------------------------|
+|Jesús Vélez Ayuso            |   22   |    25   |  10  |      25      |       40       |
+|Álvaro Gómez Morán           |   30   |    20   |  30  |      25      |       20       |
+|Luis Gabriel Román Santillán |   22   |    30   |  25  |      25      |       20       |
+|David Domínguez Gutiérrez    |   26   |    25   |  35  |      25      |       20       |
+|---------------------------------------------------------------------------------------|
