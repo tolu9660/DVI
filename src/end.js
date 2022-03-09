@@ -15,7 +15,9 @@ export default class End extends Phaser.Scene {
    * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
    */
   create() {
-    this.add.text(500, 250, 'Se acabó!\nPulsa cualquier tecla para volver a jugar')
+    this.add.text(500, 250, 'Se acabó!\nPulsa cualquier tecla para volver a jugar', {
+      	fontSize: '24px',
+      })
         .setOrigin(0.5, 0.5)  // Colocamos el pivote en el centro de cuadro de texto 
         .setAlign('center');  // Centramos el texto dentro del cuadro de texto
 
@@ -24,8 +26,31 @@ export default class End extends Phaser.Scene {
     // ir moviendo al jugador). Se puede mejorar añadiendo un temporizador que 
     // añada este listener pasado un segundo
     this.input.keyboard.on('keydown', function (event) { 
-      this.scene.start('level');
+      this.scene.start('boot')
     }, this);
+
+
+    // const { width, height } = this.scale
+
+		// this.add.text(width * 0.5, height * 0.3, 'Game Over', {
+		// 	fontSize: '52px',
+		// 	color: '#ff0000'
+		// })
+		// .setOrigin(0.5)
+
+		// const button = this.add.rectangle(width * 0.5, height * 0.55, 150, 75, 0xffffff)
+		// 	.setInteractive()
+		// 	.on(Phaser.Input.Events.GAMEOBJECT_POINTER_UP, () => {
+				
+    //     this.scene.start('boot')
+		// 	})
+
+		// this.add.text(button.x, button.y, 'Play Again', {
+		// 	color: '#000000'
+		// })
+		// .setOrigin(0.5)
+
+
   }
 
 }

@@ -1,0 +1,260 @@
+{"frames": [
+
+{
+	"filename": "predatormask_idle_1.png",
+	"frame": {"x":1,"y":808,"w":40,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":69},
+	"sourceSize": {"w":40,"h":69}
+},
+{
+	"filename": "predatormask_idle_2.png",
+	"frame": {"x":1,"y":372,"w":40,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":71},
+	"sourceSize": {"w":40,"h":71}
+},
+{
+	"filename": "predatormask_idle_3.png",
+	"frame": {"x":1,"y":76,"w":40,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":72},
+	"sourceSize": {"w":40,"h":72}
+},
+{
+	"filename": "predatormask__0003_turn_1.png",
+	"frame": {"x":1,"y":664,"w":40,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":70},
+	"sourceSize": {"w":40,"h":70}
+},
+{
+	"filename": "predatormask__0004_turn_2.png",
+	"frame": {"x":1,"y":736,"w":40,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":70},
+	"sourceSize": {"w":40,"h":70}
+},
+{
+	"filename": "predatormask__0005_turn_3.png",
+	"frame": {"x":1,"y":445,"w":40,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":71},
+	"sourceSize": {"w":40,"h":71}
+},
+{
+	"filename": "predatormask__0006_walk_1.png",
+	"frame": {"x":1,"y":518,"w":40,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":71},
+	"sourceSize": {"w":40,"h":71}
+},
+{
+	"filename": "predatormask__0006_walk_2.png",
+	"frame": {"x":1,"y":150,"w":40,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":72},
+	"sourceSize": {"w":40,"h":72}
+},
+{
+	"filename": "predatormask__0006_walk_3.png",
+	"frame": {"x":1,"y":224,"w":40,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":72},
+	"sourceSize": {"w":40,"h":72}
+},
+{
+	"filename": "predatormask__0006_walk_4.png",
+	"frame": {"x":1,"y":1228,"w":40,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":66},
+	"sourceSize": {"w":40,"h":66}
+},
+{
+	"filename": "predatormask__0006_walk_5.png",
+	"frame": {"x":1,"y":1296,"w":40,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":66},
+	"sourceSize": {"w":40,"h":66}
+},
+{
+	"filename": "predatormask__0006_walk_6.png",
+	"frame": {"x":1,"y":1090,"w":40,"h":67},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":67},
+	"sourceSize": {"w":40,"h":67}
+},
+{
+	"filename": "predatormask__0012_run_1.png",
+	"frame": {"x":1,"y":591,"w":40,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":71},
+	"sourceSize": {"w":40,"h":71}
+},
+{
+	"filename": "predatormask__0013_run_2.png",
+	"frame": {"x":1,"y":298,"w":40,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":72},
+	"sourceSize": {"w":40,"h":72}
+},
+{
+	"filename": "predatormask__0014_run_3.png",
+	"frame": {"x":1,"y":950,"w":40,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":68},
+	"sourceSize": {"w":40,"h":68}
+},
+{
+	"filename": "predatormask__0015_run_4.png",
+	"frame": {"x":1,"y":1159,"w":40,"h":67},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":67},
+	"sourceSize": {"w":40,"h":67}
+},
+{
+	"filename": "predatormask__0016_run_5.png",
+	"frame": {"x":1,"y":1364,"w":40,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":66},
+	"sourceSize": {"w":40,"h":66}
+},
+{
+	"filename": "predatormask__0017_run_6.png",
+	"frame": {"x":1,"y":1500,"w":40,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":65},
+	"sourceSize": {"w":40,"h":65}
+},
+{
+	"filename": "predatormask__0018_hurt_1.png",
+	"frame": {"x":1,"y":879,"w":40,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":69},
+	"sourceSize": {"w":40,"h":69}
+},
+{
+	"filename": "predatormask__0019_hurt_2.png",
+	"frame": {"x":1,"y":1020,"w":40,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":68},
+	"sourceSize": {"w":40,"h":68}
+},
+{
+	"filename": "predatormask__0020_hurt_3.png",
+	"frame": {"x":1,"y":1432,"w":40,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":66},
+	"sourceSize": {"w":40,"h":66}
+},
+{
+	"filename": "predatormask__0021_hurt_4.png",
+	"frame": {"x":1,"y":1567,"w":40,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":64},
+	"sourceSize": {"w":40,"h":64}
+},
+{
+	"filename": "predatormask__0022_dead_1.png",
+	"frame": {"x":1,"y":1814,"w":40,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":42},
+	"sourceSize": {"w":40,"h":42}
+},
+{
+	"filename": "predatormask__0023_dead_2.png",
+	"frame": {"x":1,"y":1858,"w":40,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":34},
+	"sourceSize": {"w":40,"h":34}
+},
+{
+	"filename": "predatormask__0024_dead_3.png",
+	"frame": {"x":1,"y":1894,"w":40,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":29},
+	"sourceSize": {"w":40,"h":29}
+},
+{
+	"filename": "predatormask__0025_dead_4.png",
+	"frame": {"x":1,"y":1953,"w":40,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":25},
+	"sourceSize": {"w":40,"h":25}
+},
+{
+	"filename": "predatormask__0026_dead_5.png",
+	"frame": {"x":1,"y":1925,"w":40,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":26},
+	"sourceSize": {"w":40,"h":26}
+},
+{
+	"filename": "predatormask__0027_jump_1.png",
+	"frame": {"x":1,"y":1633,"w":40,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":64},
+	"sourceSize": {"w":40,"h":64}
+},
+{
+	"filename": "predatormask__0028_jump_2.png",
+	"frame": {"x":1,"y":1,"w":40,"h":73},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":73},
+	"sourceSize": {"w":40,"h":73}
+},
+{
+	"filename": "predatormask__0029_jump_3.png",
+	"frame": {"x":1,"y":1699,"w":40,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":61},
+	"sourceSize": {"w":40,"h":61}
+},
+{
+	"filename": "predatormask__0030_jump_4.png",
+	"frame": {"x":1,"y":1762,"w":40,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":50},
+	"sourceSize": {"w":40,"h":50}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "alien.png",
+	"format": "RGBA8888",
+	"size": {"w":42,"h":1979},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7c7507904c5d3d2167057b655635d9df:cc9095924955631451d1a2ed1aa74038:f5c2820dc1d6657fd77f91f373566390$"
+}
+}
