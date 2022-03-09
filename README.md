@@ -224,9 +224,9 @@ Los enemigos dispondrán de armas para atacar al protagonista.
 | **Objeto** | **Descripción** | **Imagen** |
 | --- | --- | ---|
 | **Corazón** | Este objeto le dará al jugador la capacidad de recuperar una vida por cada corazón recogido.  | ![corazon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/corazon.png)
-| **Celula de energia** | Este objeto dará al jugador la posibilidad de disparar su arma |
-| **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. |
-| **Muro** | El jugador podrá encontrar muros los cuales podrá desplazar y usarlos como ventajas contra enemigos y obstáculos. |
+| **Celula de energia** | Este objeto dará al jugador la posibilidad de disparar su arma | ![célula de energía](https://github.com/tolu9660/DVI/blob/main/assets/sprites/energia.png)
+| **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. | ![llave](https://github.com/tolu9660/DVI/blob/main/assets/sprites/key.png)
+| **Muro** | El jugador podrá encontrar muros los cuales podrá desplazar y usarlos como ventajas contra enemigos y obstáculos. | ![muro](https://github.com/tolu9660/DVI/blob/main/assets/sprites/piedra.png)
  
 #### LOGROS
 Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
