@@ -5,7 +5,7 @@ Este juego ha sido desarrollado por Carlos León Aznar. En este repositorio cont
 
 # GDD
 
-Título:  The Kreephaser
+## Título:  The Kreephaser
 Motor gráfico: Phaser 3
 Estilo gráfico: 2D	
 Género: Plataformas
@@ -184,7 +184,7 @@ Crawler
 Nivel 4
 
  
-Armas 
+# Armas 
 El protagonista tendrá una pistola la cual dispara tiros normales, podrá cargar y disparar con más potencia si recolecta células de energía.
 Los enemigos dispondrán de armas para atacar al protagonista.
 Objetos
@@ -193,7 +193,7 @@ Celula de energia: Este objeto dará al jugador la posibilidad de disparar su ar
 Llave: En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia.
 Muro: El jugador podrá encontrar muros los cuales podrá desplazar y usarlos como ventajas contra enemigos y obstáculos.
  
-LOGROS
+# LOGROS
  Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
 DETALLES DE PRODUCCIÓN
 El equipo dividió las funciones en tareas y las repartió a los miembros del equipo en forma de spring semanales. En estas imágenes podemos observar las funciones definidas desde el principio hasta el momento.
