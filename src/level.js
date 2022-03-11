@@ -12,6 +12,8 @@
  */
 export default class Level extends Phaser.Scene {
 
+  
+
   /**
    * Constructor de la escena
    */
