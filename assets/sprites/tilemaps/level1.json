@@ -29,8 +29,8 @@
                  "type":"",
                  "visible":true,
                  "width":38,
-                 "x":52.1818181818183,
-                 "y":416.636363636364
+                 "x":52.1818,
+                 "y":416.636
                 }, 
                 {
                  "height":46,
@@ -231,18 +231,7 @@
                  "y":254
                 }, 
                 {
-                 "height":28,
-                 "id":60,
-                 "name":"c",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":34,
-                 "x":138,
-                 "y":357.333333333333
-                }, 
-                {
-                 "height":1.33333333333337,
+                 "height":1.33333,
                  "id":61,
                  "name":"",
                  "rotation":0,
@@ -250,7 +239,62 @@
                  "visible":true,
                  "width":0,
                  "x":134,
-                 "y":541.333333333333
+                 "y":541.333
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":10,
+         "name":"corazones",
+         "objects":[
+                {
+                 "height":28,
+                 "id":64,
+                 "name":"c",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":34,
+                 "x":132.333333333333,
+                 "y":293.333333333333
+                }, 
+                {
+                 "height":28,
+                 "id":69,
+                 "name":"c",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":34,
+                 "x":204.333333333333,
+                 "y":291.333333333333
+                }, 
+                {
+                 "height":28,
+                 "id":70,
+                 "name":"c",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":34,
+                 "x":161.666666666667,
+                 "y":238.666666666667
+                }, 
+                {
+                 "height":28,
+                 "id":71,
+                 "name":"c",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":34,
+                 "x":221.666666666667,
+                 "y":244
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -265,14 +309,14 @@
          "objects":[
                 {
                  "height":44,
-                 "id":48,
+                 "id":68,
                  "name":"enemigo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":39,
-                 "x":266.151515151515,
-                 "y":405.666666666667
+                 "x":231.833333333333,
+                 "y":402
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -280,8 +324,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":10,
- "nextobjectid":63,
+ "nextlayerid":11,
+ "nextobjectid":72,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.1",

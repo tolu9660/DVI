@@ -28,6 +28,7 @@ export default class Level2 extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
     this.obstacles = new ObstaclesController();
     this.arrayEnemies=[];
+    this.arrayObjects=[];
   
   }
 
@@ -77,17 +78,18 @@ export default class Level2 extends Phaser.Scene {
 
           break;
         }
-        case 'c':{
+        /*case 'c':{
             this.cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
             .setScale('0.5')  
             .setFixedRotation();
-            this.cora = new corazon(
+            this.c = new corazon(
                 this,
                 this.cora
             )
-    
+    this.arrayObjects[0]=this.c;
             break;
         }
+        */
         case 'energia': {
           const star = this.matter.add.sprite(x, y, 'energia',undefined,{
             isStatic:true,
@@ -139,6 +141,19 @@ export default class Level2 extends Phaser.Scene {
           this.i++;       
     }
     
+    const corazones = this.map.getObjectLayer('corazones')
+    this.j=0;
+    for (let step = 0; step < corazones.objects.length; step++){
+      const {x = 0, y = 0,width = 0} = corazones.objects[step]
+         
+          this.cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
+          .setScale('0.5')  
+          .setFixedRotation();
+          this.c = new corazon(  this,this.cora );
+        this.arrayObjects[step]=this.c;
+        this.j++;
+      
+    }
     this.matter.world.convertTilemapLayer(this.groundLayer);
 
   }
@@ -148,6 +163,7 @@ export default class Level2 extends Phaser.Scene {
       return
     }    
     this.playerController.update(dt);
+    //this.c.update(dt);
     if(this.arrayEnemies.length!=0){
       for(let e=0; e<this.i; e++){
         

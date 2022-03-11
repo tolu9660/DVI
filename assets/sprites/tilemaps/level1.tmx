@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="63">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="72">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
@@ -44,10 +44,15 @@
   <object id="35" name="spikes" x="1342.5" y="413.333" width="35" height="34.6667"/>
   <object id="36" name="spikes" x="2398.5" y="284.667" width="35" height="34.6667"/>
   <object id="37" name="spikes" x="2559.83" y="254" width="35" height="34.6667"/>
-  <object id="60" name="c" x="138" y="357.333" width="34" height="28"/>
   <object id="61" x="134" y="541.333" height="1.33333"/>
  </objectgroup>
+ <objectgroup id="10" name="corazones">
+  <object id="64" name="c" x="132.333" y="293.333" width="34" height="28"/>
+  <object id="69" name="c" x="204.333" y="291.333" width="34" height="28"/>
+  <object id="70" name="c" x="161.667" y="238.667" width="34" height="28"/>
+  <object id="71" name="c" x="221.667" y="244" width="34" height="28"/>
+ </objectgroup>
  <objectgroup id="9" name="enemigos">
-  <object id="48" name="enemigo" x="266.152" y="405.667" width="39" height="44"/>
+  <object id="68" name="enemigo" x="231.833" y="402" width="39" height="44"/>
  </objectgroup>
 </map>
