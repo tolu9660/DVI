@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "Cora_0.png",
+	"frame": {"x":0,"y":0,"w":35,"h":149},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":149},
+	"sourceSize": {"w":35,"h":149}
+},
+{
+	"filename": "Cora_1.png",
+	"frame": {"x":35,"y":0,"w":177,"h":165},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":177,"h":165},
+	"sourceSize": {"w":177,"h":165}
+},
+{
+	"filename": "Cora_2.png",
+	"frame": {"x":212,"y":0,"w":150,"h":155},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":155},
+	"sourceSize": {"w":150,"h":155}
+},
+{
+	"filename": "Cora_3.png",
+	"frame": {"x":362,"y":0,"w":118,"h":151},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":151},
+	"sourceSize": {"w":118,"h":151}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cora.png",
+	"format": "RGBA8888",
+	"size": {"w":480,"h":165},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:46b739f3b2d950b98e31a895c0b4d280:799a4060182738cf0598a21ef8b5e0e7:484877760acebdc8154a341e462c3dd5$"
+}
+}

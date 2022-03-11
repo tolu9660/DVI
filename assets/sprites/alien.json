@@ -1,7 +1,7 @@
 {"frames": [
 
 {
-	"filename": "predatormask__0000_idle_1.png",
+	"filename": "predatormask_idle_1.png",
 	"frame": {"x":1,"y":808,"w":40,"h":69},
 	"rotated": false,
 	"trimmed": false,
@@ -9,7 +9,7 @@
 	"sourceSize": {"w":40,"h":69}
 },
 {
-	"filename": "predatormask__0001_idle_2.png",
+	"filename": "predatormask_idle_2.png",
 	"frame": {"x":1,"y":372,"w":40,"h":71},
 	"rotated": false,
 	"trimmed": false,
@@ -17,7 +17,7 @@
 	"sourceSize": {"w":40,"h":71}
 },
 {
-	"filename": "predatormask__0002_idle_3.png",
+	"filename": "predatormask_idle_3.png",
 	"frame": {"x":1,"y":76,"w":40,"h":72},
 	"rotated": false,
 	"trimmed": false,
