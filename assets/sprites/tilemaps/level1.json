@@ -29,8 +29,8 @@
                  "type":"",
                  "visible":true,
                  "width":38,
-                 "x":2734,
-                 "y":253
+                 "x":52.1818181818183,
+                 "y":416.636363636364
                 }, 
                 {
                  "height":46,
@@ -132,17 +132,6 @@
                  "y":199.247
                 }, 
                 {
-                 "height":44,
-                 "id":22,
-                 "name":"enemigo",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":39,
-                 "x":2575,
-                 "y":391
-                }, 
-                {
                  "height":38,
                  "id":23,
                  "name":"llave",
@@ -240,6 +229,50 @@
                  "width":35,
                  "x":2559.83,
                  "y":254
+                }, 
+                {
+                 "height":28,
+                 "id":60,
+                 "name":"c",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":34,
+                 "x":138,
+                 "y":357.333333333333
+                }, 
+                {
+                 "height":1.33333333333337,
+                 "id":61,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":134,
+                 "y":541.333333333333
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":9,
+         "name":"enemigos",
+         "objects":[
+                {
+                 "height":44,
+                 "id":48,
+                 "name":"enemigo",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":266.151515151515,
+                 "y":405.666666666667
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -247,11 +280,11 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":9,
- "nextobjectid":38,
+ "nextlayerid":10,
+ "nextobjectid":63,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.8.2",
+ "tiledversion":"1.8.1",
  "tileheight":32,
  "tilesets":[
         {

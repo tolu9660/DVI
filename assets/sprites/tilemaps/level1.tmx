@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="38">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="10" nextobjectid="63">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
@@ -25,7 +25,7 @@
   </data>
  </layer>
  <objectgroup id="7" name="objects">
-  <object id="3" name="alien_spawn" x="2734" y="253" width="38" height="38"/>
+  <object id="3" name="alien_spawn" x="52.1818" y="416.636" width="38" height="38"/>
   <object id="5" name="spikes" x="158" y="433" width="66" height="46"/>
   <object id="9" name="spikes" x="419" y="436" width="61" height="40"/>
   <object id="10" name="energia" x="287.017" y="333.512" width="34.8712" height="29.5064"/>
@@ -35,7 +35,6 @@
   <object id="18" name="corazon" x="1565.5" y="292" width="47" height="44"/>
   <object id="19" name="energia" x="1719.56" y="422.247" width="34.8712" height="29.5064"/>
   <object id="20" name="energia" x="2236.56" y="199.247" width="34.8712" height="29.5064"/>
-  <object id="22" name="enemigo" x="2575" y="391" width="39" height="44"/>
   <object id="23" name="llave" x="1216" y="402" width="46" height="38"/>
   <object id="25" name="corazon" x="3070.5" y="284" width="47" height="44"/>
   <object id="27" name="spikes" x="896.5" y="443.667" width="64.3333" height="30.6667"/>
@@ -45,5 +44,10 @@
   <object id="35" name="spikes" x="1342.5" y="413.333" width="35" height="34.6667"/>
   <object id="36" name="spikes" x="2398.5" y="284.667" width="35" height="34.6667"/>
   <object id="37" name="spikes" x="2559.83" y="254" width="35" height="34.6667"/>
+  <object id="60" name="c" x="138" y="357.333" width="34" height="28"/>
+  <object id="61" x="134" y="541.333" height="1.33333"/>
+ </objectgroup>
+ <objectgroup id="9" name="enemigos">
+  <object id="48" name="enemigo" x="266.152" y="405.667" width="39" height="44"/>
  </objectgroup>
 </map>

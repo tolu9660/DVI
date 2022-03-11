@@ -101,6 +101,5 @@ export default class EnemyController {
         }),
         repeat: -1
       })
-    
-}
+    }
 }
