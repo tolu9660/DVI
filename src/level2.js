@@ -5,6 +5,7 @@ import PlayerController from './PlayerController.js'
 import enemyController from './EnemyController.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
+import energia from './energia.js';
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -29,6 +30,7 @@ export default class Level2 extends Phaser.Scene {
     this.obstacles = new ObstaclesController();
     this.arrayEnemies=[];
     this.arrayObjects=[];
+    this.j=0;
   
   }
 
@@ -78,7 +80,7 @@ export default class Level2 extends Phaser.Scene {
 
           break;
         }
-        /*case 'c':{
+        case 'c':{
             this.cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
             .setScale('0.5')  
             .setFixedRotation();
@@ -86,10 +88,24 @@ export default class Level2 extends Phaser.Scene {
                 this,
                 this.cora
             )
-    this.arrayObjects[0]=this.c;
+          this.arrayObjects[this.j]=this.c;
+          this.j++;
             break;
         }
-        */
+        case 'e':{
+          this.ene = this.matter.add.sprite(x + (width*0.5),y, 'ene')
+          .setScale('0.5')  
+          .setFixedRotation();
+          this.c = new energia (
+              this,
+              this.ene
+          )
+        this.arrayObjects[this.j]=this.c;
+        this.j++;
+          break;
+      }
+      
+        
         case 'energia': {
           const star = this.matter.add.sprite(x, y, 'energia',undefined,{
             isStatic:true,
@@ -141,19 +157,19 @@ export default class Level2 extends Phaser.Scene {
           this.i++;       
     }
     
-    const corazones = this.map.getObjectLayer('corazones')
+    /*const corazones = this.map.getObjectLayer('corazones')
     this.j=0;
     for (let step = 0; step < corazones.objects.length; step++){
       const {x = 0, y = 0,width = 0} = corazones.objects[step]
          
-          this.cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
+          let cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
           .setScale('0.5')  
           .setFixedRotation();
-          this.c = new corazon(  this,this.cora );
-        this.arrayObjects[step]=this.c;
+         let aux = new corazon(  this,cora );
+        this.arrayObjects[step]=aux;
         this.j++;
       
-    }
+    }*/
     this.matter.world.convertTilemapLayer(this.groundLayer);
 
   }
@@ -163,7 +179,12 @@ export default class Level2 extends Phaser.Scene {
       return
     }    
     this.playerController.update(dt);
-    //this.c.update(dt);
+    if(this.arrayObjects.length!=0){
+      for(let e=0; e<this.j; e++){
+        
+        this.arrayObjects[e].actu(dt);
+    }
+    }
     if(this.arrayEnemies.length!=0){
       for(let e=0; e<this.i; e++){
         
