@@ -4,7 +4,7 @@
   <export target="level1.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="texturas" tilewidth="32" tileheight="32" tilecount="228" columns="6">
-  <image source="../tiles/texture.png" width="192" height="1216"/>
+  <image source="texture.png" width="192" height="1216"/>
   <tile id="96">
    <properties>
     <property name="collides" type="bool" value="true"/>
@@ -170,10 +170,40 @@
   </tile>
  </tileset>
  <tileset firstgid="229" name="acido" tilewidth="32" tileheight="32" spacing="16" tilecount="3" columns="3">
-  <image source="../tiles/16.png" width="128" height="36"/>
+  <image source="16.png" width="128" height="36"/>
+  <tile id="0">
+   <objectgroup draworder="index" id="3">
+    <object id="2" x="0.167167" y="5.76727">
+     <properties>
+      <property name="collides" type="bool" value="true"/>
+     </properties>
+     <polygon points="0,0 -0.167167,25.9945 31.7618,26.0781 31.6782,-0.0835836"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0.0835836" y="5.6001">
+     <properties>
+      <property name="collides" type="bool" value="true"/>
+     </properties>
+     <polygon points="0,0 0,26.2453 31.929,26.1617 31.7618,-0.0835836"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index" id="2">
+    <object id="1" x="0" y="5.34935">
+     <properties>
+      <property name="collides" type="bool" value="true"/>
+     </properties>
+     <polygon points="0,0 0.0835836,26.496 31.8454,26.496 31.929,-0.334335"/>
+    </object>
+   </objectgroup>
+  </tile>
  </tileset>
  <imagelayer id="11" name="background">
-  <image source="../tiles/Fondo.png" width="3424" height="480"/>
+  <image source="Fondo.png" width="3424" height="480"/>
  </imagelayer>
  <layer id="1" name="ground" width="107" height="15">
   <data encoding="base64">
