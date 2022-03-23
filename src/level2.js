@@ -64,7 +64,7 @@ export default class Level2 extends Phaser.Scene {
       switch (name) {
         case 'alien_spawn': { 
           this.alien = this.matter.add.sprite(x + (width*0.5),y, 'hero')
-          .setScale('0.5')  
+          .setScale('0.4')  
           .setFixedRotation();
           this.playerController = new PlayerController(
             this,
@@ -82,7 +82,7 @@ export default class Level2 extends Phaser.Scene {
         }
         case 'c':{
             this.cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
-            .setScale('0.5')  
+            .setScale('0.3')  
             .setFixedRotation();
             this.c = new corazon(
                 this,
@@ -94,7 +94,7 @@ export default class Level2 extends Phaser.Scene {
         }
         case 'e':{
           this.ene = this.matter.add.sprite(x + (width*0.5),y, 'ene')
-          .setScale('0.5')  
+          .setScale('1.5')  
           .setFixedRotation();
           this.c = new energia (
               this,

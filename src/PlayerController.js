@@ -76,7 +76,7 @@ export default class PlayerController {
                       gameObject.destroy();
                       console.log('collyde with key')
                       break;
-              
+                   
                 default:
                   break;
 

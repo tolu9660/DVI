@@ -27,7 +27,7 @@ export default class Boot extends Phaser.Scene {
     // this.load.image('player', 'player.png');
     // this.load.image('piedra', 'piedra.png');
     // this.load.image('azul','azul.jpg');
-    // this.load.image('fondo', 'background.png');
+     this.load.image('fondo', 'background.png');
     // this.load.image('walls',"/tilemaps/wall.png");  
 
     //cargamos el alien
@@ -40,6 +40,7 @@ export default class Boot extends Phaser.Scene {
     //SUELOS NIVEL 1 (imagenes del suelo)
     this.load.image('suelo',"/tilemaps/suelo.png");  
     this.load.image('subsuelo',"/tilemaps/subsuelo.png");
+    this.load.image('suelo1',"/tilemaps/suelo1.png");
     //MAPA NIVEL 1 (nombre recusro cache, fichero json)
     this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
 
