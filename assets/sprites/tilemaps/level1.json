@@ -11,7 +11,7 @@
          "name":"ground",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":107,
          "x":0,
          "y":0
@@ -55,26 +55,26 @@
                  "y":60
                 }, 
                 {
-                 "height":27.3333333333333,
+                 "height":27.3333,
                  "id":97,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":31.3333333333334,
-                 "x":448.666666666667,
+                 "width":31.3333,
+                 "x":448.667,
                  "y":255
                 }, 
                 {
-                 "height":26.3333333333333,
+                 "height":26.3333,
                  "id":99,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":31.3333333333334,
-                 "x":513.333333333333,
-                 "y":255.333333333333
+                 "width":31.3333,
+                 "x":513.333,
+                 "y":255.333
                 }, 
                 {
                  "height":28,
@@ -83,63 +83,63 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":31.3333333333334,
-                 "x":577.333333333333,
-                 "y":256.666666666667
+                 "width":31.3333,
+                 "x":577.333,
+                 "y":256.667
                 }, 
                 {
-                 "height":26.6666666666667,
+                 "height":26.6667,
                  "id":101,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":31.3333333333334,
-                 "x":640.666666666667,
+                 "width":31.3333,
+                 "x":640.667,
                  "y":256
                 }, 
                 {
-                 "height":27.6666666666667,
+                 "height":27.6667,
                  "id":102,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32.6666666666667,
-                 "x":704.666666666667,
-                 "y":254.666666666667
+                 "width":32.6667,
+                 "x":704.667,
+                 "y":254.667
                 }, 
                 {
-                 "height":34.6666666666666,
+                 "height":34.6667,
                  "id":104,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":158.666666666667,
-                 "x":672.666666666667,
+                 "width":158.667,
+                 "x":672.667,
                  "y":446
                 }, 
                 {
-                 "height":32.6666666666667,
+                 "height":32.6667,
                  "id":107,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":31.3333333333333,
+                 "width":31.3333,
                  "x":1249,
-                 "y":255.833333333333
+                 "y":255.833
                 }, 
                 {
-                 "height":32.1666666666666,
+                 "height":32.1667,
                  "id":108,
                  "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32.6666666666667,
-                 "x":1313.16666666667,
+                 "width":32.6667,
+                 "x":1313.17,
                  "y":255.5
                 }, 
                 {
@@ -178,7 +178,7 @@
                 {
                  "height":32,
                  "id":113,
-                 "name":"",
+                 "name":"spikes",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -226,9 +226,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":128.333333333333,
+                 "width":128.333,
                  "x":1152,
-                 "y":447.666666666667
+                 "y":447.667
                 }, 
                 {
                  "height":40,
@@ -317,6 +317,17 @@
                  "width":18,
                  "x":2333,
                  "y":419
+                }, 
+                {
+                 "height":14,
+                 "id":145,
+                 "name":"pm",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":28,
+                 "x":319,
+                 "y":422
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -353,7 +364,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -419,12 +430,12 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
- "nextlayerid":11,
- "nextobjectid":143,
+ "nextlayerid":12,
+ "nextobjectid":149,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.1",

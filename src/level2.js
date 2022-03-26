@@ -6,6 +6,7 @@ import enemyController from './EnemyController.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
+import PlatafomraMovil from './plataformaMovil.js';
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -92,6 +93,15 @@ export default class Level2 extends Phaser.Scene {
           this.j++;
             break;
         }
+        case 'pm':{
+          this.pm = this.matter.add.sprite(x + (width*0.5),y, 'corazon')
+          .setScale('0.3')  
+          .setFixedRotation();
+          this.aux = new PlatafomraMovil(this,this.pm)
+        this.arrayObjects[this.j]=this.aux;
+        this.j++;
+          break;
+      }
         case 'e':{
           this.ene = this.matter.add.sprite(x + (width*0.5),y, 'ene')
           .setScale('1.5')  
