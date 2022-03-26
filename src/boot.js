@@ -27,17 +27,20 @@ export default class Boot extends Phaser.Scene {
     // this.load.image('player', 'player.png');
     // this.load.image('piedra', 'piedra.png');
     // this.load.image('azul','azul.jpg');
-    // this.load.image('fondo', 'background.png');
+     this.load.image('fondo', 'background.png');
     // this.load.image('walls',"/tilemaps/wall.png");  
 
     //cargamos el alien
-    // this.load.atlas('alien','alien.png', 'alien.json');
+    this.load.atlas('alien','alien.png', 'alien.json');
     this.load.atlas('enemigo','enemigo.png', 'enemigo.json');
-    this.load.atlas('alien','hero.png', 'hero.json');
+    this.load.atlas('hero','hero.png', 'hero.json');
+    this.load.atlas('cora','cora.png', 'cora.json');
+    this.load.atlas('ene','e.png', 'e.json');
     
     //SUELOS NIVEL 1 (imagenes del suelo)
     this.load.image('suelo',"/tilemaps/suelo.png");  
     this.load.image('subsuelo',"/tilemaps/subsuelo.png");
+    this.load.image('suelo1',"/tilemaps/suelo1.png");
     //MAPA NIVEL 1 (nombre recusro cache, fichero json)
     this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
 
@@ -57,7 +60,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('level');
+    this.scene.start('level2');
     
   }
 }
