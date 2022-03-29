@@ -26,6 +26,9 @@
    </properties>
   </tile>
   <tile id="114">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0.666667" y="9">
      <properties>
@@ -36,6 +39,9 @@
    </objectgroup>
   </tile>
   <tile id="120">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0.333333" y="9">
      <properties>
@@ -46,6 +52,9 @@
    </objectgroup>
   </tile>
   <tile id="132">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="32" y="0.333333">
      <properties>
@@ -56,6 +65,9 @@
    </objectgroup>
   </tile>
   <tile id="138">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0.666667" y="0.666667">
      <properties>
@@ -208,7 +220,7 @@
   </data>
  </layer>
  <objectgroup id="7" name="objects">
-  <object id="3" name="alien_spawn" x="73.1818" y="366.636" width="38" height="38"/>
+  <object id="3" name="alien_spawn" x="879.848" y="81.3027" width="38" height="38"/>
   <object id="5" name="spikes" x="3008.09" y="416.833" width="63.8182" height="31"/>
   <object id="9" name="spikes" x="320.121" y="417" width="95.4848" height="30.7273"/>
   <object id="64" name="spikes" x="474.121" y="449" width="130.818" height="30.7273"/>

@@ -43,15 +43,15 @@ export default class Level2 extends Phaser.Scene {
     //this.map = this.make.tilemap({ key: 'tilemap' });
     const tileset1 = this.map.addTilesetImage('acido','acido');
     const tileset2 = this.map.addTilesetImage('texturas','texturas');
+    //const tileset3 = this.map.addTilesetImage('Fondo', 'Fondo');
 
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);
-    this.plataformasLayer = this.map.createLayer('plataformas', [tileset1, tileset2]);
+    //this.backgroundLayer = this.map.createLayer('background', tileset3);
+    this.groundLayer = this.map.createLayer('ground', [tileset2, tileset1]);
+    this.plataformasLayer = this.map.createLayer('plataformas', [tileset2, tileset1]);
     
+    this.groundLayer.setCollisionByProperty({collides: true});
+    this.plataformasLayer.setCollisionByProperty({collides: true});
 
-    //this.groundLayer.setCollisionByProperty({collides: true});
-    //this.groundLayer = this.map.createLayer('ground', [tileset1])
-    this.groundLayer.setCollisionByProperty({collides : true})
-    this.plataformasLayer.setCollisionByProperty({collides : true})
 
 
 
