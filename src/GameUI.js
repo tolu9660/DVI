@@ -67,7 +67,7 @@ export default class GameUI extends Phaser.Scene {
 
   handleKeyCollected(){
     const image = this.add.image(180, 23, 'llave')
-    image.setScale('0.4','0.4')
+    image.setScale('1','1')
   }
 
   handleHeartCollected(){

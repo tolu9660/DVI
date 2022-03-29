@@ -7,6 +7,8 @@ import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
+import llave from './llave.js';
+
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -48,10 +50,11 @@ export default class Level2 extends Phaser.Scene {
     const tileset1 = this.map.addTilesetImage('suelo','suelo');
     const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
     const tileset3 = this.map.addTilesetImage('suelo1','suelo1');
+    const lava = this.map.addTilesetImage('lavas','lavas');
     const sueloTransparente = this.map.addTilesetImage('sueloT','sueloT');
 
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente]);
+    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente,lava]);
     
 
     //this.groundLayer.setCollisionByProperty({collides: true});
@@ -104,10 +107,14 @@ export default class Level2 extends Phaser.Scene {
         this.j++;
           break;
       }
-        case 'e':{
-          this.ene = this.matter.add.sprite(x + (width*0.5),y, 'ene')
-          .setScale('1.5')  
+        case 'energia':{
+          this.ene = this.matter.add.sprite(x + (width*0.5),y, 'ene',undefined,{
+            isStatic:true,
+            isSensor:true
+          })
+          .setScale('1')  
           .setFixedRotation();
+          this.ene.setData('type', 'energia')
           this.c = new energia (
               this,
               this.ene
@@ -117,16 +124,6 @@ export default class Level2 extends Phaser.Scene {
           break;
       }
       
-        
-        case 'energia': {
-          const star = this.matter.add.sprite(x, y, 'energia',undefined,{
-            isStatic:true,
-            isSensor:true
-          })
-          star.setScale('0.5','0.5')
-          star.setData('type', 'energia')
-          break;
-        }
         case 'spikes':
           const spikes = this.matter.add.rectangle(x+ (width*0.5), y+(height*0.5), width, height, {
             isStatic: true
@@ -134,12 +131,16 @@ export default class Level2 extends Phaser.Scene {
           this.obstacles.add('spikes', spikes)
           break;
           case 'llave': {
-            const key = this.matter.add.sprite(x, y, 'llave',undefined,{
-              isStatic:true,
-              isSensor:true,
-            })
-            key.setScale('0.5', '0.5')
-            key.setData('type', 'llave')
+
+            this.k = this.matter.add.sprite(x + (width),y, 'llave')
+            .setScale('1')  
+            .setFixedRotation();
+            this.k.setData('type', 'llave')
+            this.c = new llave(this,this.k)
+            this.arrayObjects[this.j]=this.c;
+
+            this.j++;
+        
             break;
           }
           case 'corazon': {
