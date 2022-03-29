@@ -37,6 +37,7 @@ export default class Level2 extends Phaser.Scene {
   create() {
     
     this.scene.launch('game-ui');
+    const backgrounImage = this.add.image(0, 0, 'Fondo').setOrigin(0,0);
 
     //cosas de mapa
     this.map = this.make.tilemap({ key: 'level1' });
