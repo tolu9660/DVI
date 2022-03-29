@@ -1,4 +1,4 @@
-
+import Star from './star.js';
 
 import { sceneEvents as events } from './EventsCenter.js';
 
@@ -7,7 +7,7 @@ import NewStateMachine from './newStateMachine.js';
  * Clase que representa el jugador del juego. El jugador se mueve por el mundo usando los cursores.
  * También almacena la puntuación o número de estrellas que ha recogido hasta el momento.
  */
-export default class PlatafomraMovil {
+export default class plataformaMovil {
   
     constructor(scene,sprite){
       // super({ key: 'player-controller' });
@@ -15,26 +15,28 @@ export default class PlatafomraMovil {
         this.sprite = sprite;
 
         this.moveTime = 0;
-       //
-        this.NewStateMachine = new NewStateMachine(this, 'plataformaMovil');
+        this.createEnemyAnimation();
+
+        this.NewStateMachine = new NewStateMachine(this, 'pm');
 
         this.NewStateMachine.addState('idle', {
           onEnter: this.idleOnEnter,
-          //onUpdate: this.idleOnUpdate
+          onUpdate: this.idleOnUpdate
         })
         .addState('move-left', {
-          onEnter: this.moveLeftOnUpdate,
-          //onUpdate: this.walkLeftOnUpdate,
-         // onExit: this.walkOnExit
+          onEnter: this.moveLeftOnEnter,
+          onUpdate: this.moveLeftOnUpdate,
+          
         })
         .addState('move-right',{
-          onEnter: this.moveRightOnUpdate,
-          //onUpdate: this.walkRightOnUpdate,
+          onEnter: this.moveRightOnEnter,
+          onUpdate: this.moveRightOnUpdate,
         })
         .setState('idle')
     
     }
     idleOnEnter(){
+      this.sprite.play('pm-idle')
       const r = Phaser.Math.Between(1, 100)
       if (r < 50) {
         this.NewStateMachine.setState('move-left')
@@ -48,9 +50,14 @@ export default class PlatafomraMovil {
     
     }
 
+    moveLeftOnEnter(){
+      this.moveTime = 0
+      this.sprite.play('pm-idle')
+    }
+
     moveLeftOnUpdate(dt){
       this.moveTime += dt
-      this.sprite.setVelocityX(-2)
+      this.sprite.setVelocityX(-0.7)
       this.sprite.flipX = true;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('move-right');
@@ -58,10 +65,14 @@ export default class PlatafomraMovil {
       
     }
 
+    moveRightOnEnter(){
+      this.moveTime = 0
+      this.sprite.play('pm-idle')
+    }
     
     moveRightOnUpdate(dt){
       this.moveTime += dt
-      this.sprite.setVelocityX(2)
+      this.sprite.setVelocityX(0.7)
       this.sprite.flipX = false;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('move-left');
@@ -71,8 +82,12 @@ export default class PlatafomraMovil {
 
 
     actu(dt){
-        // realizamos el movimiento hacia un lado y otro teniendo encuenta el atributo 
       this.NewStateMachine.update(dt);
     }
-    
+    createEnemyAnimation(){   
+      this.sprite.anims.create({
+        key:'pm-idle',
+        frames: [{key: 'pm', frame: 'pm.png'}]
+      })
+    }
 }

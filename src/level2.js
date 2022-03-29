@@ -6,7 +6,7 @@ import enemyController from './EnemyController.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlatafomraMovil from './plataformaMovil.js';
+import PlataformaMovil from './plataformaMovil.js';
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -48,8 +48,10 @@ export default class Level2 extends Phaser.Scene {
     const tileset1 = this.map.addTilesetImage('suelo','suelo');
     const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
     const tileset3 = this.map.addTilesetImage('suelo1','suelo1');
+    const sueloTransparente = this.map.addTilesetImage('sueloT','sueloT');
+
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3]);
+    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente]);
     
 
     //this.groundLayer.setCollisionByProperty({collides: true});
@@ -94,10 +96,10 @@ export default class Level2 extends Phaser.Scene {
             break;
         }
         case 'pm':{
-          this.pm = this.matter.add.sprite(x + (width*0.5),y, 'corazon')
-          .setScale('0.3')  
+          this.pm = this.matter.add.sprite(x + (width),y, 'pm')
+          .setScale('1')  
           .setFixedRotation();
-          this.aux = new PlatafomraMovil(this,this.pm)
+          this.aux = new PlataformaMovil(this,this.pm)
         this.arrayObjects[this.j]=this.aux;
         this.j++;
           break;
