@@ -24,10 +24,7 @@ let config = {
     scene: [Boot, Level2,GameUI, Creditos, End],
     physics: {
         default: 'matter',//cambiado el arcade
-        matter: {
-            debug: true
-        }
-    }
+     }
 };
 
 let config2 = {
