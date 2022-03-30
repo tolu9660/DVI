@@ -8,6 +8,7 @@ import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
 import llave from './llave.js';
+import cueva from './cueva.js'
 
 
 /**
@@ -89,9 +90,22 @@ export default class Level2 extends Phaser.Scene {
 
           //HAcemos que siga al personaje
           this.cameras.main.startFollow(this.alien)
-          
-      
+        break;
+        }
 
+        case 'cueva':{
+          this.cueva = this.matter.add.sprite(x,y, 'cueva')
+          .setStatic(true)
+          .setSensor(true)
+          .setFixedRotation()
+
+          this.cueva.setData('type', 'cueva')
+          this.c = new cueva(
+              this,
+              this.cueva
+          )
+        this.arrayObjects[this.j]=this.c;
+        this.j++;
           break;
         }
         case 'corazon':{
@@ -99,7 +113,7 @@ export default class Level2 extends Phaser.Scene {
               isStatic:true,
               isSensor:true
             })
-            .setScale('1')  
+            .setScale('1.5')  
             .setFixedRotation();
             this.corazon.setData('type', 'corazon')
             this.c = new corazon(
@@ -124,7 +138,7 @@ export default class Level2 extends Phaser.Scene {
             isStatic:true,
             isSensor:true
           })
-          .setScale('1')  
+          .setScale('1.5')  
           .setFixedRotation();
           this.ene.setData('type', 'energia')
           this.c = new energia (
@@ -145,7 +159,7 @@ export default class Level2 extends Phaser.Scene {
           case 'llave': {
 
             this.k = this.matter.add.sprite(x + (width),y, 'llave')
-            .setScale('1')  
+            .setScale('1.5')  
             .setFixedRotation();
             this.k.setData('type', 'llave')
             this.c = new llave(this,this.k)

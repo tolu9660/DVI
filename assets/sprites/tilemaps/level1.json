@@ -25,7 +25,7 @@
          "name":"plataformas",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":107,
          "x":0,
          "y":0
@@ -43,8 +43,8 @@
                  "type":"",
                  "visible":true,
                  "width":38,
-                 "x":87.8485,
-                 "y":327.969
+                 "x":3156.8485,
+                 "y":314.969
                 }, 
                 {
                  "height":31,
@@ -86,7 +86,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":160.151333333333,
+                 "width":160.151,
                  "x":224.121,
                  "y":269.25
                 }, 
@@ -154,7 +154,7 @@
                  "visible":true,
                  "width":34.8712,
                  "x":1741.56,
-                 "y":251.247
+                 "y":258.247
                 }, 
                 {
                  "height":29.5064,
@@ -302,7 +302,7 @@
                 {
                  "height":28,
                  "id":60,
-                 "name":"c",
+                 "name":"corazon",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -322,19 +322,30 @@
                  "y":541.333
                 }, 
                 {
-                 "height":6.66666666666669,
+                 "height":6.66667,
                  "id":79,
                  "name":"pm",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":7.33333333333334,
-                 "x":279.416666666667,
-                 "y":257.083333333333
+                 "width":7.33333,
+                 "x":279.417,
+                 "y":257.083
+                }, 
+                {
+                 "height":39,
+                 "id":82,
+                 "name":"cueva",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":66,
+                 "x":3340,
+                 "y":291
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -356,15 +367,15 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":82,
+ "nextobjectid":84,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.8.1",
+ "tiledversion":"1.8.2",
  "tileheight":32,
  "tilesets":[
         {

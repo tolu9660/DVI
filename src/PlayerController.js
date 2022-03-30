@@ -15,6 +15,7 @@ export default class PlayerController {
         this.sprite = sprite;
         this.cursors = cursors;
         this.obstacles = obstacles;
+        this.key = false;
 
         this.createAlienAnimation();
 
@@ -44,7 +45,7 @@ export default class PlayerController {
             console.log(this.obstacles.is('spikes', body))
             if (this.obstacles.is('spikes', body)) {
               this.NewStateMachine.setState('spike-hit')
-              return
+               return
             }
 
             if (!gameObject) {
@@ -62,20 +63,32 @@ export default class PlayerController {
                 case 'energia':
                   events.emit('star-collected')
                   gameObject.destroy();
-                  console.log('collyde with star')
+                  events.emit('mensaje-ayuda-energia')
                   break;
 
                   case 'llave':
                     events.emit('key-collected')
                     gameObject.destroy();
-                    console.log('collyde with key')
+                    events.emit('mensaje-ayuda-llave')
+                    this.key = true;
                     break;
 
                     case 'corazon':
                       events.emit('heart-collected')
                       gameObject.destroy();
-                      console.log('collyde with key')
+                      events.emit('mensaje-ayuda-corazon')
                       break;
+                    
+                    case 'cueva':
+                    // events.emit('heart-collected')
+                    // gameObject.destroy();
+                    console.log('collyde with vueva')
+                    if (this.key) {
+                      events.emit('cueva-in')
+                    }
+                    else{
+                      events.emit('cueva-stop')
+                    }
                    
                 default:
                   break;
@@ -142,8 +155,8 @@ export default class PlayerController {
     }
 
     spikeOnEnter() {
-      this.sprite.setVelocityY(-6)
-
+      this.sprite.setVelocityY(-3)
+      this.sprite.setVelocityX(-3)
       const startColor = Phaser.Display.Color.ValueToColor(0xffffff)
       const endColor = Phaser.Display.Color.ValueToColor(0xff0000)
 
