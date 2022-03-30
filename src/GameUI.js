@@ -31,7 +31,7 @@ export default class GameUI extends Phaser.Scene {
       //     quantity: 6
       // })
       const corazon = this.add.image(30, 20, 'corazon')
-      corazon.setScale('0.4','0.4')
+      //corazon.setScale('0.4','0.4')
       this.heartLabel = this.add.text(45, 25, 'x6', {
         fontSize: '16px'
       })
@@ -81,9 +81,9 @@ export default class GameUI extends Phaser.Scene {
 
   handleMinusHealthCollected(){
     console.log('hearts - collected')
-    --this.heartsCollected
+    this.heartsCollected--
     console.log(this.heartsCollected)
-    if (this.heartsCollected == 0){
+    if (this.heartsCollected <= 0){
       this.scene.pause('level')
       this.scene.start('end')
     }

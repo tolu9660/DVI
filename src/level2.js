@@ -47,15 +47,23 @@ export default class Level2 extends Phaser.Scene {
     //cosas de mapa
     this.map = this.make.tilemap({ key: 'level1' });
     //this.map = this.make.tilemap({ key: 'tilemap' });
-    const tileset1 = this.map.addTilesetImage('suelo','suelo');
-    const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
-    const tileset3 = this.map.addTilesetImage('suelo1','suelo1');
+    const tileset1L = this.map.addTilesetImage('suelo','suelo');
+    const tileset2L = this.map.addTilesetImage('subsuelo','subsuelo');
+    const tileset3L = this.map.addTilesetImage('suelo1','suelo1');
     const lava = this.map.addTilesetImage('lavas','lavas');
     const sueloTransparente = this.map.addTilesetImage('sueloT','sueloT');
 
+
+
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente,lava]);
-    
+    //this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente,lava]);
+    const backgroundImage=this.add.image(0,0,'Fondo').setOrigin(0,0);
+    const tileset1 = this.map.addTilesetImage('acido','acido');
+    const tileset2 = this.map.addTilesetImage('texturas','texturas');
+    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2,sueloTransparente]);
+    this.plataformasLayer = this.map.createLayer('plataformas', [tileset1, tileset2]);
+
+
 
     //this.groundLayer.setCollisionByProperty({collides: true});
     //this.groundLayer = this.map.createLayer('ground', [tileset1])
@@ -86,13 +94,17 @@ export default class Level2 extends Phaser.Scene {
 
           break;
         }
-        case 'c':{
-            this.cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
-            .setScale('0.3')  
+        case 'corazon':{
+            this.corazon = this.matter.add.sprite(x + (width),y, 'corazon',undefined,{
+              isStatic:true,
+              isSensor:true
+            })
+            .setScale('1')  
             .setFixedRotation();
+            this.corazon.setData('type', 'corazon')
             this.c = new corazon(
                 this,
-                this.cora
+                this.corazon
             )
           this.arrayObjects[this.j]=this.c;
           this.j++;
@@ -143,15 +155,7 @@ export default class Level2 extends Phaser.Scene {
         
             break;
           }
-          case 'corazon': {
-            const key = this.matter.add.sprite(x, y, 'corazon',undefined,{
-              isStatic:true,
-              isSensor:true,
-            })
-            key.setScale('0.5', '0.5')
-            key.setData('type', 'corazon')
-            break;
-          }
+         
         
       }
       

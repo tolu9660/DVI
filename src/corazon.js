@@ -55,7 +55,7 @@ export default class corazon extends GameObject {
       // super({ key: 'player-controller' });
         //this.scene = scene,
       // this.sprite = sprite;
-      super(scene, sprite,'CoraGiro', 10,'cora', 'Cora_', 0,3);
+      super(scene, sprite,'CoraGiro', 10,'corazon', 'Heart', 1,3);
       //this.createCoraAnimation();
 /*
 

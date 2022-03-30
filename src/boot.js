@@ -34,11 +34,13 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('alien','alien.png', 'alien.json');
     this.load.atlas('enemigo','enemigo.png', 'enemigo.json');
     this.load.atlas('hero','hero.png', 'hero.json');
-    this.load.atlas('cora','cora.png', 'cora.json');
+    this.load.atlas('corazon','corazon.png', 'corazon.json');
     this.load.atlas('llave','llave.png', 'llave.json');
     this.load.atlas('ene','e.png', 'e.json');
     this.load.atlas('pm','pm.png', 'pm.json');
-    
+    this.load.atlas('texturas','/tilemaps/texturas.png', '/tilemaps/texturas.json');
+    this.load.image('Fondo',"/tilemaps/Fondo.png");
+    this.load.image('acido',"/tilemaps/acido.png");
     
     //SUELOS NIVEL 1 (imagenes del suelo)
     this.load.image('suelo',"/tilemaps/suelo.png");  
@@ -53,7 +55,7 @@ export default class Boot extends Phaser.Scene {
     this.load.image('ui-heart-empty',"/ui_heart_empty.png");
     this.load.image('ui-heart-full',"/ui_heart_full.png");
     
-    this.load.image('corazon',"/corazon.png");
+    //this.load.image('corazon',"/corazon.png");
     this.load.image('energia',"/energia.png");    
     //this.load.image('llave',"/key.png");
 
