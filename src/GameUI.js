@@ -57,7 +57,6 @@ export default class GameUI extends Phaser.Scene {
     events.on('mensaje-ayuda-energia', this.handleMensajeAyudaEnergia, this)
     events.on('mensaje-ayuda-llave', this.handleMensajeAyudaLlave, this)
     events.on('mensaje-ayuda-corazon', this.handleMensajeAyudaCorazon, this)
-    events.on('mensaje-ayuda-enemigo', this.handleMensajeAyudaEnemigo, this)
     
     // events.on('mensaje-ayuda', this.handleMensajeAyudaEnergia, this)
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
@@ -222,40 +221,6 @@ export default class GameUI extends Phaser.Scene {
       let content = [
         "Estos corazones te ayudarán a recuperar la vida perdida. Recuerda que solo dispones de 6 vidas",
         " Pulsa el espacio para salir",
-      ];
-      this.tweens.addCounter({
-        from: 0,
-        to: 100,
-        duration: 5000,
-        onStart: () => {
-          this.scene.pause('level2')
-          bubble = this.createSpeechBubble(380,35, 400, 150, content);
-        },
-        onUpdate: tween => {
-          if(this.cursors.space.isDown){
-            this.scene.resume('level2')
-            bubble[0].destroy()
-            bubble[1].destroy()
-            this.messageCorazon = true
-          }
-        },
-
-        onComplete: () => {
-          this.scene.resume('level2')
-          bubble[0].destroy()
-          bubble[1].destroy()
-          this.messageCorazon = true
-        }
-      })
-    }
-  }
-
-  handleMensajeAyudaEnemigo(){    
-
-    if (!this.messageCorazon) {
-      let bubble;
-      let content = [
-        "Nos encontraremos enemigos con determinados ataques. Podrás acabar con ellos saltando sobre ellos o disparando si posees el arma.",
       ];
       this.tweens.addCounter({
         from: 0,
