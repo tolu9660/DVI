@@ -9,6 +9,10 @@ import NewStateMachine from './newStateMachine.js';
  */
 export default class PlayerController {
   
+  //  init() {
+  //   this.lastEnemy;
+  //  }
+
     constructor(scene,sprite, cursors, obstacles){
       // super({ key: 'player-controller' });
         this.scene = scene,
@@ -16,7 +20,7 @@ export default class PlayerController {
         this.cursors = cursors;
         this.obstacles = obstacles;
         this.key = false;
-
+        this.lastEnemy;
         this.createAlienAnimation();
 
         this.NewStateMachine = new NewStateMachine(this, 'player');
@@ -37,14 +41,43 @@ export default class PlayerController {
           .addState('spike-hit', {
             onEnter: this.spikeOnEnter,
           })
+          .addState('enemy-hit', {
+            onEnter: this.enemyHitOnEnter,
+          })
+          .addState('enemy-down', {
+            onEnter: this.enemyDownOnEnter,
+          })
           .setState('idle');
 
           this.sprite.setOnCollide((data) => {
             const body = data.bodyB;
             const gameObject = body.gameObject
-            console.log(this.obstacles.is('spikes', body))
             if (this.obstacles.is('spikes', body)) {
               this.NewStateMachine.setState('spike-hit')
+               return
+            }
+            
+            if (this.obstacles.is('enemy', body)) {
+
+              this.lastEnemy = body.gameObject
+              console.log(this.sprite.body.position.y);
+              console.log(this.lastEnemy.body.position.y);
+              if (this.sprite.body.position.x < this.lastEnemy.body.position.x) {
+                console.log(this.lastEnemy);
+                // this.lastEnemy.scene.alien.ative = false
+                // this.lastEnemy.active = false;
+                // this.lastEnemy.body.destroy();
+                
+                events.emit('alien-down', this.lastEnemy)
+                
+              } else {
+                
+                // this.NewStateMachine.setState('enemy-down')
+                this.NewStateMachine.setState('enemy-hit')
+
+                  // this.NewStateMachine.setState('enemy-hit')
+              }
+             
                return
             }
 
@@ -185,6 +218,59 @@ export default class PlayerController {
       events.emit('minus-health')
       this.NewStateMachine.setState('idle')
     }
+
+    enemyHitOnEnter() {
+      console.log(this.lastEnemy);
+      if (this.lastEnemy) {
+        if (this.sprite.body.position.x < this.lastEnemy.body.position.x){
+          this.sprite.setVelocityX(-20)
+        }
+        else{
+          this.sprite.setVelocityX(20)
+        }
+      } else {
+        this.sprite.setVelocityX(-20)
+      }
+
+      const startColor = Phaser.Display.Color.ValueToColor(0xffffff)
+      const endColor = Phaser.Display.Color.ValueToColor(0x0000ff)
+
+      this.scene.tweens.addCounter({
+        from: 0,
+        to: 100,
+        duration: 100,
+        repeat: 2,
+        yoyo: true,
+        onUpdate: tween => {
+          const value = tween.getValue()
+          const colorObject = Phaser.Display.Color.Interpolate.ColorWithColor(
+            startColor,
+            endColor,
+            100,
+            value
+          )
+          const color = Phaser.Display.Color.GetColor(
+            colorObject.r,
+            colorObject.g,
+            colorObject.b
+          )
+          this.sprite.setTint(color)
+        }
+      })
+      events.emit('minus-health')
+      this.NewStateMachine.setState('idle')
+    }
+
+    enemyDownOnEnter() { 
+
+      this.sprite.setVelocityY(-3)
+      this.sprite.setVelocityX(-3)
+
+  
+
+      this.NewStateMachine.setState('idle')
+    }
+
 
     update(dt){
       this.NewStateMachine.update(dt);

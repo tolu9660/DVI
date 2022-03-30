@@ -183,7 +183,8 @@ export default class Level2 extends Phaser.Scene {
           this.enemy = this.matter.add.sprite((x*0.9) + (width1*0.9),y, 'alien')
           .setScale('0.7')  
           .setFixedRotation()
-          this.enemyController = new enemyController(   this,  this.enemy      ) ;
+          this.obstacles.add('enemy', this.enemy.body)
+          this.enemyController = new enemyController(this,this.enemy) ;
           this.arrayEnemies[step]=this.enemyController;
           this.i++;       
     }

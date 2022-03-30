@@ -32,8 +32,14 @@ export default class EnemyController {
           onEnter: this.walkRightOnEnter,
           onUpdate: this.walkRightOnUpdate,
         })
+        .addState('death')
         .setState('idle')
-    
+        
+        
+        
+
+        events.on('alien-down', this.handleStomped, this)
+
     }
     idleOnEnter(){
       this.sprite.play('enemy-idle')
@@ -79,7 +85,15 @@ export default class EnemyController {
       }
     }
 
+    handleStomped(enemy) {
 
+      if (this.sprite !== enemy) {
+        console.log('pepe'); 
+      }
+
+      this.sprite.destroy()
+      this.NewStateMachine.setState('death')
+    }
 
     update(dt){
       this.NewStateMachine.update(dt);

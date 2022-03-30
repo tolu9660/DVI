@@ -269,22 +269,22 @@ export default class GameUI extends Phaser.Scene {
     bubble.fillRoundedRect(0, 0, bubbleWidth, bubbleHeight, 16);
 
     //  Calculate arrow coordinates
-    var point1X = Math.floor(bubbleWidth / 7);
-    var point1Y = bubbleHeight;
-    var point2X = Math.floor((bubbleWidth / 7) * 2);
-    var point2Y = bubbleHeight;
-    var point3X = Math.floor(bubbleWidth / 7);
-    var point3Y = Math.floor(bubbleHeight + arrowHeight);
+    // var point1X = Math.floor(bubbleWidth / 7);
+    // var point1Y = bubbleHeight;
+    // var point2X = Math.floor((bubbleWidth / 7) * 2);
+    // var point2Y = bubbleHeight;
+    // var point3X = Math.floor(bubbleWidth / 7);
+    // var point3Y = Math.floor(bubbleHeight + arrowHeight);
 
     //  Bubble arrow shadow
-    bubble.lineStyle(4, 0x222222, 0.5);
-    bubble.lineBetween(point2X - 1, point2Y + 6, point3X + 2, point3Y);
+    // bubble.lineStyle(4, 0x222222, 0.5);
+    // bubble.lineBetween(point2X - 1, point2Y + 6, point3X + 2, point3Y);
 
-    //  Bubble arrow fill
-    bubble.fillTriangle(point1X, point1Y, point2X, point2Y, point3X, point3Y);
-    bubble.lineStyle(2, 0x565656, 1);
-    bubble.lineBetween(point2X, point2Y, point3X, point3Y);
-    bubble.lineBetween(point1X, point1Y, point3X, point3Y);
+    // //  Bubble arrow fill
+    // bubble.fillTriangle(point1X, point1Y, point2X, point2Y, point3X, point3Y);
+    // bubble.lineStyle(2, 0x565656, 1);
+    // bubble.lineBetween(point2X, point2Y, point3X, point3Y);
+    // bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
     var content = this.add.text(0, 0, quote, { fontFamily: 'monospace', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
