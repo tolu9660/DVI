@@ -41,6 +41,7 @@ export default class Level2 extends Phaser.Scene {
   /**
    * Creación de los elementos de la escena principal de juego
    */
+  /*Hola esto es una prueba */
   create() {
     
     this.scene.launch('game-ui');
