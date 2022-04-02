@@ -23,7 +23,7 @@ import LevelClass from './LevelClass.js';
 export default class Level1 extends LevelClass {
 
   /**
-   * Constructor de la escena
+   * Constructor de la escena perro
    */
   constructor() {
     super('level1');
