@@ -27,6 +27,9 @@ export default class LevelClass extends Phaser.Scene {
   constructor(LevelKey) {
     super({ key: LevelKey });
     
+    this.groundLayer;
+    this.plataformasLayer;
+    
   }
 
   init() {
@@ -34,6 +37,7 @@ export default class LevelClass extends Phaser.Scene {
     this.obstacles = new ObstaclesController();
     this.arrayEnemies=[];
     this.arrayObjects=[];
+    this.ArrayTileset=[];
     this.j=0;
   
   }
@@ -42,37 +46,37 @@ export default class LevelClass extends Phaser.Scene {
    * Creación de los elementos de la escena principal de juego
    */
   /*Hola esto es una prueba */
-  create() {
+  create(KeyLevel,Tilesets,BackG ) {
     
     this.scene.launch('game-ui');
+    this.map = this.make.tilemap({ key: KeyLevel });
+    
+    const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
 
-    //cosas de mapa
-    this.map = this.make.tilemap({ key: 'level1' });
-    //this.map = this.make.tilemap({ key: 'tilemap' });
-    const tileset1L = this.map.addTilesetImage('suelo','suelo');
-    const tileset2L = this.map.addTilesetImage('subsuelo','subsuelo');
-    const tileset3L = this.map.addTilesetImage('suelo1','suelo1');
-    const lava = this.map.addTilesetImage('lavas','lavas');
-    const sueloTransparente = this.map.addTilesetImage('sueloT','sueloT');
+    for(let i=0; i<Tilesets.length; i++){
+      this.ArrayTileset[i]=this.map.addTilesetImage(Tilesets[i],Tilesets[i]);
+    }
+    this.cargarObjetos();
+  }
+  creacionCapas(Capas){
+    let c=[];
+      for(let e=0; e<Capas.length;e++){
 
+        for(let i=0; i<Capas[e][1].length; i++){
+          c[i]=this.ArrayTileset[i];
+        }
+        if(Capas[e][0]=='ground'){
+        this.groundLayer = this.map.createLayer(Capas[e][0],c);
+        }
+        if(Capas[e][0]=='plataformas'){
+          this.plataformasLayer = this.map.createLayer(Capas[e][0],c);
+        }   
+    }
+    this.groundLayer.setCollisionByProperty({collides : true});    
+    this.matter.world.convertTilemapLayer(this.groundLayer);
 
-
-    //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
-    //this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente,lava]);
-    const backgroundImage=this.add.image(0,0,'Fondo').setOrigin(0,0);
-    const tileset1 = this.map.addTilesetImage('acido','acido');
-    const tileset2 = this.map.addTilesetImage('texturas','texturas');
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2,sueloTransparente]);
-    this.plataformasLayer = this.map.createLayer('plataformas', [tileset1, tileset2]);
-
-
-
-    //this.groundLayer.setCollisionByProperty({collides: true});
-    //this.groundLayer = this.map.createLayer('ground', [tileset1])
-    this.groundLayer.setCollisionByProperty({collides : true})
-
-
-
+  }
+  cargarObjetos(){
     const objectsLayer = this.map.getObjectLayer('objects')
     
     objectsLayer.objects.forEach(objData => {
@@ -190,20 +194,6 @@ export default class LevelClass extends Phaser.Scene {
           this.i++;       
     }
     
-    /*const corazones = this.map.getObjectLayer('corazones')
-    this.j=0;
-    for (let step = 0; step < corazones.objects.length; step++){
-      const {x = 0, y = 0,width = 0} = corazones.objects[step]
-         
-          let cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
-          .setScale('0.5')  
-          .setFixedRotation();
-         let aux = new corazon(  this,cora );
-        this.arrayObjects[step]=aux;
-        this.j++;
-      
-    }*/
-    this.matter.world.convertTilemapLayer(this.groundLayer);
 
   }
 

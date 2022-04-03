@@ -57,9 +57,9 @@ export default class plataformaMovil {
 
     moveLeftOnUpdate(dt){
       this.moveTime += dt
-      this.sprite.setVelocityX(-2)
+      this.sprite.setVelocityX(-2.5)
      
-      if (this.moveTime > 2000) {
+      if (this.moveTime > 500) {
         this.NewStateMachine.setState('move-right');
       }
       
@@ -72,9 +72,9 @@ export default class plataformaMovil {
     
     moveRightOnUpdate(dt){
       this.moveTime += dt
-      this.sprite.setVelocityX(2)
+      this.sprite.setVelocityX(.5)
       
-      if (this.moveTime > 2000) {
+      if (this.moveTime > 500) {
         this.NewStateMachine.setState('move-left');
       }
     }

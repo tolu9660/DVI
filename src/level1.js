@@ -27,7 +27,7 @@ export default class Level1 extends LevelClass {
    */
   constructor() {
     super('level1');
-    
+    this.arrayTileset=[];
   }
 
  
@@ -37,7 +37,14 @@ export default class Level1 extends LevelClass {
    */
   create(){
     let a =0;
-    super.create();
+    this.arrayTileset[0] = 'acido';
+    this.arrayTileset[1] = 'texturas';
+    this.arrayTileset[2] = 'sueloT';
+    super.create('level1',this.arrayTileset,'Fondo');
+    let ground=['ground',[0,1,2]];
+    let plataformas=['plataformas',[2]];
+    let Capas=[ground,plataformas];
+    super.creacionCapas(Capas);
   }
 
   update(t, dt){
