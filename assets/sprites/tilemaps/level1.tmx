@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="86">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="107" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="86">
  <editorsettings>
   <export target="level1.json" format="json"/>
  </editorsettings>
@@ -212,12 +212,12 @@
   </data>
  </layer>
  <objectgroup id="7" name="objects">
-  <object id="3" name="alien_spawn" x="55.1833" y="87.6357" width="38" height="38"/>
+  <object id="3" name="alien_spawn" x="364.183" y="366.636" width="38" height="38"/>
   <object id="5" name="spikes" x="3008.09" y="416.833" width="63.8182" height="31"/>
   <object id="9" name="spikes" x="227.454" y="448.333" width="95.4848" height="30.7273"/>
   <object id="64" name="spikes" x="474.121" y="449" width="130.818" height="30.7273"/>
   <object id="76" name="spikes" x="130.788" y="142.583" width="221.484" height="1.7273"/>
-  <object id="10" name="energia" x="1018.35" y="302.845" width="34.8712" height="29.5064"/>
+  <object id="10" name="energia" x="1078.35" y="306.845" width="34.8712" height="29.5064"/>
   <object id="11" name="energia" x="527.564" y="319.247" width="34.8712" height="29.5064"/>
   <object id="12" name="energia" x="921.56" y="159.247" width="34.8712" height="29.5064"/>
   <object id="14" name="corazon" x="1268.67" y="320" width="47" height="44"/>
@@ -242,6 +242,6 @@
   <object id="82" name="cueva" x="3340" y="291" width="66" height="39"/>
  </objectgroup>
  <objectgroup id="9" name="enemigos">
-  <object id="48" name="enemigo" x="263.819" y="373.73" width="39" height="44"/>
+  <object id="48" name="enemigo" x="263.819" y="362.73" width="39" height="44"/>
  </objectgroup>
 </map>

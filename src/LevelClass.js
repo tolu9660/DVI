@@ -180,12 +180,16 @@ export default class LevelClass extends Phaser.Scene {
       
     })
     
+   
+
+  }
+  cargaEnemigos(Tipo){
     const enemigos = this.map.getObjectLayer('enemigos')
     this.i=0;
     
     for (let step = 0; step < enemigos.objects.length; step++){
-      const {x = 0, y = 0, name, width1 = 0} = enemigos.objects[step]
-          this.enemy = this.matter.add.sprite((x*0.9) + (width1*0.9),y, 'alien')
+      const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
+          this.enemy = this.matter.add.sprite((x*0.9) + (width1),y, Tipo)
           .setScale('0.7')  
           .setFixedRotation()
           this.obstacles.add('enemy', this.enemy.body)
