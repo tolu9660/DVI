@@ -212,7 +212,7 @@
   <object id="27" name="spikes" x="736.08" y="449.334" width="95.481" height="30.2728"/>
   <object id="33" name="spikes" x="1184.17" y="449.333" width="63.5" height="30.0834"/>
   <object id="65" name="spikes" x="960.837" y="449.333" width="189.5" height="30.0834"/>
-  <object id="34" name="spikes" x="1024.2" y="224.545" width="31.7273" height="30.6667"/>
+  <object id="34" name="spikes" x="1024.2" y="224.545" width="31.7273" height="26.3334"/>
   <object id="35" name="spikes" x="1407.83" y="418.666" width="32.5" height="28"/>
   <object id="66" name="spikes" x="1502.33" y="448.916" width="161.25" height="30.5"/>
   <object id="36" name="spikes" x="2272.17" y="417" width="63.3333" height="30.8334"/>
