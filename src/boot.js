@@ -58,6 +58,9 @@ export default class Boot extends Phaser.Scene {
     //this.load.image('corazon',"/corazon.png");
     this.load.image('energia',"/energia.png");    
     //this.load.image('llave',"/key.png");
+    //carga de sonidos:
+    this.load.audio('sonidoFondo', '/sound/musica.mp3');
+
 
   }
 

@@ -39,6 +39,7 @@ export default class LevelClass extends Phaser.Scene {
     this.arrayObjects=[];
     this.ArrayTileset=[];
     this.j=0;
+
   
   }
 
@@ -221,7 +222,11 @@ export default class LevelClass extends Phaser.Scene {
     }
     
   }
+  jugando(){
+    if(this.playerController.vivo()){
 
+    }
+  }
 
  
   

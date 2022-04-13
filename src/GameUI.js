@@ -98,6 +98,7 @@ export default class GameUI extends Phaser.Scene {
     console.log(this.heartsCollected)
     if (this.heartsCollected == 0){
       this.scene.pause('level')
+    
       this.scene.start('end')
     }
     this.heartLabel.text = `x${this.heartsCollected}`
