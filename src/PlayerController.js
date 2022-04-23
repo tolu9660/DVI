@@ -9,9 +9,7 @@ import NewStateMachine from './newStateMachine.js';
  */
 export default class PlayerController {
   
-  //  init() {
-  //   this.lastEnemy;
-  //  }
+ 
 
     constructor(scene,sprite, cursors, obstacles){
       // super({ key: 'player-controller' });
@@ -63,19 +61,12 @@ export default class PlayerController {
               console.log(this.sprite.body.position.y);
               console.log(this.lastEnemy.body.position.y);
               if (this.sprite.body.position.x < this.lastEnemy.body.position.x) {
-                console.log(this.lastEnemy);
-                // this.lastEnemy.scene.alien.ative = false
-                // this.lastEnemy.active = false;
-                // this.lastEnemy.body.destroy();
-                
+                console.log(this.lastEnemy);            
                 events.emit('alien-down', this.lastEnemy)
                 
               } else {
                 
-                // this.NewStateMachine.setState('enemy-down')
                 this.NewStateMachine.setState('enemy-hit')
-
-                  // this.NewStateMachine.setState('enemy-hit')
               }
              
                return
@@ -113,9 +104,7 @@ export default class PlayerController {
                       break;
                     
                     case 'cueva':
-                    // events.emit('heart-collected')
-                    // gameObject.destroy();
-                    console.log('collyde with vueva')
+                     console.log('collyde with vueva')
                     if (this.key) {
                       events.emit('cueva-in')
                     }
@@ -178,12 +167,12 @@ export default class PlayerController {
       if (this.cursors.left.isDown) {
         this.sprite.flipX = false;
         this.sprite.setVelocityX(-speed);
-        // this.alien.play('player-walk', true)
+   
       }
       else if (this.cursors.right.isDown) {
         this.sprite.flipX = true;
         this.sprite.setVelocityX(speed);
-        // this.alien.play('player-walk', true)
+      
       }
     }
 

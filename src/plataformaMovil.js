@@ -1,4 +1,4 @@
-import Star from './star.js';
+
 
 import { sceneEvents as events } from './EventsCenter.js';
 

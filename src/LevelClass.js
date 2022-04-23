@@ -1,6 +1,4 @@
-//import Platform from './platform.js';
-//import Player from './player.js';
-////import piedra from './piedra.js';
+
 import PlayerController from './PlayerController.js'
 import enemyController from './EnemyController.js'
 import corazon from './corazon.js';

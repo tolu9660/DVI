@@ -19,16 +19,9 @@ export default class Boot extends Phaser.Scene {
   preload() {
     // Con setPath podemos establecer el prefijo que se añadirá a todos los load que aparecen a continuación
     this.load.setPath('assets/sprites/');
-    // this.load.image('platform', 'platform.png');
-    // this.load.image('base', 'base.png');
-    // this.load.image('calavera', 'calavera.png');
-    // this.load.image('star', 'star.png');
-    // this.load.image('key', 'Key1.png');
-    // this.load.image('player', 'player.png');
-    // this.load.image('piedra', 'piedra.png');
-    // this.load.image('azul','azul.jpg');
-     this.load.image('fondo', 'background.png');
-    // this.load.image('walls',"/tilemaps/wall.png");  
+    
+
+ 
 
     //cargamos el alien
     this.load.atlas('alien','alien.png', 'alien.json');
@@ -36,7 +29,7 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('hero','hero.png', 'hero.json');
     this.load.atlas('corazon','corazon.png', 'corazon.json');
     this.load.atlas('llave','llave.png', 'llave.json');
-    this.load.atlas('ene','e.png', 'e.json');
+    this.load.atlas('energia','e.png', 'e.json');
     this.load.atlas('pm','pm.png', 'pm.json');
     this.load.atlas('texturas','/tilemaps/texturas.png', '/tilemaps/texturas.json');
     this.load.image('Fondo',"/tilemaps/Fondo.png");
@@ -45,9 +38,8 @@ export default class Boot extends Phaser.Scene {
     //SUELOS NIVEL 1 (imagenes del suelo)
     this.load.image('suelo',"/tilemaps/suelo.png");  
     this.load.image('subsuelo',"/tilemaps/subsuelo.png");
-    this.load.image('suelo1',"/tilemaps/suelo1.png");
-    this.load.image('sueloT',"/tilemaps/Transparente.png");
-    this.load.image('lavas',"/tilemaps/lavas.png");
+    
+
     //MAPA NIVEL 1 (nombre recusro cache, fichero json)
     this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
 
@@ -55,9 +47,7 @@ export default class Boot extends Phaser.Scene {
     this.load.image('ui-heart-empty',"/ui_heart_empty.png");
     this.load.image('ui-heart-full',"/ui_heart_full.png");
     
-    //this.load.image('corazon',"/corazon.png");
-    this.load.image('energia',"/energia.png");    
-    //this.load.image('llave',"/key.png");
+  
     //carga de sonidos:
     this.load.audio('sonidoFondo', '/sound/musica.mp3');
 
