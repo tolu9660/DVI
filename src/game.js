@@ -2,6 +2,8 @@ import Boot from './boot.js';
 import End from './end.js';
 import Level from './level.js';
 import Level2 from './level2.js';
+import Level1 from './level1.js';
+import Level3 from './level3.js';
 import Inicio from './Inicio.js'
 import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
@@ -21,13 +23,13 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Boot, Level2,GameUI, Creditos, End],
+    scene: [Inicio, Opciones,  Boot, Level3,GameUI, Creditos, End],
     physics: {
         default: 'matter',//cambiado el arcade
-        matter: {
-            debug: true
-        }
-    }
+        // matter: {
+        //     debug: true
+        // }
+     }
 };
 
 let config2 = {
@@ -35,7 +37,7 @@ let config2 = {
     width: 800,
     height: 520,
     pixelArt: true,
-    scene: [Inicio, Opciones, Creditos, Boot, Level2, End],
+    scene: [Inicio, Opciones, Creditos, Boot, Level3, End],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {

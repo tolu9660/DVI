@@ -1,6 +1,4 @@
-//import Platform from './platform.js';
-//import Player from './player.js';
-////import piedra from './piedra.js';
+
 import PlayerController from './PlayerController.js'
 import enemyController from './EnemyController.js'
 import corazon from './corazon.js';
@@ -19,13 +17,16 @@ import cueva from './cueva.js'
  * El juego termina cuando el jugador ha recogido 10 estrellas.
  * @extends Phaser.Scene
  */
-export default class Level2 extends Phaser.Scene {
+export default class LevelClass extends Phaser.Scene {
 
   /**
    * Constructor de la escena
    */
-  constructor() {
-    super({ key: 'level2' });
+  constructor(LevelKey) {
+    super({ key: LevelKey });
+    
+    this.groundLayer;
+    this.plataformasLayer;
     
   }
 
@@ -34,7 +35,9 @@ export default class Level2 extends Phaser.Scene {
     this.obstacles = new ObstaclesController();
     this.arrayEnemies=[];
     this.arrayObjects=[];
+    this.ArrayTileset=[];
     this.j=0;
+
   
   }
 
@@ -42,40 +45,37 @@ export default class Level2 extends Phaser.Scene {
    * Creación de los elementos de la escena principal de juego
    */
   /*Hola esto es una prueba */
-  create() {
+  create(KeyLevel,Tilesets,BackG ) {
     
     this.scene.launch('game-ui');
-    //const backgrounImage = this.add.image(0, 0, 'Fondo').setOrigin(0,0);
-
-    //cosas de mapa
-    this.map = this.make.tilemap({ key: 'level2' });
-    //this.map = this.make.tilemap({ key: 'tilemap' });
-
-    const tileset1L = this.map.addTilesetImage('suelo','suelo');
-    const tileset2L = this.map.addTilesetImage('subsuelo','subsuelo');
-    const tileset3L = this.map.addTilesetImage('suelo1','suelo1');
-    const lava = this.map.addTilesetImage('lavas','lavas');
-    const sueloTransparente = this.map.addTilesetImage('sueloT','sueloT');
-
-
-
-    //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
-    //this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2, tileset3,sueloTransparente,lava]);
-    const backgroundImage=this.add.image(0,0,'Fondo').setOrigin(0,0);
-    const tileset1 = this.map.addTilesetImage('acido','acido');
-    const tileset2 = this.map.addTilesetImage('texturas','texturas');
-    this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2,sueloTransparente]);
-    this.plataformasLayer = this.map.createLayer('plataformas', [tileset1, tileset2]);
-
-
-
-    //this.groundLayer.setCollisionByProperty({collides: true});
-    //this.groundLayer = this.map.createLayer('ground', [tileset1])
-    this.groundLayer.setCollisionByProperty({collides : true})    
+    this.map = this.make.tilemap({ key: KeyLevel });
     
-    this.groundLayer.setCollisionByProperty({collides: true});
-    this.plataformasLayer.setCollisionByProperty({collides: true});
+    const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
 
+    for(let i=0; i<Tilesets.length; i++){
+      this.ArrayTileset[i]=this.map.addTilesetImage(Tilesets[i],Tilesets[i]);
+    }
+    this.cargarObjetos();
+  }
+  creacionCapas(Capas){
+    let c=[];
+      for(let e=0; e<Capas.length;e++){
+
+        for(let i=0; i<Capas[e][1].length; i++){
+          c[i]=this.ArrayTileset[i];
+        }
+        if(Capas[e][0]=='ground'){
+        this.groundLayer = this.map.createLayer(Capas[e][0],c);
+        }
+        if(Capas[e][0]=='plataformas'){
+          this.plataformasLayer = this.map.createLayer(Capas[e][0],c);
+        }   
+    }
+    this.groundLayer.setCollisionByProperty({collides : true});    
+    this.matter.world.convertTilemapLayer(this.groundLayer);
+
+  }
+  cargarObjetos(){
     const objectsLayer = this.map.getObjectLayer('objects')
     
     objectsLayer.objects.forEach(objData => {
@@ -179,12 +179,16 @@ export default class Level2 extends Phaser.Scene {
       
     })
     
+   
+
+  }
+  cargaEnemigos(Tipo){
     const enemigos = this.map.getObjectLayer('enemigos')
     this.i=0;
     
     for (let step = 0; step < enemigos.objects.length; step++){
-      const {x = 0, y = 0, name, width1 = 0} = enemigos.objects[step]
-          this.enemy = this.matter.add.sprite((x*0.9) + (width1*0.9),y, 'alien')
+      const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
+          this.enemy = this.matter.add.sprite((x*0.9) + (width1),y, Tipo)
           .setScale('0.7')  
           .setFixedRotation()
           this.obstacles.add('enemy', this.enemy.body)
@@ -193,20 +197,6 @@ export default class Level2 extends Phaser.Scene {
           this.i++;       
     }
     
-    /*const corazones = this.map.getObjectLayer('corazones')
-    this.j=0;
-    for (let step = 0; step < corazones.objects.length; step++){
-      const {x = 0, y = 0,width = 0} = corazones.objects[step]
-         
-          let cora = this.matter.add.sprite(x + (width*0.5),y, 'cora')
-          .setScale('0.5')  
-          .setFixedRotation();
-         let aux = new corazon(  this,cora );
-        this.arrayObjects[step]=aux;
-        this.j++;
-      
-    }*/
-    this.matter.world.convertTilemapLayer(this.groundLayer);
 
   }
 
@@ -230,7 +220,11 @@ export default class Level2 extends Phaser.Scene {
     }
     
   }
+  jugando(){
+    if(this.playerController.vivo()){
 
+    }
+  }
 
  
   

@@ -19,44 +19,37 @@ export default class Boot extends Phaser.Scene {
   preload() {
     // Con setPath podemos establecer el prefijo que se añadirá a todos los load que aparecen a continuación
     this.load.setPath('assets/sprites/');
-    // this.load.image('platform', 'platform.png');
-    // this.load.image('base', 'base.png');
-    // this.load.image('calavera', 'calavera.png');
-    // this.load.image('star', 'star.png');
-    // this.load.image('key', 'Key1.png');
-    // this.load.image('player', 'player.png');
-    // this.load.image('piedra', 'piedra.png');
-    // this.load.image('azul','azul.jpg');
-    // this.load.image('fondo', 'background.png');
-    // this.load.image('walls',"/tilemaps/wall.png");  
-
-    //cargamos el alien
-    this.load.atlas('alien','alien.png', 'alien.json');
-    this.load.atlas('enemigo','enemigo.png', 'enemigo.json');
-    this.load.atlas('hero','hero.png', 'hero.json');
-    this.load.atlas('cora','cora.png', 'cora.json');
-    this.load.atlas('texturas1','/tilemaps/texturas1.png','/tilemaps/texturas1.json')
-    //this.load.image('acid','/tilemaps/acid.png');
-    //this.load.image('Fondo','/tilemaps/Fondo.png');
-
-
-    //this.load.image('texturas','/tilemaps/texturas.png');
-    
-    //SUELOS NIVEL 1 (imagenes del suelo)
-    //this.load.image('suelo',"/tilemaps/suelo.png");  
-    //this.load.image('subsuelo',"/tilemaps/subsuelo.png");
-    //MAPA NIVEL 1 (nombre recusro cache, fichero json)
-    this.load.tilemapTiledJSON('level2', '/tilemaps/level2.json');
 
     
+    //characters:
+    this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
+    this.load.atlas('hero','/PCharacters/hero.png', '/PCharacters/hero.json');
+   
+    //Objetos: 
+    this.load.atlas('corazon','/objetos/corazon.png', '/objetos/corazon.json');
+    this.load.atlas('llave','/objetos/llave.png', '/objetos/llave.json');
+    this.load.atlas('energia','/objetos/e.png', '/objetos/e.json');
+    this.load.atlas('pm','/objetos/pm.png', '/objetos/pm.json');
+    this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
+    this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
+    
+  
+    
+    
+    // NIVEL 1:
+    
+    this.load.tilemapTiledJSON('level1', '/tilemaps/mapa3/level1.json');
+    this.load.atlas('texturas','/tilemaps/mapa3/texturas.png', '/tilemaps/mapa3/texturas.json');
+    this.load.image('Fondo',"/tilemaps/mapa3/Fondo.png");
+    this.load.image('acido',"/tilemaps/mapa3/acido.png");
+    this.load.atlas('cueva','/tilemaps/mapa3/cueva.png', '/tilemaps/mapa3/cueva.json');
+    //carga de sonidos:
+    this.load.audio('sonidoFondo', '/sound/level1/musica.mp3');
 
+    // NIVEL 2:
     
-    this.load.image('ui-heart-empty',"/ui_heart_empty.png");
-    this.load.image('ui-heart-full',"/ui_heart_full.png");
-    
-    this.load.image('corazon',"/corazon.png");
-    this.load.image('energia',"/energia.png");    
-    this.load.image('llave',"/key.png");
+
+
 
   }
 
@@ -66,7 +59,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('level2');
+    this.scene.start('level3');
     
   }
 }
