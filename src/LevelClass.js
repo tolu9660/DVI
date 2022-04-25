@@ -96,9 +96,9 @@ export default class LevelClass extends Phaser.Scene {
           //this.cameras.main.add(0, 0, 300, 500);
       
           this.cameras.main.startFollow(this.alien, false, 1, 1, 0, 0);
-          this.cameras.main.setDeadzone(400, 200);
+          this.cameras.main.setDeadzone(400, 250);
   
-          this.cameras.main.zoom = 0.9;
+          this.cameras.main.zoom = 1;
 
         break;
         }
