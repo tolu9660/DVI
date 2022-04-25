@@ -45,7 +45,8 @@ export default class Level3 extends LevelClass {
     let plataformas=['plataformas',[2]];
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
-    super.cargaEnemigos('alien');
+    //super.cargaEnemigos('alien');
+    super.cargaEnemigos('alien2');
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }

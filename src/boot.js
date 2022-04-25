@@ -21,7 +21,8 @@ export default class Boot extends Phaser.Scene {
     this.load.setPath('assets/sprites/');
     
     //characters:
-    this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
+    //this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
+    this.load.atlas('alien2','/enemy2/enemigo.png', '/enemy2/enemigo.json');
     this.load.atlas('hero','/PCharacters/hero.png', '/PCharacters/hero.json');
    
     //Objetos: 

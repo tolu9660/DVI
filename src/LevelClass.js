@@ -192,7 +192,8 @@ export default class LevelClass extends Phaser.Scene {
           .setScale('0.7')  
           .setFixedRotation()
           this.obstacles.add('enemy', this.enemy.body)
-          this.enemyController = new enemyController(this,this.enemy) ;
+          //marcar un switch que permita crear el tipo de enemigo
+          this.enemyController = new enemyController(this,this.enemy,Tipo) ;
           this.arrayEnemies[step]=this.enemyController;
           this.i++;       
     }
