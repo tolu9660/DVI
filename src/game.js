@@ -17,13 +17,13 @@ import GameUI from './GameUI.js'
 let config = {
     type: Phaser.AUTO,
     width: 1000,
-    height: 480,
+    height: 500,
     scale: {
-        mode: Phaser.Scale.FIT,  
+        //mode: Phaser.Scale.FIT,  
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Inicio, Opciones,  Boot, Level3,GameUI, Creditos, End],
+    scene: [Inicio, Opciones,  Boot, Level3, GameUI, Creditos, End],
     physics: {
         default: 'matter',//cambiado el arcade
         // matter: {
