@@ -29,7 +29,7 @@ export default class GameUI extends Phaser.Scene {
       })
 
       const energia = this.add.image(100, 25, 'energia')
-      energia.setScale('0.4','0.4')
+      //energia.setScale('0.4','0.4')
      this.starsLabel = this.add.text(123 , 26, 'x0', {
         fontSize: '16px'
       })

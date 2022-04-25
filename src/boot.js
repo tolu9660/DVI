@@ -20,36 +20,34 @@ export default class Boot extends Phaser.Scene {
     // Con setPath podemos establecer el prefijo que se añadirá a todos los load que aparecen a continuación
     this.load.setPath('assets/sprites/');
     
-
- 
-
-    //cargamos el alien
-    this.load.atlas('alien','alien.png', 'alien.json');
-    this.load.atlas('enemigo','enemigo.png', 'enemigo.json');
-    this.load.atlas('hero','hero.png', 'hero.json');
-    this.load.atlas('corazon','corazon.png', 'corazon.json');
-    this.load.atlas('llave','llave.png', 'llave.json');
-    this.load.atlas('energia','e.png', 'e.json');
-    this.load.atlas('pm','pm.png', 'pm.json');
-    this.load.atlas('texturas','/tilemaps/texturas.png', '/tilemaps/texturas.json');
-    this.load.image('Fondo',"/tilemaps/Fondo.png");
-    this.load.image('acido',"/tilemaps/acido.png");
-    this.load.atlas('cueva','/tilemaps/cueva.png', '/tilemaps/cueva.json');
-    //SUELOS NIVEL 1 (imagenes del suelo)
-    this.load.image('suelo',"/tilemaps/suelo.png");  
-    this.load.image('subsuelo',"/tilemaps/subsuelo.png");
-    
-
-    //MAPA NIVEL 1 (nombre recusro cache, fichero json)
-    this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
-
-    
-    this.load.image('ui-heart-empty',"/ui_heart_empty.png");
-    this.load.image('ui-heart-full',"/ui_heart_full.png");
+    //characters:
+    this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
+    this.load.atlas('hero','/PCharacters/hero.png', '/PCharacters/hero.json');
+   
+    //Objetos: 
+    this.load.atlas('corazon','/objetos/corazon.png', '/objetos/corazon.json');
+    this.load.atlas('llave','/objetos/llave.png', '/objetos/llave.json');
+    this.load.atlas('energia','/objetos/e.png', '/objetos/e.json');
+    this.load.atlas('pm','/objetos/pm.png', '/objetos/pm.json');
+    this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
+    this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
     
   
+    
+    
+    // NIVEL 1:
+    
+    this.load.tilemapTiledJSON('level1', '/tilemaps/mapa3/level1.json');
+    this.load.atlas('texturas','/tilemaps/mapa3/texturas.png', '/tilemaps/mapa3/texturas.json');
+    this.load.image('Fondo',"/tilemaps/mapa3/Fondo.png");
+    this.load.image('acido',"/tilemaps/mapa3/acido.png");
+    this.load.atlas('cueva','/tilemaps/mapa3/cueva.png', '/tilemaps/mapa3/cueva.json');
     //carga de sonidos:
-    this.load.audio('sonidoFondo', '/sound/musica.mp3');
+    this.load.audio('sonidoFondo', '/sound/level1/musica.mp3');
+
+    // NIVEL 2:
+    
+
 
 
   }
