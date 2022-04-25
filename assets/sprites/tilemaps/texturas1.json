@@ -1,10 +1,110 @@
 {
   "frames": [
     {
-      "filename": "Ground-Additional_02.png",
+      "filename": "Ground-Additional_0333.png",
       "frame": {
         "x": 0,
         "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Ground-Additional_0444.png",
+      "frame": {
+        "x": 0,
+        "y": 256,
+        "w": 256,
+        "h": 256
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Decor_Ruins_01.png",
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 240,
+        "h": 240
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 240
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Decor_Ruins_02.png",
+      "frame": {
+        "x": 0,
+        "y": 752,
+        "w": 240,
+        "h": 240
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 240,
+        "h": 240
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Ground-Additional_02.png",
+      "frame": {
+        "x": 0,
+        "y": 992,
         "w": 160,
         "h": 160
       },
@@ -29,7 +129,7 @@
       "filename": "Ground-Additional_03.png",
       "frame": {
         "x": 0,
-        "y": 160,
+        "y": 1152,
         "w": 160,
         "h": 160
       },
@@ -54,7 +154,7 @@
       "filename": "Ground-Additional_04.png",
       "frame": {
         "x": 0,
-        "y": 320,
+        "y": 1312,
         "w": 160,
         "h": 160
       },
@@ -79,7 +179,7 @@
       "filename": "Ground-Additional_07.png",
       "frame": {
         "x": 0,
-        "y": 480,
+        "y": 1472,
         "w": 160,
         "h": 160
       },
@@ -104,7 +204,7 @@
       "filename": "Ground-Additional_05.png",
       "frame": {
         "x": 0,
-        "y": 640,
+        "y": 1632,
         "w": 64,
         "h": 160
       },
@@ -129,7 +229,7 @@
       "filename": "Ground-Additional_06.png",
       "frame": {
         "x": 0,
-        "y": 800,
+        "y": 1792,
         "w": 64,
         "h": 160
       },
@@ -151,10 +251,235 @@
       }
     },
     {
-      "filename": "Brick_01.png",
+      "filename": "Fence.png",
       "frame": {
         "x": 0,
-        "y": 960,
+        "y": 1952,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Grass_01.png",
+      "frame": {
+        "x": 0,
+        "y": 2016,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Little_Wreckage.png",
+      "frame": {
+        "x": 64,
+        "y": 1632,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_01.png",
+      "frame": {
+        "x": 64,
+        "y": 1696,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_02.png",
+      "frame": {
+        "x": 64,
+        "y": 1760,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Grass_02.png",
+      "frame": {
+        "x": 64,
+        "y": 1824,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_03.png",
+      "frame": {
+        "x": 64,
+        "y": 1856,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_04.png",
+      "frame": {
+        "x": 64,
+        "y": 1888,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Spikes.png",
+      "frame": {
+        "x": 64,
+        "y": 1920,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Brick_01.png",
+      "frame": {
+        "x": 64,
+        "y": 1952,
         "w": 32,
         "h": 32
       },
@@ -178,8 +503,8 @@
     {
       "filename": "Brick_02.png",
       "frame": {
-        "x": 0,
-        "y": 992,
+        "x": 64,
+        "y": 1984,
         "w": 32,
         "h": 32
       },
@@ -203,8 +528,8 @@
     {
       "filename": "Bridge_01.png",
       "frame": {
-        "x": 0,
-        "y": 1024,
+        "x": 64,
+        "y": 2016,
         "w": 32,
         "h": 32
       },
@@ -228,8 +553,8 @@
     {
       "filename": "Bridge_02.png",
       "frame": {
-        "x": 0,
-        "y": 1056,
+        "x": 96,
+        "y": 1952,
         "w": 32,
         "h": 32
       },
@@ -253,8 +578,8 @@
     {
       "filename": "Decor_Plant.png",
       "frame": {
-        "x": 0,
-        "y": 1088,
+        "x": 96,
+        "y": 1984,
         "w": 32,
         "h": 32
       },
@@ -278,8 +603,8 @@
     {
       "filename": "Ground_01.png",
       "frame": {
-        "x": 0,
-        "y": 1120,
+        "x": 96,
+        "y": 2016,
         "w": 32,
         "h": 32
       },
@@ -303,8 +628,8 @@
     {
       "filename": "Ground_02.png",
       "frame": {
-        "x": 0,
-        "y": 1152,
+        "x": 128,
+        "y": 1632,
         "w": 32,
         "h": 32
       },
@@ -328,8 +653,8 @@
     {
       "filename": "Ground_03.png",
       "frame": {
-        "x": 0,
-        "y": 1184,
+        "x": 128,
+        "y": 1664,
         "w": 32,
         "h": 32
       },
@@ -353,8 +678,8 @@
     {
       "filename": "Ground_04.png",
       "frame": {
-        "x": 0,
-        "y": 1216,
+        "x": 128,
+        "y": 1696,
         "w": 32,
         "h": 32
       },
@@ -378,8 +703,8 @@
     {
       "filename": "Ground_05.png",
       "frame": {
-        "x": 0,
-        "y": 1248,
+        "x": 128,
+        "y": 1728,
         "w": 32,
         "h": 32
       },
@@ -403,8 +728,8 @@
     {
       "filename": "Ground_06.png",
       "frame": {
-        "x": 0,
-        "y": 1280,
+        "x": 128,
+        "y": 1760,
         "w": 32,
         "h": 32
       },
@@ -428,8 +753,8 @@
     {
       "filename": "Ground_07.png",
       "frame": {
-        "x": 0,
-        "y": 1312,
+        "x": 128,
+        "y": 1792,
         "w": 32,
         "h": 32
       },
@@ -453,8 +778,8 @@
     {
       "filename": "Ground_08.png",
       "frame": {
-        "x": 0,
-        "y": 1344,
+        "x": 128,
+        "y": 1824,
         "w": 32,
         "h": 32
       },
@@ -478,8 +803,8 @@
     {
       "filename": "Ground_09.png",
       "frame": {
-        "x": 0,
-        "y": 1376,
+        "x": 128,
+        "y": 1856,
         "w": 32,
         "h": 32
       },
@@ -503,8 +828,8 @@
     {
       "filename": "Ground_10.png",
       "frame": {
-        "x": 0,
-        "y": 1408,
+        "x": 128,
+        "y": 1888,
         "w": 32,
         "h": 32
       },
@@ -528,8 +853,8 @@
     {
       "filename": "Ground_11.png",
       "frame": {
-        "x": 0,
-        "y": 1440,
+        "x": 128,
+        "y": 1920,
         "w": 32,
         "h": 32
       },
@@ -553,8 +878,8 @@
     {
       "filename": "Ground_12.png",
       "frame": {
-        "x": 0,
-        "y": 1472,
+        "x": 128,
+        "y": 1952,
         "w": 32,
         "h": 32
       },
@@ -578,8 +903,8 @@
     {
       "filename": "Ground_13.png",
       "frame": {
-        "x": 0,
-        "y": 1504,
+        "x": 128,
+        "y": 1984,
         "w": 32,
         "h": 32
       },
@@ -603,8 +928,108 @@
     {
       "filename": "Ladder.png",
       "frame": {
+        "x": 128,
+        "y": 2016,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
         "x": 0,
-        "y": 1536,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_05.png",
+      "frame": {
+        "x": 160,
+        "y": 992,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_06.png",
+      "frame": {
+        "x": 160,
+        "y": 1024,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_07.png",
+      "frame": {
+        "x": 160,
+        "y": 1056,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Rock_08.png",
+      "frame": {
+        "x": 160,
+        "y": 1088,
         "w": 32,
         "h": 32
       },
@@ -628,8 +1053,8 @@
     {
       "filename": "Sign_01.png",
       "frame": {
-        "x": 0,
-        "y": 1568,
+        "x": 160,
+        "y": 1120,
         "w": 32,
         "h": 32
       },
@@ -653,8 +1078,8 @@
     {
       "filename": "Sign_02.png",
       "frame": {
-        "x": 0,
-        "y": 1600,
+        "x": 160,
+        "y": 1152,
         "w": 32,
         "h": 32
       },
@@ -678,8 +1103,8 @@
     {
       "filename": "Sign_03.png",
       "frame": {
-        "x": 0,
-        "y": 1632,
+        "x": 160,
+        "y": 1184,
         "w": 32,
         "h": 32
       },
@@ -703,8 +1128,8 @@
     {
       "filename": "Sign_04.png",
       "frame": {
-        "x": 0,
-        "y": 1664,
+        "x": 160,
+        "y": 1216,
         "w": 32,
         "h": 32
       },
@@ -728,8 +1153,8 @@
     {
       "filename": "Sign_05.png",
       "frame": {
-        "x": 0,
-        "y": 1696,
+        "x": 160,
+        "y": 1248,
         "w": 32,
         "h": 32
       },
@@ -753,8 +1178,8 @@
     {
       "filename": "Sign_06.png",
       "frame": {
-        "x": 0,
-        "y": 1728,
+        "x": 160,
+        "y": 1280,
         "w": 32,
         "h": 32
       },
@@ -778,8 +1203,8 @@
     {
       "filename": "Wooden_Barrel.png",
       "frame": {
-        "x": 0,
-        "y": 1760,
+        "x": 160,
+        "y": 1312,
         "w": 32,
         "h": 32
       },
@@ -803,8 +1228,8 @@
     {
       "filename": "Wooden_Box.png",
       "frame": {
-        "x": 0,
-        "y": 1792,
+        "x": 160,
+        "y": 1344,
         "w": 32,
         "h": 32
       },
@@ -832,8 +1257,8 @@
     "image": "texturas1.png",
     "format": "RGBA8888",
     "size": {
-      "w": 160,
-      "h": 1824
+      "w": 256,
+      "h": 2048
     },
     "scale": 1
   }

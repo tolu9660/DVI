@@ -35,9 +35,9 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('enemigo','enemigo.png', 'enemigo.json');
     this.load.atlas('hero','hero.png', 'hero.json');
     this.load.atlas('cora','cora.png', 'cora.json');
-    this.load.atlas('texturas','/tilemaps/texturas.png','/tilemaps/texturas.json')
-    this.load.image('acido','/tilemaps/acido.png');
-    this.load.image('Fondo','/tilemaps/Fondo.png');
+    this.load.atlas('texturas1','/tilemaps/texturas1.png','/tilemaps/texturas1.json')
+    //this.load.image('acid','/tilemaps/acid.png');
+    //this.load.image('Fondo','/tilemaps/Fondo.png');
 
 
     //this.load.image('texturas','/tilemaps/texturas.png');
@@ -46,7 +46,7 @@ export default class Boot extends Phaser.Scene {
     //this.load.image('suelo',"/tilemaps/suelo.png");  
     //this.load.image('subsuelo',"/tilemaps/subsuelo.png");
     //MAPA NIVEL 1 (nombre recusro cache, fichero json)
-    this.load.tilemapTiledJSON('level1', '/tilemaps/level1.json');
+    this.load.tilemapTiledJSON('level2', '/tilemaps/level2.json');
 
     
 

@@ -37,19 +37,21 @@ export default class Level2 extends Phaser.Scene {
   create() {
     
     this.scene.launch('game-ui');
-    const backgrounImage = this.add.image(0, 0, 'Fondo').setOrigin(0,0);
+    //const backgrounImage = this.add.image(0, 0, 'Fondo').setOrigin(0,0);
 
     //cosas de mapa
-    this.map = this.make.tilemap({ key: 'level1' });
+    this.map = this.make.tilemap({ key: 'level2' });
     //this.map = this.make.tilemap({ key: 'tilemap' });
-    const tileset1 = this.map.addTilesetImage('acido','acido');
-    const tileset2 = this.map.addTilesetImage('texturas','texturas');
+    //const tileset1 = this.map.addTilesetImage('acid','acid');
+    const tileset2 = this.map.addTilesetImage('texturas1','texturas1');
     //const tileset3 = this.map.addTilesetImage('Fondo','Fondo');
 
     
     
-    this.groundLayer = this.map.createLayer('ground', [tileset2, tileset1]);
-    this.plataformasLayer = this.map.createLayer('plataformas', [tileset2, tileset1]);
+    this.groundLayer = this.map.createLayer('ground', tileset2);
+    this.plataformasLayer = this.map.createLayer('columnas', tileset2);
+    this.plataformasLayer = this.map.createLayer('plataformas', tileset2);
+    this.plataformasLayer = this.map.createLayer('decoracion', tileset2);
     //this.backgroundLayer = this.map.createLayer('background', tileset3);
     
     
