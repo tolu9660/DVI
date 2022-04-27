@@ -19,6 +19,7 @@ export default class PlayerController {
         this.obstacles = obstacles;
         this.key = false;
         this.lastEnemy;
+        this.damage;
         this.createAlienAnimation();
 
         this.NewStateMachine = new NewStateMachine(this, 'player');
@@ -204,12 +205,18 @@ export default class PlayerController {
           this.sprite.setTint(color)
         }
       })
-      events.emit('minus-health')
+      events.emit('minus-health',this.damage)
       this.NewStateMachine.setState('idle')
     }
 
     enemyHitOnEnter() {
-      console.log(this.lastEnemy);
+     // console.log(this.lastEnemy);
+      //console.log(this.lastEnemy.body);
+      //console.log(this.lastEnemy.body.gameObject);
+      //con este atributo podemos saber el tipo de enemigo que tenemos de esta manera poder restar mas o menos 
+      //console.log(this.lastEnemy.body.gameObject.texture.key);
+      let tipo=this.lastEnemy.body.gameObject.texture.key;
+      
       if (this.lastEnemy) {
         if (this.sprite.body.position.x < this.lastEnemy.body.position.x){
           this.sprite.setVelocityX(-20)
@@ -246,7 +253,18 @@ export default class PlayerController {
           this.sprite.setTint(color)
         }
       })
-      events.emit('minus-health')
+      
+      switch(tipo){
+        case 'alien':
+          this.damage=1;
+          events.emit('minus-health')
+          break;
+        case 'alien1':
+          this.damage=2;
+          events.emit('minus-health2')
+          break;
+          
+      }
       this.NewStateMachine.setState('idle')
     }
 

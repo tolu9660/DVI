@@ -1,12 +1,17 @@
 
 import PlayerController from './PlayerController.js'
 import enemyController from './EnemyController.js'
+
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
 import llave from './llave.js';
 import cueva from './cueva.js'
+import EnemyController1 from './EnemyController1.js';
+import EnemyController2 from './EnemyController2.js';
+import EnemyController3 from './EnemyController3.js';
+
 
 
 /**
@@ -191,10 +196,25 @@ export default class LevelClass extends Phaser.Scene {
           this.enemy = this.matter.add.sprite((x*0.9) + (width1),y, Tipo)
           .setScale('0.7')  
           .setFixedRotation()
+          let e;
           this.obstacles.add('enemy', this.enemy.body)
           //marcar un switch que permita crear el tipo de enemigo
-          this.enemyController = new enemyController(this,this.enemy,Tipo) ;
-          this.arrayEnemies[step]=this.enemyController;
+          switch(Tipo){
+            case 'alien':
+              e = new enemyController(this,this.enemy,Tipo) ;
+              break;
+            case 'alien1':
+              e = new EnemyController1(this,this.enemy,Tipo) ;
+              break;
+            case 'alien2':
+              e = new EnemyController2(this,this.enemy,Tipo) ;
+              break;
+            case 'alien3':
+              e = new EnemyController3(this,this.enemy,Tipo) ;
+              break;
+          }
+         
+          this.arrayEnemies[step]=e;
           this.i++;       
     }
     

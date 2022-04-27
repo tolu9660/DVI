@@ -21,8 +21,10 @@ export default class Boot extends Phaser.Scene {
     this.load.setPath('assets/sprites/');
     
     //characters:
-    //this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
-    this.load.atlas('alien2','/enemy2/enemigo.png', '/enemy2/enemigo.json');
+    this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
+    this.load.atlas('alien1','/enemy2/enemigo.png', '/enemy2/enemigo.json');
+    this.load.atlas('alien2','/enemy3/enemigo3.png', '/enemy3/enemigo3.json');
+    this.load.atlas('alien3','/enemy4/enemigo4.png', '/enemy4/enemigo4.json');
     this.load.atlas('hero','/PCharacters/hero.png', '/PCharacters/hero.json');
    
     //Objetos: 
@@ -38,11 +40,11 @@ export default class Boot extends Phaser.Scene {
     
     // NIVEL 1:
     
-    this.load.tilemapTiledJSON('level1', '/tilemaps/mapa3/level1.json');
-    this.load.atlas('texturas','/tilemaps/mapa3/texturas.png', '/tilemaps/mapa3/texturas.json');
-    this.load.image('Fondo',"/tilemaps/mapa3/Fondo.png");
-    this.load.image('acido',"/tilemaps/mapa3/acido.png");
-    this.load.atlas('cueva','/tilemaps/mapa3/cueva.png', '/tilemaps/mapa3/cueva.json');
+    this.load.tilemapTiledJSON('level1', '/tilemaps/mapa1/level1.json');
+    this.load.atlas('texturas','/tilemaps/mapa1/texturas.png', '/tilemaps/mapa3/texturas.json');
+    this.load.image('Fondo',"/tilemaps/mapa1/Fondo.png");
+    this.load.image('acido',"/tilemaps/mapa1/acido.png");
+    this.load.atlas('cueva','/tilemaps/mapa1/cueva.png', '/tilemaps/mapa3/cueva.json');
     //carga de sonidos:
     this.load.audio('sonidoFondo', '/sound/level1/musica.mp3');
 
@@ -59,7 +61,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('level3');
+    this.scene.start('level1');
     
   }
 }

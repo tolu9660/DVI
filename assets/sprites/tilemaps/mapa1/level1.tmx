@@ -212,7 +212,7 @@
   </data>
  </layer>
  <objectgroup id="7" name="objects">
-  <object id="3" name="alien_spawn" x="62.183" y="370.636" width="38" height="38"/>
+  <object id="3" name="alien_spawn" x="299.183" y="376.636" width="38" height="38"/>
   <object id="5" name="spikes" x="3008.09" y="416.833" width="63.8182" height="31"/>
   <object id="9" name="spikes" x="227.454" y="448.333" width="95.4848" height="30.7273"/>
   <object id="64" name="spikes" x="474.121" y="449" width="130.818" height="30.7273"/>
@@ -242,6 +242,6 @@
   <object id="82" name="cueva" x="3340" y="291" width="66" height="39"/>
  </objectgroup>
  <objectgroup id="9" name="enemigos">
-  <object id="48" name="enemigo" x="263.819" y="362.73" width="39" height="44"/>
+  <object id="48" name="enemigo" x="187.819" y="369.73" width="39" height="44"/>
  </objectgroup>
 </map>

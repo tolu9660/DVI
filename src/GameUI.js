@@ -38,6 +38,7 @@ export default class GameUI extends Phaser.Scene {
     events.on('key-collected', this.handleKeyCollected, this)
     events.on('heart-collected', this.handleHeartCollected, this)
     events.on('minus-health', this.handleMinusHealthCollected, this)
+    events.on('minus-health2', this.handleMinusHealthCollected2, this)
     events.on('cueva-in', this.handleCuevaIn, this)
     events.on('cueva-stop', this.handleCuevaStop, this)
     events.on('mensaje-ayuda-energia', this.handleMensajeAyudaEnergia, this)
@@ -54,8 +55,12 @@ export default class GameUI extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('heart-collected', this.handleHeartCollected, this)
     })
+    //creo un evento por cada enemigo
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('minus-health', this.handleMinusHealthCollected, this)
+    })
+    this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
+      events.off('minus-health2', this.handleMinusHealthCollected2, this)
     })
   }
 
@@ -80,7 +85,21 @@ export default class GameUI extends Phaser.Scene {
 
   handleMinusHealthCollected(){
     console.log('hearts - collected')
+
     --this.heartsCollected
+    console.log(this.heartsCollected)
+    if (this.heartsCollected == 0){
+      this.scene.pause('level')
+    
+      this.scene.start('end')
+    }
+    this.heartLabel.text = `x${this.heartsCollected}`
+
+  }
+  handleMinusHealthCollected2(){
+    console.log('hearts - collected2')
+
+   this.heartsCollected=this.heartsCollected-2
     console.log(this.heartsCollected)
     if (this.heartsCollected == 0){
       this.scene.pause('level')

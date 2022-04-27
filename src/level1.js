@@ -2,7 +2,7 @@
 //import Player from './player.js';
 ////import piedra from './piedra.js';
 import PlayerController from './PlayerController.js'
-import enemyController from './EnemyController.js'
+import enemyController from './EnemyController1.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
@@ -45,6 +45,7 @@ export default class Level1 extends LevelClass {
     let plataformas=['plataformas',[2]];
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
+    super.cargaEnemigos('alien3');
   }
 
   update(t, dt){

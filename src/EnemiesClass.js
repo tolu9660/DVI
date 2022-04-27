@@ -21,6 +21,7 @@ export default class EnemiesClass {
         this.endFrate= endFrate;
         this.rate=rate
         this.moveTime = 0;
+        this.type=Type;
         this.createEnemyAnimation();
 
         this.NewStateMachine = new NewStateMachine(this, Type);

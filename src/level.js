@@ -1,6 +1,6 @@
 
 import PlayerController from './PlayerController.js'
-import enemyController from './EnemyController.js'
+import enemyController from './EnemyController1.js'
 import ObstaclesController from './ObstaclesController.js';
 
 /**
