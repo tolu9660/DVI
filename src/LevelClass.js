@@ -87,8 +87,8 @@ export default class LevelClass extends Phaser.Scene {
       const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'alien_spawn': { 
-          this.alien = this.matter.add.sprite(x + (width*0.5),y, 'hero')
-          .setScale('0.4')  
+          this.alien = this.matter.add.sprite(x + (width),y, 'hero')
+          .setScale('0.5')  
           .setFixedRotation();
           this.playerController = new PlayerController(
             this,
@@ -122,7 +122,7 @@ export default class LevelClass extends Phaser.Scene {
               isStatic:true,
               isSensor:true
             })
-            .setScale('1.5')  
+            .setScale('1.2')  
             .setFixedRotation();
             this.corazon.setData('type', 'corazon')
             this.c = new corazon(
@@ -143,11 +143,11 @@ export default class LevelClass extends Phaser.Scene {
           break;
       }
         case 'energia':{
-          this.ene = this.matter.add.sprite(x + (width*0.5),y, 'ene',undefined,{
+          this.ene = this.matter.add.sprite(x + (width),y, 'ene',undefined,{
             isStatic:true,
             isSensor:true
           })
-          .setScale('1.5')  
+          .setScale('1.2')  
           .setFixedRotation();
           this.ene.setData('type', 'energia')
           this.c = new energia (
@@ -193,8 +193,8 @@ export default class LevelClass extends Phaser.Scene {
     
     for (let step = 0; step < enemigos.objects.length; step++){
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
-          this.enemy = this.matter.add.sprite((x*0.9) + (width1),y, Tipo)
-          .setScale('0.7')  
+          this.enemy = this.matter.add.sprite((x) + (width1),y, Tipo)
+          .setScale('0.5')  
           .setFixedRotation()
           let e;
           this.obstacles.add('enemy', this.enemy.body)

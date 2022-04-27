@@ -43,8 +43,8 @@
                  "type":"",
                  "visible":true,
                  "width":38,
-                 "x":299.183,
-                 "y":376.636
+                 "x":73.5572,
+                 "y":365.511
                 }, 
                 {
                  "height":31,
@@ -362,8 +362,8 @@
                  "type":"",
                  "visible":true,
                  "width":39,
-                 "x":187.819,
-                 "y":369.73
+                 "x":35.819,
+                 "y":238.73
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1169,7 +1169,7 @@
                  "value":true
                 }],
          "spacing":0,
-         "tilecount":0,
+         "tilecount":1,
          "tileheight":1,
          "tilewidth":32,
          "transparentcolor":"#ff00ff"

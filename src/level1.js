@@ -45,7 +45,7 @@ export default class Level1 extends LevelClass {
     let plataformas=['plataformas',[2]];
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
-    super.cargaEnemigos('alien3');
+    super.cargaEnemigos('alien2');
   }
 
   update(t, dt){

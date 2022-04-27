@@ -195,7 +195,7 @@
  <tileset firstgid="232" name="Fondo" tilewidth="3424" tileheight="480" spacing="16" tilecount="1" columns="1">
   <image source="Fondo.png" width="3424" height="480"/>
  </tileset>
- <tileset firstgid="233" name="sueloTransparente" tilewidth="32" tileheight="1" tilecount="0" columns="1">
+ <tileset firstgid="233" name="sueloTransparente" tilewidth="32" tileheight="1" tilecount="1" columns="1">
   <properties>
    <property name="collides" type="bool" value="true"/>
   </properties>
@@ -212,7 +212,7 @@
   </data>
  </layer>
  <objectgroup id="7" name="objects">
-  <object id="3" name="alien_spawn" x="299.183" y="376.636" width="38" height="38"/>
+  <object id="3" name="alien_spawn" x="73.5572" y="365.511" width="38" height="38"/>
   <object id="5" name="spikes" x="3008.09" y="416.833" width="63.8182" height="31"/>
   <object id="9" name="spikes" x="227.454" y="448.333" width="95.4848" height="30.7273"/>
   <object id="64" name="spikes" x="474.121" y="449" width="130.818" height="30.7273"/>
@@ -242,6 +242,6 @@
   <object id="82" name="cueva" x="3340" y="291" width="66" height="39"/>
  </objectgroup>
  <objectgroup id="9" name="enemigos">
-  <object id="48" name="enemigo" x="187.819" y="369.73" width="39" height="44"/>
+  <object id="48" name="enemigo" x="35.819" y="238.73" width="39" height="44"/>
  </objectgroup>
 </map>

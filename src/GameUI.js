@@ -37,6 +37,7 @@ export default class GameUI extends Phaser.Scene {
     events.on('star-collected', this.handleStarCollected, this)
     events.on('key-collected', this.handleKeyCollected, this)
     events.on('heart-collected', this.handleHeartCollected, this)
+    //eventos que gestionan el decremento de vida.
     events.on('minus-health', this.handleMinusHealthCollected, this)
     events.on('minus-health2', this.handleMinusHealthCollected2, this)
     events.on('cueva-in', this.handleCuevaIn, this)
