@@ -9,6 +9,9 @@ import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
 import parallaxScene from './parallaxScene.js';
 import GameUI from './GameUI.js'
+import Transicion from './transicion.js'
+import Transicion1 from './transicion1.js'
+
 
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
@@ -17,13 +20,13 @@ import GameUI from './GameUI.js'
 let config = {
     type: Phaser.AUTO,
     width: 1000,
-    height: 480,
+    height: 500,
     scale: {
-        mode: Phaser.Scale.FIT,  
+        //mode: Phaser.Scale.FIT,  
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Inicio, Opciones,  Boot, Level1,GameUI, Creditos, End],
+    scene: [Inicio, Opciones,  Boot, Transicion, Transicion1, Level3, GameUI, Creditos, End],
     physics: {
         default: 'matter',//cambiado el arcade
         // matter: {
@@ -37,7 +40,7 @@ let config2 = {
     width: 800,
     height: 520,
     pixelArt: true,
-    scene: [Inicio, Opciones, Creditos, Boot, Level1, End],
+    scene: [Inicio, Opciones, Creditos, Boot, Transicion1, Transicion, Level3, End],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {

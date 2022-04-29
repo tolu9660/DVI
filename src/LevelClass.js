@@ -55,7 +55,7 @@ export default class LevelClass extends Phaser.Scene {
     this.scene.launch('game-ui');
     this.map = this.make.tilemap({ key: KeyLevel });
     
-    const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
+    const backgroundImage=this.add.image(0,0,BackG).setOrigin(0.1,0.288);
 
     for(let i=0; i<Tilesets.length; i++){
       this.ArrayTileset[i]=this.map.addTilesetImage(Tilesets[i],Tilesets[i]);
@@ -98,7 +98,15 @@ export default class LevelClass extends Phaser.Scene {
             )
 
           //HAcemos que siga al personaje
-          this.cameras.main.startFollow(this.alien)
+          //this.cameras.main.add(0, 0, 300, 500);
+      
+          this.cameras.main.startFollow(this.alien, false, 1, 1, 0, 0);
+          this.cameras.main.setDeadzone(400, 350);
+  
+          this.cameras.main.shake(200, 0.05, true, Phaser.Cameras.SHAKE_HORIZONTAL, false);
+
+          this.cameras.main.zoom = 1;
+
         break;
         }
 

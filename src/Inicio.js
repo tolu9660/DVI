@@ -11,15 +11,20 @@ export default class inicio extends Phaser.Scene {
 
   preload() {
     this.load.image('azul', 'assets/sprites/azul.jpg')
+    this.load.image('Inicio',"assets/sprites/inicio.jpg");
+    this.load.image('Inicio2',"assets/sprites/inicio2.jpg");
 
 
   }
 
   create() {
+
+    const backgroundImage=this.add.image(0,0,'Inicio2').setOrigin(0,0);
+
     const { width, height } = this.scale
 
     // Play button
-    const jugarButton = this.add.image(width * 0.5, height * 0.6, 'azul')
+    const jugarButton = this.add.image(width * 0.5, height * 0.45, 'azul')
       .setDisplaySize(150, 50)
       .setInteractive()
       .on('pointerover', () => this.enterButtonHoverStateJugar())
@@ -31,7 +36,7 @@ export default class inicio extends Phaser.Scene {
 
 
     // Settings button
-    const opcionesButton = this.add.image(jugarButton.x, jugarButton.y + jugarButton.displayHeight + 10, 'azul')
+    const opcionesButton = this.add.image(jugarButton.x, jugarButton.y + jugarButton.displayHeight + 18, 'azul')
       .setDisplaySize(150, 50)
       .setInteractive()
       .on('pointerover', () => this.enterButtonHoverStateOpciones())
@@ -43,7 +48,7 @@ export default class inicio extends Phaser.Scene {
       .setOrigin(0.5);
 
     // Credits button
-    const creditosButton = this.add.image(opcionesButton.x, opcionesButton.y + opcionesButton.displayHeight + 10, 'azul')
+    const creditosButton = this.add.image(opcionesButton.x, opcionesButton.y + opcionesButton.displayHeight + 18, 'azul')
       .setDisplaySize(150, 50)
       .setInteractive()
       .on('pointerover', () => this.enterButtonHoverStateCreditos())
@@ -53,7 +58,7 @@ export default class inicio extends Phaser.Scene {
 
     this.creditosButton = this.add.text(creditosButton.x, creditosButton.y, 'Creditos').setOrigin(0.5);
 
-    const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 10, 'azul')
+    const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 18, 'azul')
     .setDisplaySize(150, 50)
     this.SalirButton = this.add.text(SalirButton.x, SalirButton.y, 'Salir').setOrigin(0.5);
   }

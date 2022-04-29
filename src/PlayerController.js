@@ -77,6 +77,7 @@ export default class PlayerController {
               return
             }
             if (gameObject instanceof Phaser.Physics.Matter.TileBody) {
+              console.log("PRIMER IF");
               if (this.NewStateMachine.isCurrentState('jump')) {
                 this.NewStateMachine.setState('idle')
               }

@@ -45,10 +45,12 @@ export default class Level2 extends Phaser.Scene {
   create() {
     
     this.scene.launch('game-ui');
+    //const backgrounImage = this.add.image(0, 0, 'Fondo').setOrigin(0,0);
 
     //cosas de mapa
-    this.map = this.make.tilemap({ key: 'level1' });
+    this.map = this.make.tilemap({ key: 'level2' });
     //this.map = this.make.tilemap({ key: 'tilemap' });
+
     const tileset1L = this.map.addTilesetImage('suelo','suelo');
     const tileset2L = this.map.addTilesetImage('subsuelo','subsuelo');
     const tileset3L = this.map.addTilesetImage('suelo1','suelo1');
@@ -69,9 +71,10 @@ export default class Level2 extends Phaser.Scene {
 
     //this.groundLayer.setCollisionByProperty({collides: true});
     //this.groundLayer = this.map.createLayer('ground', [tileset1])
-    this.groundLayer.setCollisionByProperty({collides : true})
-
-
+    this.groundLayer.setCollisionByProperty({collides : true})    
+    
+    this.groundLayer.setCollisionByProperty({collides: true});
+    this.plataformasLayer.setCollisionByProperty({collides: true});
 
     const objectsLayer = this.map.getObjectLayer('objects')
     
