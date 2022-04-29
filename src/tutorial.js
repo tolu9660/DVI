@@ -20,13 +20,13 @@ import LevelClass from './LevelClass.js';
  * El juego termina cuando el jugador ha recogido 10 estrellas.
  * @extends Phaser.Scene
  */
-export default class Level1 extends LevelClass {
+export default class Tutorial extends LevelClass {
 
   /**
    * Constructor de la escena perro
    */
   constructor() {
-    super('level1');
+    super('tutorial');
     this.arrayTileset=[];
   }
 
@@ -37,10 +37,10 @@ export default class Level1 extends LevelClass {
    */
   create(){
     let a =0;
-    this.arrayTileset[0] = 'acido';
-    this.arrayTileset[1] = 'texturas';
-    this.arrayTileset[2] = 'sueloT';
-    super.create('level1',this.arrayTileset,'Fondo');
+    //this.arrayTileset[0] = 'acido';
+    //this.arrayTileset[1] = 'texturas';
+    //this.arrayTileset[2] = 'sueloT';
+    super.create('tutorial',this.arrayTileset,'FondoTutorial');
     let ground=['ground',[0,1,2]];
     let plataformas=['plataformas',[2]];
     let Capas=[ground,plataformas];
