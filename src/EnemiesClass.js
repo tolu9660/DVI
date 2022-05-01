@@ -91,12 +91,29 @@ export default class EnemiesClass {
     }
 
     handleStomped(enemy) {
-
+      console.log(enemy.type); 
+      
+      console.log('Este es el valor que guarda el atributo:');
+      
+      console.log(this.type);
       if (this.sprite !== enemy) {
         console.log('pepe'); 
       }
-
-      this.sprite.destroy()
+      switch(this.type){
+        case 'alien':
+          this.sprite.destroy();
+          break;
+        case 'alien1':
+          this.sprite.destroy();
+          break;
+        case 'alien2':
+          this.sprite.destroy();
+          break;
+        case 'alien3':
+          this.sprite.destroy();
+            break;
+      }
+      //this.sprite.destroy()
       this.NewStateMachine.setState('death')
     }
 

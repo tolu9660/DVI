@@ -7,10 +7,12 @@ import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
 import llave from './llave.js';
-import cueva from './cueva.js'
+import cueva from './cuevaRoja.js'
 import EnemyController1 from './EnemyController1.js';
 import EnemyController2 from './EnemyController2.js';
 import EnemyController3 from './EnemyController3.js';
+import cuevaRoja from './cuevaRoja.js';
+import cuevaAzul from './cuevaAzul.js';
 
 
 
@@ -98,7 +100,7 @@ export default class LevelClass extends Phaser.Scene {
       switch (name) {
         case 'heroe': { 
           this.alien = this.matter.add.sprite(x + (width),y, 'hero')
-          .setScale('0.5')  
+          .setScale('0.8')  
           .setFixedRotation();
           this.playerController = new PlayerController(
             this,
@@ -113,20 +115,34 @@ export default class LevelClass extends Phaser.Scene {
         }
 
         case 'cueva':{
-          this.cueva = this.matter.add.sprite(x,y, 'cueva')
+          //this.cueva = this.matter.add.sprite(x,y, 'cuevaA')
+          console.log(objData.type);
+
+          this.cueva = this.matter.add.sprite(x,y, objData.type)
+          .setScale('0.7')  
           .setStatic(true)
           .setSensor(true)
           .setFixedRotation()
 
-          this.cueva.setData('type', 'cueva')
-          this.c = new cueva(
+          //this.cueva.setData('type', 'cueva')
+          if(objData.type==='Rojo'){
+                this.c = new cuevaRoja (
+                  this,
+                  this.cueva
+              )
+          }
+          else{
+            this.c = new cuevaAzul (
               this,
               this.cueva
           )
+          }
+         
         this.arrayObjects[this.j]=this.c;
         this.j++;
           break;
         }
+        
         case 'corazon':{
             this.corazon = this.matter.add.sprite(x + (width),y, 'corazon',undefined,{
               isStatic:true,
@@ -169,26 +185,39 @@ export default class LevelClass extends Phaser.Scene {
           break;
       }
       
-        case 'spikes':
-          const spikes = this.matter.add.rectangle(x+ (width*0.5), y+(height*0.5), width, height, {
-            isStatic: true
-          })
-          this.obstacles.add('spikes', spikes)
-          break;
-          case 'llave': {
+      case 'spikes':{
+        const spikes = this.matter.add.rectangle(x+ (width*0.5), y+(height*0.5), width, height, {
+          isStatic: true
+        })
+        this.obstacles.add('spikes', spikes)
+        this.arrayObjects[this.j]=this.c;
+        this.j++;
+        break;
 
-            this.k = this.matter.add.sprite(x + (width),y, 'llave')
-            .setScale('1.5')  
-            .setFixedRotation();
-            this.k.setData('type', 'llave')
-            this.c = new llave(this,this.k)
-            this.arrayObjects[this.j]=this.c;
+      }
+      case 'limite': {
 
-            this.j++;
+        this.k = this.matter.add.sprite(x + (width),y, 'llave')
         
-            break;
-          }
-         
+       
+  
+        break;
+      }
+      
+      case 'llave': {
+
+        this.k = this.matter.add.sprite(x + (width),y, 'llave')
+        .setScale('1.5')  
+        .setFixedRotation();
+        this.k.setData('type', 'llave')
+        this.c = new llave(this,this.k)
+        this.arrayObjects[this.j]=this.c;
+
+        this.j++;
+    
+        break;
+      }
+      
         
       }
       
@@ -197,11 +226,13 @@ export default class LevelClass extends Phaser.Scene {
    
 
   }
-  cargaEnemigos(Tipo){
+  cargaEnemigos(){
     const enemigos = this.map.getObjectLayer('enemigos')
     this.i=0;
-    
+    let Tipo;
     for (let step = 0; step < enemigos.objects.length; step++){
+      console.log( enemigos.objects[step].type);
+      Tipo= enemigos.objects[step].type;
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
           this.enemy = this.matter.add.sprite((x) + (width1),y, Tipo)
           .setScale('0.5')  
@@ -209,6 +240,7 @@ export default class LevelClass extends Phaser.Scene {
           let e;
           this.obstacles.add('enemy', this.enemy.body)
           //marcar un switch que permita crear el tipo de enemigo
+        
           switch(Tipo){
             case 'alien':
               e = new enemyController(this,this.enemy,Tipo) ;

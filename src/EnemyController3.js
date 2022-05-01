@@ -13,7 +13,7 @@ import NewStateMachine from './newStateMachine.js';
 
 constructor(scene,sprite,tipo){
   //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
-  super(scene, sprite,'enemy3','enemy-idle','enemy-walk','enemigo4.png',
+  super(scene, sprite,tipo,'enemy-idle','enemy-walk','enemigo4.png',
         'Alien_Walk_',tipo,1,5,10);
 }
 

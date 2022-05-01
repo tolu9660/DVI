@@ -8,7 +8,7 @@ import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
 import llave from './llave.js';
-import cueva from './cueva.js'
+import cueva from './cuevaRoja.js'
 import LevelClass from './LevelClass.js';
 
 
@@ -46,7 +46,7 @@ export default class Tutorial extends LevelClass {
     let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
-    super.cargaEnemigos('alien2');
+    super.cargaEnemigos();
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }

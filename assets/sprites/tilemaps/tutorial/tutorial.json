@@ -28,67 +28,104 @@
         }, 
         {
          "draworder":"topdown",
-         "id":10,
-         "name":"enemigos",
-         "objects":[
-                {
-                 "height":0,
-                 "id":9,
-                 "name":"enemigo",
-                 "point":true,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":6912.12,
-                 "y":1936.36
-                }, 
-                {
-                 "height":0,
-                 "id":20,
-                 "name":"enemigo",
-                 "point":true,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":3444,
-                 "y":1424
-                }, 
-                {
-                 "height":0,
-                 "id":21,
-                 "name":"enemigo",
-                 "point":true,
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":14044,
-                 "y":1472
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
          "id":13,
          "name":"objects",
          "objects":[
                 {
                  "height":0,
-                 "id":23,
-                 "name":"heroe",
+                 "id":24,
+                 "name":"energia",
                  "point":true,
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":280,
-                 "y":1280
+                 "x":1792,
+                 "y":256
+                }, 
+                {
+                 "height":0,
+                 "id":27,
+                 "name":"corazon",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":5400,
+                 "y":464
+                }, 
+                {
+                 "height":0,
+                 "id":28,
+                 "name":"energia",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":7256,
+                 "y":944
+                }, 
+                {
+                 "height":0,
+                 "id":29,
+                 "name":"corazon",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":7832,
+                 "y":216
+                }, 
+                {
+                 "height":0,
+                 "id":30,
+                 "name":"corazon",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":8632,
+                 "y":1192
+                }, 
+                {
+                 "height":0,
+                 "id":31,
+                 "name":"llave",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":8688,
+                 "y":712
+                }, 
+                {
+                 "height":0,
+                 "id":32,
+                 "name":"energia",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":11816,
+                 "y":472
+                }, 
+                {
+                 "height":0,
+                 "id":33,
+                 "name":"cueva",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":15224,
+                 "y":1568
                 }, 
                 {
                  "height":1640,
@@ -102,15 +139,62 @@
                  "y":24
                 }, 
                 {
-                 "height":1528,
-                 "id":35,
-                 "name":"limite",
+                 "height":0,
+                 "id":36,
+                 "name":"cofre",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":24,
-                 "x":8,
-                 "y":16
+                 "width":0,
+                 "x":11024,
+                 "y":1184
+                }, 
+                {
+                 "height":0,
+                 "id":74,
+                 "name":"heroe",
+                 "point":true,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1796,
+                 "y":1720
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":10,
+         "name":"enemigos",
+         "objects":[
+                {
+                 "height":0,
+                 "id":72,
+                 "name":"enemigo",
+                 "point":true,
+                 "rotation":0,
+                 "type":"alien",
+                 "visible":true,
+                 "width":0,
+                 "x":1431,
+                 "y":1761
+                }, 
+                {
+                 "height":0,
+                 "id":73,
+                 "name":"enemigo",
+                 "point":true,
+                 "rotation":0,
+                 "type":"alien1",
+                 "visible":true,
+                 "width":0,
+                 "x":2020.66666666667,
+                 "y":1749.33333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -119,7 +203,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":37,
+ "nextobjectid":75,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.1",

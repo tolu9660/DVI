@@ -8,7 +8,7 @@ import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
 import llave from './llave.js';
-import cueva from './cueva.js'
+import cueva from './cuevaRoja.js'
 import LevelClass from './LevelClass.js';
 
 

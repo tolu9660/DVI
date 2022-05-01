@@ -57,10 +57,10 @@ export default class PlayerController {
             }
             
             if (this.obstacles.is('enemy', body)) {
-
+              console.log(body);
               this.lastEnemy = body.gameObject
-              console.log(this.sprite.body.position.y);
-              console.log(this.lastEnemy.body.position.y);
+              //console.log(this.sprite.body.position.y);
+              //console.log(this.lastEnemy.body.position.y);
               if (this.sprite.body.position.x < this.lastEnemy.body.position.x) {
                 console.log(this.lastEnemy);            
                 events.emit('alien-down', this.lastEnemy)
@@ -175,6 +175,7 @@ export default class PlayerController {
         this.sprite.setVelocityX(speed);
       
       }
+      this.NewStateMachine.setState('idle')
     }
 
     spikeOnEnter() {
