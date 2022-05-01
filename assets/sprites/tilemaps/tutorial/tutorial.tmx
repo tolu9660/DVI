@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="75">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="79">
  <editorsettings>
   <export target="tutorial.json" format="json"/>
  </editorsettings>
@@ -327,9 +327,11 @@
   </object>
   <object id="34" name="limite" x="15312" y="24" width="24" height="1640"/>
   <object id="36" name="cofre" x="11024" y="1184"/>
-  <object id="74" name="heroe" x="1796" y="1720">
+  <object id="76" name="heroe" x="1968" y="342">
    <point/>
   </object>
+  <object id="77" name="energia" x="1648" y="312"/>
+  <object id="78" name="corazon" x="1718" y="328"/>
  </objectgroup>
  <objectgroup id="10" name="enemigos">
   <object id="72" name="enemigo" type="alien" x="1431" y="1761">

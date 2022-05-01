@@ -63,12 +63,7 @@ export default class LevelClass extends Phaser.Scene {
     for(let i=0; i<Tilesets.length; i++){
       this.ArrayTileset[i]=this.map.addTilesetImage(conjuntos[i],Tilesets[i]);//KEY -> nombre del boot
     }
-    /*const tileset1 = this.map.addTilesetImage('fondo1','fondo1');
-    const tileset2 = this.map.addTilesetImage('plataformas','tiles1');
-    this.ArrayTileset[0]=tileset1;
-    this.ArrayTileset[1]=tileset2;*/
-    
-
+  
   }
   creacionCapas(Capas){
     let c=[];
@@ -79,152 +74,158 @@ export default class LevelClass extends Phaser.Scene {
         }
       if(Capas[e][0]=='fondo'){
         this.groundLayer = this.map.createLayer(Capas[e][0],c);
-       //this.groundLayer = this.map.createLayer('fondo',this.ArrayTileset[0]);
+    
       }
       if(Capas[e][0]=='plataformas'){
         this.groundLayer = this.map.createLayer(Capas[e][0],c); 
-       // this.groundLayer = this.map.createLayer('plataformas',this.ArrayTileset[1]);
+   
         }   
     }
     
     this.groundLayer.setCollisionByProperty({collides : true});    
     this.matter.world.convertTilemapLayer(this.groundLayer);
-    
     this.cargarObjetos();
+    
   }
   cargarObjetos(){
-    const objectsLayer = this.map.getObjectLayer('objects')
-    
-    objectsLayer.objects.forEach(objData => {
-      const {x = 0, y = 0, name, width = 0, height = 0} = objData
+  const objectsLayer = this.map.getObjectLayer('objects')
+  objectsLayer.objects.forEach(objData => {
+    const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'heroe': { 
-          this.alien = this.matter.add.sprite(x + (width),y, 'hero')
+          this.player = this.matter.add.sprite(x + (width),y, 'hero')
           .setScale('0.8')  
           .setFixedRotation();
           this.playerController = new PlayerController(
-            this,
-            this.alien, 
-            this.cursors, 
-            this.obstacles
-            )
-
-          //HAcemos que siga al personaje
-          this.cameras.main.startFollow(this.alien)
-        break;
+          this,
+          this.player, 
+          this.cursors, 
+          this.obstacles
+          )
+          this.cameras.main.startFollow(this.player)
+          break;
         }
 
         case 'cueva':{
-          //this.cueva = this.matter.add.sprite(x,y, 'cuevaA')
-          console.log(objData.type);
-
+      
           this.cueva = this.matter.add.sprite(x,y, objData.type)
           .setScale('0.7')  
           .setStatic(true)
           .setSensor(true)
-          .setFixedRotation()
+          .setFixedRotation();
 
-          //this.cueva.setData('type', 'cueva')
           if(objData.type==='Rojo'){
-                this.c = new cuevaRoja (
-                  this,
-                  this.cueva
-              )
+            this.c = new cuevaRoja (this,this.cueva)
           }
           else{
-            this.c = new cuevaAzul (
-              this,
-              this.cueva
-          )
+          this.c = new cuevaAzul (this, this.cueva )
           }
-         
-        this.arrayObjects[this.j]=this.c;
-        this.j++;
-          break;
-        }
-        
-        case 'corazon':{
-            this.corazon = this.matter.add.sprite(x + (width),y, 'corazon',undefined,{
-              isStatic:true,
-              isSensor:true
-            })
-            .setScale('1.2')  
-            .setFixedRotation();
-            this.corazon.setData('type', 'corazon')
-            this.c = new corazon(
-                this,
-                this.corazon
-            )
+
           this.arrayObjects[this.j]=this.c;
           this.j++;
-            break;
+        break;
+        }
+
+        case 'corazon':{
+          this.corazon = this.matter.add.sprite(x + (width),y, 'corazon',undefined,{
+          isStatic:true,
+          isSensor:true
+          })
+          .setScale('1.2')  
+          .setFixedRotation();
+          this.corazon.setData('type', 'corazon')
+          this.c = new corazon(this,this.corazon)
+          this.arrayObjects[this.j]=this.c;
+          this.j++;
+          break;
         }
         case 'pm':{
-          this.pm = this.matter.add.sprite(x + (width),y, 'pm')
+          this.pm = this.matter.add.sprite(x + (width),y, objData.type)
           .setScale('1')  
           .setFixedRotation();
-          this.aux = new PlataformaMovil(this,this.pm)
-        this.arrayObjects[this.j]=this.aux;
-        this.j++;
+        
+         //cambiar plataformaMovil por la clase
+          switch ( objData.type) {
+            case 'pmv': { 
+              this.aux = new PlataformaMovil(this,this.pm)
+            break;
+            }
+            case 'pmh': { 
+              this.aux = new PlataformaMovil(this,this.pm)
+            break;
+            }
+            default:{
+              this.aux = new PlataformaMovil(this,this.pm)
+              break; 
+            }
+          }
+         
+          this.arrayObjects[this.j]=this.aux;
+          this.j++;
           break;
-      }
+        }
+        case 'trampa':{
+          this.pm = this.matter.add.sprite(x + (width),y, objData.type)
+          .setScale('1')  
+          .setFixedRotation();
+          //cambiar plataformaMovil por la clase
+          switch ( objData.type) {
+            case 'acido': { 
+              this.aux = new PlataformaMovil(this,this.pm)
+            break;
+            }
+            case 'lava': { 
+              this.aux = new PlataformaMovil(this,this.pm)
+            break;
+            }
+            case 'pinchos': { 
+              this.aux = new PlataformaMovil(this,this.pm)
+            break;
+            }
+            default:{
+              this.aux = new PlataformaMovil(this,this.pm)
+              break; 
+            }
+          }
+         
+          this.arrayObjects[this.j]=this.aux;
+          this.j++;
+          break;
+        }
         case 'energia':{
-          this.ene = this.matter.add.sprite(x + (width),y, 'ene',undefined,{
-            isStatic:true,
-            isSensor:true
+          this.ene = this.matter.add.sprite(x + (width),y, 'energia',undefined,{
+          isStatic:true,
+          isSensor:true
           })
           .setScale('1.2')  
           .setFixedRotation();
           this.ene.setData('type', 'energia')
           this.c = new energia (
-              this,
-              this.ene
+          this,
+          this.ene
           )
-        this.arrayObjects[this.j]=this.c;
-        this.j++;
+          this.arrayObjects[this.j]=this.c;
+          this.j++;
           break;
-      }
-      
-      case 'spikes':{
-        const spikes = this.matter.add.rectangle(x+ (width*0.5), y+(height*0.5), width, height, {
-          isStatic: true
-        })
-        this.obstacles.add('spikes', spikes)
-        this.arrayObjects[this.j]=this.c;
-        this.j++;
-        break;
+        }
+
+        case 'llave': {
+
+          this.k = this.matter.add.sprite(x + (width),y, 'llave')
+          .setScale('1.5')  
+          .setFixedRotation();
+          this.k.setData('type', 'llave')
+          this.c = new llave(this,this.k)
+          this.arrayObjects[this.j]=this.c;
+
+          this.j++;
+
+          break;
+        }
+
 
       }
-      case 'limite': {
-
-        this.k = this.matter.add.sprite(x + (width),y, 'llave')
-        
-       
-  
-        break;
-      }
-      
-      case 'llave': {
-
-        this.k = this.matter.add.sprite(x + (width),y, 'llave')
-        .setScale('1.5')  
-        .setFixedRotation();
-        this.k.setData('type', 'llave')
-        this.c = new llave(this,this.k)
-        this.arrayObjects[this.j]=this.c;
-
-        this.j++;
-    
-        break;
-      }
-      
-        
-      }
-      
     })
-    
-   
-
   }
   cargaEnemigos(){
     const enemigos = this.map.getObjectLayer('enemigos')
@@ -254,6 +255,9 @@ export default class LevelClass extends Phaser.Scene {
             case 'alien3':
               e = new EnemyController3(this,this.enemy,Tipo) ;
               break;
+            default:
+              console.log("no se ha captado el tipo del enemigo");
+              e = new enemyController(this,this.enemy,'alien') ;
           }
          
           this.arrayEnemies[step]=e;
@@ -283,11 +287,7 @@ export default class LevelClass extends Phaser.Scene {
     }
     
   }
-  jugando(){
-    if(this.playerController.vivo()){
-
-    }
-  }
+ 
 
  
   

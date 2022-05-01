@@ -151,15 +151,37 @@
                 }, 
                 {
                  "height":0,
-                 "id":74,
+                 "id":76,
                  "name":"heroe",
                  "point":true,
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":1796,
-                 "y":1720
+                 "x":1968,
+                 "y":342
+                }, 
+                {
+                 "height":0,
+                 "id":77,
+                 "name":"energia",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1648,
+                 "y":312
+                }, 
+                {
+                 "height":0,
+                 "id":78,
+                 "name":"corazon",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":0,
+                 "x":1718,
+                 "y":328
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -203,7 +225,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":75,
+ "nextobjectid":79,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.1",
