@@ -37,9 +37,9 @@ export default class Level1 extends LevelClass {
    */
   create(){
     let a =0;
-    this.arrayTileset[0] = 'fondo3';
-    this.arrayTileset[1] = 'tiles3';
-    super.create('level2',this.arrayTileset,'Fondo');
+    this.arrayTileset[0] = 'fondo1';
+    this.arrayTileset[1] = 'tiles1';
+    super.create('level1',this.arrayTileset);
     let ground=['fondo',[0]];
     let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];

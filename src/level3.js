@@ -37,20 +37,19 @@ export default class Level3 extends LevelClass {
    */
   create(){
     let a =0;
-    this.arrayTileset[0] = 'acido';
-    this.arrayTileset[1] = 'texturas';
-    this.arrayTileset[2] = 'sueloT';
-    super.create('level1',this.arrayTileset,'Fondo');
-    let ground=['ground',[0,1,2]];
-    let plataformas=['plataformas',[2]];
+    this.arrayTileset[0] = 'fondo3';
+    this.arrayTileset[1] = 'tiles3';
+    //this.arrayTileset[2] = 'sueloT';
+    super.create('level3',this.arrayTileset);
+    //indico para cada capa que tilesets voy a utilizar
+    let ground=['fondo',[0]];
+    let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
-
-    super.cargaEnemigos('alien1');
+    super.cargaEnemigos('alien2');
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }
-
 
   update(t, dt){
     let a =0;

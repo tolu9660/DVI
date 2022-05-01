@@ -37,10 +37,10 @@ export default class Tutorial extends LevelClass {
    */
   create(){
     let a =0;
-    this.arrayTileset[0] = 'fondo1';
-    this.arrayTileset[1] = 'tiles1';
+    this.arrayTileset[0] = 'fondo';
+    this.arrayTileset[1] = 'tiles';
     //this.arrayTileset[2] = 'sueloT';
-    super.create('tutorial',this.arrayTileset,'FondoTutorial');
+    super.create('tutorial',this.arrayTileset);
     //indico para cada capa que tilesets voy a utilizar
     let ground=['fondo',[0]];
     let plataformas=['plataformas',[1]];

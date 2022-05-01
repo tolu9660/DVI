@@ -50,12 +50,12 @@ export default class LevelClass extends Phaser.Scene {
    * Creación de los elementos de la escena principal de juego
    */
   /*Hola esto es una prueba */
-  create(KeyLevel,Tilesets,BackG ) {
+  create(KeyLevel,Tilesets ) {
     
     this.scene.launch('game-ui');
     this.map = this.make.tilemap({ key: KeyLevel });
     
-    const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
+    //const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
     let conjuntos=['fondo','plataformas'];
     //creo los diferentes tileset que voy a usar para mi nivel
     for(let i=0; i<Tilesets.length; i++){

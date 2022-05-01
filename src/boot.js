@@ -35,28 +35,31 @@ export default class Boot extends Phaser.Scene {
     this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
     this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
     //
-    this.load.atlas('cueva','/tilemaps/mapa3/cueva.png', '/tilemaps/mapa3/cueva.json');
+    this.load.atlas('cueva','/objetos/cueva.png', '/objetos/cueva.json');
     //Tutorial:
     this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
-    this.load.image('fondo1','/tilemaps/tutorial/fondo.jpg');
-    this.load.atlas('tiles1','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
+    this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
+    this.load.atlas('tiles','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
   
     
     
     // NIVEL 1:
     
     this.load.tilemapTiledJSON('level1', '/tilemaps/mapa1/nivel1.json');
-    this.load.image('fondo2','/tilemaps/mapa1/fondo.jpg');
-    this.load.atlas('tiles2','/tilemaps/mapa1/texture.png', '/tilemaps/mapa1/texture.json'); 
+    this.load.image('fondo1','/tilemaps/mapa1/fondo1.jpg');
+    this.load.atlas('tiles1','/tilemaps/mapa1/texture.png', '/tilemaps/mapa1/texture.json'); 
     
     //carga de sonidos:
     this.load.audio('sonidoFondo', '/sound/level1/musica.mp3');
 
     // NIVEL 2:
     this.load.tilemapTiledJSON('level2', '/tilemaps/mapa2/nivel2.json');
-    this.load.image('fondo3','/tilemaps/mapa2/fondo.jpg');
-    this.load.atlas('tiles3','/tilemaps/mapa2/texture.png', '/tilemaps/mapa2/texture.json'); 
-
+    this.load.image('fondo2','/tilemaps/mapa2/fondo.jpg');
+    this.load.atlas('tiles2','/tilemaps/mapa2/texture.png', '/tilemaps/mapa2/texture.json'); 
+    // NIVEL 3:
+    this.load.tilemapTiledJSON('level3', '/tilemaps/mapa3/nivel3.json');
+    this.load.image('fondo3','/tilemaps/mapa3/fondo.jpg');
+    this.load.atlas('tiles3','/tilemaps/mapa3/texture.png', '/tilemaps/mapa3/texture.json'); 
 
 
   }
@@ -67,7 +70,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('level1');
+    this.scene.start('level2');
     
   }
 }

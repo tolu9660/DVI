@@ -481,7 +481,55 @@
 </data>
  </layer>
  <objectgroup id="9" name="enemigos">
+  <object id="8" name="enemigo" x="17104" y="2384">
+   <point/>
+  </object>
+  <object id="9" name="enemigo" x="11240" y="944">
+   <point/>
+  </object>
+  <object id="10" name="enemigo" x="1872" y="1480">
+   <point/>
+  </object>
+  <object id="12" name="enemigo" x="3328" y="3376">
+   <point/>
+  </object>
   <object id="13" name="enemigo" x="168" y="2732">
+   <point/>
+  </object>
+  <object id="14" name="enemigo" x="12904" y="1568">
+   <point/>
+  </object>
+  <object id="15" name="enemigo" x="13572" y="1564">
+   <point/>
+  </object>
+  <object id="16" name="enemigo" x="8692" y="3356">
+   <point/>
+  </object>
+  <object id="17" name="enemigo" x="9632" y="3368">
+   <point/>
+  </object>
+  <object id="18" name="enemigo" x="16284" y="3156">
+   <point/>
+  </object>
+  <object id="19" name="enemigo" x="5384" y="1168">
+   <point/>
+  </object>
+  <object id="20" name="enemigo" x="21716" y="1332">
+   <point/>
+  </object>
+  <object id="21" name="enemigo" x="22324" y="1336">
+   <point/>
+  </object>
+  <object id="22" name="enemigo" x="25168" y="2364">
+   <point/>
+  </object>
+  <object id="23" name="enemigo" x="26416" y="3388">
+   <point/>
+  </object>
+  <object id="24" name="enemigo" x="19496" y="2720">
+   <point/>
+  </object>
+  <object id="35" name="enemigo" x="6744" y="3480">
    <point/>
   </object>
  </objectgroup>
@@ -489,6 +537,5 @@
   <object id="76" name="heroe" x="504" y="1072"/>
   <object id="77" name="corazon" x="768" y="2032"/>
   <object id="92" name="limite" x="0" y="40" width="72" height="2776"/>
-  <object id="145" name="limite" x="27496" y="-8" width="24" height="2624"/>
  </objectgroup>
 </map>
