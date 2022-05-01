@@ -34,22 +34,28 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('pm','/objetos/pm.png', '/objetos/pm.json');
     this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
     this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
-    
+    //
+    this.load.atlas('cueva','/tilemaps/mapa3/cueva.png', '/tilemaps/mapa3/cueva.json');
+    //Tutorial:
+    this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
+    this.load.image('fondo1','/tilemaps/tutorial/fondo.jpg');
+    this.load.atlas('tiles1','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
   
     
     
     // NIVEL 1:
     
-    this.load.tilemapTiledJSON('level1', '/tilemaps/mapa1/level1.json');
-    this.load.atlas('texturas','/tilemaps/mapa1/texturas.png', '/tilemaps/mapa1/texturas.json');
-    this.load.image('Fondo','/tilemaps/mapa1/Fondo.png');
-    this.load.image('acido','/tilemaps/mapa1/acido.png');
-    this.load.atlas('cueva','/tilemaps/mapa1/cueva.png', '/tilemaps/mapa1/cueva.json');
+    this.load.tilemapTiledJSON('level1', '/tilemaps/mapa1/nivel1.json');
+    this.load.image('fondo2','/tilemaps/mapa1/fondo.jpg');
+    this.load.atlas('tiles2','/tilemaps/mapa1/texture.png', '/tilemaps/mapa1/texture.json'); 
+    
     //carga de sonidos:
     this.load.audio('sonidoFondo', '/sound/level1/musica.mp3');
 
     // NIVEL 2:
-    
+    this.load.tilemapTiledJSON('level2', '/tilemaps/mapa2/nivel2.json');
+    this.load.image('fondo3','/tilemaps/mapa2/fondo.jpg');
+    this.load.atlas('tiles3','/tilemaps/mapa2/texture.png', '/tilemaps/mapa2/texture.json'); 
 
 
 

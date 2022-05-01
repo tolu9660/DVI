@@ -56,29 +56,39 @@ export default class LevelClass extends Phaser.Scene {
     this.map = this.make.tilemap({ key: KeyLevel });
     
     const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
-
+    let conjuntos=['fondo','plataformas'];
+    //creo los diferentes tileset que voy a usar para mi nivel
     for(let i=0; i<Tilesets.length; i++){
-      this.ArrayTileset[i]=this.map.addTilesetImage(Tilesets[i],Tilesets[i]);
+      this.ArrayTileset[i]=this.map.addTilesetImage(conjuntos[i],Tilesets[i]);//KEY -> nombre del boot
     }
-    this.cargarObjetos();
+    /*const tileset1 = this.map.addTilesetImage('fondo1','fondo1');
+    const tileset2 = this.map.addTilesetImage('plataformas','tiles1');
+    this.ArrayTileset[0]=tileset1;
+    this.ArrayTileset[1]=tileset2;*/
+    
+
   }
   creacionCapas(Capas){
     let c=[];
       for(let e=0; e<Capas.length;e++){
 
         for(let i=0; i<Capas[e][1].length; i++){
-          c[i]=this.ArrayTileset[i];
+          c[i]=this.ArrayTileset[Capas[e][1]];
         }
-        if(Capas[e][0]=='ground'){
+      if(Capas[e][0]=='fondo'){
         this.groundLayer = this.map.createLayer(Capas[e][0],c);
-        }
-        if(Capas[e][0]=='plataformas'){
-          this.plataformasLayer = this.map.createLayer(Capas[e][0],c);
+       //this.groundLayer = this.map.createLayer('fondo',this.ArrayTileset[0]);
+      }
+      if(Capas[e][0]=='plataformas'){
+        this.groundLayer = this.map.createLayer(Capas[e][0],c); 
+       // this.groundLayer = this.map.createLayer('plataformas',this.ArrayTileset[1]);
         }   
     }
+    
     this.groundLayer.setCollisionByProperty({collides : true});    
     this.matter.world.convertTilemapLayer(this.groundLayer);
-
+    
+    this.cargarObjetos();
   }
   cargarObjetos(){
     const objectsLayer = this.map.getObjectLayer('objects')
@@ -86,7 +96,7 @@ export default class LevelClass extends Phaser.Scene {
     objectsLayer.objects.forEach(objData => {
       const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
-        case 'alien_spawn': { 
+        case 'heroe': { 
           this.alien = this.matter.add.sprite(x + (width),y, 'hero')
           .setScale('0.5')  
           .setFixedRotation();

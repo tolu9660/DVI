@@ -300,38 +300,6 @@
 129,129,145,145,129,129,145,145,129,129,145,145,129,129,145,145,145,145,145,145,145,145,145,145,145,145,145,145,145,145,129,129,129,129,129,145,145,145,145,129,129,145,129,129,129,129,129,129,129,129,145,145,129,129,129,129,129,129,145,145,145,145,145,145,129,129,129,145,145,145,129,145,129,145,129,145,129,145,129,129,145,145,129,145,129,129,145,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129
 </data>
  </layer>
- <objectgroup id="13" name="objects">
-  <object id="23" name="heroe" x="280" y="1280">
-   <point/>
-  </object>
-  <object id="24" name="energia" x="1792" y="256">
-   <point/>
-  </object>
-  <object id="27" name="corazon" x="5400" y="464">
-   <point/>
-  </object>
-  <object id="28" name="energia" x="7256" y="944">
-   <point/>
-  </object>
-  <object id="29" name="corazon" x="7832" y="216">
-   <point/>
-  </object>
-  <object id="30" name="corazon" x="8632" y="1192">
-   <point/>
-  </object>
-  <object id="31" name="llave" x="8688" y="712">
-   <point/>
-  </object>
-  <object id="32" name="energia" x="11816" y="472">
-   <point/>
-  </object>
-  <object id="33" name="cueva" x="15224" y="1568">
-   <point/>
-  </object>
-  <object id="34" name="limite" x="15312" y="24" width="24" height="1640"/>
-  <object id="35" name="limite" x="8" y="16" width="24" height="1528"/>
-  <object id="36" name="cofre" x="11024" y="1184"/>
- </objectgroup>
  <objectgroup id="10" name="enemigos">
   <object id="9" name="enemigo" x="6912.12" y="1936.36">
    <point/>
@@ -342,5 +310,12 @@
   <object id="21" name="enemigo" x="14044" y="1472">
    <point/>
   </object>
+ </objectgroup>
+ <objectgroup id="13" name="objects">
+  <object id="23" name="heroe" x="280" y="1280">
+   <point/>
+  </object>
+  <object id="34" name="limite" x="15312" y="24" width="24" height="1640"/>
+  <object id="35" name="limite" x="8" y="16" width="24" height="1528"/>
  </objectgroup>
 </map>
