@@ -276,7 +276,7 @@ export default class LevelClass extends Phaser.Scene {
         this.arrayObjects[e].actu(dt);
     }
     }
-    // console.log(this.enemies.getChildren());
+
     if (this.enemies.getChildren()) {
       this.enemies.getChildren().forEach((element) => {
         element.update(dt)

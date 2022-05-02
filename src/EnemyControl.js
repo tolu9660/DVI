@@ -6,7 +6,7 @@ import NewStateMachine from './newStateMachine.js';
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
  */
-export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
+export default class EnemyControl extends Phaser.GameObjects.Sprite {
   
     constructor(scene,x,y,type,idle,walk,imgIdle,imgWalk,img,startFrate,endFrate,rate){
         super(scene,x,y,type)
@@ -62,11 +62,15 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     }
     idleOnEnter(){
       this.play('enemy-idle')
-    
+      console.log('pop');
+      
       const r = Phaser.Math.Between(1, 100)
       if (r < 50) {
+        console.log('pepop');
         this.NewStateMachine.setState('walk-left')
-      } else {          
+      } else {
+        console.log('pepop2');
+        
         this.NewStateMachine.setState('walk-right')
       }
     }
@@ -77,13 +81,15 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     }
 
     walkLeftOnEnter(){
+      console.log('wl');
       this.moveTime = 0
       this.play('enemy-walk')
     }
 
     walkLeftOnUpdate(dt){
       this.moveTime += dt
-      this.setVelocityX(-100)
+      console.log(this);
+      this.setVelocityX(-2)
       this.flipX = true;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('walk-right');
@@ -98,8 +104,8 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     
     walkRightOnUpdate(dt){
       this.moveTime += dt
-
-      this.setVelocityX(100)
+      console.log(this);
+      this.setVelocityX(2)
       this.flipX = false;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('walk-left');
@@ -107,6 +113,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     }
 
     handleStomped(enemy) {
+      console.log(enemy.type); 
       
       console.log('Este es el valor que guarda el atributo:');
       
