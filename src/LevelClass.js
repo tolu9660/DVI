@@ -38,7 +38,7 @@ export default class LevelClass extends Phaser.Scene {
   }
 
   init() {
-    this.cursors = this.input.keyboard.createCursorKeys();
+   
     this.obstacles = new ObstaclesController();
     this.arrayEnemies=[];
     this.arrayObjects=[];
@@ -83,8 +83,9 @@ export default class LevelClass extends Phaser.Scene {
     }
     
     this.groundLayer.setCollisionByProperty({collides : true});    
-    this.matter.world.convertTilemapLayer(this.groundLayer);
+    this.physics.world.setBounds(0,0,16000,3000);
     this.cargarObjetos();
+
     
   }
   cargarObjetos(){
@@ -93,26 +94,31 @@ export default class LevelClass extends Phaser.Scene {
     const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'heroe': { 
-          this.player = this.matter.add.sprite(x + (width),y, 'hero')
-          .setScale('0.8')  
-          .setFixedRotation();
+          // this.player = this.physics.add.sprite(x + (width),y, 'hero')
+          // .setScale('0.8')  
+          // this.physics.add.collider(this.player,this.groundLayer)
+
+          // .setFixedRotation();
           this.playerController = new PlayerController(
           this,
-          this.player, 
-          this.cursors, 
-          this.obstacles
+          x,
+          y, 
           )
-          this.cameras.main.startFollow(this.player)
+          // this.playerController.setBullets(this.bullets)
+                  //Config Camara
+
+          // this.cameras.main.startFollow(this.player)
           break;
         }
 
         case 'cueva':{
       
-          this.cueva = this.matter.add.sprite(x,y, objData.type)
+          this.cueva = this.physics.add.staticSprite(x,y, objData.type)
           .setScale('0.7')  
-          .setStatic(true)
-          .setSensor(true)
-          .setFixedRotation();
+          // .setStatic(true)
+          // .setSensor(true)
+          // .setFixedRotation();
+          this.physics.add.collider(this.cueva,this.groundLayer)
 
           if(objData.type==='Rojo'){
             this.c = new cuevaRoja (this,this.cueva)
@@ -127,12 +133,11 @@ export default class LevelClass extends Phaser.Scene {
         }
 
         case 'corazon':{
-          this.corazon = this.matter.add.sprite(x + (width),y, 'corazon',undefined,{
-          isStatic:true,
-          isSensor:true
-          })
-          .setScale('1.2')  
-          .setFixedRotation();
+          this.corazon = this.physics.add.staticSprite(x + (width),y, 'corazon')
+         this.corazon.scale = 2
+          // this.physics.add.collider(this.corazon,this.groundLayer)
+          
+          // .setFixedRotation();
           this.corazon.setData('type', 'corazon')
           this.c = new corazon(this,this.corazon)
           this.arrayObjects[this.j]=this.c;
@@ -140,10 +145,11 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'pm':{
-          this.pm = this.matter.add.sprite(x + (width),y, objData.type)
+          this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
           .setScale('1')  
-          .setFixedRotation();
-        
+          // .setFixedRotation();
+          this.physics.add.collider(this.pm,this.groundLayer)
+
          //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'pmv': { 
@@ -165,9 +171,11 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'trampa':{
-          this.pm = this.matter.add.sprite(x + (width),y, objData.type)
+          this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
           .setScale('1')  
-          .setFixedRotation();
+          this.physics.add.collider(this.pm,this.groundLayer)
+
+          // .setFixedRotation();
           //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'acido': { 
@@ -193,12 +201,14 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'energia':{
-          this.ene = this.matter.add.sprite(x + (width),y, 'energia',undefined,{
+          this.ene = this.physics.add.staticSprite(x + (width),y, 'energia',undefined,{
           isStatic:true,
           isSensor:true
           })
           .setScale('1.2')  
-          .setFixedRotation();
+          this.physics.add.collider(this.ene,this.groundLayer)
+
+          // .setFixedRotation();
           this.ene.setData('type', 'energia')
           this.c = new energia (
           this,
@@ -211,9 +221,11 @@ export default class LevelClass extends Phaser.Scene {
 
         case 'llave': {
 
-          this.k = this.matter.add.sprite(x + (width),y, 'llave')
+          this.k = this.physics.add.staticSprite(x + (width),y, 'llave')
           .setScale('1.5')  
-          .setFixedRotation();
+          // .setFixedRotation();
+          this.physics.add.collider(this.k,this.groundLayer)
+
           this.k.setData('type', 'llave')
           this.c = new llave(this,this.k)
           this.arrayObjects[this.j]=this.c;
@@ -235,11 +247,12 @@ export default class LevelClass extends Phaser.Scene {
       console.log( enemigos.objects[step].type);
       Tipo= enemigos.objects[step].type;
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
-          this.enemy = this.matter.add.sprite((x) + (width1),y, Tipo)
-          .setScale('0.5')  
-          .setFixedRotation()
+          this.enemy = this.physics.add.sprite((x) + (width1),y, Tipo)  
+          this.physics.add.collider(this.enemy,this.groundLayer)
+          // .setFixedRotation()
           let e;
-          this.obstacles.add('enemy', this.enemy.body)
+          console.log(Tipo);
+          // this.obstacles.add('enemy', this.enemy.body)
           //marcar un switch que permita crear el tipo de enemigo
         
           switch(Tipo){

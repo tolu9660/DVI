@@ -12,6 +12,8 @@ export default class EnemiesClass {
 
         this.scene = scene,
         this.sprite = sprite;
+        this.scene.add.existing(this.sprite);
+        this.scene.physics.add.existing(this.sprite);
         this.idle=idle;
         this.walk= walk;
         this.imgIdle=imgIdle;
