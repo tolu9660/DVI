@@ -27,7 +27,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         // .setScale('0.8')  
         this.scene.physics.add.collider(this,this.scene.groundLayer)
         // this.scene.cameras.main.startFollow(this)
-        console.log(this.height);
+
         // console.log(this);
         // console.log(this.displayWidth());
 
@@ -60,7 +60,15 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         });
         this.scene.physics.add.collider(this.bullets,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
         this.createAlienAnimation();
-        this.scene.physics.add.overlap(thisthis.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
+        console.log(this.scene.arrayEnemies);
+        this.scene.arrayEnemies.forEach((element) => {
+          console.log('peod');
+          console.log(element);
+        });
+        this.scene.physics.add.overlap(this, this.scene.arrayEnemies,(player, enemigo)=>{
+          console.log(player);
+          console.log(enemigo);
+        })
 
 
         this.NewStateMachine = new NewStateMachine(this, 'player');

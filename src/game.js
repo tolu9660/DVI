@@ -28,24 +28,10 @@ let config = {
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {
-            gravity: {y:400},
+            gravity: {y:700},
             debug: true
          }
      }
-};
-
-let config2 = {
-    type: Phaser.AUTO,
-    width: 800,
-    height: 520,
-    pixelArt: true,
-    scene: [Inicio, Opciones, Creditos, Boot, Level1, End],
-    physics: {
-        default: 'arcade',//cambiado el arcade
-        arcade: {
-            gravity: {y:200}
-        }
-    }
 };
 
 new Phaser.Game(config);

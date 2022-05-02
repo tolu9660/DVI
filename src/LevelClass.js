@@ -1,6 +1,6 @@
 
 import PlayerController from './PlayerController.js'
-import enemyController from './EnemyController.js'
+import EnemyController from './EnemyController.js'
 
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
@@ -63,6 +63,7 @@ export default class LevelClass extends Phaser.Scene {
     for(let i=0; i<Tilesets.length; i++){
       this.ArrayTileset[i]=this.map.addTilesetImage(conjuntos[i],Tilesets[i]);//KEY -> nombre del boot
     }
+    this.enemies = this.add.group();
   
   }
   creacionCapas(Capas){
@@ -94,27 +95,13 @@ export default class LevelClass extends Phaser.Scene {
     const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'heroe': { 
-          // this.player = this.physics.add.sprite(x + (width),y, 'hero')
-          // .setScale('0.8')  
-          // this.physics.add.collider(this.player,this.groundLayer)
-
-          // .setFixedRotation();
-          this.playerController = new PlayerController(
-          this,
-          x,
-          y, 
-          )
-          // this.playerController.setBullets(this.bullets)
-                  //Config Camara
-
-          // this.cameras.main.startFollow(this.player)
+          this.playerController = new PlayerController(this,x,y)
           break;
         }
 
         case 'cueva':{
       
           this.cueva = this.physics.add.staticSprite(x,y, objData.type)
-          .setScale('0.7')  
           // .setStatic(true)
           // .setSensor(true)
           // .setFixedRotation();
@@ -242,38 +229,37 @@ export default class LevelClass extends Phaser.Scene {
   cargaEnemigos(){
     const enemigos = this.map.getObjectLayer('enemigos')
     this.i=0;
-    let Tipo;
+    let type;
     for (let step = 0; step < enemigos.objects.length; step++){
-      console.log( enemigos.objects[step].type);
-      Tipo= enemigos.objects[step].type;
+      type= enemigos.objects[step].type;
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
-          this.enemy = this.physics.add.sprite((x) + (width1),y, Tipo)  
-          this.physics.add.collider(this.enemy,this.groundLayer)
+          // this.enemy = this.physics.add.sprite((x) + (width1),y, Tipo)  
+          // this.physics.add.collider(this.enemy,this.groundLayer)
           // .setFixedRotation()
-          let e;
-          console.log(Tipo);
+          // let e;
+
           // this.obstacles.add('enemy', this.enemy.body)
           //marcar un switch que permita crear el tipo de enemigo
-        
-          switch(Tipo){
+          console.log(type);
+          switch(type){
             case 'alien':
-              e = new enemyController(this,this.enemy,Tipo) ;
+              this.enemies.add(new EnemyController(this,x, y,type)) ;
               break;
             case 'alien1':
-              e = new EnemyController1(this,this.enemy,Tipo) ;
+              this.enemies.add(new EnemyController1(this,x,y,type)) ;
               break;
-            case 'alien2':
-              e = new EnemyController2(this,this.enemy,Tipo) ;
-              break;
-            case 'alien3':
-              e = new EnemyController3(this,this.enemy,Tipo) ;
-              break;
+            // case 'alien2':
+            //   e = new EnemyController2(this,this.enemy,Tipo) ;
+            //   break;
+            // case 'alien3':
+            //   e = new EnemyController3(this,this.enemy,Tipo) ;
+            //   break;
             default:
               console.log("no se ha captado el tipo del enemigo");
-              e = new enemyController(this,this.enemy,'alien') ;
+              this.enemies.add(new EnemyController(this,x, y,'alien'));
           }
-         
-          this.arrayEnemies[step]=e;
+         console.log(this.enemies);
+          // this.arrayEnemies[step]=e;
           this.i++;       
     }
     

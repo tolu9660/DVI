@@ -6,14 +6,25 @@ import NewStateMachine from './newStateMachine.js';
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
  */
-export default class EnemiesClass {
+export default class EnemiesClass extends Phaser.GameObjects.Sprite {
   
-    constructor(scene,sprite,Type,idle,walk,imgIdle,imgWalk,img,startFrate,endFrate,rate){
+    constructor(scene,x,y,type,idle,walk,imgIdle,imgWalk,img,startFrate,endFrate,rate){
+        super(scene,x,y,type)
+        console.log(scene);
+        console.log(x);
+        console.log(y);
+        console.log(type);
+        console.log(this.width);
+        console.log(this.height);
+        // this.setDepth(0);
+        this.scene.add.existing(this);
+        this.scene.physics.add.existing(this);
+        this.scene.physics.add.collider(this,this.scene.groundLayer)
 
         this.scene = scene,
-        this.sprite = sprite;
-        this.scene.add.existing(this.sprite);
-        this.scene.physics.add.existing(this.sprite);
+        // this.sprite = sprite;
+        // this.scene.add.existing(this.sprite);
+        // this.scene.physics.add.existing(this.sprite);
         this.idle=idle;
         this.walk= walk;
         this.imgIdle=imgIdle;
@@ -23,10 +34,10 @@ export default class EnemiesClass {
         this.endFrate= endFrate;
         this.rate=rate
         this.moveTime = 0;
-        this.type=Type;
+        this.type=type;
         this.createEnemyAnimation();
 
-        this.NewStateMachine = new NewStateMachine(this, Type);
+        this.NewStateMachine = new NewStateMachine(this, type);
 
         this.NewStateMachine.addState('idle', {
           onEnter: this.idleOnEnter,
@@ -35,7 +46,6 @@ export default class EnemiesClass {
         .addState('walk-left', {
           onEnter: this.walkLeftOnEnter,
           onUpdate: this.walkLeftOnUpdate,
-          onExit: this.walkOnExit
         })
         .addState('walk-right',{
           onEnter: this.walkRightOnEnter,
@@ -51,27 +61,35 @@ export default class EnemiesClass {
 
     }
     idleOnEnter(){
-      this.sprite.play('enemy-idle')
-      const r = Phaser.Math.Between(1, 100)
-      if (r < 50) {
-        this.NewStateMachine.setState('walk-left')
-      } else {
-        this.NewStateMachine.setState('walk-right')
-      }
+      this.play('enemy-idle')
+      console.log('pop');
+      
+      // const r = Phaser.Math.Between(1, 100)
+      // if (r < 50) {
+      //   console.log('pepop');
+      //   this.NewStateMachine.setState('walk-left')
+      // } else {
+      //   console.log('pepop2');
+        
+      //   this.NewStateMachine.setState('walk-right')
+      // }
     }
     idleOnUpdate(){
+      console.log(this.NewStateMachine.states);
+
         // this.NewStateMachine.setState('walk')
     }
 
     walkLeftOnEnter(){
+      console.log('wl');
       this.moveTime = 0
-      this.sprite.play('enemy-walk')
+      this.play('enemy-walk')
     }
 
     walkLeftOnUpdate(dt){
       this.moveTime += dt
-      this.sprite.setVelocityX(-2)
-      this.sprite.flipX = true;
+      this.setVelocityX(-2)
+      this.flipX = true;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('walk-right');
       }
@@ -79,6 +97,7 @@ export default class EnemiesClass {
     }
 
     walkRightOnEnter(){
+      console.log('wr');
       this.moveTime = 0
       this.sprite.play('enemy-walk')
     }
@@ -123,21 +142,21 @@ export default class EnemiesClass {
       this.NewStateMachine.update(dt);
     }
     createEnemyAnimation(){   
-      this.sprite.anims.create({
+      this.anims.create({
         key:this.idle,
         frames: [{key: this.img, frame: this.imgIdle}]
       })
-
-      this.sprite.anims.create({
-        key:this.walk,
-        frameRate: this.rate,
-        frames:this.sprite.anims.generateFrameNames(this.img, {
-          start: this.starFrate,
-          end: this.endFrate,
-          prefix: this.imgWalk,
-          suffix: '.png'
-        }),
-        repeat: -1
-      })
+      
+      // this.anims.create({
+      //   key:this.walk,
+      //   frameRate: this.rate,
+      //   frames:this.anims.generateFrameNames(this.img, {
+      //     start: this.starFrate,
+      //     end: this.endFrate,
+      //     prefix: this.imgWalk,
+      //     suffix: '.png'
+      //   }),
+      //   repeat: -1
+      // })
     }
 }
