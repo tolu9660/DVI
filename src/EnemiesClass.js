@@ -64,18 +64,18 @@ export default class EnemiesClass extends Phaser.GameObjects.Sprite {
       this.play('enemy-idle')
       console.log('pop');
       
-      // const r = Phaser.Math.Between(1, 100)
-      // if (r < 50) {
-      //   console.log('pepop');
-      //   this.NewStateMachine.setState('walk-left')
-      // } else {
-      //   console.log('pepop2');
+      const r = Phaser.Math.Between(1, 100)
+      if (r < 50) {
+        console.log('pepop');
+        this.NewStateMachine.setState('walk-left')
+      } else {
+        console.log('pepop2');
         
-      //   this.NewStateMachine.setState('walk-right')
-      // }
+        this.NewStateMachine.setState('walk-right')
+      }
     }
     idleOnUpdate(){
-      console.log(this.NewStateMachine.states);
+      // console.log(this.NewStateMachine.states);
 
         // this.NewStateMachine.setState('walk')
     }
@@ -88,6 +88,7 @@ export default class EnemiesClass extends Phaser.GameObjects.Sprite {
 
     walkLeftOnUpdate(dt){
       this.moveTime += dt
+      console.log(this);
       this.setVelocityX(-2)
       this.flipX = true;
       if (this.moveTime > 1500) {
@@ -97,15 +98,15 @@ export default class EnemiesClass extends Phaser.GameObjects.Sprite {
     }
 
     walkRightOnEnter(){
-      console.log('wr');
       this.moveTime = 0
-      this.sprite.play('enemy-walk')
+      this.play('enemy-walk')
     }
     
     walkRightOnUpdate(dt){
       this.moveTime += dt
-      this.sprite.setVelocityX(2)
-      this.sprite.flipX = false;
+      console.log(this);
+      this.setVelocityX(2)
+      this.flipX = false;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('walk-left');
       }
@@ -117,21 +118,21 @@ export default class EnemiesClass extends Phaser.GameObjects.Sprite {
       console.log('Este es el valor que guarda el atributo:');
       
       console.log(this.type);
-      if (this.sprite !== enemy) {
+      if (this!== enemy) {
         console.log('pepe'); 
       }
       switch(this.type){
         case 'alien':
-          this.sprite.destroy();
+          this.destroy();
           break;
         case 'alien1':
-          this.sprite.destroy();
+          this.destroy();
           break;
         case 'alien2':
-          this.sprite.destroy();
+          this.destroy();
           break;
         case 'alien3':
-          this.sprite.destroy();
+          this.destroy();
             break;
       }
       //this.sprite.destroy()
@@ -147,16 +148,16 @@ export default class EnemiesClass extends Phaser.GameObjects.Sprite {
         frames: [{key: this.img, frame: this.imgIdle}]
       })
       
-      // this.anims.create({
-      //   key:this.walk,
-      //   frameRate: this.rate,
-      //   frames:this.anims.generateFrameNames(this.img, {
-      //     start: this.starFrate,
-      //     end: this.endFrate,
-      //     prefix: this.imgWalk,
-      //     suffix: '.png'
-      //   }),
-      //   repeat: -1
-      // })
+      this.anims.create({
+        key:this.walk,
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.img, {
+          start: this.starFrate,
+          end: this.endFrate,
+          prefix: this.imgWalk,
+          suffix: '.png'
+        }),
+        repeat: -1
+      })
     }
 }

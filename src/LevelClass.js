@@ -258,7 +258,6 @@ export default class LevelClass extends Phaser.Scene {
               console.log("no se ha captado el tipo del enemigo");
               this.enemies.add(new EnemyController(this,x, y,'alien'));
           }
-         console.log(this.enemies);
           // this.arrayEnemies[step]=e;
           this.i++;       
     }
@@ -277,13 +276,14 @@ export default class LevelClass extends Phaser.Scene {
         this.arrayObjects[e].actu(dt);
     }
     }
-    if(this.arrayEnemies.length!=0){
-      for(let e=0; e<this.i; e++){
-        
-      this.arrayEnemies[e].update(dt);
-
-      }
+    // console.log(this.enemies.getChildren());
+    if (this.enemies.getChildren()) {
+      this.enemies.getChildren().forEach((element) => {
+        element.update(dt)
+      });
+      
     }
+
     
   }
  
