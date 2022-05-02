@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="79">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="78">
  <editorsettings>
   <export target="tutorial.json" format="json"/>
  </editorsettings>
@@ -300,45 +300,25 @@
 129,129,145,145,129,129,145,145,129,129,145,145,129,129,145,145,145,145,145,145,145,145,145,145,145,145,145,145,145,145,129,129,129,129,129,145,145,145,145,129,129,145,129,129,129,129,129,129,129,129,145,145,129,129,129,129,129,129,145,145,145,145,145,145,129,129,129,145,145,145,129,145,129,145,129,145,129,145,129,129,145,145,129,145,129,129,145,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129,129
 </data>
  </layer>
- <objectgroup id="13" name="objects">
-  <object id="24" name="energia" x="1792" y="256">
-   <point/>
-  </object>
-  <object id="27" name="corazon" x="5400" y="464">
-   <point/>
-  </object>
-  <object id="28" name="energia" x="7256" y="944">
-   <point/>
-  </object>
-  <object id="29" name="corazon" x="7832" y="216">
-   <point/>
-  </object>
-  <object id="30" name="corazon" x="8632" y="1192">
-   <point/>
-  </object>
-  <object id="31" name="llave" x="8688" y="712">
-   <point/>
-  </object>
-  <object id="32" name="energia" x="11816" y="472">
-   <point/>
-  </object>
-  <object id="33" name="cueva" x="15224" y="1568">
-   <point/>
-  </object>
-  <object id="34" name="limite" x="15312" y="24" width="24" height="1640"/>
-  <object id="36" name="cofre" x="11024" y="1184"/>
-  <object id="76" name="heroe" x="1968" y="342">
-   <point/>
-  </object>
-  <object id="77" name="energia" x="1648" y="312"/>
-  <object id="78" name="corazon" x="1718" y="328"/>
- </objectgroup>
  <objectgroup id="10" name="enemigos">
-  <object id="72" name="enemigo" type="alien" x="1431" y="1761">
-   <point/>
-  </object>
-  <object id="73" name="enemigo" type="alien1" x="2020.67" y="1749.33">
-   <point/>
-  </object>
+  <object id="67" name="enemigo" x="7158.55" y="1992.73" width="42.5455" height="42.7879"/>
+  <object id="71" name="enemigo" x="5686.73" y="1978.61" width="42.5455" height="42.7879"/>
+  <object id="72" name="enemigo" x="13992.4" y="1492.18" width="42.5455" height="42.7879"/>
+  <object id="75" name="enemigo" x="5126.73" y="1946.61" width="42.5455" height="42.7879"/>
+ </objectgroup>
+ <objectgroup id="13" name="objects">
+  <object id="34" name="limite" x="15312" y="24" width="24" height="1640"/>
+  <object id="35" name="limite" x="8" y="16" width="24" height="1528"/>
+  <object id="36" name="cofre" x="11024" y="1184"/>
+  <object id="50" name="energia" x="1160" y="568"/>
+  <object id="51" name="energia" x="1969.7" y="278.788"/>
+  <object id="52" name="energia" x="7237" y="917"/>
+  <object id="54" name="energia" x="11872" y="400"/>
+  <object id="59" name="corazon" x="7859.5" y="157.333" width="9" height="6.83333"/>
+  <object id="60" name="corazon" x="8635.5" y="1212.58" width="9" height="6.83333"/>
+  <object id="62" name="corazon" x="5335.5" y="432.583" width="9" height="6.83333"/>
+  <object id="63" name="cueva" type="Rojo" x="15132" y="1566" width="136" height="100"/>
+  <object id="76" name="heroe" x="8570.24" y="607.576" width="124" height="156"/>
+  <object id="77" name="llave" x="8781.82" y="748.485" width="3.0303"/>
  </objectgroup>
 </map>

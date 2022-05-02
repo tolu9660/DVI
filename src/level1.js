@@ -43,8 +43,9 @@ export default class Level1 extends LevelClass {
     let ground=['fondo',[0]];
     let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];
-    super.creacionCapas(Capas);
-    super.cargaEnemigos('alien2');
+  
+    super.creacionCapas(Capas);   
+    super.cargaEnemigos(); 
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }
