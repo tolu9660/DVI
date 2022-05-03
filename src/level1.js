@@ -32,6 +32,11 @@ export default class Level1 extends LevelClass {
 
  
 
+  preload(){
+    this.load.setPath('assets/sprites/alien5/');
+    this.load.atlas('alien5Walk','/Walk/texture.png', '/Walk/texture.json');
+
+  }
   /**
    * Creación de los elementos de la escena principal de juego
    */
@@ -44,7 +49,7 @@ export default class Level1 extends LevelClass {
     let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
-    super.cargaEnemigos('alien2');
+    super.cargaEnemigos();
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }

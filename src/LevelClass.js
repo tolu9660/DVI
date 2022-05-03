@@ -238,7 +238,7 @@ export default class LevelClass extends Phaser.Scene {
             //   break;
             default:
               console.log("no se ha captado el tipo del enemigo");
-              this.enemies.add(new EnemyController(this,x, y,'alien'));
+              this.enemies.add(new EnemyController(this,x, y,'alien5Walk'));
           }
           // this.arrayEnemies[step]=e;
           this.i++;       

@@ -1,0 +1,183 @@
+{
+  "frames": {
+    "Alien5 Idle1.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64.8,
+        "h": 47.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 19.6,
+        "y": 42.400000000000006,
+        "w": 64.8,
+        "h": 47.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Idle6.png": {
+      "frame": {
+        "x": 64.8,
+        "y": 0,
+        "w": 56.800000000000004,
+        "h": 54
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 36.4,
+        "w": 56.800000000000004,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Idle7.png": {
+      "frame": {
+        "x": 0,
+        "y": 47.2,
+        "w": 56.800000000000004,
+        "h": 53.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 37.2,
+        "w": 56.800000000000004,
+        "h": 53.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Idle5.png": {
+      "frame": {
+        "x": 121.60000000000001,
+        "y": 0,
+        "w": 56.800000000000004,
+        "h": 50
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 41.2,
+        "w": 56.800000000000004,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Idle4.png": {
+      "frame": {
+        "x": 178.4,
+        "y": 0,
+        "w": 56.800000000000004,
+        "h": 48.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 42,
+        "w": 56.800000000000004,
+        "h": 48.400000000000006
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Idle3.png": {
+      "frame": {
+        "x": 235.20000000000002,
+        "y": 0,
+        "w": 56.800000000000004,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 43.2,
+        "w": 56.800000000000004,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Idle2.png": {
+      "frame": {
+        "x": 292,
+        "y": 0,
+        "w": 56.800000000000004,
+        "h": 47.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 42.400000000000006,
+        "w": 56.800000000000004,
+        "h": 47.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 349,
+      "h": 100
+    },
+    "scale": 0.4
+  }
+}

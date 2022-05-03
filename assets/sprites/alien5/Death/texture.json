@@ -1,0 +1,255 @@
+{
+  "frames": {
+    "Alien5 Death09.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 85.60000000000001,
+        "h": 43.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12.8,
+        "y": 46.400000000000006,
+        "w": 85.60000000000001,
+        "h": 43.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death10.png": {
+      "frame": {
+        "x": 85.60000000000001,
+        "y": 0,
+        "w": 83.2,
+        "h": 40.800000000000004
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12.8,
+        "y": 48.800000000000004,
+        "w": 83.2,
+        "h": 40.800000000000004
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death08.png": {
+      "frame": {
+        "x": 168.8,
+        "y": 0,
+        "w": 79.2,
+        "h": 44
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13.600000000000001,
+        "y": 45.6,
+        "w": 79.2,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death04.png": {
+      "frame": {
+        "x": 85.60000000000001,
+        "y": 40.800000000000004,
+        "w": 70.4,
+        "h": 66.4
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21.6,
+        "y": 23.200000000000003,
+        "w": 70.4,
+        "h": 66.4
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death05.png": {
+      "frame": {
+        "x": 0,
+        "y": 43.2,
+        "w": 70.4,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 17.6,
+        "y": 27.200000000000003,
+        "w": 70.4,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death07.png": {
+      "frame": {
+        "x": 0,
+        "y": 105.60000000000001,
+        "w": 68,
+        "h": 55.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15.200000000000001,
+        "y": 34.4,
+        "w": 68,
+        "h": 55.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death03.png": {
+      "frame": {
+        "x": 248,
+        "y": 0,
+        "w": 65.60000000000001,
+        "h": 63.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 25.6,
+        "y": 21.6,
+        "w": 65.60000000000001,
+        "h": 63.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death06.png": {
+      "frame": {
+        "x": 156,
+        "y": 44,
+        "w": 64.8,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16.8,
+        "y": 29.6,
+        "w": 64.8,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death02.png": {
+      "frame": {
+        "x": 156,
+        "y": 104,
+        "w": 61.6,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 26.400000000000002,
+        "y": 25.6,
+        "w": 61.6,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Death01.png": {
+      "frame": {
+        "x": 68,
+        "y": 107.2,
+        "w": 56.800000000000004,
+        "h": 47.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 42.400000000000006,
+        "w": 56.800000000000004,
+        "h": 47.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 314,
+      "h": 164
+    },
+    "scale": 0.4
+  }
+}

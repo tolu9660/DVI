@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "Alien5 Hit2.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 63.2,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 38.400000000000006,
+        "y": 27.200000000000003,
+        "w": 63.2,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Hit3.png": {
+      "frame": {
+        "x": 63.2,
+        "y": 0,
+        "w": 63.2,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 39.2,
+        "y": 27.200000000000003,
+        "w": 63.2,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Hit4.png": {
+      "frame": {
+        "x": 126.4,
+        "y": 0,
+        "w": 63.2,
+        "h": 62.400000000000006
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 37.6,
+        "y": 27.200000000000003,
+        "w": 63.2,
+        "h": 62.400000000000006
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Alien5 Hit1.png": {
+      "frame": {
+        "x": 189.60000000000002,
+        "y": 0,
+        "w": 56.800000000000004,
+        "h": 47.2
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 42.400000000000006,
+        "w": 56.800000000000004,
+        "h": 47.2
+      },
+      "sourceSize": {
+        "w": 102.4,
+        "h": 102.4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 246,
+      "h": 62
+    },
+    "scale": 0.4
+  }
+}

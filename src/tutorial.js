@@ -49,12 +49,7 @@ export default class Tutorial extends LevelClass {
     super.cargaEnemigos();
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
-    console.log(this);
 
-    const corazon = this.add.image(30, 20, 'corazon')
-    this.heartLabel = this.add.text(45, 25, 'x6', {
-      fontSize: '16px'
-    })
   }
 
   update(t, dt){

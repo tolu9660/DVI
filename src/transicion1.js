@@ -20,7 +20,7 @@ export default class Transicion1 extends Phaser.Scene {
       // ir moviendo al jugador). Se puede mejorar añadiendo un temporizador que 
       // añada este listener pasado un segundo
       this.input.keyboard.on('keydown', function (event) { 
-        this.scene.start('tutorial')
+        this.scene.start('nivel1')
       }, this);
   
     }
