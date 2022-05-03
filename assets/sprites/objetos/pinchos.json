@@ -1,0 +1,111 @@
+{
+  "frames": {
+    "Pinchos4.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 114,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 114,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 114,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Pinchos3.png": {
+      "frame": {
+        "x": 0,
+        "y": 126,
+        "w": 114,
+        "h": 118
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 114,
+        "h": 118
+      },
+      "sourceSize": {
+        "w": 114,
+        "h": 118
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Pinchos2.png": {
+      "frame": {
+        "x": 0,
+        "y": 244,
+        "w": 114,
+        "h": 112
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 114,
+        "h": 112
+      },
+      "sourceSize": {
+        "w": 114,
+        "h": 112
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Pinchos1.png": {
+      "frame": {
+        "x": 0,
+        "y": 356,
+        "w": 124,
+        "h": 104
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 124,
+        "h": 104
+      },
+      "sourceSize": {
+        "w": 124,
+        "h": 104
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 124,
+      "h": 460
+    },
+    "scale": 1
+  }
+}

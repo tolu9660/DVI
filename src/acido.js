@@ -8,7 +8,8 @@ import GameObject from './gameobj.js';
 export default class acido extends GameObject {
   
     constructor(scene,x,y){
-      super(scene,x,y,'CoraGiro', 10,'acido', 'Heart', 1,3);
-        //hay que cambiar los nombres y los numeros de frames TODO
+      super(scene,x,y,'Acido', 10,'acido', 'Acido', 1,6);
+      this.body.immovable = true;
+      //this.body.allowGravity = false;
     }
 }

@@ -8,7 +8,7 @@ import GameObject from './gameobj.js';
 export default class lava extends GameObject {
   
     constructor(scene,x,y){
-      super(scene,x,y,'CoraGiro', 10,'lava', 'Heart', 1,3);
+      super(scene,x,y,'Lava', 10,'lava', 'Lava', 1,6);
         //hay que cambiar los nombres y los numeros de frames TODO
     }
 }

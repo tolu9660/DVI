@@ -9,6 +9,7 @@ import PlataformaMovil from './plataformaMovil.js';
 import Lava from './lava.js';
 import Acido from './acido.js';
 import Pinchos from './pinchos.js';
+import Arbusto from './arbusto.js';
 
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
@@ -166,15 +167,19 @@ export default class LevelClass extends Phaser.Scene {
           //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'acido': { 
-              this.aux = new Acido(this,this.pm)
+              this.objects.add(new Acido(this,x, y))
             break;
             }
             case 'lava': { 
-              this.aux = new Lava(this,this.pm)
+              this.objects.add(new Lava(this,x, y))
             break;
             }
             case 'pinchos': { 
-              this.aux = new Pinchos(this,this.pm)
+              this.objects.add(new Pinchos(this,x, y))
+            break;
+            }
+            case 'arbusto': { 
+              this.objects.add(new Arbusto(this,x, y))
             break;
             }
             default:{
