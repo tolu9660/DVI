@@ -6,12 +6,14 @@ export default class GameUI extends Phaser.Scene {
   /**
    * Constructor de la escena
    */
-  constructor() {
+  constructor(scene) {
     super({ key: 'game-ui' });
-
+    this.sceneActual = scene;
+    
   }
 
   init(){
+    this.sceneActualP = this.sceneActual;
     this.starsCollected = 0;
     this.heartsCollected = 6;
     this.messageCueva = false
@@ -23,10 +25,7 @@ export default class GameUI extends Phaser.Scene {
 
   create(){
     
-      const corazon = this.add.image(30, 20, 'corazon')
-      this.heartLabel = this.add.text(45, 25, 'x6', {
-        fontSize: '16px'
-      })
+
 
       const energia = this.add.image(100, 25, 'energia')
       //energia.setScale('0.4','0.4')

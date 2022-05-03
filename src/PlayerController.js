@@ -18,7 +18,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this);
         // this.scene.physics.add.sprite(x + (this.width),y, 'hero')
-        
+        this.flipFlop;
         this.scene.cameras.main.setBounds(0, 0, 16000, 3000); //Y = 250
         this.scene.cameras.main.zoom = 1;
         this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
@@ -40,31 +40,37 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.body.setSize(this.width,this.height);
         this.body.setOffset(this.width,-5);
         this.body.updateFromGameObject();
-        this.cursors = this.scene.input.keyboard.createCursorKeys();
-        // this.cursors = this.scene.input.keyboard.addKeys({
-        //   up:Phaser.Input.Keyboard.KeyCodes.W,
-        //   down:Phaser.Input.Keyboard.KeyCodes.S,
-        //   left:Phaser.Input.Keyboard.KeyCodes.A,
-        //   right:Phaser.Input.Keyboard.KeyCodes.D,
-        //   space:Phaser.Input.Keyboard.KeyCodes.SPACE,
-        //   E:Phaser.Input.Keyboard.KeyCodes.E,
-        //   ESC:Phaser.Input.Keyboard.KeyCodes.ESC
-        // });
+        // this.cursors = this.scene.input.keyboard.createCursorKeys();
+        this.cursors = this.scene.input.keyboard.addKeys({
+          up:Phaser.Input.Keyboard.KeyCodes.UP,
+          down:Phaser.Input.Keyboard.KeyCodes.DOWN,
+          left:Phaser.Input.Keyboard.KeyCodes.LEFT,
+          right:Phaser.Input.Keyboard.KeyCodes.RIGHT,
+          space:Phaser.Input.Keyboard.KeyCodes.SPACE,
+          E:Phaser.Input.Keyboard.KeyCodes.E,
+          ESC:Phaser.Input.Keyboard.KeyCodes.ESC
+        });
+        
 
         // this.obstacles = this.scene;
         this.key = false;
         this.lastEnemy;
         this.damage;
+        this.energy = 0;
+        // this.bullets = this.scene.physics.add.group({
+        //   classType: Phaser.Physics.Arcade.Image,
+        //   frameQuantity:50,
+        //     active: false,
+        //     visible: false,
+        //     key: 'bullet'
+        // });
         this.bullets = this.scene.physics.add.group({
-          classType: Phaser.Physics.Arcade.Image,
-          frameQuantity:50,
-            active: false,
-            visible: false,
-            key: 'bullet'
+          classType: Phaser.Physics.Arcade.Image 
         });
         this.scene.physics.add.collider(this.bullets,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
         this.scene.physics.add.collider(this,this.scene.enemies,this.handlePlayerEnemiesCollision,undefined,this.scene)
-        this.scene.physics.add.collider(this.bullets,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this.scene)
+
+        this.scene.physics.add.collider(this,this.scene.objects,this.handleheartsplayer,undefined,this)
 
         this.createAlienAnimation();
 
@@ -210,7 +216,17 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         } else {
           player.setVelocityX(400)
         }
-        
+        switch(enemigo.type){
+        case 'alien':
+          this.damage=1;
+          events.emit('minus-health')
+          break;
+        case 'alien1':
+          this.damage=2;
+          events.emit('minus-health2')
+          break;
+          
+      }
         player.NewStateMachine.setState('enemy-hit');
       }
     }
@@ -265,6 +281,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     jumpOnUpdate(){
       const speed = 300
 
+
       if (this.cursors.left.isDown) {
         this.flipX = true;
         this.setVelocityX(-speed);
@@ -282,7 +299,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         }
       }else if (this.body.onFloor()){
         this.NewStateMachine.setState('idle')    
-      }    }
+      }   
+    
+    }
 
     spikeOnEnter() {
       this.setVelocityY(-3)
@@ -393,6 +412,26 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     setBullets(bullets){
       this.bullets = bullets
     }
+
+    handleheartsplayer(player,objeto){
+      console.log(objeto);
+      switch (objeto.img) {
+        case 'energia':
+          this.energy += 1
+                            events.emit('star-collected')
+                            objeto.destroy();
+                  events.emit('mensaje-ayuda-energia')
+          break;
+          case 'corazon':
+            events.emit('heart-collected')
+            objeto.destroy();
+            events.emit('mensaje-ayuda-corazon')
+            break;
+        default:
+          break;
+      }
+                            
+    }
     shoot(){
       console.log(this.body.deltaX());
       // sprite.angle = sprite.body.angle;
@@ -405,8 +444,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       }else {
         vector.x = 1
       }
-      this.bullet = this.bullets.getFirstDead(false);
-      this.bullet.body.reset(this.x, this.y);
+      this.bullet = this.bullets.get(this.x, this.y, 'bullet');
+      this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
+
       this.bullet.setActive(true)
       this.bullet.setVisible(true)
       this.bullet.body.allowGravity = false
@@ -424,16 +464,29 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       bullet.destroy() 
     }
     handleBulletsEnemiesCollision(bullet, enemy) {
-      
+      console.log(bullet);
+      console.log(enemy);      
       bullet.destroy()
       enemy.destroy();
     }
     update(dt){
       this.NewStateMachine.update(dt);
-      if (this.cursors.space.isDown) {
+      if (Phaser.Input.Keyboard.JustDown(this.cursors.space)) {
         this.shoot();
+      }      
+      if (!this.body.onFloor() && this.energy >0 && this.cursors.E.isDown) {
+        if (!this.flipFlop) {
+          console.log('pedo');
+          this.setVelocityY(-600)
+          this.energy = this.energy - 1
+          this.flipFlop = true;
       }
-      
+        
+      }
+      if (this.cursors.E.isUp) {
+        this.flipFlop = false;
+    }
+
     }
 
     createAlienAnimation(){

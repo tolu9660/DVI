@@ -51,6 +51,10 @@ export default class Tutorial extends LevelClass {
     this.MusicaFondo.play();
     console.log(this);
 
+    const corazon = this.add.image(30, 20, 'corazon')
+    this.heartLabel = this.add.text(45, 25, 'x6', {
+      fontSize: '16px'
+    })
   }
 
   update(t, dt){

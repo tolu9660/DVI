@@ -9,8 +9,8 @@ import NewStateMachine from './newStateMachine.js';
  */
 export default class energia extends GameObject {
   
-    constructor(scene,sprite){
-         super(scene, sprite,'eneGiro', 10,'energia', 'Blue Crystal', 1,8);
+    constructor(scene,x,y){
+        super(scene,x,y,'eneGiro', 10,'energia', 'Blue Crystal', 1,8);
     }
    
   
