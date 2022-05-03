@@ -445,6 +445,18 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           events.emit('mensaje-ayuda-llave')
           this.hasKey = true;
         break;
+        /*
+         case 'llave':
+          events.emit('key-collected')
+          objeto.destroy();
+          events.emit('mensaje-ayuda-llave')
+          this.hasKey = true;
+          // gravedad ->
+              this.body.ignoreGravity = false;
+              this.body.immovable=true;
+          objeto.
+        break;
+        */
         case 'cueva':
           // this.health += 1
           // events.emit('cueva-collected',this.health)
