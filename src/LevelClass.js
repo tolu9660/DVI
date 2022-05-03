@@ -15,7 +15,7 @@ import cuevaRoja from './cuevaRoja.js';
 import cuevaAzul from './cuevaAzul.js';
 import { sceneEvents as events } from './EventsCenter.js';
 
-
+/**hola esto es una prueba* */
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
