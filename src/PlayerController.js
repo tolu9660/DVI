@@ -77,6 +77,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.scene.physics.add.collider(this.bullets,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
         this.scene.physics.add.collider(this,this.scene.enemies,this.handlePlayerEnemiesCollision,undefined,this.scene)
 
+        
+
         this.scene.physics.add.collider(this,this.scene.objects,this.handleheartsplayer,undefined,this)
 
         this.createAlienAnimation();
@@ -225,7 +227,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         }
         switch(enemigo.type){
           case 'alien':
-            this.health = this.health - 1;
+            this.health -=  1;
             events.emit('heart',this.health)
             break;
           case 'alien1':
@@ -451,9 +453,31 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           // objeto.destroy();
           // events.emit('mensaje-ayuda-corazon')
         break;
+        case 'trampas':
+          trampas(player, objeto);
+        break;
         default:
           break;
       }
+    }
+
+    trampas(player, objeto){
+      switch(objeto.img){
+        case 'acido':
+          this.health -=  1;
+          events.emit('heart',this.health)
+          break;
+        case 'pinchos':
+          this.health -= 2;
+          events.emit('heart', this.health)
+          break;
+         case 'lava':
+          this.health -= 1;
+          events.emit('heart', this.health)
+          break;
+    }
+      player.body.setVelocityY(-200);
+      player.NewStateMachine.setState('enemy-hit');
     }
 
           //         case 'llave':
