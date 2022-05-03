@@ -35,8 +35,8 @@ export default class Boot extends Phaser.Scene {
 
     //transicion inicial
     
-    this.load.image('Transicion0',"/trasInicioC0.jpg");
-    this.load.image('Transicion1',"/trasInicioC1.jpg");
+    //this.load.image('Transicion0',"/trasInicioC0.jpg");
+    //this.load.image('Transicion1',"/trasInicioC1.jpg");
     
   
     

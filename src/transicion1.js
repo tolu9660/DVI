@@ -6,6 +6,9 @@ export default class Transicion1 extends Phaser.Scene {
       super({ key: 'transicion1' });
     }
   
+    preload(){
+      this.load.image('Transicion1',"assets/sprites/trasInicioC1.jpg");
+    }
     /**
      * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
      */
