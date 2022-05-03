@@ -49,13 +49,13 @@ export default class GameUI extends Phaser.Scene {
     
     // events.on('mensaje-ayuda', this.handleMensajeAyudaEnergia, this)
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('energy-collected', this.handleStarCollected, this)
+      events.off('energy', this.handleStarCollected, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('key-collected', this.handleKeyCollected, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('heart-collected', this.handleHeartCollected, this)
+      events.off('heart', this.handleHeartCollected, this)
     })
     //creo un evento por cada enemigo
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{

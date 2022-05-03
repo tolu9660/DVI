@@ -19,10 +19,16 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.scene.physics.add.existing(this);
         // this.scene.physics.add.sprite(x + (this.width),y, 'hero')
         this.flipFlop;
-        this.scene.cameras.main.setBounds(0, 0, 16000, 3000); //Y = 250
-        this.scene.cameras.main.zoom = 1;
-        this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
-        this.scene.cameras.main.fadeIn(1000);
+        this.scene.cameras.main.startFollow(this, false, 1, 1, 0, 0);
+        this.scene.cameras.main.setDeadzone(400, 350);
+
+        this.scene.cameras.main.shake(200, 0.05, true, Phaser.Cameras.SHAKE_HORIZONTAL, false);
+
+        this.scene.cameras.main.zoom = 0.5;
+        // this.scene.cameras.main.setBounds(0, 0, 16000, 3000); //Y = 250
+        // this.scene.cameras.main.zoom = 1;
+        // this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
+        // this.scene.cameras.main.fadeIn(1000);
 
         // .setScale('0.8')  
         this.scene.physics.add.collider(this,this.scene.groundLayer)
