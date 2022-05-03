@@ -5,7 +5,7 @@ import EnemyController from './EnemyController.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlataformaMovil from './plataformaMovil.js';
+//import PlataformaMovil from './plataformaMovil.js';
 import Lava from './lava.js';
 import Acido from './acido.js';
 import Pinchos from './pinchos.js';
@@ -142,8 +142,8 @@ export default class LevelClass extends Phaser.Scene {
 
          //cambiar plataformaMovil por la clase
           switch ( objData.type) {
-            case 'pmv': { 
-              /*this.plataforma = this.physics.add.staticSprite(x, y , 'pm');
+            case 'pmv': 
+               /*this.plataforma = this.physics.add.staticSprite(x, y , 'pm');
               this.plataforma.body.ignoreGravity = true;
               
               this.posicion_plataforma_x = this.plataforma.x
@@ -152,17 +152,17 @@ export default class LevelClass extends Phaser.Scene {
               this.objects.add(new PlataformaVertical(this,x,y))
              
             break;
-            }
-            case 'pmh': { 
+            
+            case 'pmh': 
 
               this.objects.add(new PlataformaHorizontal(this,x,y))
             break;
-            }
-            case 'pmt': { 
+            
+            case 'pmt': 
 
               this.objects.add(new PlataformaTiempo(this,x,y))
             break;
-            }
+            
             default:{
               this.objects.add(new PlataformaHorizontal(this,x,y))
               break; 
@@ -173,9 +173,6 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'trampa':{
-          this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
-          .setScale('1')  
-          this.physics.add.collider(this.pm,this.groundLayer)
 
           // .setFixedRotation();
           //cambiar plataformaMovil por la clase
@@ -196,10 +193,7 @@ export default class LevelClass extends Phaser.Scene {
               this.objects.add(new Arbusto(this,x, y))
             break;
             }
-            default:{
-              this.aux = new PlataformaMovil(this,this.pm)
-              break; 
-            }
+            
           }
          
           this.arrayObjects[this.j]=this.aux;

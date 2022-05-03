@@ -24,7 +24,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
         this.scene.cameras.main.shake(200, 0.05, true, Phaser.Cameras.SHAKE_HORIZONTAL, false);
 
-        this.scene.cameras.main.zoom = 0.5;
+        this.scene.cameras.main.zoom = 0.3;
         // this.scene.cameras.main.setBounds(0, 0, 16000, 3000); //Y = 250
         // this.scene.cameras.main.zoom = 1;
         // this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
