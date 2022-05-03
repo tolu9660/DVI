@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="215" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="267">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="215" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="269">
  <editorsettings>
   <export target="nivel1.json" format="json"/>
  </editorsettings>
@@ -526,7 +526,7 @@
   <object id="168" name="corazon" x="13478" y="758" width="68" height="68"/>
   <object id="169" name="corazon" x="8054" y="1990" width="68" height="68"/>
   <object id="170" name="corazon" x="694" y="2110" width="68" height="68"/>
-  <object id="171" name="heroe" x="3626.61" y="903.273" width="124" height="156"/>
+  <object id="171" name="heroe" x="1074.61" y="1039.27" width="124" height="156"/>
   <object id="172" name="energiarosa" x="7542" y="1144" width="116" height="112"/>
   <object id="173" name="energiaazul" x="4430" y="2320" width="116" height="112"/>
   <object id="174" name="energiarosa" x="11622" y="2432" width="116" height="112"/>
