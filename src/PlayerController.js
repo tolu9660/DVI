@@ -466,15 +466,15 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         case 'acido':
           this.health -=  1;
           events.emit('heart',this.health)
-          break;
+        break;
         case 'pinchos':
           this.health -= 2;
           events.emit('heart', this.health)
-          break;
-         case 'lava':
+        break;
+        case 'lava':
           this.health -= 1;
           events.emit('heart', this.health)
-          break;
+        break;
     }
       player.body.setVelocityY(-200);
       player.NewStateMachine.setState('enemy-hit');

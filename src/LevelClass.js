@@ -6,6 +6,10 @@ import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
 import PlataformaMovil from './plataformaMovil.js';
+import Lava from './lava.js';
+import Acido from './acido.js';
+import Pinchos from './pinchos.js';
+
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
 import EnemyController1 from './EnemyController1.js';
@@ -162,15 +166,15 @@ export default class LevelClass extends Phaser.Scene {
           //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'acido': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.aux = new Acido(this,this.pm)
             break;
             }
             case 'lava': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.aux = new Lava(this,this.pm)
             break;
             }
             case 'pinchos': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.aux = new Pinchos(this,this.pm)
             break;
             }
             default:{
