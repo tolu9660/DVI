@@ -19,6 +19,7 @@ export default class Boot extends Phaser.Scene {
   preload() {
     // Con setPath podemos establecer el prefijo que se añadirá a todos los load que aparecen a continuación
     this.load.setPath('assets/sprites/');
+
     
     //characters:
     this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
@@ -34,6 +35,7 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('pm','/objetos/pm.png', '/objetos/pm.json');
     this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
     this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
+<<<<<<< HEAD
     //
   //  this.load.atlas('cueva','/objetos/cueva.png', '/objetos/cueva.json');
     this.load.atlas('cuevaA','/objetos/cuevaA.png', '/objetos/cuevaA.json');
@@ -43,6 +45,15 @@ export default class Boot extends Phaser.Scene {
     this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
     this.load.atlas('tiles','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
     this.load.image('bullet','/PCharacters/bullet.png')
+=======
+
+    //transicion inicial
+    
+    //this.load.image('Transicion0',"/trasInicioC0.jpg");
+    //this.load.image('Transicion1',"/trasInicioC1.jpg");
+    
+  
+>>>>>>> alvaro
     
     
     // NIVEL 1:
@@ -72,7 +83,11 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
+<<<<<<< HEAD
     this.scene.start('tutorial');
+=======
+    this.scene.start('transicion');
+>>>>>>> alvaro
     
   }
 }

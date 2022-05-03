@@ -13,6 +13,8 @@ import ObstaclesController from './ObstaclesController.js';
  */
 export default class Level extends Phaser.Scene {
 
+  
+
   /**
    * Constructor de la escena
    */
@@ -37,8 +39,8 @@ export default class Level extends Phaser.Scene {
     //cosas de mapa
     this.map = this.make.tilemap({ key: 'level1' });
     //this.map = this.make.tilemap({ key: 'tilemap' });
-    const tileset1 = this.map.addTilesetImage('suelo','suelo');
-    const tileset2 = this.map.addTilesetImage('subsuelo','subsuelo');
+    const tileset1 = this.map.addTilesetImage('acido','acido');
+    const tileset2 = this.map.addTilesetImage('texturas','texturas');
  
     //const tileset1 = this.map.addTilesetImage('suelo_jesus', 'ground')
     this.groundLayer = this.map.createLayer('ground', [tileset1, tileset2]);

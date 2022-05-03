@@ -10,6 +10,9 @@ import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
 import parallaxScene from './parallaxScene.js';
 import GameUI from './GameUI.js'
+import Transicion from './transicion.js'
+import Transicion1 from './transicion1.js'
+
 
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
@@ -18,9 +21,9 @@ import GameUI from './GameUI.js'
 let config = {
     type: Phaser.AUTO,
     width: 1000,
-    height: 480,
+    height: 500,
     scale: {
-        mode: Phaser.Scale.FIT,  
+        //mode: Phaser.Scale.FIT,  
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
