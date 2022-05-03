@@ -10,9 +10,9 @@ import GameObject from './gameobj.js';
  */
 export default class llave extends GameObject {
   
-    constructor(scene,sprite){
+    constructor(scene,x,y){
  
-      super(scene, sprite,'llaveGiro', 10,'llave', 'Key', 1,6);
+      super(scene,x,y,'llaveGiro', 10,'llave', 'Key', 1,6);
      
 }
 }

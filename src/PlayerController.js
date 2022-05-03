@@ -53,10 +53,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         
 
         // this.obstacles = this.scene;
-        this.key = false;
+        this.hasKey = false;
         this.lastEnemy;
         this.damage;
         this.energy = 0;
+        this.health = 6;
         // this.bullets = this.scene.physics.add.group({
         //   classType: Phaser.Physics.Arcade.Image,
         //   frameQuantity:50,
@@ -217,14 +218,15 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           player.setVelocityX(400)
         }
         switch(enemigo.type){
-        case 'alien':
-          this.damage=1;
-          events.emit('minus-health')
-          break;
-        case 'alien1':
-          this.damage=2;
-          events.emit('minus-health2')
-          break;
+          case 'alien':
+            this.health = this.health - 1;
+            events.emit('heart',this.health)
+            break;
+          case 'alien1':
+
+            this.health -= 2;
+            events.emit('heart', this.health)
+            break;
           
       }
         player.NewStateMachine.setState('enemy-hit');
@@ -331,11 +333,12 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           this.sprite.setTint(color)
         }
       })
-      events.emit('minus-health',this.damage)
+      events.emit('heart',this.health)
       this.NewStateMachine.setState('idle')
     }
 
-    enemyHitOnEnter() {
+    enemyHitOnEnter(conect) {
+      console.log(conect);
      // console.log(this.lastEnemy);
       //console.log(this.lastEnemy.body);
       //console.log(this.lastEnemy.body.gameObject);
@@ -418,20 +421,58 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       switch (objeto.img) {
         case 'energia':
           this.energy += 1
-                            events.emit('star-collected')
-                            objeto.destroy();
-                  events.emit('mensaje-ayuda-energia')
-          break;
-          case 'corazon':
-            events.emit('heart-collected')
-            objeto.destroy();
-            events.emit('mensaje-ayuda-corazon')
-            break;
+          events.emit('energy', this.energy)
+          objeto.destroy();
+          events.emit('mensaje-ayuda-energia')
+        break;
+        case 'corazon':
+          if (this.health < 6){
+            this.health += 1
+          }          
+          events.emit('heart',this.health)
+          objeto.destroy();
+          events.emit('mensaje-ayuda-corazon')
+        break;
+        case 'llave':
+          events.emit('key-collected')
+          objeto.destroy();
+          events.emit('mensaje-ayuda-llave')
+          this.hasKey = true;
+        break;
+        case 'cueva':
+          // this.health += 1
+          // events.emit('cueva-collected',this.health)
+          // objeto.destroy();
+          // events.emit('mensaje-ayuda-corazon')
+        break;
         default:
           break;
       }
-                            
     }
+
+          //         case 'llave':
+          //           events.emit('key-collected')
+          //           gameObject.destroy();
+          //           events.emit('mensaje-ayuda-llave')
+          //           this.key = true;
+          //           break;
+
+          //           case 'corazon':
+          //             events.emit('heart-collected')
+          //             gameObject.destroy();
+          //             events.emit('mensaje-ayuda-corazon')
+          //             break;
+                    
+          //           case 'cueva':
+          //            console.log('collyde with vueva')
+          //           if (this.key) {
+          //             events.emit('cueva-in')
+          //           }
+          //           else{
+          //             events.emit('cueva-stop')
+          //           }
+
+
     shoot(){
       console.log(this.body.deltaX());
       // sprite.angle = sprite.body.angle;
@@ -474,19 +515,13 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       if (Phaser.Input.Keyboard.JustDown(this.cursors.space)) {
         this.shoot();
       }      
-      if (!this.body.onFloor() && this.energy >0 && this.cursors.E.isDown) {
-        if (!this.flipFlop) {
-          console.log('pedo');
-          this.setVelocityY(-600)
-          this.energy = this.energy - 1
-          this.flipFlop = true;
+      if (!this.body.onFloor() && this.energy >0 && Phaser.Input.Keyboard.JustDown(this.cursors.E)) {
+        this.setVelocityY(-600)
+        this.energy = this.energy - 1
+        events.emit('energy', this.energy)
       }
-        
-      }
-      if (this.cursors.E.isUp) {
-        this.flipFlop = false;
-    }
-
+      console.log(this.health);
+      console.log(this.body.onFloor());
     }
 
     createAlienAnimation(){

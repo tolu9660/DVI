@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="81">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="81">
  <editorsettings>
   <export target="tutorial.json" format="json"/>
  </editorsettings>
@@ -316,7 +316,7 @@
   <object id="30" name="corazon" x="8632" y="1192">
    <point/>
   </object>
-  <object id="31" name="llave" x="8688" y="712">
+  <object id="31" name="llave" x="4223.03" y="1115.15">
    <point/>
   </object>
   <object id="32" name="energia" x="11816" y="472">

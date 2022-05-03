@@ -56,7 +56,7 @@ export default class LevelClass extends Phaser.Scene {
   /*Hola esto es una prueba */
   create(KeyLevel,Tilesets ) {
     
-    // this.scene.launch('game-ui');
+    this.scene.launch('game-ui');
     this.map = this.make.tilemap({ key: KeyLevel });
 
     //const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
@@ -124,18 +124,8 @@ export default class LevelClass extends Phaser.Scene {
         }
 
         case 'corazon':{
-        //   this.corazon = this.physics.add.staticSprite(x + (width),y, 'corazon')
-        //  this.corazon.scale = 2
-        //   // this.physics.add.collider(this.corazon,this.groundLayer)
-          
-        //   // .setFixedRotation();
-        //   this.corazon.setData('type', 'corazon')
-        //   this.c = 
           this.objects.add(new corazon(this,x, y))
-
-          // this.arrayObjects[this.j]=this.c;
-          // this.j++;
-          break;
+        break;
         }
         case 'pm':{
           this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
@@ -194,39 +184,22 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'energia':{
-
           this.objects.add(new energia(this,x, y))
-
-          // this.ene = this.physics.add.staticSprite(x + (width),y, 'energia',undefined,{
-          // isStatic:true,
-          // isSensor:true
-          // })
-          // .setScale('1.2')  
-          // this.physics.add.collider(this.ene,this.groundLayer)
-
-          // // .setFixedRotation();
-          // this.ene.setData('type', 'energia')
-          // this.c = new energia (
-          // this,
-          // this.ene
-          // )
-          // this.arrayObjects[this.j]=this.c;
-          // this.j++;
-          break;
+        break;
         }
 
         case 'llave': {
+          this.objects.add(new llave(this,x, y))
+          // this.k = this.physics.add.staticSprite(x + (width),y, 'llave')
+          // .setScale('1.5')  
+          // // .setFixedRotation();
+          // this.physics.add.collider(this.k,this.groundLayer)
 
-          this.k = this.physics.add.staticSprite(x + (width),y, 'llave')
-          .setScale('1.5')  
-          // .setFixedRotation();
-          this.physics.add.collider(this.k,this.groundLayer)
+          // this.k.setData('type', 'llave')
+          // this.c = new llave(this,this.k)
+          // this.arrayObjects[this.j]=this.c;
 
-          this.k.setData('type', 'llave')
-          this.c = new llave(this,this.k)
-          this.arrayObjects[this.j]=this.c;
-
-          this.j++;
+          // this.j++;
 
           break;
         }
