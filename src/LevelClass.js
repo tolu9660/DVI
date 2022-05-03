@@ -13,6 +13,7 @@ import EnemyController2 from './EnemyController2.js';
 import EnemyController3 from './EnemyController3.js';
 import cuevaRoja from './cuevaRoja.js';
 import cuevaAzul from './cuevaAzul.js';
+import { sceneEvents as events } from './EventsCenter.js';
 
 
 
@@ -84,7 +85,7 @@ export default class LevelClass extends Phaser.Scene {
     }
     
     this.groundLayer.setCollisionByProperty({collides : true});    
-    this.physics.world.setBounds(0,0,16000,3000);
+    // this.physics.world.setBounds(0,0,16000,3000);
     this.cargarObjetos();
 
     
@@ -96,6 +97,7 @@ export default class LevelClass extends Phaser.Scene {
       switch (name) {
         case 'heroe': { 
           this.playerController = new PlayerController(this,x,y)
+          this.physics.add.collider(this.playerController ,this.groundLayer)
           break;
         }
 
@@ -262,7 +264,7 @@ export default class LevelClass extends Phaser.Scene {
           this.i++;       
     }
     
-
+   
   }
 
   update(t, dt){

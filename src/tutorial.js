@@ -49,6 +49,8 @@ export default class Tutorial extends LevelClass {
     super.cargaEnemigos();
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
+    console.log(this);
+
   }
 
   update(t, dt){

@@ -10,12 +10,8 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
   
     constructor(scene,x,y,type,idle,walk,imgIdle,imgWalk,img,startFrate,endFrate,rate){
         super(scene,x,y,type)
-        console.log(scene);
         console.log(x);
         console.log(y);
-        console.log(type);
-        console.log(this.width);
-        console.log(this.height);
         // this.setDepth(0);
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this);
