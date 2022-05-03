@@ -6,7 +6,7 @@ import enemyController from './EnemyController1.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlataformaMovil from './plataformaMovil.js';
+import PlataformaMovil from './plataformaVertical.js';
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
 import LevelClass from './LevelClass.js';
@@ -49,11 +49,17 @@ export default class Tutorial extends LevelClass {
     super.cargaEnemigos();
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
+    console.log(this);
+
+    const corazon = this.add.image(30, 20, 'corazon')
+    this.heartLabel = this.add.text(45, 25, 'x6', {
+      fontSize: '16px'
+    })
   }
 
   update(t, dt){
     let a =0;
-    super.update();
+    super.update(t,dt);
     
   }
 

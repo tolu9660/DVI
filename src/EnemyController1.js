@@ -11,10 +11,10 @@ import NewStateMachine from './newStateMachine.js';
 
  export default class EnemyController1 extends EnemiesClass {
 
-constructor(scene,sprite,tipo){
+constructor(scene,x,y,type){
   //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
-  super(scene, sprite,tipo,'enemy-idle','enemy-walk','enemigo.png',
-        'jackal_walk_',tipo,1,5,10);
+  super(scene, x,y,'alien','enemy-idle','enemy-walk','predatormask_idle_1.png',
+  'predatormask__0006_walk_','alien',1,6,10);
 }
 
  }

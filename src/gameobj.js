@@ -3,12 +3,12 @@
 
 import NewStateMachine from './newStateMachine.js';
 
-export default class GameObject {
+export default class GameObject extends Phaser.Physics.Arcade.Sprite {
   
-    constructor(scene,sprite,nombreKey,fRate,img,preFix,Vstart,vEnd){
- 
+    constructor(scene,x,y,nombreKey,fRate,img,preFix,Vstart,vEnd){
+        super(scene,x,y,img)
         this.scene = scene;
-        this.sprite = sprite;
+        // this.sprite = sprite;
         this.nombreKey=nombreKey
         this.fRate=fRate
         this.Vstart=Vstart
@@ -16,6 +16,11 @@ export default class GameObject {
         this.preFix=preFix
         this.img=img
         this.createAnimation();
+        this.scene.add.existing(this);
+        this.scene.physics.add.existing(this);
+        this.body.allowGravity = false
+        this.scene.physics.add.collider(this,this.scene.groundLayer)
+
         this.NewStateMachine = new NewStateMachine(this,this.img);
 
         this.NewStateMachine.addState('giro', {
@@ -28,7 +33,7 @@ export default class GameObject {
    
   
       animar(){
-        this.sprite.play(this.nombreKey)
+        this.play(this.nombreKey)
       }
       
       
@@ -38,10 +43,10 @@ export default class GameObject {
     }
     createAnimation(){   
     
-        this.sprite.anims.create({
+        this.anims.create({
           key:this.nombreKey,
           frameRate: this.fRate,
-          frames:this.sprite.anims.generateFrameNames(this.img, {
+          frames:this.anims.generateFrameNames(this.img, {
             start: this.Vstart,
             end: this.vEnd,
             prefix: this.preFix,

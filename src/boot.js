@@ -19,6 +19,7 @@ export default class Boot extends Phaser.Scene {
   preload() {
     // Con setPath podemos establecer el prefijo que se añadirá a todos los load que aparecen a continuación
     this.load.setPath('assets/sprites/');
+
     
     //characters:
     this.load.atlas('alien','/enemy1/alien.png', '/enemy1/alien.json');
@@ -42,7 +43,7 @@ export default class Boot extends Phaser.Scene {
     this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
     this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
     this.load.atlas('tiles','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
-  
+    this.load.image('bullet','/PCharacters/bullet.png')
     
     
     // NIVEL 1:

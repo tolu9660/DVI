@@ -6,7 +6,7 @@ import enemyController from './EnemyController1.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlataformaMovil from './plataformaMovil.js';
+import PlataformaMovil from './plataformaVertical.js';
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
 import LevelClass from './LevelClass.js';
@@ -52,7 +52,7 @@ export default class Level1 extends LevelClass {
 
   update(t, dt){
     let a =0;
-    super.update();
+    super.update(t, dt);
     
   }
 

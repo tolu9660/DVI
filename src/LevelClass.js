@@ -1,11 +1,11 @@
 
 import PlayerController from './PlayerController.js'
-import enemyController from './EnemyController.js'
+import EnemyController from './EnemyController.js'
 
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlataformaMovil from './plataformaMovil.js';
+import PlataformaMovil from './plataformaVertical.js';
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
 import EnemyController1 from './EnemyController1.js';
@@ -13,8 +13,12 @@ import EnemyController2 from './EnemyController2.js';
 import EnemyController3 from './EnemyController3.js';
 import cuevaRoja from './cuevaRoja.js';
 import cuevaAzul from './cuevaAzul.js';
+import { sceneEvents as events } from './EventsCenter.js';
+import PlataformaVertical from './plataformaVertical.js';
+import PlataformaHorizontal from './PlataformaHorizontal.js';
+import PlataformaTiempo from './plataformaTiempo.js';
 
-
+/**hola esto es una prueba* */
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -35,10 +39,11 @@ export default class LevelClass extends Phaser.Scene {
     this.groundLayer;
     this.plataformasLayer;
     
+    
   }
 
   init() {
-    this.cursors = this.input.keyboard.createCursorKeys();
+   
     this.obstacles = new ObstaclesController();
     this.arrayEnemies=[];
     this.arrayObjects=[];
@@ -56,13 +61,15 @@ export default class LevelClass extends Phaser.Scene {
     
     this.scene.launch('game-ui');
     this.map = this.make.tilemap({ key: KeyLevel });
-    
+
     //const backgroundImage=this.add.image(0,0,BackG).setOrigin(0,0);
     let conjuntos=['fondo','plataformas'];
     //creo los diferentes tileset que voy a usar para mi nivel
     for(let i=0; i<Tilesets.length; i++){
       this.ArrayTileset[i]=this.map.addTilesetImage(conjuntos[i],Tilesets[i]);//KEY -> nombre del boot
     }
+    this.enemies = this.add.group();
+    this.objects = this.add.group();
   
   }
   creacionCapas(Capas){
@@ -83,8 +90,9 @@ export default class LevelClass extends Phaser.Scene {
     }
     
     this.groundLayer.setCollisionByProperty({collides : true});    
-    this.matter.world.convertTilemapLayer(this.groundLayer);
+    // this.physics.world.setBounds(0,0,16000,3000);
     this.cargarObjetos();
+
     
   }
   cargarObjetos(){
@@ -93,26 +101,18 @@ export default class LevelClass extends Phaser.Scene {
     const {x = 0, y = 0, name, width = 0, height = 0} = objData
       switch (name) {
         case 'heroe': { 
-          this.player = this.matter.add.sprite(x + (width),y, 'hero')
-          .setScale('0.8')  
-          .setFixedRotation();
-          this.playerController = new PlayerController(
-          this,
-          this.player, 
-          this.cursors, 
-          this.obstacles
-          )
-          this.cameras.main.startFollow(this.player)
+          this.playerController = new PlayerController(this,x,y)
+          this.physics.add.collider(this.playerController ,this.groundLayer)
           break;
         }
 
         case 'cueva':{
       
-          this.cueva = this.matter.add.sprite(x,y, objData.type)
-          .setScale('0.7')  
-          .setStatic(true)
-          .setSensor(true)
-          .setFixedRotation();
+          this.cueva = this.physics.add.staticSprite(x,y, objData.type)
+          // .setStatic(true)
+          // .setSensor(true)
+          // .setFixedRotation();
+          this.physics.add.collider(this.cueva,this.groundLayer)
 
           if(objData.type==='Rojo'){
             this.c = new cuevaRoja (this,this.cueva)
@@ -127,47 +127,52 @@ export default class LevelClass extends Phaser.Scene {
         }
 
         case 'corazon':{
-          this.corazon = this.matter.add.sprite(x + (width),y, 'corazon',undefined,{
-          isStatic:true,
-          isSensor:true
-          })
-          .setScale('1.2')  
-          .setFixedRotation();
-          this.corazon.setData('type', 'corazon')
-          this.c = new corazon(this,this.corazon)
-          this.arrayObjects[this.j]=this.c;
-          this.j++;
-          break;
+          this.objects.add(new corazon(this,x, y))
+        break;
         }
         case 'pm':{
-          this.pm = this.matter.add.sprite(x + (width),y, objData.type)
-          .setScale('1')  
-          .setFixedRotation();
+          //this.plataforma = this.physics.add.staticSprite(x + (width),y, objData.type)
         
+         // this.physics.add.collider(this.plataforma,this.groundLayer)
+
          //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'pmv': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              /*this.plataforma = this.physics.add.staticSprite(x, y , 'pm');
+              this.plataforma.body.ignoreGravity = true;
+              
+              this.posicion_plataforma_x = this.plataforma.x
+              this.posicion_plataforma_y = this.plataforma.y
+              console.log( this.plataforma.body)*/
+              this.objects.add(new PlataformaVertical(this,x,y))
+             
             break;
             }
             case 'pmh': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+
+              this.objects.add(new PlataformaHorizontal(this,x,y))
+            break;
+            }
+            case 'pmt': { 
+
+              this.objects.add(new PlataformaTiempo(this,x,y))
             break;
             }
             default:{
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.objects.add(new PlataformaHorizontal(this,x,y))
               break; 
             }
           }
          
-          this.arrayObjects[this.j]=this.aux;
-          this.j++;
+         
           break;
         }
         case 'trampa':{
-          this.pm = this.matter.add.sprite(x + (width),y, objData.type)
+          this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
           .setScale('1')  
-          .setFixedRotation();
+          this.physics.add.collider(this.pm,this.groundLayer)
+
+          // .setFixedRotation();
           //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'acido': { 
@@ -193,32 +198,22 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'energia':{
-          this.ene = this.matter.add.sprite(x + (width),y, 'energia',undefined,{
-          isStatic:true,
-          isSensor:true
-          })
-          .setScale('1.2')  
-          .setFixedRotation();
-          this.ene.setData('type', 'energia')
-          this.c = new energia (
-          this,
-          this.ene
-          )
-          this.arrayObjects[this.j]=this.c;
-          this.j++;
-          break;
+          this.objects.add(new energia(this,x, y))
+        break;
         }
 
         case 'llave': {
+          this.objects.add(new llave(this,x, y))
+          // this.k = this.physics.add.staticSprite(x + (width),y, 'llave')
+          // .setScale('1.5')  
+          // // .setFixedRotation();
+          // this.physics.add.collider(this.k,this.groundLayer)
 
-          this.k = this.matter.add.sprite(x + (width),y, 'llave')
-          .setScale('1.5')  
-          .setFixedRotation();
-          this.k.setData('type', 'llave')
-          this.c = new llave(this,this.k)
-          this.arrayObjects[this.j]=this.c;
+          // this.k.setData('type', 'llave')
+          // this.c = new llave(this,this.k)
+          // this.arrayObjects[this.j]=this.c;
 
-          this.j++;
+          // this.j++;
 
           break;
         }
@@ -230,41 +225,40 @@ export default class LevelClass extends Phaser.Scene {
   cargaEnemigos(){
     const enemigos = this.map.getObjectLayer('enemigos')
     this.i=0;
-    let Tipo;
+    let type;
     for (let step = 0; step < enemigos.objects.length; step++){
-      console.log( enemigos.objects[step].type);
-      Tipo= enemigos.objects[step].type;
+      type= enemigos.objects[step].type;
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
-          this.enemy = this.matter.add.sprite((x) + (width1),y, Tipo)
-          .setScale('0.5')  
-          .setFixedRotation()
-          let e;
-          this.obstacles.add('enemy', this.enemy.body)
+          // this.enemy = this.physics.add.sprite((x) + (width1),y, Tipo)  
+          // this.physics.add.collider(this.enemy,this.groundLayer)
+          // .setFixedRotation()
+          // let e;
+
+          // this.obstacles.add('enemy', this.enemy.body)
           //marcar un switch que permita crear el tipo de enemigo
-        
-          switch(Tipo){
+          console.log(type);
+          switch(type){
             case 'alien':
-              e = new enemyController(this,this.enemy,Tipo) ;
+              this.enemies.add(new EnemyController(this,x, y,type)) ;
               break;
             case 'alien1':
-              e = new EnemyController1(this,this.enemy,Tipo) ;
+              this.enemies.add(new EnemyController1(this,x,y,type)) ;
               break;
-            case 'alien2':
-              e = new EnemyController2(this,this.enemy,Tipo) ;
-              break;
-            case 'alien3':
-              e = new EnemyController3(this,this.enemy,Tipo) ;
-              break;
+            // case 'alien2':
+            //   e = new EnemyController2(this,this.enemy,Tipo) ;
+            //   break;
+            // case 'alien3':
+            //   e = new EnemyController3(this,this.enemy,Tipo) ;
+            //   break;
             default:
               console.log("no se ha captado el tipo del enemigo");
-              e = new enemyController(this,this.enemy,'alien') ;
+              this.enemies.add(new EnemyController(this,x, y,'alien'));
           }
-         
-          this.arrayEnemies[step]=e;
+          // this.arrayEnemies[step]=e;
           this.i++;       
     }
     
-
+   
   }
 
   update(t, dt){
@@ -272,19 +266,22 @@ export default class LevelClass extends Phaser.Scene {
       return
     }    
     this.playerController.update(dt);
-    if(this.arrayObjects.length!=0){
-      for(let e=0; e<this.j; e++){
-        
-        this.arrayObjects[e].actu(dt);
+    if (this.objects.getChildren()) {
+      this.objects.getChildren().forEach((element) => {
+        element.actu(dt)
+      });
+      
     }
-    }
-    if(this.arrayEnemies.length!=0){
-      for(let e=0; e<this.i; e++){
-        
-      this.arrayEnemies[e].update(dt);
 
-      }
+    
+    
+    if (this.enemies.getChildren()) {
+      this.enemies.getChildren().forEach((element) => {
+        element.update(dt)
+      });
+      
     }
+
     
   }
  

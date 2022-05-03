@@ -7,11 +7,11 @@ export default class GameUI extends Phaser.Scene {
    * Constructor de la escena
    */
   constructor() {
-    super({ key: 'game-ui' });
-
+    super({ key: 'game-ui' });    
   }
 
   init(){
+    console.log(this);
     this.starsCollected = 0;
     this.heartsCollected = 6;
     this.messageCueva = false
@@ -23,10 +23,10 @@ export default class GameUI extends Phaser.Scene {
 
   create(){
     
-      const corazon = this.add.image(30, 20, 'corazon')
-      this.heartLabel = this.add.text(45, 25, 'x6', {
-        fontSize: '16px'
-      })
+    const corazon = this.add.image(30, 20, 'corazon')
+    this.heartLabel = this.add.text(45, 25, 'x6', {
+      fontSize: '16px'
+    })
 
       const energia = this.add.image(100, 25, 'energia')
       //energia.setScale('0.4','0.4')
@@ -34,9 +34,10 @@ export default class GameUI extends Phaser.Scene {
         fontSize: '16px'
       })
 
-    events.on('star-collected', this.handleStarCollected, this)
+    events.on('energy', this.handleEnergy, this)
+    // events.on('energy-used', this.handleEnergyUsed, this)
     events.on('key-collected', this.handleKeyCollected, this)
-    events.on('heart-collected', this.handleHeartCollected, this)
+    events.on('heart', this.handleHeart, this)
     //eventos que gestionan el decremento de vida.
     events.on('minus-health', this.handleMinusHealthCollected, this)
     events.on('minus-health2', this.handleMinusHealthCollected2, this)
@@ -48,13 +49,13 @@ export default class GameUI extends Phaser.Scene {
     
     // events.on('mensaje-ayuda', this.handleMensajeAyudaEnergia, this)
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('star-collected', this.handleStarCollected, this)
+      events.off('energy', this.handleStarCollected, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('key-collected', this.handleKeyCollected, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('heart-collected', this.handleHeartCollected, this)
+      events.off('heart', this.handleHeartCollected, this)
     })
     //creo un evento por cada enemigo
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
@@ -65,9 +66,11 @@ export default class GameUI extends Phaser.Scene {
     })
   }
 
-  handleStarCollected(){
-    ++this.starsCollected
-    this.starsLabel.text = `x${this.starsCollected}`
+  handleEnergy(value){
+    this.starsLabel.text = `x${value}`
+  }
+  handleEnergyCollected(value){
+    this.starsLabel.text = `x${value}`
   }
 
   handleKeyCollected(){
@@ -75,13 +78,8 @@ export default class GameUI extends Phaser.Scene {
 
   }
 
-  handleHeartCollected(){
-    console.log('hearts collected')
-    if (this.heartsCollected < 6){
-      this.heartsCollected++
-    }
-
-    this.heartLabel.text = `x${this.heartsCollected}`
+  handleHeart(value){
+    this.heartLabel.text = `x${value}`
   }
 
   handleMinusHealthCollected(){
