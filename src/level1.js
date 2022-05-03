@@ -6,7 +6,7 @@ import enemyController from './EnemyController1.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlataformaMovil from './plataformaMovil.js';
+import PlataformaMovil from './plataformaVertical.js';
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
 import LevelClass from './LevelClass.js';
@@ -43,8 +43,9 @@ export default class Level1 extends LevelClass {
     let ground=['fondo',[0]];
     let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];
-    super.creacionCapas(Capas);
-    super.cargaEnemigos('alien2');
+  
+    super.creacionCapas(Capas);   
+    super.cargaEnemigos(); 
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }
