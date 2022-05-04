@@ -17,6 +17,8 @@ import NewStateMachine from '../newStateMachine.js';
         // this.body.setSize(this.width/2,this.height/2)
         this.setSize(this.width/2,this.height/2)
         this.flipX = true;
+        this.damage=3;
+        this.health=5;
         // this.body.setOffset(this.width,this.height);
         console.log(this.NewStateMachine);
         this.NewStateMachine.addState('waiting', {

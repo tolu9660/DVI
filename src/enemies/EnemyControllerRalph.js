@@ -16,6 +16,8 @@ import NewStateMachine from '../newStateMachine.js';
  super(scene, x,y,type,[1,8],null,[1,5],[1,10],[1,7],[1,5],null,10);
         // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
+        this.damage=2;
+        this.health=4;
         this.setSize(this.width/2,this.height/2)
         // this.body.setOffset(this.width,this.height);
         console.log(this.NewStateMachine);

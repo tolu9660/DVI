@@ -17,6 +17,8 @@ import NewStateMachine from '../newStateMachine.js';
   super(scene, x,y,type,[1,9],null,[1,4],[1,5],[1,8],[1,5],null,10);
   this.setSize(this.width/2,this.height/2)
   // this.body.setOffset(this.width,this.height);
+  this.damage=1;
+   this.health=4;
   console.log(this.NewStateMachine);
   this.scene = scene
   this.bulletsEnemy = this.scene.physics.add.group({
