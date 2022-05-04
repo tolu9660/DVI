@@ -364,7 +364,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
 
     enemyHitOnEnter(conect) {
-      console.log(conect);
+      // console.log(conect);
      // console.log(this.lastEnemy);
       //console.log(this.lastEnemy.body);
       //console.log(this.lastEnemy.body.gameObject);

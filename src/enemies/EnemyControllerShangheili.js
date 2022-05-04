@@ -18,7 +18,6 @@ import NewStateMachine from '../newStateMachine.js';
         // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
         this.setSize(this.width/2,this.height/2)
-
         this.scene = scene
       //   this.triggerTimer = this.scene.time.addEvent({
       //     callback: this.shootEnemy,

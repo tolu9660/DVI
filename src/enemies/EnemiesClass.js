@@ -69,8 +69,10 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         }).addState('attack', {
           onEnter: this.attackOnEnter,
           onUpdate: this.attackOnUpdate
+        }).addState('waiting', {
+          onEnter: this.waitingOnEnter,
+          onUpdate: this.waitingOnUpdate
         }).setState('idle')
-        
         
         
 
@@ -82,6 +84,12 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     
     }
     attackOnUpdate(){
+    }
+    waitingOnEnter(){
+      // this.setVelocityY(-50)
+      console.log('experando a explotar');
+    }
+    waitingOnUpdate(){
     }
     jumpOnEnter(){
       // this.setVelocityY(-50)
@@ -280,6 +288,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         })
       }
       if (this.attack) {
+        console.log(this.attack);
       this.anims.create({
         key:'enemy-attack',
         frameRate: this.rate,

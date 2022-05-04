@@ -13,7 +13,7 @@ import GameUI from './GameUI.js';
 import Transicion from './transicion.js'
 import Transicion1 from './transicion1.js'
 import Pause from './Pause.js';
-import Gameover from'./gameover.js';
+import Gameover from'./Gameover.js';
 
 
 /**
