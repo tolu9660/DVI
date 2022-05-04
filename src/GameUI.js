@@ -23,18 +23,24 @@ export default class GameUI extends Phaser.Scene {
 
   create(){
     
-    const corazon = this.add.image(30, 20, 'corazon')
+    const corazon = this.add.image(30, 20, 'corazon','Heart1.png')
     this.heartLabel = this.add.text(45, 25, 'x6', {
       fontSize: '16px'
     })
-
-      const energia = this.add.image(100, 25, 'energia')
-      //energia.setScale('0.4','0.4')
+    corazon.scale=0.4
+      const energia = this.add.image(100, 25, 'energia','Blue Crystal2.png')
+      energia.scale=0.4
      this.starsLabel = this.add.text(123 , 26, 'x0', {
+        fontSize: '16px'
+      })
+      const energiaPlus = this.add.image(170, 25, 'energiaRosa','Red Crystal2.png')
+      energiaPlus.scale=0.4
+     this.starsLabelPlus = this.add.text(195 , 26, 'x0', {
         fontSize: '16px'
       })
 
     events.on('energy', this.handleEnergy, this)
+    events.on('energyPlus', this.handleEnergyPlus, this)
     // events.on('energy-used', this.handleEnergyUsed, this)
     events.on('key-collected', this.handleKeyCollected, this)
     events.on('heart', this.handleHeart, this)
@@ -49,7 +55,10 @@ export default class GameUI extends Phaser.Scene {
     
     // events.on('mensaje-ayuda', this.handleMensajeAyudaEnergia, this)
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('energy', this.handleStarCollected, this)
+      events.off('energy', this.handleEnergy, this)
+    })
+    this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
+      events.off('energyPlus', this.handleEnergyPlus, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('key-collected', this.handleKeyCollected, this)
@@ -69,12 +78,16 @@ export default class GameUI extends Phaser.Scene {
   handleEnergy(value){
     this.starsLabel.text = `x${value}`
   }
+  handleEnergyPlus(value){
+    this.starsLabelPlus.text = `x${value}`
+  }
   handleEnergyCollected(value){
     this.starsLabel.text = `x${value}`
   }
 
   handleKeyCollected(){
-    const image = this.add.image(180, 23, 'llave')
+    const image = this.add.image(250, 23, 'llave')
+    image.scale=0.4
 
   }
 

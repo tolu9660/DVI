@@ -63,6 +63,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.lastEnemy;
         this.damage;
         this.energy = 0;
+        this.energyPlus = 0;
         this.health = 6;
         // this.bullets = this.scene.physics.add.group({
         //   classType: Phaser.Physics.Arcade.Image,
@@ -431,6 +432,12 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           objeto.destroy();
           events.emit('mensaje-ayuda-energia')
         break;
+        case 'energiaRosa':
+          this.energy += 1
+          events.emit('energyPlus', this.energy)
+          objeto.destroy();
+          events.emit('mensaje-ayuda-energia')
+        break;
         case 'corazon':
           if (this.health < 6){
             this.health += 1
@@ -445,18 +452,26 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           events.emit('mensaje-ayuda-llave')
           this.hasKey = true;
         break;
-        /*
-         case 'llave':
-          events.emit('key-collected')
-          objeto.destroy();
-          events.emit('mensaje-ayuda-llave')
-          this.hasKey = true;
-          // gravedad ->
-              this.body.ignoreGravity = false;
-              this.body.immovable=true;
-          objeto.
+        case 'cofre':
+          if(objeto.random()==1){
+            this.energy+=5;
+            events.emit('energy', this.energy)
+            objeto.destroy();
+          }
+          else{
+            if (this.health < 6){
+              this.health += 1
+            }     
+            events.emit('heart',this.health)
+            objeto.destroy();
+          }
+          
         break;
-        */
+         case 'pm':
+          
+         objeto.destroy();
+        break;
+        
         case 'cueva':
           // this.health += 1
           // events.emit('cueva-collected',this.health)
@@ -529,6 +544,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       enemy.destroy();
     }
     update(dt){
+
       this.NewStateMachine.update(dt);
       if (Phaser.Input.Keyboard.JustDown(this.cursors.space)) {
         this.shoot();
@@ -539,7 +555,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         events.emit('energy', this.energy)
       }
       console.log(this.health);
-      console.log(this.body.onFloor());
+     //console.log(this.body.onFloor());
     }
 
     createAlienAnimation(){

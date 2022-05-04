@@ -2,9 +2,9 @@ import GameObject from './gameobj.js';
 
 export default class cuevaAzul extends GameObject {
   
-    constructor(scene,sprite){
+    constructor(scene,x,y){
    //azul:
-   super(scene, sprite,'cuevaGiro', 10,'cuevaA', 'Cave2_', 1,7);
+   super(scene, x,y,'cuevaGiro', 10,'cuevaA', 'Cave2_', 1,7);
   }
    
 }

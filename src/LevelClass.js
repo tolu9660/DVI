@@ -17,6 +17,8 @@ import { sceneEvents as events } from './EventsCenter.js';
 import PlataformaVertical from './plataformaVertical.js';
 import PlataformaHorizontal from './PlataformaHorizontal.js';
 import PlataformaTiempo from './plataformaTiempo.js';
+import cofre from './cofre.js';
+import energiaRosa from './energiaRosa.js';
 
 /**hola esto es una prueba* */
 
@@ -108,26 +110,32 @@ export default class LevelClass extends Phaser.Scene {
 
         case 'cueva':{
       
-          this.cueva = this.physics.add.staticSprite(x,y, objData.type)
-          // .setStatic(true)
-          // .setSensor(true)
-          // .setFixedRotation();
-          this.physics.add.collider(this.cueva,this.groundLayer)
-
-          if(objData.type==='Rojo'){
-            this.c = new cuevaRoja (this,this.cueva)
+           //cambiar plataformaMovil por la clase
+           switch ( objData.type) {
+            case 'Rojo': { 
+              
+              this.objects.add(new cuevaRoja(this,x,y))
+             
+            break;
+            }
+            case 'Metal': { 
+              this.objects.add(new cuevaAzul(this,x,y))
+            break;
+            }
+            default:{
+              this.objects.add(new cuevaAzul(this,x,y))
+              break; 
+            }
           }
-          else{
-          this.c = new cuevaAzul (this, this.cueva )
-          }
-
-          this.arrayObjects[this.j]=this.c;
-          this.j++;
-        break;
+         break;
         }
 
         case 'corazon':{
           this.objects.add(new corazon(this,x, y))
+        break;
+        }
+        case 'cofre':{
+          this.objects.add(new cofre(this,x, y))
         break;
         }
         case 'pm':{
@@ -149,23 +157,20 @@ export default class LevelClass extends Phaser.Scene {
             break;
             }
             case 'pmh': { 
-
               this.objects.add(new PlataformaHorizontal(this,x,y))
             break;
             }
-            case 'pmt': { 
+            /*case 'pmt': { 
 
               this.objects.add(new PlataformaTiempo(this,x,y))
             break;
-            }
+            }*/
             default:{
               this.objects.add(new PlataformaHorizontal(this,x,y))
               break; 
             }
           }
-         
-         
-          break;
+         break;
         }
         case 'trampa':{
           this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
@@ -198,7 +203,16 @@ export default class LevelClass extends Phaser.Scene {
           break;
         }
         case 'energia':{
-          this.objects.add(new energia(this,x, y))
+          
+
+          if(objData.type==='Rosa'){
+            this.objects.add(new energiaRosa(this,x, y))
+          }
+          else{
+            this.objects.add(new energia(this,x, y))
+          }
+
+      
         break;
         }
 
