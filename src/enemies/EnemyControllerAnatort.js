@@ -14,7 +14,11 @@ import NewStateMachine from '../newStateMachine.js';
     console.log(type);
 
     //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
-    super(scene, x,y,type,[1,8],[1,5],10);        // this.body.setSize(this.width/2,this.height/2)
+    //scene,x,y,type,idle,walk,jump,attack,death,hit,shoot,10
+    // super(scene, x,y,type,[1,8],[1,5],null,null,[],10); 
+    super(scene, x,y,type,[1,7],[1,5],null,[1,8],[1,10],[1,4],null,10);
+    // super(scene, x,y,type,[1,15],[1,5],[1,4],[1,10],[1,7],10);
+    // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
         this.setSize(this.width/2,this.height/2)
         this.flipX = true;
@@ -23,7 +27,7 @@ import NewStateMachine from '../newStateMachine.js';
         this.NewStateMachine.addState('jump', {
           onEnter: this.jumpOnEnter,
           onUpdate: this.jumpOnUpdate
-        }).setState('idle')
+        })
         this.scene = scene
         this.bulletsEnemy = this.scene.physics.add.group({
           classType: Phaser.Physics.Arcade.Image 
@@ -37,42 +41,58 @@ import NewStateMachine from '../newStateMachine.js';
       // });
       
       // this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
-
-
 }
+
+walkLeftOnUpdate(dt){
+  this.moveTime += dt
+  this.setVelocityX(-200)
+  this.flipX = false;
+  if (this.moveTime > 3000) {
+    this.NewStateMachine.setState('walk-right');
+  }
+  if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
+    this.NewStateMachine.setState('seguir');
+        
+  }
+  
+}
+
+    
+walkRightOnUpdate(dt){
+  this.moveTime += dt
+
+  this.setVelocityX(200)
+  this.flipX = true;
+  if (this.moveTime > 3000) {
+    this.NewStateMachine.setState('walk-left');
+  }
+  if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
+    this.NewStateMachine.setState('seguir');
+  }
+}
+
+
 jumpOnEnter(){
   // this.setVelocityY(-50)
 
 }
+
 jumpOnUpdate(){
   // this.setBounceY(1)
   // this.shootEnemy()
   
   // console.log(Math.abs(this.x - this.scene.playerController.x));
-  if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
-    if(this.x < this.scene.playerController.x) //Jugador a la derecha
-    {
-      // this.play('move-skeleton', true);
-      this.play('enemy-walk',true)
-      this.body.setVelocityX(200);
-    }
-    else//Jugador a la izquierda
-    {
-      // this.play('move-skeleton', true);
-      this.play('enemy-walk',true)
-        this.body.setVelocityX(-200);
-    }
-  }
+  
   // console.log(this.x);
   // console.log(this.scene.playerController.x);
-  if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
-    this.body.setVelocityX(0);
-    this.on('animationcomplete', () =>{
+  // if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
+  //   this.body.setVelocityX(0);
+  //   this.on('animationcomplete', () =>{
       
-      console.log('exploto');
-    })
+  //     console.log('exploto');
+  //   })
     
-  }
+  // }
 }
 // update(dt){
 //   console.log('pedo');
