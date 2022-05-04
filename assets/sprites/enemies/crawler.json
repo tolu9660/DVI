@@ -1,0 +1,755 @@
+{
+	"textures": [
+		{
+			"image": "crawler.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2028,
+				"h": 1186
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Boss-Jump2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 4,
+						"w": 256,
+						"h": 310
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 256,
+						"h": 310
+					}
+				},
+				{
+					"filename": "Boss-Jump3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 2,
+						"w": 256,
+						"h": 310
+					},
+					"frame": {
+						"x": 1,
+						"y": 313,
+						"w": 256,
+						"h": 310
+					}
+				},
+				{
+					"filename": "Boss-Jump4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 12,
+						"w": 256,
+						"h": 302
+					},
+					"frame": {
+						"x": 1,
+						"y": 625,
+						"w": 256,
+						"h": 302
+					}
+				},
+				{
+					"filename": "Boss Run7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 64,
+						"w": 284,
+						"h": 256
+					},
+					"frame": {
+						"x": 1,
+						"y": 929,
+						"w": 284,
+						"h": 256
+					}
+				},
+				{
+					"filename": "Boss Hit2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 128,
+						"y": 18,
+						"w": 220,
+						"h": 302
+					},
+					"frame": {
+						"x": 259,
+						"y": 1,
+						"w": 220,
+						"h": 302
+					}
+				},
+				{
+					"filename": "Boss Hit3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 132,
+						"y": 18,
+						"w": 220,
+						"h": 302
+					},
+					"frame": {
+						"x": 259,
+						"y": 305,
+						"w": 220,
+						"h": 302
+					}
+				},
+				{
+					"filename": "Boss Hit4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 134,
+						"y": 18,
+						"w": 220,
+						"h": 302
+					},
+					"frame": {
+						"x": 259,
+						"y": 609,
+						"w": 220,
+						"h": 302
+					}
+				},
+				{
+					"filename": "Boss-Jump5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 38,
+						"w": 256,
+						"h": 272
+					},
+					"frame": {
+						"x": 287,
+						"y": 913,
+						"w": 256,
+						"h": 272
+					}
+				},
+				{
+					"filename": "Boss Hit5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 130,
+						"y": 18,
+						"w": 220,
+						"h": 302
+					},
+					"frame": {
+						"x": 481,
+						"y": 1,
+						"w": 220,
+						"h": 302
+					}
+				},
+				{
+					"filename": "Boss-Death05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 66,
+						"y": 28,
+						"w": 280,
+						"h": 288
+					},
+					"frame": {
+						"x": 481,
+						"y": 305,
+						"w": 280,
+						"h": 288
+					}
+				},
+				{
+					"filename": "Boss-Death04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 16,
+						"w": 258,
+						"h": 280
+					},
+					"frame": {
+						"x": 703,
+						"y": 1,
+						"w": 258,
+						"h": 280
+					}
+				},
+				{
+					"filename": "Boss-Death03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 20,
+						"w": 232,
+						"h": 270
+					},
+					"frame": {
+						"x": 481,
+						"y": 595,
+						"w": 232,
+						"h": 270
+					}
+				},
+				{
+					"filename": "Boss-Death02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 38,
+						"w": 230,
+						"h": 256
+					},
+					"frame": {
+						"x": 545,
+						"y": 867,
+						"w": 230,
+						"h": 256
+					}
+				},
+				{
+					"filename": "Boss Run3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 66,
+						"w": 242,
+						"h": 254
+					},
+					"frame": {
+						"x": 715,
+						"y": 595,
+						"w": 242,
+						"h": 254
+					}
+				},
+				{
+					"filename": "Boss Run4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 66,
+						"y": 68,
+						"w": 290,
+						"h": 252
+					},
+					"frame": {
+						"x": 763,
+						"y": 283,
+						"w": 290,
+						"h": 252
+					}
+				},
+				{
+					"filename": "Boss Run6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 68,
+						"w": 242,
+						"h": 252
+					},
+					"frame": {
+						"x": 963,
+						"y": 1,
+						"w": 242,
+						"h": 252
+					}
+				},
+				{
+					"filename": "Boss Run2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 68,
+						"w": 228,
+						"h": 252
+					},
+					"frame": {
+						"x": 777,
+						"y": 851,
+						"w": 228,
+						"h": 252
+					}
+				},
+				{
+					"filename": "Boss Run1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 66,
+						"y": 70,
+						"w": 234,
+						"h": 250
+					},
+					"frame": {
+						"x": 959,
+						"y": 537,
+						"w": 234,
+						"h": 250
+					}
+				},
+				{
+					"filename": "Boss Run5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 72,
+						"w": 232,
+						"h": 248
+					},
+					"frame": {
+						"x": 1055,
+						"y": 255,
+						"w": 232,
+						"h": 248
+					}
+				},
+				{
+					"filename": "Boss-Death01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 72,
+						"w": 226,
+						"h": 248
+					},
+					"frame": {
+						"x": 1207,
+						"y": 1,
+						"w": 226,
+						"h": 248
+					}
+				},
+				{
+					"filename": "Boss-Jump1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 72,
+						"w": 226,
+						"h": 248
+					},
+					"frame": {
+						"x": 1007,
+						"y": 789,
+						"w": 226,
+						"h": 248
+					}
+				},
+				{
+					"filename": "Boss Hit1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1195,
+						"y": 505,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss Idle1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1289,
+						"y": 251,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss Idle2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1435,
+						"y": 1,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss-Death10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 226,
+						"w": 380,
+						"h": 94
+					},
+					"frame": {
+						"x": 1007,
+						"y": 1039,
+						"w": 380,
+						"h": 94
+					}
+				},
+				{
+					"filename": "Boss Idle5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1235,
+						"y": 751,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss-Death07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 138,
+						"w": 374,
+						"h": 180
+					},
+					"frame": {
+						"x": 1389,
+						"y": 997,
+						"w": 374,
+						"h": 180
+					}
+				},
+				{
+					"filename": "Boss Idle6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1423,
+						"y": 497,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss-Death09.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 226,
+						"w": 376,
+						"h": 94
+					},
+					"frame": {
+						"x": 1651,
+						"y": 247,
+						"w": 376,
+						"h": 94
+					}
+				},
+				{
+					"filename": "Boss Idle7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1663,
+						"y": 1,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss-Death06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 108,
+						"w": 374,
+						"h": 212
+					},
+					"frame": {
+						"x": 1651,
+						"y": 343,
+						"w": 374,
+						"h": 212
+					}
+				},
+				{
+					"filename": "Boss-Death08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 226,
+						"w": 374,
+						"h": 94
+					},
+					"frame": {
+						"x": 1651,
+						"y": 557,
+						"w": 374,
+						"h": 94
+					}
+				},
+				{
+					"filename": "Boss Idle8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 76,
+						"w": 226,
+						"h": 244
+					},
+					"frame": {
+						"x": 1463,
+						"y": 743,
+						"w": 226,
+						"h": 244
+					}
+				},
+				{
+					"filename": "Boss Idle3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 78,
+						"w": 226,
+						"h": 242
+					},
+					"frame": {
+						"x": 1765,
+						"y": 653,
+						"w": 226,
+						"h": 242
+					}
+				},
+				{
+					"filename": "Boss Idle4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 384,
+						"h": 352
+					},
+					"spriteSourceSize": {
+						"x": 72,
+						"y": 78,
+						"w": 226,
+						"h": 242
+					},
+					"frame": {
+						"x": 1765,
+						"y": 897,
+						"w": 226,
+						"h": 242
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:26889c69ab9343985d37d61d6b1a7236:a6e2175565bee98b1ff2c5a18b3d5d6e:d8a7989a5a37127578c6e25e962b6813$"
+	}
+}
