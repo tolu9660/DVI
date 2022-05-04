@@ -13,6 +13,7 @@
   
     preload(){
       this.load.image('Transicion0',"assets/sprites/trasInicioC0.jpg");
+      this.load.image('Transicion1',"assets/sprites/trasInicioC1.jpg");
     }
     /**
      * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
@@ -24,8 +25,9 @@
       // lleguemos a ver el mensaje porque veníamos con una tecla pulsada del juego (al 
       // ir moviendo al jugador). Se puede mejorar añadiendo un temporizador que 
       // añada este listener pasado un segundo
+
       this.input.keyboard.on('keydown', function (event) { 
-        this.scene.start('transicion1')
+        this.scene.start('tutorial')
       }, this);
   
     }
