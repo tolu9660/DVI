@@ -29,7 +29,7 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Boot, Pause,Tutorial,GameUI, Creditos, Gameover],
+    scene: [Boot, Pause,Level1,GameUI, Creditos, Gameover],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="215" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="269">
-=======
 <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="215" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="269">
->>>>>>> alvaro
  <editorsettings>
   <export target="nivel1.json" format="json"/>
  </editorsettings>
@@ -485,9 +481,6 @@
 </data>
  </layer>
  <objectgroup id="9" name="enemigos">
-<<<<<<< HEAD
-  <object id="148" name="enemigo" type="shangheili" x="2050" y="1428" width="108" height="136" visible="0"/>
-=======
   <object id="147" name="enemigo" type="feona" x="150" y="2660" width="108" height="136"/>
   <object id="148" name="enemigo" type="shangheili" x="2050" y="1428" width="108" height="136"/>
   <object id="149" name="enemigo" type="grunt" x="3226" y="3332" width="108" height="136"/>
@@ -505,7 +498,6 @@
   <object id="161" name="enemigo" type="sapien" x="22274" y="1244" width="108" height="136"/>
   <object id="162" name="enemigo" type="shangheili" x="25106" y="2292" width="108" height="136"/>
   <object id="163" name="enemigo" type="grunt" x="26322" y="3332" width="108" height="136"/>
->>>>>>> alvaro
  </objectgroup>
  <objectgroup id="14" name="objects">
   <object id="92" name="limite" x="0" y="40" width="72" height="2776"/>
