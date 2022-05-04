@@ -6,6 +6,9 @@ export default class Transicion1 extends Phaser.Scene {
       super({ key: 'transicion1' });
     }
   
+    preload(){
+      this.load.image('Transicion1',"assets/sprites/trasInicioC1.jpg");
+    }
     /**
      * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
      */
@@ -17,7 +20,7 @@ export default class Transicion1 extends Phaser.Scene {
       // ir moviendo al jugador). Se puede mejorar añadiendo un temporizador que 
       // añada este listener pasado un segundo
       this.input.keyboard.on('keydown', function (event) { 
-        this.scene.start('level3')
+        this.scene.start('tutorial')
       }, this);
   
     }

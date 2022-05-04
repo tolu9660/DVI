@@ -11,8 +11,8 @@ import NewStateMachine from './newStateMachine.js';
  */
 export default class corazon extends GameObject {
   
-    constructor(scene,sprite){
-      super(scene, sprite,'CoraGiro', 10,'corazon', 'Heart', 1,3);
+    constructor(scene,x,y){
+      super(scene,x,y,'CoraGiro', 10,'corazon', 'Heart', 1,3);
   
     }
 }

@@ -4,20 +4,20 @@
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 24,
-        "h": 19.5
+        "w": 96,
+        "h": 78
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 4,
-        "y": 8.5,
-        "w": 24,
-        "h": 19.5
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 78
       },
       "sourceSize": {
-        "w": 32,
-        "h": 32
+        "w": 96,
+        "h": 78
       },
       "pivot": {
         "x": 0.5,
@@ -26,22 +26,22 @@
     },
     "Heart1.png": {
       "frame": {
-        "x": 24,
+        "x": 96,
         "y": 0,
-        "w": 22,
-        "h": 21
+        "w": 88,
+        "h": 84
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 5,
-        "y": 7.5,
-        "w": 22,
-        "h": 21
+        "x": 0,
+        "y": 0,
+        "w": 88,
+        "h": 84
       },
       "sourceSize": {
-        "w": 32,
-        "h": 32
+        "w": 88,
+        "h": 84
       },
       "pivot": {
         "x": 0.5,
@@ -51,21 +51,21 @@
     "Heart3.png": {
       "frame": {
         "x": 0,
-        "y": 19.5,
-        "w": 19,
-        "h": 22.5
+        "y": 78,
+        "w": 76,
+        "h": 90
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 6.5,
-        "y": 6.5,
-        "w": 19,
-        "h": 22.5
+        "x": 0,
+        "y": 0,
+        "w": 76,
+        "h": 90
       },
       "sourceSize": {
-        "w": 32,
-        "h": 32
+        "w": 76,
+        "h": 90
       },
       "pivot": {
         "x": 0.5,
@@ -79,9 +79,9 @@
     "image": "texture.png",
     "format": "RGBA8888",
     "size": {
-      "w": 46,
-      "h": 42
+      "w": 184,
+      "h": 168
     },
-    "scale": 0.25
+    "scale": 1
   }
 }

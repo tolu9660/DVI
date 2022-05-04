@@ -7,11 +7,11 @@ export default class GameUI extends Phaser.Scene {
    * Constructor de la escena
    */
   constructor() {
-    super({ key: 'game-ui' });
-
+    super({ key: 'game-ui' });    
   }
 
   init(){
+    console.log(this);
     this.starsCollected = 0;
     this.heartsCollected = 6;
     this.messageCueva = false
@@ -23,21 +23,30 @@ export default class GameUI extends Phaser.Scene {
 
   create(){
     
-      const corazon = this.add.image(30, 20, 'corazon')
-      this.heartLabel = this.add.text(45, 25, 'x6', {
-        fontSize: '16px'
-      })
-
-      const energia = this.add.image(100, 25, 'energia')
-      //energia.setScale('0.4','0.4')
+    const corazon = this.add.image(30, 20, 'corazon','Heart1.png')
+    this.heartLabel = this.add.text(45, 25, 'x6', {
+      fontSize: '16px'
+    })
+    corazon.scale=0.4
+      const energia = this.add.image(100, 25, 'energia','Blue Crystal2.png')
+      energia.scale=0.4
      this.starsLabel = this.add.text(123 , 26, 'x0', {
         fontSize: '16px'
       })
+      const energiaPlus = this.add.image(170, 25, 'energiaRosa','Red Crystal2.png')
+      energiaPlus.scale=0.4
+     this.starsLabelPlus = this.add.text(195 , 26, 'x0', {
+        fontSize: '16px'
+      })
 
-    events.on('star-collected', this.handleStarCollected, this)
+    events.on('energy', this.handleEnergy, this)
+    events.on('energyPlus', this.handleEnergyPlus, this)
+    // events.on('energy-used', this.handleEnergyUsed, this)
     events.on('key-collected', this.handleKeyCollected, this)
-    events.on('heart-collected', this.handleHeartCollected, this)
+    events.on('heart', this.handleHeart, this)
+    //eventos que gestionan el decremento de vida.
     events.on('minus-health', this.handleMinusHealthCollected, this)
+    events.on('minus-health2', this.handleMinusHealthCollected2, this)
     events.on('cueva-in', this.handleCuevaIn, this)
     events.on('cueva-stop', this.handleCuevaStop, this)
     events.on('mensaje-ayuda-energia', this.handleMensajeAyudaEnergia, this)
@@ -46,49 +55,63 @@ export default class GameUI extends Phaser.Scene {
     
     // events.on('mensaje-ayuda', this.handleMensajeAyudaEnergia, this)
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('star-collected', this.handleStarCollected, this)
+      events.off('energy', this.handleEnergy, this)
+    })
+    this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
+      events.off('energyPlus', this.handleEnergyPlus, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('key-collected', this.handleKeyCollected, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('heart-collected', this.handleHeartCollected, this)
+      events.off('heart', this.handleHeartCollected, this)
     })
+    //creo un evento por cada enemigo
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('minus-health', this.handleMinusHealthCollected, this)
     })
-
-    // Create a label to use as a button
-    pause_label = game.add.text(w - 100, 20, 'Pause', { font: '24px Arial', fill: '#fff' });
-    pause_label.inputEnabled = true;
-    pause_label.events.onInputUp.add(function () {
-        // When the paus button is pressed, we pause the game
-        game.paused = true;
+    this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
+      events.off('minus-health2', this.handleMinusHealthCollected2, this)
     })
   }
 
-  handleStarCollected(){
-    ++this.starsCollected
-    this.starsLabel.text = `x${this.starsCollected}`
+  handleEnergy(value){
+    this.starsLabel.text = `x${value}`
+  }
+  handleEnergyPlus(value){
+    this.starsLabelPlus.text = `x${value}`
+  }
+  handleEnergyCollected(value){
+    this.starsLabel.text = `x${value}`
   }
 
   handleKeyCollected(){
-    const image = this.add.image(180, 23, 'llave')
+    const image = this.add.image(250, 23, 'llave')
+    image.scale=0.4
 
   }
 
-  handleHeartCollected(){
-    console.log('hearts collected')
-    if (this.heartsCollected < 6){
-      this.heartsCollected++
-    }
-
-    this.heartLabel.text = `x${this.heartsCollected}`
+  handleHeart(value){
+    this.heartLabel.text = `x${value}`
   }
 
   handleMinusHealthCollected(){
     console.log('hearts - collected')
+
     --this.heartsCollected
+    console.log(this.heartsCollected)
+    if (this.heartsCollected == 0){
+      this.scene.pause('level')
+    
+      this.scene.start('end')
+    }
+    this.heartLabel.text = `x${this.heartsCollected}`
+
+  }
+  handleMinusHealthCollected2(){
+    console.log('hearts - collected2')
+
+   this.heartsCollected=this.heartsCollected-2
     console.log(this.heartsCollected)
     if (this.heartsCollected == 0){
       this.scene.pause('level')

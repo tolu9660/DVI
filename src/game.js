@@ -3,6 +3,7 @@ import End from './end.js';
 import Level from './level.js';
 import Level2 from './level2.js';
 import Level1 from './level1.js';
+import Tutorial from './tutorial.js';
 import Level3 from './level3.js';
 import Inicio from './Inicio.js'
 import Opciones from './Opciones.js';
@@ -26,27 +27,14 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Inicio, Opciones,  Boot, Transicion, Transicion1, Level3, GameUI, Creditos, End],
-    physics: {
-        default: 'matter',//cambiado el arcade
-        // matter: {
-        //     debug: true
-        // }
-     }
-};
-
-let config2 = {
-    type: Phaser.AUTO,
-    width: 800,
-    height: 520,
-    pixelArt: true,
-    scene: [Inicio, Opciones, Creditos, Boot, Transicion1, Transicion, Level3, End],
+    scene: [Inicio, Opciones, Boot, Tutorial,GameUI, Creditos, End],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {
-            gravity: {y:200}
-        }
-    }
+            gravity: {y:460},
+            debug: true
+         }
+     }
 };
 
 new Phaser.Game(config);
