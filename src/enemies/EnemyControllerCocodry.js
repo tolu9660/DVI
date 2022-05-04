@@ -18,8 +18,8 @@ import NewStateMachine from '../newStateMachine.js';
    this.setSize(this.width/2,this.height/2)
    // this.body.setOffset(this.width,this.height);
    console.log(this.NewStateMachine);
-   this.damage=5;
-   this.health=2;
+   this.damage=2;
+   this.health=5;
    this.scene = scene
    this.bulletsEnemy = this.scene.physics.add.group({
      classType: Phaser.Physics.Arcade.Image 
