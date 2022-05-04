@@ -1,0 +1,490 @@
+{
+  "frames": [
+    {
+      "filename": "Hero_Boy_Idle5.png",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 78,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 133
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle9.png",
+      "frame": {
+        "x": 0,
+        "y": 132,
+        "w": 78,
+        "h": 132
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 132
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle4.png",
+      "frame": {
+        "x": 0,
+        "y": 264,
+        "w": 82,
+        "h": 130
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 82,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 82,
+        "h": 130
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle8.png",
+      "frame": {
+        "x": 78,
+        "y": 0,
+        "w": 86,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 86,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 86,
+        "h": 129
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle6.png",
+      "frame": {
+        "x": 78,
+        "y": 128,
+        "w": 78,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 78,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 129
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle7.png",
+      "frame": {
+        "x": 0,
+        "y": 394,
+        "w": 78,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 78,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 129
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero-Boy-Run-2.png",
+      "frame": {
+        "x": 0,
+        "y": 522,
+        "w": 98,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 99,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero-Boy-Run-0.png",
+      "frame": {
+        "x": 78,
+        "y": 394,
+        "w": 78,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero-Boy-Run-5.png",
+      "frame": {
+        "x": 82,
+        "y": 256,
+        "w": 78,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 78,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle1.png",
+      "frame": {
+        "x": 156,
+        "y": 128,
+        "w": 78,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 78,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle10.png",
+      "frame": {
+        "x": 164,
+        "y": 0,
+        "w": 78,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle13.png",
+      "frame": {
+        "x": 0,
+        "y": 648,
+        "w": 78,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero-Boy-Run-3.png",
+      "frame": {
+        "x": 0,
+        "y": 774,
+        "w": 110,
+        "h": 125
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 110,
+        "h": 125
+      },
+      "sourceSize": {
+        "w": 111,
+        "h": 126
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero-Boy-Run-4.png",
+      "frame": {
+        "x": 0,
+        "y": 899,
+        "w": 98,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 99,
+        "h": 124
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle2.png",
+      "frame": {
+        "x": 98,
+        "y": 899,
+        "w": 94,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 94,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 95,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero-Boy-Run-1.png",
+      "frame": {
+        "x": 192,
+        "y": 899,
+        "w": 84,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 84,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 84,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle12.png",
+      "frame": {
+        "x": 276,
+        "y": 899,
+        "w": 78,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle3.png",
+      "frame": {
+        "x": 78,
+        "y": 648,
+        "w": 78,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "filename": "Hero_Boy_Idle11.png",
+      "frame": {
+        "x": 110,
+        "y": 772,
+        "w": 77,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 0,
+        "w": 77,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ],
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "hero.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 354,
+      "h": 1023
+    },
+    "scale": 1
+  }
+}

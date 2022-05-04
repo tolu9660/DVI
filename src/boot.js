@@ -26,6 +26,8 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('alien1','/enemy2/enemigo.png', '/enemy2/enemigo.json');
     this.load.atlas('alien2','/enemy3/enemigo3.png', '/enemy3/enemigo3.json');
     this.load.atlas('alien3','/enemy4/enemigo4.png', '/enemy4/enemigo4.json');
+   
+    this.load.atlas('alien5','/alien5/texture.png', '/alien5/texture.json');
     this.load.atlas('hero','/PCharacters/hero.png', '/PCharacters/hero.json');
    
     //Objetos: 
@@ -49,7 +51,7 @@ export default class Boot extends Phaser.Scene {
     // NIVEL 1:
     
     this.load.tilemapTiledJSON('level1', '/tilemaps/mapa1/nivel1.json');
-    this.load.image('fondo1','/tilemaps/mapa1/fondo1.jpg');
+    this.load.image('fondo1','/tilemaps/mapa1/fondo.jpg');
     this.load.atlas('tiles1','/tilemaps/mapa1/texture.png', '/tilemaps/mapa1/texture.json'); 
     
     //carga de sonidos:
@@ -73,7 +75,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('level1');
+    this.scene.start('tutorial');
     
   }
 }

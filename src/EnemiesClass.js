@@ -10,13 +10,14 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
   
     constructor(scene,x,y,type,idle,walk,imgIdle,imgWalk,img,startFrate,endFrate,rate){
         super(scene,x,y,type)
-        console.log(x);
-        console.log(y);
+
         // this.setDepth(0);
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this);
         this.scene.physics.add.collider(this,this.scene.groundLayer)
-
+        // this.body.setSize(this.width,this.height);
+        // this.body.setOffset(this.width,-500);
+        // this.body.setOffset(this.width,-500);
         this.scene = scene,
         // this.sprite = sprite;
         // this.scene.add.existing(this.sprite);
@@ -47,7 +48,10 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
           onEnter: this.walkRightOnEnter,
           onUpdate: this.walkRightOnUpdate,
         })
-        .addState('death')
+        .addState('death',{
+          onEnter: this.deathOnEnter,
+          onUpdate: this.deathOnUpdate,
+        })
         .setState('idle')
         
         
@@ -55,6 +59,11 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
         events.on('alien-down', this.handleStomped, this)
 
+    }
+    deathOnEnter(){
+      console.log('enemigo muerto');
+      this.play
+      this.destroy()
     }
     idleOnEnter(){
       this.play('enemy-idle')
@@ -69,18 +78,21 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     idleOnUpdate(){
       // console.log(this.NewStateMachine.states);
 
-        // this.NewStateMachine.setState('walk')
+        this.NewStateMachine.setState('walk')
     }
 
     walkLeftOnEnter(){
       this.moveTime = 0
       this.play('enemy-walk')
+      // console.log('Poisiton BE ' + this.body.y);
+      // console.log('Poisiton E ' + this.y);
+      // console.log('Poisiton DBE ' + this.body.deltaY());
     }
 
     walkLeftOnUpdate(dt){
       this.moveTime += dt
       this.setVelocityX(-100)
-      this.flipX = true;
+      this.flipX = false;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('walk-right');
       }
@@ -96,7 +108,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
       this.moveTime += dt
 
       this.setVelocityX(100)
-      this.flipX = false;
+      this.flipX = true;
       if (this.moveTime > 1500) {
         this.NewStateMachine.setState('walk-left');
       }
@@ -130,6 +142,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
     update(dt){
       this.NewStateMachine.update(dt);
+
     }
     createEnemyAnimation(){   
       this.anims.create({

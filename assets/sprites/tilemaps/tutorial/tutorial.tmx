@@ -311,12 +311,10 @@
   <object id="42" name="llave" x="4112" y="972" width="72" height="64"/>
   <object id="43" name="energia" x="7165.39" y="914.061" width="116" height="112"/>
   <object id="44" name="energia" x="1734" y="280" width="116" height="112"/>
-  <object id="45" name="heroe" x="1916" y="204" width="124" height="156"/>
+  <object id="45" name="heroe" x="2072" y="1208" width="124" height="156"/>
   <object id="52" name="cueva" x="15172" y="1638" width="136" height="100"/>
  </objectgroup>
  <objectgroup id="10" name="enemigos">
-  <object id="48" name="enemigo" x="13954" y="1384" width="108" height="136"/>
-  <object id="50" name="enemigo" type="alien" x="1577" y="1218" width="108" height="136"/>
-  <object id="51" name="enemigo" type="alien" x="5099" y="1734" width="108" height="136"/>
+  <object id="50" name="enemigo" x="1577" y="1218" width="108" height="136"/>
  </objectgroup>
 </map>

@@ -207,8 +207,8 @@
                  "type":"",
                  "visible":true,
                  "width":124,
-                 "x":1916,
-                 "y":204
+                 "x":2072,
+                 "y":1208
                 }, 
                 {
                  "height":100,
@@ -234,36 +234,14 @@
          "objects":[
                 {
                  "height":136,
-                 "id":48,
-                 "name":"enemigo",
-                 "rotation":0,
-                 "type":"alien",
-                 "visible":true,
-                 "width":108,
-                 "x":13954,
-                 "y":1384
-                }, 
-                {
-                 "height":136,
                  "id":50,
                  "name":"enemigo",
                  "rotation":0,
-                 "type":"alien",
+                 "type":"",
                  "visible":true,
                  "width":108,
                  "x":1577,
                  "y":1218
-                }, 
-                {
-                 "height":136,
-                 "id":51,
-                 "name":"enemigo",
-                 "rotation":0,
-                 "type":"alien",
-                 "visible":true,
-                 "width":108,
-                 "x":5099,
-                 "y":1734
                 }],
          "opacity":1,
          "type":"objectgroup",

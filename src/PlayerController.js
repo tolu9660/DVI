@@ -42,10 +42,10 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         // this.setSize(this.width,this.height);
         // this.body.setSize(this.width,this.height);
         // this.body.setOffset(128,128);
+        // this.body.setSize(this.width/2,this.height/2);
         // this.body.setSize(this.width,this.height);
-        this.body.setSize(this.width,this.height);
-        this.body.setOffset(this.width,-5);
-        this.body.updateFromGameObject();
+        this.setOffset(this.width,0);
+        // this.body.updateFromGameObject();
         // this.cursors = this.scene.input.keyboard.createCursorKeys();
         this.cursors = this.scene.input.keyboard.addKeys({
           up:Phaser.Input.Keyboard.KeyCodes.UP,
@@ -75,7 +75,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           classType: Phaser.Physics.Arcade.Image 
         });
         this.scene.physics.add.collider(this.bullets,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
-        this.scene.physics.add.collider(this,this.scene.enemies,this.handlePlayerEnemiesCollision,undefined,this.scene)
+        this.scene.physics.add.overlap(this,this.scene.enemies,this.handlePlayerEnemiesCollision,undefined,this.scene)
 
         this.scene.physics.add.collider(this,this.scene.objects,this.handleheartsplayer,undefined,this)
 
@@ -214,9 +214,20 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
     }
     handlePlayerEnemiesCollision(player,enemigo){
+      console.log('Poisiton PBE ' + player.body.y);
+      console.log('Poisiton PE ' + player.y);
+      console.log('Poisiton PDBE ' + player.body.deltaY());
+      console.log('Poisiton BE ' + enemigo.body.y);
+      console.log('Poisiton E ' + enemigo.y);
+      console.log('Poisiton DBE ' + enemigo.body.deltaY());
+    
       if (player.body.deltaY()>enemigo.body.deltaY()) {
-      
-        enemigo.destroy()
+        player.setVelocityY(-400)
+        events.emit('alien-down', enemigo)
+        // enemigo.setState('death')
+        // enemigo.destroy()
+        
+        
       }else if ((player.body.x < enemigo.body.x && enemigo.body.deltaX()<0) || (player.body.x > enemigo.body.x && enemigo.body.deltaX()>0)) {
         if (player.body.x < enemigo.body.x) {
           player.setVelocityX(-400)
@@ -239,8 +250,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       }
     }
     idleOnEnter(){
-      this.play('player-idle')
-      this.setVelocity(0,0)
+      this.play('player-idle',true)
+      this.setVelocity(0)
+      // console.log('Poisiton DPE ' + this.body.deltaY());
     }
     idleOnUpdate(){
       if (this.cursors.left.isDown || this.cursors.right.isDown ){
@@ -249,6 +261,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       if (this.cursors.up.isDown ){
         this.NewStateMachine.setState('jump')
       }
+      
     }
     walkOnEnter(){
       this.play('player-walk', true)
@@ -256,7 +269,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     walkOnUpdate(){
       this.play('player-walk', true)
       const speed = 200
+      // console.log('Poisiton PBE ' + this.body.y);
+      // console.log('Poisiton PE ' + this.y);
+      // console.log('Poisiton DPE ' + this.body.deltaY());
 
+      
       if (this.cursors.left.isDown) {
         this.flipX = true;
         this.setVelocityX(-speed);
@@ -493,7 +510,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       }
       this.bullet = this.bullets.get(this.x, this.y, 'bullet');
       this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
-
+      // this.anims.play('bullet')
       this.bullet.setActive(true)
       this.bullet.setVisible(true)
       this.bullet.body.allowGravity = false
@@ -526,27 +543,26 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.energy = this.energy - 1
         events.emit('energy', this.energy)
       }
-      console.log(this.health);
-      console.log(this.body.onFloor());
+
     }
 
     createAlienAnimation(){
 
+      // this.anims.create({
+      //   key: 'player-idle',
+      //   frames: [{key: 'hero', frame: 'Hero_Boy_Idle8.png'}]
+      // });
       this.anims.create({
-        key: 'player-idle',
-        frames: [{key: 'hero', frame: 'Hero_Boy_Idle1.png'}]
-      });
-      // this.sprite.anims.create({
-      //   key:'player-idle',
-      //   frameRate: 7,
-      //   frames:this.sprite.anims.generateFrameNames('hero', {
-      //     start: 1,
-      //     end: 13,
-      //     prefix: 'Hero_Boy_Idle',
-      //     suffix: '.png'
-      //   }),
-      //   repeat: -1
-      // })
+        key:'player-idle',
+        frameRate: 10,
+        frames:this.anims.generateFrameNames('hero', {
+          start: 1,
+          end: 13,
+          prefix: 'Hero Boy Idle',
+          suffix: '.png'
+        }),
+        repeat: -1
+      })
   
       this.anims.create({
         key:'player-walk',
@@ -559,6 +575,18 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         }),
         repeat: -1
       })
+
+      // this.anims.create({
+      //   key:'bullet',
+      //   frameRate: 3,
+      //   frames:this.anims.generateFrameNames('hero', {
+      //     start: 1,
+      //     end: 3,
+      //     prefix: 'bullet_',
+      //     suffix: '.png'
+      //   }),
+      //   repeat: -1
+      // })
 
     }
   

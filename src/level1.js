@@ -34,7 +34,7 @@ export default class Level1 extends LevelClass {
 
   preload(){
     this.load.setPath('assets/sprites/alien5/');
-    this.load.atlas('alien5Walk','/Walk/texture.png', '/Walk/texture.json');
+    this.load.atlas('alien5','/texture.png', '/texture.json');
 
   }
   /**
