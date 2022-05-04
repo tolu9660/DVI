@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="57">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="120" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="58">
  <editorsettings>
   <export target="tutorial.json" format="json"/>
  </editorsettings>
@@ -316,6 +316,6 @@
   <object id="56" name="cueva" type="Metal" x="3744" y="1438" width="136" height="100"/>
  </objectgroup>
  <objectgroup id="10" name="enemigos">
-  <object id="51" name="enemigo" type="anatort" x="1599" y="1574" width="108" height="136"/>
+  <object id="57" name="enemigo" type="feona" x="1934.68" y="1554.23" width="108" height="136"/>
  </objectgroup>
 </map>

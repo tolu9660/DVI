@@ -66,6 +66,9 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         }).addState('jump', {
           onEnter: this.jumpOnEnter,
           onUpdate: this.jumpOnUpdate
+        }).addState('attack', {
+          onEnter: this.attackOnEnter,
+          onUpdate: this.attackOnUpdate
         }).setState('idle')
         
         
@@ -74,12 +77,18 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         events.on('alien-down', this.handleStomped, this)
 
     }
+    attackOnEnter(){
+      // this.setVelocityY(-50)
+    
+    }
+    attackOnUpdate(){
+    }
     jumpOnEnter(){
       // this.setVelocityY(-50)
     
     }
     jumpOnUpdate(){
-      this.setBounceY(1)
+      // this.setBounceY(1)
     }
     seguirOnEnter(){
       console.log('a la caza');
@@ -93,39 +102,32 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         {
           // this.play('move-skeleton', true);
           this.play('enemy-walk',true)
-          this.body.setVelocityX(300);
+          this.body.setVelocityX(200);
         }
         else//Jugador a la izquierda
         {
           // this.play('move-skeleton', true);
           this.play('enemy-walk',true)
-            this.body.setVelocityX(-300);
+            this.body.setVelocityX(-200);
         }
 
         if(Math.abs(this.x - this.scene.playerController.x) > 800) {
           this.NewStateMachine.setState('idle');
         }
 
-        if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
-          console.log('exploto');
-          
-          this.body.setVelocityX(0);
-          this.NewStateMachine.setState('explotar');
-        //   this.on('animationcomplete', () =>{
-            
 
-        // })
-      }
     }
     // }
 
     deathOnEnter(){
-      console.log('enemigo muerto');
+      // console.log('enemigo muerto');
 
-      if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
-        this.scene.playerController.health -=1
+      // if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
+      //   this.scene.playerController.setVelocityY(-300)
+      //   this.scene.playerController.NewStateMachine.setState('enemy-hit');
+      //   this.scene.playerController.health -=1
 
-      }
+      // }
       // this.destroy()
     }
     deathOnUpdate(){

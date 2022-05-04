@@ -12,18 +12,17 @@ import NewStateMachine from '../newStateMachine.js';
 
   constructor(scene,x,y,type){
 
-    //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
-       //scene,x,y,type,idle,walk,jump,attack,death,hit,shoot,10
-       super(scene, x,y,type,[1,7],[1,5],null,[1,15],[1,10],[1,4],null,10);
-        // this.body.setSize(this.width/2,this.height/2)
+   super(scene, x,y,type,[1,15],[1,5],[1,4],[1,10],[1,7],10);
+    // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
         this.setSize(this.width/2,this.height/2)
+        this.flipX = true;
         // this.body.setOffset(this.width,this.height);
         console.log(this.NewStateMachine);
-        this.NewStateMachine.addState('jump', {
-          onEnter: this.jumpOnEnter,
-          onUpdate: this.jumpOnUpdate
-        }).setState('jump')
+        this.NewStateMachine.addState('waiting', {
+          onEnter: this.waitingpOnEnter,
+          onUpdate: this.waitingOnUpdate
+        })
         this.scene = scene
         this.bulletsEnemy = this.scene.physics.add.group({
           classType: Phaser.Physics.Arcade.Image 
@@ -37,85 +36,84 @@ import NewStateMachine from '../newStateMachine.js';
       // });
       
       // this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
-
-
 }
-jumpOnEnter(){
-  // this.setVelocityY(-50)
 
+walkLeftOnUpdate(dt){
+  this.moveTime += dt
+  this.setVelocityX(-200)
+  this.flipX = false;
+  if (this.moveTime > 3000) {
+    this.NewStateMachine.setState('walk-right');
+  }
+  if(Math.abs(this.x - this.scene.playerController.x) < 500) {
+    this.NewStateMachine.setState('waiting');
+        
+  }
+  
 }
-jumpOnUpdate(){
+ 
+
+    
+walkRightOnUpdate(dt){
+  this.moveTime += dt
+
+  this.setVelocityX(200)
+  this.flipX = true;
+  if (this.moveTime > 3000) {
+    this.NewStateMachine.setState('walk-left');
+  }
+  if(Math.abs(this.x - this.scene.playerController.x) < 500) {
+    this.NewStateMachine.setState('waiting');
+  }
+}
+deathOnEnter(){
+  console.log('enemigo muerto');
+
+  if(Math.abs(this.x - this.scene.playerController.x) < 150 ) {
+    this.scene.playerController.setVelocityY(-300)
+    this.scene.playerController.NewStateMachine.setState('enemy-hit');
+    this.scene.playerController.health -=1
+
+  }
+  // this.destroy()
+}
+
+waitingpOnEnter(){
+  this.play('enemy-idle')
+  this.body.setVelocityX(0);
+}
+
+waitingOnUpdate(){
+  if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
+    console.log('exploto');
+    
+    
+    this.NewStateMachine.setState('explotar');
+  //   this.on('animationcomplete', () =>{
+      
+  }
+  // })
+}
   // this.setBounceY(1)
   // this.shootEnemy()
   
   // console.log(Math.abs(this.x - this.scene.playerController.x));
-  if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
-    if(this.x < this.scene.playerController.x) //Jugador a la derecha
-    {
-      // this.play('move-skeleton', true);
-      this.play('enemy-walk',true)
-      this.body.setVelocityX(200);
-    }
-    else//Jugador a la izquierda
-    {
-      // this.play('move-skeleton', true);
-      this.play('enemy-walk',true)
-        this.body.setVelocityX(-200);
-    }
-  }
+  
   // console.log(this.x);
   // console.log(this.scene.playerController.x);
-  if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
-    this.body.setVelocityX(0);
-    this.on('animationcomplete', () =>{
+  // if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
+  //   this.body.setVelocityX(0);
+  //   this.on('animationcomplete', () =>{
       
-      console.log('exploto');
-    })
+  //     console.log('exploto');
+  //   })
     
-  }
-}
+  // }
+
 // update(dt){
 //   console.log('pedo');
 //   console.log(this.body.y);
 //   console.log('pedo');  
 // }
-shootEnemy(){
-  // console.log(this.body.deltaX());
-  // sprite.angle = sprite.body.angle;
-  // console.log(this.sprite.body);
-  console.log(this.scaleX);
-  // console.log(this.sprite.rotation);
-  const vector = new Phaser.Math.Vector2(1,0)
-  if (this) {
-    // if (this.body.deltaX() < 0) {
-    //   vector.x = -1
-    // }else {
-    //   vector.x = 1
-    // }
-    this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bullet');
-    console.log(this.scene);
-    this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
-    // this.anims.play('bullet')
-    this.bullet.setActive(true)
-    this.bullet.setVisible(true)
-    this.bullet.body.allowGravity = false
-    this.bullet.setRotation(vector.angle())
-  
-    // this.bullet.x += vector.x = 16 
-  
-  
-  
-    this.bullet.setVelocityX(vector.x * 500, 300)
-  }
 
-  
-
-}
-handleBulletsEnemiesCollision(bullet, player) {
-  console.log(bullet);
-  console.log(player);      
-  bullet.destroy()
-  player.damage();
-
-}
  }

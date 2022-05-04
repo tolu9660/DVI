@@ -35,7 +35,10 @@ export default class Tutorial extends LevelClass {
     this.load.setPath('assets/sprites/enemies');
     this.load.atlas('jackal','/jackal.png', '/jackal.json');
     this.load.atlas('anatort','/anatort.png', '/anatort.json');
-
+    this.load.atlas('shangheili','/shangheili.png', '/shangheili.json');
+    this.load.atlas('grunt','/grunt.png', '/grunt.json');
+    this.load.atlas('sapien','/sapien.png', '/sapien.json');
+    this.load.atlas('feona','/feona.png', '/feona.json');
 
   }
   /**

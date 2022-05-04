@@ -332,8 +332,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
 
     spikeOnEnter() {
-      this.setVelocityY(-3)
-      this.setVelocityX(-3)
+      this.setVelocityY(200)
       const startColor = Phaser.Display.Color.ValueToColor(0xffffff)
       const endColor = Phaser.Display.Color.ValueToColor(0xff0000)
 
@@ -582,7 +581,10 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       console.log(bullet);
       console.log(enemy);      
       bullet.destroy()
-      enemy.triggerTimer.remove()
+      if (enemy.triggerTimer != null){
+        enemy.triggerTimer.remove()
+      }
+      // enemy.triggerTimer.remove()
       enemy.destroy();
     }
     update(dt){

@@ -70,8 +70,48 @@ walkRightOnUpdate(dt){
     this.NewStateMachine.setState('seguir');
   }
 }
+deathOnEnter(){
+  console.log('enemigo muerto');
 
+  if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
+    this.scene.playerController.setVelocityY(-300)
+    this.scene.playerController.NewStateMachine.setState('enemy-hit');
+    this.scene.playerController.health -=1
 
+  }
+  // this.destroy()
+}
+seguirOnUpdate(){
+  console.log('siguiendo');
+
+    if(this.x < this.scene.playerController.x) //Jugador a la derecha
+    {
+      // this.play('move-skeleton', true);
+      this.play('enemy-walk',true)
+      this.body.setVelocityX(200);
+    }
+    else//Jugador a la izquierda
+    {
+      // this.play('move-skeleton', true);
+      this.play('enemy-walk',true)
+        this.body.setVelocityX(-200);
+    }
+
+    if(Math.abs(this.x - this.scene.playerController.x) > 800) {
+      this.NewStateMachine.setState('idle');
+    }
+
+    if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
+      console.log('exploto');
+      
+      this.body.setVelocityX(0);
+      this.NewStateMachine.setState('explotar');
+    //   this.on('animationcomplete', () =>{
+        
+
+    // })
+  }
+}
 jumpOnEnter(){
   // this.setVelocityY(-50)
 

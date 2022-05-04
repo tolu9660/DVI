@@ -20,59 +20,81 @@ import NewStateMachine from '../newStateMachine.js';
         this.setSize(this.width/2,this.height/2)
         // this.body.setOffset(this.width,this.height);
         console.log(this.NewStateMachine);
-        this.NewStateMachine.addState('jump', {
-          onEnter: this.jumpOnEnter,
-          onUpdate: this.jumpOnUpdate
-        }).setState('jump')
         this.scene = scene
         this.bulletsEnemy = this.scene.physics.add.group({
           classType: Phaser.Physics.Arcade.Image 
         });
-      //   this.triggerTimer = this.scene.time.addEvent({
-      //     callback: this.shootEnemy,
-      //     callbackScope: this,
-      //     //delay: 2000,// + getRandom(0, 1000), // 1000 = 1 second
-      //     delay: Math.random() * (2000 - 1000) + 1000,
-      //     loop: true
-      // });
+        this.triggerTimer = null;
       
       // this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
 
 
 }
-jumpOnEnter(){
-  // this.setVelocityY(-50)
+idleOnEnter(){
+  this.play('enemy-idle',true)
+  this.setBounceY(1)
+//   this.triggerTimer = this.scene.time.addEvent({
+//     callback: this.shootEnemy,
+//     callbackScope: this,
+//     //delay: 2000,// + getRandom(0, 1000), // 1000 = 1 second
+//     delay: Math.random() * (2000 - 1000) + 1000,
+//     loop: true
+// });
 
 }
-jumpOnUpdate(){
-  // this.setBounceY(1)
-  // this.shootEnemy()
-  
-  // console.log(Math.abs(this.x - this.scene.playerController.x));
-  if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
-    if(this.x < this.scene.playerController.x) //Jugador a la derecha
-    {
-      // this.play('move-skeleton', true);
-      this.play('enemy-walk',true)
-      this.body.setVelocityX(200);
-    }
-    else//Jugador a la izquierda
-    {
-      // this.play('move-skeleton', true);
-      this.play('enemy-walk',true)
-        this.body.setVelocityX(-200);
-    }
+
+idleOnUpdate(){
+
+  this.setBounceY(1)
+  if(Math.abs(this.x - this.scene.playerController.x) < 800) {
+    this.NewStateMachine.setState('jump');
   }
+}
+jumpOnEnter(){
+  // this.setVelocityY(-200)
+  this.setBounceY(1)
+  // this.play('enemy-jump',true)
+  this.triggerTimer = this.scene.time.addEvent({
+    callback: this.shootEnemy,
+    callbackScope: this,
+    //delay: 2000,// + getRandom(0, 1000), // 1000 = 1 second
+    delay: Math.random() * (2000 - 1000) + 1000,
+    loop: true
+});
+}
+jumpOnUpdate(){
+  // this.setVelocityY(-50)
+  
+  // this.shootEnemy()
+  if(Math.abs(this.x - this.scene.playerController.x) > 800) {
+    this.NewStateMachine.setState('idle');
+    this.triggerTimer.remove()
+  }
+  // console.log(Math.abs(this.x - this.scene.playerController.x));
+  // if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
+  //   if(this.x < this.scene.playerController.x) //Jugador a la derecha
+  //   {
+  //     // this.play('move-skeleton', true);
+  //     this.play('enemy-walk',true)
+  //     this.body.setVelocityX(200);
+  //   }
+  //   else//Jugador a la izquierda
+  //   {
+  //     // this.play('move-skeleton', true);
+  //     this.play('enemy-walk',true)
+  //       this.body.setVelocityX(-200);
+  //   }
+  // }
   // console.log(this.x);
   // console.log(this.scene.playerController.x);
-  if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
-    this.body.setVelocityX(0);
-    this.on('animationcomplete', () =>{
+  // if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
+  //   this.body.setVelocityX(0);
+  //   this.on('animationcomplete', () =>{
       
-      console.log('exploto');
-    })
+  //     console.log('exploto');
+  //   })
     
-  }
+  // }
 }
 // update(dt){
 //   console.log('pedo');
