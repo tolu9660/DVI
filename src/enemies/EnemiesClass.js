@@ -1,8 +1,8 @@
 
 
-import { sceneEvents as events } from './EventsCenter.js';
+import { sceneEvents as events } from '../EventsCenter.js';
 
-import NewStateMachine from './newStateMachine.js';
+import NewStateMachine from '../newStateMachine.js';
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
  */
@@ -52,7 +52,6 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
           onEnter: this.deathOnEnter,
           onUpdate: this.deathOnUpdate,
         })
-        .setState('idle')
         
         
         
@@ -62,9 +61,11 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     }
     deathOnEnter(){
       console.log('enemigo muerto');
-      this.play
+
       this.destroy()
     }
+
+
     idleOnEnter(){
       this.play('enemy-idle')
     
@@ -142,7 +143,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
     update(dt){
       this.NewStateMachine.update(dt);
-
+      // console.log(this);
     }
     createEnemyAnimation(){   
       this.anims.create({
@@ -159,7 +160,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
           prefix: this.imgWalk,
           suffix: '.png'
         }),
-        repeat: -1
+        // repeat: -1
       })
     }
 }

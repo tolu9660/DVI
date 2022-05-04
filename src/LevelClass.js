@@ -1,6 +1,18 @@
 
 import PlayerController from './PlayerController.js'
-import EnemyController from './EnemyController.js'
+import EnemyControllerJackal from './enemies/EnemyControllerJackal.js'
+import EnemyControllerGrunt from './enemies/EnemyControllerGrunt.js'
+import EnemyControllerRalph from './enemies/EnemyControllerRalph.js'
+import EnemyControllerBozapatilla from './enemies/EnemyControllerBozapatilla.js'
+import EnemyControllerMarinavaja from './enemies/EnemyControllerMarinavaja.js'
+import EnemyControllerShangheili from './enemies/EnemyControllerShangheili.js'
+import EnemyControllerSapien from './enemies/EnemyControllerSapien.js'
+import EnemyControllerGalrado from './enemies/EnemyControllerGalrado.js'
+import EnemyControllerCocodry from './enemies/EnemyControllerCocodry.js'
+import EnemyControllerLobeznotrid from './enemies/EnemyControllerLobeznotrid.js'
+import EnemyControllerDrago from './enemies/EnemyControllerDrago.js'
+import EnemyControllerFeona from './enemies/EnemyControllerFeona.js'
+import EnemyControllerAnatort from './enemies/EnemyControllerAnatort.js'
 
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
@@ -13,9 +25,6 @@ import Arbusto from './arbusto.js';
 
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
-import EnemyController1 from './EnemyController1.js';
-import EnemyController2 from './EnemyController2.js';
-import EnemyController3 from './EnemyController3.js';
 import cuevaRoja from './cuevaRoja.js';
 import cuevaAzul from './cuevaAzul.js';
 import { sceneEvents as events } from './EventsCenter.js';
@@ -245,6 +254,9 @@ export default class LevelClass extends Phaser.Scene {
     this.i=0;
     let type;
     for (let step = 0; step < enemigos.objects.length; step++){
+      enemigos.objects.forEach(element => {
+        console.log(element);
+      });
       type= enemigos.objects[step].type;
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
           // this.enemy = this.physics.add.sprite((x) + (width1),y, Tipo)  
@@ -256,24 +268,55 @@ export default class LevelClass extends Phaser.Scene {
           //marcar un switch que permita crear el tipo de enemigo
           console.log(type);
           switch(type){
-            case 'alien':
-              this.enemies.add(new EnemyController(this,x, y,type)) ;
-              break;
-            case 'alien1':
-              this.enemies.add(new EnemyController1(this,x,y,type)) ;
-              break;
-            // case 'alien2':
-            //   e = new EnemyController2(this,this.enemy,Tipo) ;
-            //   break;
-            // case 'alien3':
-            //   e = new EnemyController3(this,this.enemy,Tipo) ;
-            //   break;
-            default:
-              console.log("no se ha captado el tipo del enemigo");
-              this.enemies.add(new EnemyController(this,x, y,'alien5'));
+            //te sigue dispara
+            case 'jackal':
+              this.enemies.add(new EnemyControllerJackal(this,x, y,type)) ;
+            break;
+            case 'grunt':
+              this.enemies.add(new EnemyControllerGrunt(this,x, y,type)) ;
+            break;
+            case 'ralph':
+              this.enemies.add(new EnemyControllerRalph(this,x, y,type)) ;
+            break;
+
+            // case 'bozapatilla':
+            //   this.enemies.add(new EnemyControllerBozapatilla(this,x, y,type)) ;
+            // break;
+
+            // case 'marinavaja':
+            //   this.enemies.add(new EnemyControllerMarinavaja(this,x, y,type)) ;
+            // break;
+
+            // //te sigue	
+            // case 'shangheili':
+            //   this.enemies.add(new EnemyControllerShangheili(this,x, y,type)) ;
+            // break;
+            // case 'sapien':
+            //   this.enemies.add(new EnemyControllerSapien(this,x, y,type)) ;
+            // break;
+
+            // //te sigue salta y dispara
+            // case 'galrado':
+            //   this.enemies.add(new EnemyControllerGalrado(this,x, y,type)) ;
+            // break;
+            // case 'cocodry':
+            //   this.enemies.add(new EnemyControllerCocodry(this,x, y,type)) ;
+            // break;
+            // case 'lobeznotrid':
+            //   this.enemies.add(new EnemyControllerLobeznotrid(this,x, y,type)) ;
+            // break;
+            // case 'drago':
+            //   this.enemies.add(new EnemyControllerDrago(this,x, y,type)) ;
+            // break;
+
+            // //te sigue y explota
+            // case 'feona':
+            //   this.enemies.add(new EnemyControllerFeona(this,x, y,type)) ;
+            // break;
+            // case 'anatort':
+            //   this.enemies.add(new EnemyControllerAnatort(this,x, y,type)) ;
+            // break;
           }
-          // this.arrayEnemies[step]=e;
-          this.i++;       
     }
     
    

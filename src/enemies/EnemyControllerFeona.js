@@ -1,14 +1,14 @@
 
-import { sceneEvents as events } from './EventsCenter.js';
+import { sceneEvents as events } from '../EventsCenter.js';
 
-import EnemiesClass from './enemies/EnemiesClass.js/index.js';
-import NewStateMachine from './newStateMachine.js';
+import EnemiesClass from './EnemiesClass.js';
+import NewStateMachine from '../newStateMachine.js';
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
  */
 
 
- export default class EnemyController extends EnemiesClass {
+ export default class EnemyControllerFeona extends EnemiesClass {
 
   constructor(scene,x,y,type){
 

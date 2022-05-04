@@ -226,9 +226,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     
       if (player.body.deltaY()>enemigo.body.deltaY()) {
         player.setVelocityY(-400)
-        events.emit('alien-down', enemigo)
+        // events.emit('alien-down', enemigo)
         // enemigo.setState('death')
-        // enemigo.destroy()
+        enemigo.destroy()
         
         
       }else if ((player.body.x < enemigo.body.x && enemigo.body.deltaX()<0) || (player.body.x > enemigo.body.x && enemigo.body.deltaX()>0)) {
@@ -443,7 +443,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
 
     handleheartsplayer(player,objeto){
-      console.log(objeto);
+
       switch (objeto.img) {
         case 'energia':
           this.energy += 1
@@ -582,6 +582,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       console.log(bullet);
       console.log(enemy);      
       bullet.destroy()
+      enemy.triggerTimer.remove()
       enemy.destroy();
     }
     update(dt){
@@ -594,6 +595,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.setVelocityY(-600)
         this.energy = this.energy - 1
         events.emit('energy', this.energy)
+      }
+      events.emit('heart',this.health)
+
+      if (this.health <= 0) {
+        console.log('player death');
       }
     }
 
@@ -641,7 +647,10 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
     }
   
-
+    damage(){
+      console.log('pedo');
+      this.health -= 1;
+    }
 
 
  }
