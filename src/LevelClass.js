@@ -5,7 +5,12 @@ import EnemyController from './EnemyController.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-import PlataformaMovil from './plataformaMovil.js';
+//import PlataformaMovil from './plataformaMovil.js';
+import Lava from './lava.js';
+import Acido from './acido.js';
+import Pinchos from './pinchos.js';
+import Arbusto from './arbusto.js';
+
 import llave from './llave.js';
 import cueva from './cuevaRoja.js'
 import EnemyController1 from './EnemyController1.js';
@@ -14,8 +19,11 @@ import EnemyController3 from './EnemyController3.js';
 import cuevaRoja from './cuevaRoja.js';
 import cuevaAzul from './cuevaAzul.js';
 import { sceneEvents as events } from './EventsCenter.js';
+import PlataformaVertical from './plataformaVertical.js';
+import PlataformaHorizontal from './PlataformaHorizontal.js';
+import PlataformaTiempo from './plataformaTiempo.js';
 
-
+/**hola esto es una prueba* */
 
 /**
  * Escena principal del juego. La escena se compone de una serie de plataformas 
@@ -128,55 +136,64 @@ export default class LevelClass extends Phaser.Scene {
         break;
         }
         case 'pm':{
-          this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
-          .setScale('1')  
-          // .setFixedRotation();
-          this.physics.add.collider(this.pm,this.groundLayer)
+          //this.plataforma = this.physics.add.staticSprite(x + (width),y, objData.type)
+        
+         // this.physics.add.collider(this.plataforma,this.groundLayer)
 
          //cambiar plataformaMovil por la clase
           switch ( objData.type) {
-            case 'pmv': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+            case 'pmv': 
+               /*this.plataforma = this.physics.add.staticSprite(x, y , 'pm');
+              this.plataforma.body.ignoreGravity = true;
+              
+              this.posicion_plataforma_x = this.plataforma.x
+              this.posicion_plataforma_y = this.plataforma.y
+              console.log( this.plataforma.body)*/
+              this.objects.add(new PlataformaVertical(this,x,y))
+             
             break;
-            }
-            case 'pmh': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+            
+            case 'pmh': 
+
+              this.objects.add(new PlataformaHorizontal(this,x,y))
             break;
-            }
+            
+            case 'pmt': 
+
+              this.objects.add(new PlataformaTiempo(this,x,y))
+            break;
+            
             default:{
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.objects.add(new PlataformaHorizontal(this,x,y))
               break; 
             }
           }
          
-          this.arrayObjects[this.j]=this.aux;
-          this.j++;
+         
           break;
         }
         case 'trampa':{
-          this.pm = this.physics.add.staticSprite(x + (width),y, objData.type)
-          .setScale('1')  
-          this.physics.add.collider(this.pm,this.groundLayer)
 
           // .setFixedRotation();
           //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'acido': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.objects.add(new Acido(this,x, y))
             break;
             }
             case 'lava': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.objects.add(new Lava(this,x, y))
             break;
             }
             case 'pinchos': { 
-              this.aux = new PlataformaMovil(this,this.pm)
+              this.objects.add(new Pinchos(this,x, y))
             break;
             }
-            default:{
-              this.aux = new PlataformaMovil(this,this.pm)
-              break; 
+            case 'arbusto': { 
+              this.objects.add(new Arbusto(this,x, y))
+            break;
             }
+            
           }
          
           this.arrayObjects[this.j]=this.aux;
@@ -252,13 +269,15 @@ export default class LevelClass extends Phaser.Scene {
       return
     }    
     this.playerController.update(dt);
-    if(this.arrayObjects.length!=0){
-      for(let e=0; e<this.j; e++){
-        
-        this.arrayObjects[e].actu(dt);
-    }
+    if (this.objects.getChildren()) {
+      this.objects.getChildren().forEach((element) => {
+        element.actu(dt)
+      });
+      
     }
 
+    
+    
     if (this.enemies.getChildren()) {
       this.enemies.getChildren().forEach((element) => {
         element.update(dt)

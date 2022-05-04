@@ -27,11 +27,15 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
+<<<<<<< HEAD
     scene: [Inicio, Opciones, Boot, Tutorial,GameUI, Creditos, End],
+=======
+    scene: [Inicio, Opciones, Boot,Level1, Transicion, Transicion1, Tutorial,GameUI, Creditos, End],
+>>>>>>> alvaro
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {
-            gravity: {y:700},
+            gravity: {y:460}, //700
             debug: true
          }
      }

@@ -35,6 +35,8 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('llave','/objetos/llave.png', '/objetos/llave.json');
     this.load.atlas('energia','/objetos/e.png', '/objetos/e.json');
     this.load.atlas('pm','/objetos/pm.png', '/objetos/pm.json');
+    this.load.atlas('pinchos','/objetos/pinchos.png', '/objetos/pinchos.json');
+    this.load.atlas('arbusto','/objetos/arbusto.png', '/objetos/arbusto.json');
     this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
     this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
     //
@@ -75,7 +77,11 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
+<<<<<<< HEAD
     this.scene.start('tutorial');
+=======
+    this.scene.start('level1');
+>>>>>>> alvaro
     
   }
 }
