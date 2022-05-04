@@ -7,7 +7,7 @@ export default class Transicionnivel3 extends Phaser.Scene {
     }
   
     preload(){
-      this.load.image('Transicionnivel3',"assets/sprites/TransicionNivel1C0.jpg");
+      this.load.image('Transicionnivel3',"assets/sprites/TransicionNivel3C0.jpg");
     }
     /**
      * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado

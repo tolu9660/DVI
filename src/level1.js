@@ -61,6 +61,7 @@ export default class Level1 extends LevelClass {
     let a =0;
     super.update(t, dt);
     
+    
   }
 
 

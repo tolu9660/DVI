@@ -1,5 +1,5 @@
 import Boot from './boot.js';
-import End from './end.js';
+
 import Level from './level.js';
 import Level2 from './level2.js';
 import Level1 from './level1.js';
@@ -9,9 +9,11 @@ import Inicio from './Inicio.js'
 import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
 import parallaxScene from './parallaxScene.js';
-import GameUI from './GameUI.js'
+import GameUI from './GameUI.js';
 import Transicion from './transicion.js'
 import Transicion1 from './transicion1.js'
+import Pause from './Pause.js';
+import Gameover from'./gameover.js';
 
 
 /**
@@ -27,7 +29,7 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Inicio, Opciones, Boot, Tutorial,GameUI, Creditos, End],
+    scene: [Inicio, Opciones, Boot, Pause,Tutorial,GameUI, Creditos, Gameover],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {
