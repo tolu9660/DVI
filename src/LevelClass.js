@@ -279,43 +279,43 @@ export default class LevelClass extends Phaser.Scene {
               this.enemies.add(new EnemyControllerRalph(this,x, y,type)) ;
             break;
 
-            // case 'bozapatilla':
-            //   this.enemies.add(new EnemyControllerBozapatilla(this,x, y,type)) ;
-            // break;
+            case 'bozapatilla':
+              this.enemies.add(new EnemyControllerBozapatilla(this,x, y,type)) ;
+            break;
 
-            // case 'marinavaja':
-            //   this.enemies.add(new EnemyControllerMarinavaja(this,x, y,type)) ;
-            // break;
+            case 'marinavaja':
+              this.enemies.add(new EnemyControllerMarinavaja(this,x, y,type)) ;
+            break;
 
-            // //te sigue	
-            // case 'shangheili':
-            //   this.enemies.add(new EnemyControllerShangheili(this,x, y,type)) ;
-            // break;
-            // case 'sapien':
-            //   this.enemies.add(new EnemyControllerSapien(this,x, y,type)) ;
-            // break;
+            //te sigue	
+            case 'shangheili':
+              this.enemies.add(new EnemyControllerShangheili(this,x, y,type)) ;
+            break;
+            case 'sapien':
+              this.enemies.add(new EnemyControllerSapien(this,x, y,type)) ;
+            break;
 
-            // //te sigue salta y dispara
-            // case 'galrado':
-            //   this.enemies.add(new EnemyControllerGalrado(this,x, y,type)) ;
-            // break;
-            // case 'cocodry':
-            //   this.enemies.add(new EnemyControllerCocodry(this,x, y,type)) ;
-            // break;
-            // case 'lobeznotrid':
-            //   this.enemies.add(new EnemyControllerLobeznotrid(this,x, y,type)) ;
-            // break;
-            // case 'drago':
-            //   this.enemies.add(new EnemyControllerDrago(this,x, y,type)) ;
-            // break;
+            //te sigue salta y dispara
+            case 'galrado':
+              this.enemies.add(new EnemyControllerGalrado(this,x, y,type)) ;
+            break;
+            case 'cocodry':
+              this.enemies.add(new EnemyControllerCocodry(this,x, y,type)) ;
+            break;
+            case 'lobeznotrid':
+              this.enemies.add(new EnemyControllerLobeznotrid(this,x, y,type)) ;
+            break;
+            case 'drago':
+              this.enemies.add(new EnemyControllerDrago(this,x, y,type)) ;
+            break;
 
-            // //te sigue y explota
-            // case 'feona':
-            //   this.enemies.add(new EnemyControllerFeona(this,x, y,type)) ;
-            // break;
-            // case 'anatort':
-            //   this.enemies.add(new EnemyControllerAnatort(this,x, y,type)) ;
-            // break;
+            //te sigue y explota
+            case 'feona':
+              this.enemies.add(new EnemyControllerFeona(this,x, y,type)) ;
+            break;
+            case 'anatort':
+              this.enemies.add(new EnemyControllerAnatort(this,x, y,type)) ;
+            break;
           }
     }
     

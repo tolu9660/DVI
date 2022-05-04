@@ -8,30 +8,29 @@ import NewStateMachine from '../newStateMachine.js';
  */
 export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
   
-    constructor(scene,x,y,type,idle,walk,imgIdle,imgWalk,img,startFrate,endFrate,rate){
+    constructor(scene,x,y,type,idle,walk,rate){
         super(scene,x,y,type)
-
+        this.type=type;
+        this.idle= idle
+        this.walk= walk
+        this.rate= rate
+        console.log(this.idle);
         // this.setDepth(0);
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this);
         this.scene.physics.add.collider(this,this.scene.groundLayer)
-        // this.body.setSize(this.width,this.height);
-        // this.body.setOffset(this.width,-500);
-        // this.body.setOffset(this.width,-500);
-        this.scene = scene,
-        // this.sprite = sprite;
-        // this.scene.add.existing(this.sprite);
-        // this.scene.physics.add.existing(this.sprite);
-        this.idle=idle;
-        this.walk= walk;
-        this.imgIdle=imgIdle;
-        this.imgWalk=imgWalk;
-        this.img=img;
-        this.starFrate= startFrate;
-        this.endFrate= endFrate;
-        this.rate=rate
+        this.scene = scene
+
+        // this.idle=idle;
+        // this.walk= walk;
+        // this.imgIdle=imgIdle;
+        // this.imgWalk=imgWalk;
+        // this.img=img;
+        // this.starFrate= startFrate;
+        // this.endFrate= endFrate;
+        // this.rate=rate
         this.moveTime = 0;
-        this.type=type;
+
         this.createEnemyAnimation();
 
         this.NewStateMachine = new NewStateMachine(this, type);
@@ -67,7 +66,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
 
     idleOnEnter(){
-      this.play('enemy-idle')
+      this.play('enemy-idle',true)
     
       const r = Phaser.Math.Between(1, 100)
       if (r < 50) {
@@ -77,14 +76,12 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
       }
     }
     idleOnUpdate(){
-      // console.log(this.NewStateMachine.states);
-
         this.NewStateMachine.setState('walk')
     }
 
     walkLeftOnEnter(){
       this.moveTime = 0
-      this.play('enemy-walk')
+      this.play('enemy-walk',true)
       // console.log('Poisiton BE ' + this.body.y);
       // console.log('Poisiton E ' + this.y);
       // console.log('Poisiton DBE ' + this.body.deltaY());
@@ -146,18 +143,85 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
       // console.log(this);
     }
     createEnemyAnimation(){   
-      this.anims.create({
-        key:this.idle,
-        frames: [{key: this.img, frame: this.imgIdle}]
-      })
+      // this.anims.create({
+      //   key:'enemy-idle',
+      //   frames: [{key: this.type, frame: 'Alien_Idle_1.png'}]
+      // })
       
       this.anims.create({
-        key:this.walk,
+        key:'enemy-idle',
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.type, {
+          start: this.idle[0],
+          end: this.idle[1],
+          prefix: 'Alien_Idle_',
+          suffix: '.png'
+        }),
+        repeat: -1
+      })
+
+      this.anims.create({
+        key:'enemy-walk',
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.type, {
+          start: this.walk[0],
+          end: this.walk[1],
+          prefix: 'Alien_Walk_',
+          suffix: '.png'
+        }),
+        repeat: -1
+      })
+      this.anims.create({
+        key:'enemy-jump',
         frameRate: this.rate,
         frames:this.anims.generateFrameNames(this.img, {
           start: this.starFrate,
           end: this.endFrate,
-          prefix: this.imgWalk,
+          prefix: 'Alien_Jump_',
+          suffix: '.png'
+        }),
+        // repeat: -1
+      })
+      this.anims.create({
+        key:'enemy-attack',
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.img, {
+          start: this.starFrate,
+          end: this.endFrate,
+          prefix: 'Alien_Attack_',
+          suffix: '.png'
+        }),
+        // repeat: -1
+      })
+      this.anims.create({
+        key:'enemy-death',
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.img, {
+          start: this.starFrate,
+          end: this.endFrate,
+          prefix: 'Alien_Death_',
+          suffix: '.png'
+        }),
+        // repeat: -1
+      })
+      this.anims.create({
+        key:'enemy-hit',
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.img, {
+          start: this.starFrate,
+          end: this.endFrate,
+          prefix: 'Alien_hit_',
+          suffix: '.png'
+        }),
+        // repeat: -1
+      })
+      this.anims.create({
+        key:'enemy-shoot',
+        frameRate: this.rate,
+        frames:this.anims.generateFrameNames(this.img, {
+          start: this.starFrate,
+          end: this.endFrate,
+          prefix: 'Alien_Shoot_',
           suffix: '.png'
         }),
         // repeat: -1
