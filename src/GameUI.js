@@ -57,6 +57,14 @@ export default class GameUI extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('minus-health', this.handleMinusHealthCollected, this)
     })
+
+    // Create a label to use as a button
+    pause_label = game.add.text(w - 100, 20, 'Pause', { font: '24px Arial', fill: '#fff' });
+    pause_label.inputEnabled = true;
+    pause_label.events.onInputUp.add(function () {
+        // When the paus button is pressed, we pause the game
+        game.paused = true;
+    })
   }
 
   handleStarCollected(){
