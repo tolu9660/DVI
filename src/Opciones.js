@@ -42,7 +42,7 @@ export default class Opciones extends Phaser.Scene{
           const menuinicialButton= this.add.image(width * 0.5, height * 0.9, 'azul')
           .setDisplaySize(150, 50)
           .setInteractive()
-          .on('pointerdown', () => this.scene.start('inicio') );
+          .on('pointerdown', () => this.scene.resume(this.scene.key) );
           this.menuinicialButton = this.add.text(menuinicialButton.x, menuinicialButton.y, 'Menu')
       .setOrigin(0.5);
 

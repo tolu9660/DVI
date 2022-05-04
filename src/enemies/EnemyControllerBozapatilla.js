@@ -13,7 +13,8 @@ import NewStateMachine from '../newStateMachine.js';
   constructor(scene,x,y,type){
 
     //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
-    super(scene, x,y,type,1,5,10);
+    //scene,x,y,type,idle,walk,jump,attack,death,hit,shoot,10
+    super(scene, x,y,type,[1,11],null,[1,4],null,[1,7],[1,5],[1,5],10);
         // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
         this.setSize(this.width/2,this.height/2)
