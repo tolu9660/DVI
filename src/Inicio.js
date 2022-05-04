@@ -57,9 +57,10 @@ export default class inicio extends Phaser.Scene {
 
     this.creditosButton = this.add.text(creditosButton.x, creditosButton.y, 'Creditos').setOrigin(0.5);
 
-    const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 18, 'azul')
+   /* const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 18, 'azul')
     .setDisplaySize(150, 50)
     this.SalirButton = this.add.text(SalirButton.x, SalirButton.y, 'Salir').setOrigin(0.5);
+ */
   }
 
 

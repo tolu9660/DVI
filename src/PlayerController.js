@@ -1,6 +1,7 @@
 
 
 import { sceneEvents as events } from './EventsCenter.js';
+import Pause from './Pause.js';
 
 import NewStateMachine from './newStateMachine.js';
 /**
@@ -592,7 +593,14 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       this.NewStateMachine.update(dt);
       if (Phaser.Input.Keyboard.JustDown(this.cursors.space)) {
         this.shoot();
-      }      
+      }     
+      if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
+       
+          //cuando se acbe el nivel 1
+        this.scene.start('pause')
+     
+       
+      } 
       if (!this.body.onFloor() && this.energy >0 && Phaser.Input.Keyboard.JustDown(this.cursors.E)) {
         this.setVelocityY(-600)
         this.energy = this.energy - 1
@@ -602,6 +610,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
       if (this.health <= 0) {
         console.log('player death');
+        this.scene.start('gameover');
       }
     }
 
