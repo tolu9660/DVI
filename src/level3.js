@@ -29,7 +29,14 @@ export default class Level3 extends LevelClass {
     super('level3');
     this.arrayTileset=[];
   }
+  preload(){
+    this.load.setPath('assets/sprites/enemies');
+    this.load.atlas('cocodry','/cocodry.png', '/cocodry.json');
+    this.load.atlas('marinavaja','/marinavaja.png', '/marinavaja.json');
+    this.load.atlas('lobeznotrid','/lobeznotrid.png', '/lobeznotrid.json');
+    this.load.atlas('galrado','/galrado.png', '/galrado.json');
 
+  }
  
 
   /**

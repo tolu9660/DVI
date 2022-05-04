@@ -31,7 +31,12 @@ export default class Tutorial extends LevelClass {
   }
 
  
+  preload(){
+    this.load.setPath('assets/sprites/enemies');
+    this.load.atlas('jackal','/jackal.png', '/jackal.json');
+    
 
+  }
   /**
    * Creación de los elementos de la escena principal de juego
    */

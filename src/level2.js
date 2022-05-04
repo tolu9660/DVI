@@ -30,7 +30,14 @@ export default class Level2 extends LevelClass {
     this.arrayTileset=[];
   }
 
- 
+  preload(){
+    this.load.setPath('assets/sprites/enemies');
+    this.load.atlas('drago','/drago.png', '/drago.json');
+    this.load.atlas('ralph','/ralph.png', '/ralph.json');
+    this.load.atlas('bozapatilla','/bozapatilla.png', '/bozapatilla.json');
+    this.load.atlas('anatort','/anatort.png', '/anatort.json');
+
+  }
 
   /**
    * Creación de los elementos de la escena principal de juego
