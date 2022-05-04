@@ -1,0 +1,375 @@
+{
+  "frames": {
+    "Red Crystal Killed5.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 123,
+        "h": 125
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 123,
+        "h": 125
+      },
+      "sourceSize": {
+        "w": 123,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal Killed6.png": {
+      "frame": {
+        "x": 0,
+        "y": 125,
+        "w": 123,
+        "h": 125
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 123,
+        "h": 125
+      },
+      "sourceSize": {
+        "w": 123,
+        "h": 125
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal Killed4.png": {
+      "frame": {
+        "x": 0,
+        "y": 250,
+        "w": 118,
+        "h": 115
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 118,
+        "h": 115
+      },
+      "sourceSize": {
+        "w": 118,
+        "h": 115
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal Killed3.png": {
+      "frame": {
+        "x": 0,
+        "y": 365,
+        "w": 106,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 106,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 106,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal Killed1.png": {
+      "frame": {
+        "x": 0,
+        "y": 479,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal Killed2.png": {
+      "frame": {
+        "x": 0,
+        "y": 593,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal2.png": {
+      "frame": {
+        "x": 0,
+        "y": 707,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal3.png": {
+      "frame": {
+        "x": 0,
+        "y": 821,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal4.png": {
+      "frame": {
+        "x": 0,
+        "y": 935,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal5.png": {
+      "frame": {
+        "x": 0,
+        "y": 1049,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal6.png": {
+      "frame": {
+        "x": 0,
+        "y": 1163,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal7.png": {
+      "frame": {
+        "x": 0,
+        "y": 1277,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal8.png": {
+      "frame": {
+        "x": 0,
+        "y": 1391,
+        "w": 98,
+        "h": 114
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 98,
+        "h": 114
+      },
+      "sourceSize": {
+        "w": 98,
+        "h": 114
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal1.png": {
+      "frame": {
+        "x": 0,
+        "y": 1505,
+        "w": 96,
+        "h": 86
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 86
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Red Crystal Killed7.png": {
+      "frame": {
+        "x": 0,
+        "y": 1591,
+        "w": 96,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 32
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 123,
+      "h": 1623
+    },
+    "scale": 1
+  }
+}
