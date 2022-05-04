@@ -17,6 +17,8 @@ import NewStateMachine from '../newStateMachine.js';
    super(scene, x,y,type,[1,6],[1,6],null,[1,11],[1,8],[1,4],null,10);
          // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
+        this.damage=1;
+        this.health=5;
         this.setSize(this.width/2,this.height/2)
 
         this.scene = scene

@@ -20,6 +20,8 @@ import NewStateMachine from '../newStateMachine.js';
     // super(scene, x,y,type,[1,15],[1,5],[1,4],[1,10],[1,7],10);
     // this.body.setSize(this.width/2,this.height/2)
         // this.body.setSize(this.width/2,this.height/2)
+        this.health=4;
+        this.damage=3;
         this.setSize(this.width/2,this.height/2)
         this.flipX = true;
         // this.body.setOffset(this.width,this.height);
