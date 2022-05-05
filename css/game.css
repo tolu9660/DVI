@@ -48,7 +48,7 @@ animation-delay: -5s;
 }
 
 body{
-  background-image: url("/assets/backgrounds/ladrillos.jpg");
+  background-image: url("./assets/backgrounds/ladrillos.jpg");
 }
 
 #titulo {
