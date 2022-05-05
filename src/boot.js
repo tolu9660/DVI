@@ -45,6 +45,7 @@ export default class Boot extends Phaser.Scene {
   //  this.load.atlas('cueva','/objetos/cueva.png', '/objetos/cueva.json');
     this.load.atlas('cuevaA','/objetos/cuevaA.png', '/objetos/cuevaA.json');
     this.load.atlas('cuevaR','/objetos/cuevaR.png', '/objetos/cuevaR.json');
+    this.load.atlas('cuevaM','/objetos/cuevaM.png', '/objetos/cuevaM.json');
     //Tutorial:
     this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
     this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
@@ -79,7 +80,8 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('transicion');
+
+    this.scene.start('tutorial');
     
   }
 }

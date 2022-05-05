@@ -1,12 +1,14 @@
 import GameObject from './gameobj.js';
 
-export default class cuevaAzul extends GameObject {
+export default class cuevaMetal extends GameObject {
   
     constructor(scene,x,y,level){
    //azul:
-   super(scene, x,y,'cuevaGiro', 10,'cuevaA', 'Cave2_', 1,7);
-   
+   super(scene, x,y,'cuevaGiro', 10,'cuevaM', 'Cyberdoor Open', 1,11);
+    //this.body.ignoreGravity = true;
+    //this.body.immovable=true;
       this.level=level;
+      this
   }
   getLevel(){
     return this.level;

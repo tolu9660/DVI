@@ -28,6 +28,28 @@
         }, 
         {
          "draworder":"topdown",
+         "id":10,
+         "name":"enemigos",
+         "objects":[
+                {
+                 "height":136,
+                 "id":57,
+                 "name":"enemigo",
+                 "rotation":0,
+                 "type":"feona",
+                 "visible":true,
+                 "width":108,
+                 "x":1934.68,
+                 "y":1554.23
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":13,
          "name":"objects",
          "objects":[
@@ -116,8 +138,8 @@
                  "type":"",
                  "visible":true,
                  "width":72,
-                 "x":3256,
-                 "y":1348
+                 "x":2327,
+                 "y":1106
                 }, 
                 {
                  "height":112,
@@ -142,6 +164,28 @@
                  "y":280
                 }, 
                 {
+                 "height":80,
+                 "id":53,
+                 "name":"cueva",
+                 "rotation":0,
+                 "type":"azul",
+                 "visible":true,
+                 "width":64,
+                 "x":3646,
+                 "y":1456
+                }, 
+                {
+                 "height":80,
+                 "id":58,
+                 "name":"cueva",
+                 "rotation":0,
+                 "type":"Metal",
+                 "visible":true,
+                 "width":64,
+                 "x":3238,
+                 "y":1464
+                }, 
+                {
                  "height":156,
                  "id":45,
                  "name":"heroe",
@@ -151,39 +195,6 @@
                  "width":124,
                  "x":2612,
                  "y":1456
-                }, 
-                {
-                 "height":80,
-                 "id":53,
-                 "name":"cueva",
-                 "rotation":0,
-                 "type":"Rojo",
-                 "visible":true,
-                 "width":64,
-                 "x":3616,
-                 "y":1420
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":10,
-         "name":"enemigos",
-         "objects":[
-                {
-                 "height":136,
-                 "id":57,
-                 "name":"enemigo",
-                 "rotation":0,
-                 "type":"feona",
-                 "visible":true,
-                 "width":108,
-                 "x":1934.68,
-                 "y":1554.23
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -192,7 +203,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":58,
+ "nextobjectid":59,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.1",

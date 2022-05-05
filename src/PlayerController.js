@@ -81,7 +81,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
         
 
-        this.scene.physics.add.collider(this,this.scene.objects,this.handleheartsplayer,undefined,this)
+        this.scene.physics.add.overlap(this,this.scene.objects,this.handleheartsplayer,undefined,this)
 
         this.createAlienAnimation();
 
@@ -506,6 +506,13 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
          
           }
           break;
+        case 'cuevaM':
+          if(this.hasKey){
+          events.emit('cueva-in',objeto.getLevel(),objeto.nextLevel())
+          objeto.destroy();
+        
+          }
+        break;
         case 'trampas':
           trampas(player, objeto);
         break;
