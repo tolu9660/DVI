@@ -84,7 +84,7 @@ if (this) {
 // }else {
 //   vector.x = 1
 // }
-this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bullet');
+this.bullet = this.bulletsEnemy.get(this.x, this.y, 'cocdry_bala');
 console.log(this.scene);
 this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
 // this.anims.play('bullet')
@@ -110,4 +110,10 @@ bullet.destroy()
 player.damage();
 
 }
+handleBulletsGroundCollision(bullet, ground) {
+
+  bullet.destroy()
+
+}
+
 }

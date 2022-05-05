@@ -35,6 +35,11 @@ export default class Level3 extends LevelClass {
     this.load.atlas('marinavaja','/marinavaja.png', '/marinavaja.json');
     this.load.atlas('lobeznotrid','/lobeznotrid.png', '/lobeznotrid.json');
     this.load.atlas('galrado','/galrado.png', '/galrado.json');
+    this.load.image('galrado_bala','/galrado_bala.png');
+    this.load.image('cocodry_bala','/cocodry_bala.png');
+    this.load.image('marinavaja_bala','/marinavaja_bala.png');
+    this.load.image('lobeznotrid_bala','/lobeznotrid_bala.png');
+   
 
   }
  
