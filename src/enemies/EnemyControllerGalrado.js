@@ -85,7 +85,7 @@ if (this) {
   }else {
     vector.x = 1
   }
-
+}
 this.bullet = this.bulletsEnemy.get(this.x, this.y, 'galrado_bala');
 console.log(this.scene);
 this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
@@ -105,7 +105,7 @@ this.bullet.setVelocityX(vector.x * 500, 300)
 
 
 
-}
+
 handleBulletsEnemiesCollision(bullet, player) {
 console.log(bullet);
 console.log(player);      

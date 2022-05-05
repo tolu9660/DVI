@@ -66,6 +66,11 @@ export default class Boot extends Phaser.Scene {
     this.load.tilemapTiledJSON('level3', '/tilemaps/mapa3/nivel3.json');
     this.load.image('fondo3','/tilemaps/mapa3/fondo.jpg');
     this.load.atlas('tiles3','/tilemaps/mapa3/texture.png', '/tilemaps/mapa3/texture.json'); 
+    
+    // BOSS
+    this.load.tilemapTiledJSON('levelBoss', '/tilemaps/boss/levelboss.json');
+    this.load.image('fondoBoss','/tilemaps/boss/fondo.jpg');
+    this.load.atlas('tilesBoss','/tilemaps/boss/texture.png', '/tilemaps/boss/texture.json'); 
 
 
   }
@@ -77,7 +82,7 @@ export default class Boot extends Phaser.Scene {
   create() {
     
 
-    this.scene.start('level1');
+    this.scene.start('levelBoss');
     
   }
 }

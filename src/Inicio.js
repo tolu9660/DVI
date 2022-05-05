@@ -17,7 +17,7 @@ export default class inicio extends Phaser.Scene {
   }
 
   create() {
-
+    this.scene.bringToTop()
     const backgroundImage=this.add.image(0,0,'Inicio').setOrigin(0,0);
 
     const { width, height } = this.scale

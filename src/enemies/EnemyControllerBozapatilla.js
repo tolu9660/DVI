@@ -75,7 +75,7 @@ shootEnemy(){
 // console.log(this.body.deltaX());
 // sprite.angle = sprite.body.angle;
 // console.log(this.sprite.body);
-console.log(this.scaleX);
+console.log(this);
 // console.log(this.sprite.rotation);
 const vector = new Phaser.Math.Vector2(1,0)
   if (this) {
@@ -105,7 +105,7 @@ const vector = new Phaser.Math.Vector2(1,0)
 
 
 
-}
+
 handleBulletsEnemiesCollision(bullet, player) {
 console.log(bullet);
 console.log(player);      

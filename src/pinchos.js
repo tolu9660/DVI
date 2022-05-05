@@ -7,8 +7,8 @@ import GameObject from './gameobj.js';
  */
 export default class pinchos extends GameObject {
   
-    constructor(scene,x,y){
-      super(scene,x,y,'Pinchos', 10,'pinchos', 'Pinchos', 1,4);
+    constructor(scene,x,y,type){
+      super(scene,x,y,type, 10,'pinchos', 'Pinchos', 1,4);
       this.body.immovable = true;
       //this.body.allowGravity = false;
     }

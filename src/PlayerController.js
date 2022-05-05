@@ -55,6 +55,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           right:Phaser.Input.Keyboard.KeyCodes.RIGHT,
           space:Phaser.Input.Keyboard.KeyCodes.SPACE,
           E:Phaser.Input.Keyboard.KeyCodes.E,
+          D:Phaser.Input.Keyboard.KeyCodes.D,
           ESC:Phaser.Input.Keyboard.KeyCodes.ESC,
           C:Phaser.Input.Keyboard.KeyCodes.C
         });
@@ -227,6 +228,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     handlePlayerEnemiesCollision(player,enemigo){    
       if (player.body.deltaY()>enemigo.body.deltaY()) {
         player.setVelocityY(-400)
+        if (enemigo.triggerTimer != null){
+          enemigo.triggerTimer.remove()
+        }
         enemigo.destroy()
       }else if ((player.body.x < enemigo.body.x && enemigo.body.deltaX()<0) || (player.body.x > enemigo.body.x && enemigo.body.deltaX()>0)) {
         if (player.body.x < enemigo.body.x) {
@@ -281,6 +285,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         if (this.cursors.up.isDown) {
           this.NewStateMachine.setState('jump');
         }
+        if(this.cursors.D.isDown) {
+       
+            this.setVelocityX(-800)
+       
+        }
       }
       else if (this.cursors.right.isDown) {
         this.flipX = false;
@@ -288,7 +297,12 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         if (this.cursors.up.isDown) {
           this.NewStateMachine.setState('jump');
         }
+        if(this.cursors.D.isDown) {
+            this.setVelocityX(800)
+          
+       
       }
+      } 
       else {
         this.NewStateMachine.setState('idle')
       }
@@ -360,25 +374,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       this.NewStateMachine.setState('idle')
     }
 
-    enemyHitOnEnter(conect) {
-      // console.log(conect);
-     // console.log(this.lastEnemy);
-      //console.log(this.lastEnemy.body);
-      //console.log(this.lastEnemy.body.gameObject);
-      //con este atributo podemos saber el tipo de enemigo que tenemos de esta manera poder restar mas o menos 
-      //console.log(this.lastEnemy.body.gameObject.texture.key);
-      // let tipo=this.lastEnemy.body.gameObject.texture.key;
-      
-      // if (this.lastEnemy) {
-      //   if (this.sprite.body.position.x < this.lastEnemy.body.position.x){
-      //     this.sprite.setVelocityX(-20)
-      //   }
-      //   else{
-      //     this.sprite.setVelocityX(20)
-      //   }
-      // } else {
-      //   this.sprite.setVelocityX(-20)
-      // }
+    enemyHitOnEnter() {
+
 
       const startColor = Phaser.Display.Color.ValueToColor(0xffffff)
       const endColor = Phaser.Display.Color.ValueToColor(0x0000ff)
@@ -443,20 +440,19 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
 
     handleheartsplayer(player,objeto){
-      console.log(objeto);
       switch (objeto.img) {
         
         case 'energia':
-          this.energy += 1
+          this.energy += 3
           events.emit('energy', this.energy)
           objeto.destroy();
-          events.emit('mensaje-ayuda-energia')
+          events.emit('mensaje-ayuda-energia', this.scene.scene.key)
         break;
         case 'energiaRosa':
           this.energyPlus += 5
           events.emit('energyPlus', this.energyPlus)
           objeto.destroy();
-          events.emit('mensaje-ayuda-energia')
+          events.emit('mensaje-ayuda-energia', this.scene.scene.key)
         break;
         case 'corazon':
           if (this.health < 6){
@@ -464,12 +460,12 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           }          
           events.emit('heart',this.health)
           objeto.destroy();
-          events.emit('mensaje-ayuda-corazon')
+          events.emit('mensaje-ayuda-corazon', this.scene.scene.key)
         break;
         case 'llave':
           events.emit('key-collected')
           objeto.destroy();
-          events.emit('mensaje-ayuda-llave')
+          events.emit('mensaje-ayuda-llave', this.scene.scene.key)
           this.hasKey = true;
         break;
         case 'cofre':
@@ -514,8 +510,29 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         
           }
         break;
-        case 'trampas':
-          trampas(player, objeto);
+        case 'acido':
+          this.health -=  1;
+          events.emit('heart',this.health)
+          player.body.setVelocityY(-200);
+          player.NewStateMachine.setState('enemy-hit');
+        break;
+        case 'pinchos':
+          this.health -= 2;
+          events.emit('heart', this.health)
+          player.body.setVelocityY(-300);
+          player.NewStateMachine.setState('enemy-hit');
+        break;
+        case 'lava':
+          this.health -= 1;
+          events.emit('heart', this.health)
+          player.body.setVelocityY(-100);
+          player.NewStateMachine.setState('enemy-hit');
+        break;
+        case 'arbusto':
+          this.health -= 1;
+          events.emit('heart', this.health)
+          player.body.setVelocityY(-400);
+          player.NewStateMachine.setState('enemy-hit');
         break;
         default:
           break;
@@ -523,6 +540,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
 
     trampas(player, objeto){
+      
       switch(objeto.img){
         case 'acido':
           this.health -=  1;
@@ -536,9 +554,14 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           this.health -= 1;
           events.emit('heart', this.health)
         break;
+        case 'arbusto':
+          this.health -= 1;
+          events.emit('heart', this.health)
+          player.body.setVelocityY(-200);
+          player.NewStateMachine.setState('enemy-hit');
+        break;
     }
-      player.body.setVelocityY(-200);
-      player.NewStateMachine.setState('enemy-hit');
+
     }
 
           //         case 'llave':
@@ -644,6 +667,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       if (Phaser.Input.Keyboard.JustDown(this.cursors.space)) {
         this.shoot();
       }     
+ 
       if (Phaser.Input.Keyboard.JustDown(this.cursors.C)) {
         if (this.energyPlus > 0) {
           this.shootPower();

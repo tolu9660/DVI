@@ -13,7 +13,6 @@ import EnemyControllerLobeznotrid from './enemies/EnemyControllerLobeznotrid.js'
 import EnemyControllerDrago from './enemies/EnemyControllerDrago.js'
 import EnemyControllerFeona from './enemies/EnemyControllerFeona.js'
 import EnemyControllerAnatort from './enemies/EnemyControllerAnatort.js'
-
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
@@ -33,6 +32,7 @@ import PlataformaHorizontal from './PlataformaHorizontal.js';
 import PlataformaTiempo from './plataformaTiempo.js';
 import cofre from './cofre.js';
 import energiaRosa from './energiaRosa.js';
+import EnemyControllerCrawler from './enemies/EnemyControllerCrawler.js'
 
 /**hola esto es una prueba* */
 
@@ -191,21 +191,22 @@ export default class LevelClass extends Phaser.Scene {
 
           // .setFixedRotation();
           //cambiar plataformaMovil por la clase
+          console.log(objData.type);
           switch ( objData.type) {
             case 'acido': { 
-              this.objects.add(new Acido(this,x, y))
+              this.objects.add(new Acido(this,x, y,objData.type))
             break;
             }
             case 'lava': { 
-              this.objects.add(new Lava(this,x, y))
+              this.objects.add(new Lava(this,x, y,objData.type))
             break;
             }
             case 'pinchos': { 
-              this.objects.add(new Pinchos(this,x, y))
+              this.objects.add(new Pinchos(this,x, y,objData.type))
             break;
             }
             case 'arbusto': { 
-              this.objects.add(new Arbusto(this,x, y))
+              this.objects.add(new Arbusto(this,x, y,objData.type))
             break;
             }
             
@@ -254,19 +255,10 @@ export default class LevelClass extends Phaser.Scene {
     this.i=0;
     let type;
     for (let step = 0; step < enemigos.objects.length; step++){
-      enemigos.objects.forEach(element => {
-        console.log(element);
-      });
+
       type= enemigos.objects[step].type;
       const {x = 0, y = 0, width1 = 0} = enemigos.objects[step]
-          // this.enemy = this.physics.add.sprite((x) + (width1),y, Tipo)  
-          // this.physics.add.collider(this.enemy,this.groundLayer)
-          // .setFixedRotation()
-          // let e;
-
-          // this.obstacles.add('enemy', this.enemy.body)
-          //marcar un switch que permita crear el tipo de enemigo
-          console.log(type);
+ 
           switch(type){
             //te sigue dispara
             case 'jackal':
@@ -315,6 +307,9 @@ export default class LevelClass extends Phaser.Scene {
             break;
             case 'anatort':
               this.enemies.add(new EnemyControllerAnatort(this,x, y,type)) ;
+            break;
+            case 'crawler':
+              this.enemies.add(new EnemyControllerCrawler(this,x, y,type)) ;
             break;
           }
     }

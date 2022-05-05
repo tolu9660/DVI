@@ -48,7 +48,6 @@ export default class Level1 extends LevelClass {
    * Creación de los elementos de la escena principal de juego
    */
   create(){
-    this.scene.moveBelow('game-ui')
     
     let a =0;
     this.arrayTileset[0] = 'fondo1';

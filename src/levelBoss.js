@@ -20,32 +20,33 @@ import LevelClass from './LevelClass.js';
  * El juego termina cuando el jugador ha recogido 10 estrellas.
  * @extends Phaser.Scene
  */
-export default class Tutorial extends LevelClass {
+export default class LevelBoss extends LevelClass {
 
   /**
    * Constructor de la escena perro
    */
   constructor() {
-    super('tutorial');
+    super('levelBoss');
     this.arrayTileset=[];
+    
   }
 
  
+
   preload(){
     this.load.setPath('assets/sprites/enemies');
-    this.load.atlas('jackal','/jackal.png', '/jackal.json');
-    this.load.image('jackal_bala','/jackal_bala.png');
+    this.load.atlas('crawler','/crawler.png', '/crawler.json');
+    // this.load.image('crawler_bala','/crawler_bala.png');
   }
   /**
    * Creación de los elementos de la escena principal de juego
    */
   create(){
+    
     let a =0;
-    this.arrayTileset[0] = 'fondo';
-    this.arrayTileset[1] = 'tiles';
-    //this.arrayTileset[2] = 'sueloT';
-    super.create('tutorial',this.arrayTileset);
-    //indico para cada capa que tilesets voy a utilizar
+    this.arrayTileset[0] = 'fondoBoss';
+    this.arrayTileset[1] = 'tilesBoss';
+    super.create('levelBoss',this.arrayTileset);
     let ground=['fondo',[0]];
     let plataformas=['plataformas',[1]];
     let Capas=[ground,plataformas];
@@ -53,12 +54,12 @@ export default class Tutorial extends LevelClass {
     super.cargaEnemigos();
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
-
   }
 
   update(t, dt){
     let a =0;
-    super.update(t,dt);
+    super.update(t, dt);
+    
     
   }
 

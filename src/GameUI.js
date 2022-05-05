@@ -11,7 +11,6 @@ export default class GameUI extends Phaser.Scene {
   }
 
   init(){
-    console.log(this);
     this.starsCollected = 0;
     this.heartsCollected = 6;
     this.messageCueva = false
@@ -22,6 +21,7 @@ export default class GameUI extends Phaser.Scene {
   }
 
   create(){
+    this.scene.bringToTop()
     
     const corazon = this.add.image(30, 20, 'corazon','Heart1.png')
     this.heartLabel = this.add.text(45, 25, 'x6', {
@@ -123,8 +123,6 @@ export default class GameUI extends Phaser.Scene {
   }
 
   handleCuevaIn(level,next){
-    console.log(level)
-    console.log(next)
     this.scene.stop(level)
     this.scene.start(next)
   }
@@ -166,8 +164,8 @@ export default class GameUI extends Phaser.Scene {
     
   }
 
-  handleMensajeAyudaEnergia(){
-    if (!this.messageEnergia) {
+  handleMensajeAyudaEnergia(nivel){
+    if (!this.messageEnergia && nivel == 'tutorial') {
       let bubble;
       let content = [
         "Recopila estas celulas de energia para usar un disparo mas potente",
@@ -200,8 +198,8 @@ export default class GameUI extends Phaser.Scene {
       })
     }
   }
-  handleMensajeAyudaLlave(){
-    if (!this.messageLlave) {
+  handleMensajeAyudaLlave(nivel){
+    if (!this.messageLlave && nivel == 'tutorial') {
       let bubble;
       let content = [
         "Esta llave te permitirá acceder a la cueva para liberar a un miembro de la familia.",
@@ -234,9 +232,9 @@ export default class GameUI extends Phaser.Scene {
       })
     }
   }
-  handleMensajeAyudaCorazon(){    
+  handleMensajeAyudaCorazon(nivel){    
 
-    if (!this.messageCorazon) {
+    if (!this.messageCorazon && nivel == 'tutorial') {
       let bubble;
       let content = [
         "Estos corazones te ayudarán a recuperar la vida perdida. Recuerda que solo dispones de 6 vidas",
