@@ -85,7 +85,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('level1');
+    this.scene.start('tutorial');
     
 
 

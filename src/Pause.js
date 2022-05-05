@@ -67,14 +67,12 @@ export default class Pause extends Phaser.Scene{
   
     }
     
-    
       update() {
     
-      }
-      enterButtonHoverStateOpciones() {
+      }enterButtonHoverStateOpciones() {
         this.opcionesButton.setStyle({ fill: '#ff0' });
       }
-    
+
       enterButtonHoverStateReanudar() {
         this.reanudarButton.setStyle({ fill: '#ff0' });
       };
@@ -99,4 +97,8 @@ export default class Pause extends Phaser.Scene{
       enterButtonHoverStateSalir() {
         this.SalirButton.setStyle({ fill: '#ff0' });
       }
+      enterButtonRestStateReiniciar() {
+        this.reiniciarButton.setStyle({ fill: '#ffff' });
+      };
+      
     }
