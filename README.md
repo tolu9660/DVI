@@ -85,7 +85,7 @@ Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos e
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
 |    **Vadum**       |   1-2  |   6     |   Todos   |![hero](https://github.com/tolu9660/DVI/blob/main/assets/sprites/hero1.png) |
-                                                                               |
+                                                                             
 
 #### ENEMIGOS
 
@@ -160,6 +160,8 @@ Los mapas son grandes y con diferentes alturas por lo que los usuarios tenian qu
 
 Hay zonas de los ultimos niveles donde los usuarios con poca experiencia no lograban pasar por ciertas zonas y tenian que dar la vuelta para pasar por otro lado.
 - Podemos mantener esos niveles de dificultad en ciertas zonas pero al ser algo mas complicadas debemos dejar otras zonas de paso para los usuarios con poca experiencia. Pero estas zonas las mantendriamos debido a que ciertos usuarios podrian intentar pasar por esas zonas a modo de "reto".
+
+Los usuarios han encontrado bugs con algunos objetos animados a lo largo de los uno de los participantes a comentado que el muñeco podria desplazarse mas deprisa. Por esto y todo lo comentado anteriormente al juego aun le quedan cosas que pulir y solucionar.
 
 
 #### MIEMBROS DEL EQUIPO
