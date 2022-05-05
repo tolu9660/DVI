@@ -1,10 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://tolu9660.github.io/DVI/assets/backgrounds/ladrillos.jpg);
 
 
 
 body{
-  background-image: url("assets/backgrounds/ladrillos.jpg");
+  background-image: url("DVI/assets/backgrounds/ladrillos.jpg");
 }
 
 svg {
