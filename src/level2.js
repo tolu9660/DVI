@@ -36,6 +36,9 @@ export default class Level2 extends LevelClass {
     this.load.atlas('ralph','/ralph.png', '/ralph.json');
     this.load.atlas('bozapatilla','/bozapatilla.png', '/bozapatilla.json');
     this.load.atlas('anatort','/anatort.png', '/anatort.json');
+    this.load.image('ralph_bala','/ralph_bala.png');
+    this.load.image('bozapatilla_bala','/bozapatilla_bala.png');
+    
 
   }
 

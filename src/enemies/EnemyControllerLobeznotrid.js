@@ -79,14 +79,17 @@ console.log(this.scaleX);
 // console.log(this.sprite.rotation);
 const vector = new Phaser.Math.Vector2(1,0)
 if (this) {
-// if (this.body.deltaX() < 0) {
-//   vector.x = -1
-// }else {
-//   vector.x = 1
-// }
-this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bullet');
+
+  if (this.x > this.scene.playerController.x) {
+    vector.x = -1
+  }else {
+    vector.x = 1
+  }
+
+this.bullet = this.bulletsEnemy.get(this.x, this.y, 'lobeznotrid_bala');
 console.log(this.scene);
 this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
+  this.scene.physics.add.collider(this.bullet,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this)
 // this.anims.play('bullet')
 this.bullet.setActive(true)
 this.bullet.setVisible(true)
@@ -110,4 +113,10 @@ bullet.destroy()
 player.damage();
 
 }
+handleBulletsGroundCollision(bullet, ground) {
+
+  bullet.destroy()
+
+}
+
 }
