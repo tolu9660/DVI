@@ -97,10 +97,9 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 |    **Shangheli**    |![Shangheli](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien2%20Walk1.png)      |                                                 
 |    **Grunt**        |![Grunt](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien3%20Attack1_1.png)  |
 |    **Sapien**       |![Sapien](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien4%20Attack1_01.png) |                                                
-|    **Drago**        |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Attack_1.png)      |                                                 
+|    **Drago**        |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/drago.png)      |                                                 
 |    **Ralp**         |![Ralp](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien7%20Death1.png)     |                                             
-|    **Galrado**      |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_1.png)        |                                                 
-|    **Laon**         |![Laon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_2.png)        |                                                 
+|    **Galrado**      |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_1.png)        |                                              
 |    **Añatort**      |![Añatort](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_3.png)        |                                                 
 |    **Cocodry**      |![Cocodry](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Jump_2.png)        |                                                 
 |    **Lobeznotird**  |![Lobeznotird](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Jump_3.png)        |                                                 
@@ -130,7 +129,7 @@ En todos los niveles se usa el mismo fondo con una paleta distinta de colores pe
 <img src="assets/sprites/uml1.png"/>
 <img src="assets/sprites/uml2.png"/>
 <img src="assets/sprites/uml3.png"/>
-<img src="assets/sprites/uml4.png"/>
+<img src="assets/sprites/uml5.png"/>
 
 
 ### Breve descripción del sistema y plataformas de comunicación
