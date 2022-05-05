@@ -13,7 +13,9 @@ export default class Opciones extends Phaser.Scene{
         this.load.image('fondo','assets/sprites/fondoopciones.jpg')
       }
       create()
-      { const { width, height } = this.scale
+      {
+        this.scene.bringToTop()
+        const { width, height } = this.scale
          // this.add.image(200,200,'azul');
          const backgroundImage=this.add.image(0,0,'fondo').setOrigin(0,0);
           //botones musica

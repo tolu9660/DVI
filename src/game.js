@@ -13,7 +13,7 @@ import GameUI from './GameUI.js';
 import Transicion from './transicion_0.js'
 import Transicion1 from './transicion_1.js'
 import Pause from './Pause.js';
-import Gameover from'./gameover.js';
+import Gameover from'./Gameover.js';
 import Transicionnivel3 from './transicionnivel3_0.js';
 import Transicionnivel2_1 from './transicionnivel2_1.js';
 import Transicionnivel2_2 from './transicionnivel2_2.js';
@@ -40,7 +40,7 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Boot, Tutorial,GameUI,Transicion,Transicion1,Transicionnivel1,Transicionnivel2_0,
+    scene: [Inicio,Boot,Opciones,Pause, Tutorial,GameUI,Transicion,Transicion1,Transicionnivel1,Transicionnivel2_0,
         Transicionnivel2_1,Transicionnivel2_2,Transicionnivel3,transicionnivel4_0,Transicionnivel4_1,TransicionTutorial0,
         TransicionTutorial1,TransicionTutorial2,Level1,Level2,Level3,Creditos, Gameover],
     physics: {

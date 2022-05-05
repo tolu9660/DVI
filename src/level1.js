@@ -28,6 +28,7 @@ export default class Level1 extends LevelClass {
   constructor() {
     super('level1');
     this.arrayTileset=[];
+    
   }
 
  
@@ -38,12 +39,17 @@ export default class Level1 extends LevelClass {
     this.load.atlas('grunt','/grunt.png', '/grunt.json');
     this.load.atlas('sapien','/sapien.png', '/sapien.json');
     this.load.atlas('feona','/feona.png', '/feona.json');
+    this.load.atlas('bozapatilla','/bozapatilla.png', '/bozapatilla.json');
     this.load.image('grunt_bala','/grunt_bala.png');
+
+    this.load.image('bozapatilla_bala','/bozapatilla_bala.png');
   }
   /**
    * Creación de los elementos de la escena principal de juego
    */
   create(){
+    this.scene.moveBelow('game-ui')
+    
     let a =0;
     this.arrayTileset[0] = 'fondo1';
     this.arrayTileset[1] = 'tiles1';

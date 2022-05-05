@@ -17,7 +17,7 @@ export default class Pause extends Phaser.Scene{
       }
     
       create() {
-    
+        this.scene.bringToTop()
         const backgroundImage=this.add.image(0,0,'Inicio').setOrigin(0,0);
     
         const { width, height } = this.scale
@@ -52,7 +52,7 @@ export default class Pause extends Phaser.Scene{
           .setInteractive()
           .on('pointerover', () => this.enterButtonHoverStateReiniciar())
           .on('pointerout', () => this.enterButtonRestStateReiniciar())
-          .on('pointerdown', () => this.scene.start(this.scene.restart(this.scene.key)) )
+          .on('pointerdown', () => this.scene.start(this.scene.start(this.scene.key)) )
         ;
     
         this.reiniciarButton = this.add.text(reiniciarButton.x, reiniciarButton.y, 'Reiniciar').setOrigin(0.5);

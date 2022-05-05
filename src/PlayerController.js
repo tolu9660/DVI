@@ -644,13 +644,15 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         }
         
       }   
-      // if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
+      if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
        
-      //     //cuando se acbe el nivel 1
-      //   this.scene.start('pause')
+          //cuando se acbe el nivel 1
+          this.scene.scene.pause(this.scene.scene)
+          this.scene.scene.launch('pause')
+          
      
        
-      // } 
+      } 
       if (!this.body.onFloor() && this.energy >0 && Phaser.Input.Keyboard.JustDown(this.cursors.E)) {
         this.setVelocityY(-600)
         this.energy = this.energy - 1
@@ -659,8 +661,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       events.emit('heart',this.health)
       events.emit('energyPlus',this.energyPlus)
       if (this.health <= 0) {
-        console.log('player death');
-        this.scene.start('gameover');
+        this.scene.scene.start('gameover')
       }
     }
 
@@ -709,7 +710,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
   
     damage(){
-      console.log('pedo');
       this.health -= 1;
     }
 
