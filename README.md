@@ -109,12 +109,11 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 
 
 #### Objetos
-| **Objeto** | **Descripción** | **Imagen** |
-| --- | --- | ---|
-| **Corazón** | Este objeto le dará al jugador la capacidad de recuperar una vida por cada corazón recogido.  | ![corazon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/corazon.png)
-| **Celula de energia** | Este objeto dará al jugador la posibilidad de realizar un doble salto | ![célula de energía](https://github.com/tolu9660/DVI/blob/main/assets/sprites/energia.png)
-| **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. | ![llave](https://github.com/tolu9660/DVI/blob/main/assets/sprites/key.png)
-| **Gema** | El jugador podrá encontrar gemas las cuales usara para poder realizar el disparo potenciado. | ![gema](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gema.png)
+1. Corazon: Este objeto le dará al jugador la capacidad de recuperar una vida por cada corazón recogido.
+2. Celula de energia: Este objeto de color azul dará al jugador la posibilidad de realizar un doble salto.
+3. Gema: El jugador podrá encontrar gemas rosas las cuales usara para poder realizar el disparo potenciado.
+4. Llave: En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia.
+
 
 ### Resumen de dirección artística
 En todos los niveles se usa el mismo fondo con una paleta distinta de colores pero en todos se usa una gama de colores oscura. Cuando el jugador baja en los mapas que tienen cuevas se usan las mismas texturas que en la superficie pero con colores mas oscuros para representar lugares con poca iluminación.
