@@ -1,0 +1,36 @@
+{"frames": [
+
+{
+	"filename": "Cyber Floating Tile1.png",
+	"frame": {"x":0,"y":0,"w":192,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":192,"h":64},
+	"sourceSize": {"w":192,"h":64}
+},
+{
+	"filename": "Cyber Floating Tile2.png",
+	"frame": {"x":192,"y":0,"w":192,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":192,"h":64},
+	"sourceSize": {"w":192,"h":64}
+},
+{
+	"filename": "Cyber Floating Tile3.png",
+	"frame": {"x":384,"y":0,"w":192,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":192,"h":64},
+	"sourceSize": {"w":192,"h":64}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "pm.png",
+	"format": "RGBA8888",
+	"size": {"w":576,"h":64},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3ec79c39251654c1ad802fd239e7c311:7a4fdab29c0257a666d2d8aee9ccecef:b321a80e83d98a1c8b24c8a003f56aa4$"
+}
+}

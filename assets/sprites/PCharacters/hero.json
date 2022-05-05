@@ -1,0 +1,692 @@
+{
+	"textures": [
+		{
+			"image": "hero.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 966,
+				"h": 418
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Hero Boy Idle11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 35,
+						"w": 80,
+						"h": 126
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 80,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Hero Boy Idle12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 35,
+						"w": 80,
+						"h": 126
+					},
+					"frame": {
+						"x": 83,
+						"y": 1,
+						"w": 80,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Hero Boy Idle2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 96,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 35,
+						"w": 96,
+						"h": 126
+					},
+					"frame": {
+						"x": 165,
+						"y": 1,
+						"w": 96,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Hero Boy Idle3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 35,
+						"w": 80,
+						"h": 126
+					},
+					"frame": {
+						"x": 263,
+						"y": 1,
+						"w": 80,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Hero-Boy-Run-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 86,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 61,
+						"y": 35,
+						"w": 86,
+						"h": 126
+					},
+					"frame": {
+						"x": 345,
+						"y": 1,
+						"w": 86,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Hero-Boy-Run-4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 126
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 35,
+						"w": 100,
+						"h": 126
+					},
+					"frame": {
+						"x": 433,
+						"y": 1,
+						"w": 100,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Hero Boy Idle1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 33,
+						"w": 80,
+						"h": 128
+					},
+					"frame": {
+						"x": 535,
+						"y": 1,
+						"w": 80,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero Boy Idle10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 33,
+						"w": 80,
+						"h": 128
+					},
+					"frame": {
+						"x": 617,
+						"y": 1,
+						"w": 80,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero Boy Idle13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 33,
+						"w": 80,
+						"h": 128
+					},
+					"frame": {
+						"x": 699,
+						"y": 1,
+						"w": 80,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero Boy Jump1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 33,
+						"w": 80,
+						"h": 128
+					},
+					"frame": {
+						"x": 781,
+						"y": 1,
+						"w": 80,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero-Boy-Run-0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 31,
+						"w": 80,
+						"h": 128
+					},
+					"frame": {
+						"x": 863,
+						"y": 1,
+						"w": 80,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero-Boy-Run-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 33,
+						"w": 100,
+						"h": 128
+					},
+					"frame": {
+						"x": 1,
+						"y": 129,
+						"w": 100,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero-Boy-Run-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 112,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 31,
+						"w": 112,
+						"h": 128
+					},
+					"frame": {
+						"x": 103,
+						"y": 129,
+						"w": 112,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero-Boy-Run-5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 33,
+						"w": 80,
+						"h": 128
+					},
+					"frame": {
+						"x": 217,
+						"y": 129,
+						"w": 80,
+						"h": 128
+					}
+				},
+				{
+					"filename": "Hero Boy Idle6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 130
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 31,
+						"w": 80,
+						"h": 130
+					},
+					"frame": {
+						"x": 299,
+						"y": 129,
+						"w": 80,
+						"h": 130
+					}
+				},
+				{
+					"filename": "Hero Boy Idle7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 130
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 31,
+						"w": 80,
+						"h": 130
+					},
+					"frame": {
+						"x": 381,
+						"y": 129,
+						"w": 80,
+						"h": 130
+					}
+				},
+				{
+					"filename": "Hero Boy Idle8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 88,
+						"h": 130
+					},
+					"spriteSourceSize": {
+						"x": 59,
+						"y": 31,
+						"w": 88,
+						"h": 130
+					},
+					"frame": {
+						"x": 463,
+						"y": 131,
+						"w": 88,
+						"h": 130
+					}
+				},
+				{
+					"filename": "Hero Boy Idle4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 84,
+						"h": 132
+					},
+					"spriteSourceSize": {
+						"x": 63,
+						"y": 29,
+						"w": 84,
+						"h": 132
+					},
+					"frame": {
+						"x": 553,
+						"y": 131,
+						"w": 84,
+						"h": 132
+					}
+				},
+				{
+					"filename": "Hero Boy Idle5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 134
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 27,
+						"w": 80,
+						"h": 134
+					},
+					"frame": {
+						"x": 639,
+						"y": 131,
+						"w": 80,
+						"h": 134
+					}
+				},
+				{
+					"filename": "Hero Boy Idle9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 134
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 27,
+						"w": 80,
+						"h": 134
+					},
+					"frame": {
+						"x": 721,
+						"y": 131,
+						"w": 80,
+						"h": 134
+					}
+				},
+				{
+					"filename": "Hero Boy Jump3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 134
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 19,
+						"w": 80,
+						"h": 134
+					},
+					"frame": {
+						"x": 803,
+						"y": 131,
+						"w": 80,
+						"h": 134
+					}
+				},
+				{
+					"filename": "Hero Boy Jump2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 136
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 23,
+						"w": 80,
+						"h": 136
+					},
+					"frame": {
+						"x": 885,
+						"y": 131,
+						"w": 80,
+						"h": 136
+					}
+				},
+				{
+					"filename": "Hero Boy Jump4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 136
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 21,
+						"w": 80,
+						"h": 136
+					},
+					"frame": {
+						"x": 1,
+						"y": 259,
+						"w": 80,
+						"h": 136
+					}
+				},
+				{
+					"filename": "Hero Boy Jump5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 136
+					},
+					"spriteSourceSize": {
+						"x": 67,
+						"y": 25,
+						"w": 80,
+						"h": 136
+					},
+					"frame": {
+						"x": 83,
+						"y": 259,
+						"w": 80,
+						"h": 136
+					}
+				},
+				{
+					"filename": "Hero Boy Fly4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 138
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 25,
+						"w": 98,
+						"h": 138
+					},
+					"frame": {
+						"x": 165,
+						"y": 259,
+						"w": 98,
+						"h": 138
+					}
+				},
+				{
+					"filename": "Hero Boy Fly8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 138
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 29,
+						"w": 98,
+						"h": 138
+					},
+					"frame": {
+						"x": 265,
+						"y": 261,
+						"w": 98,
+						"h": 138
+					}
+				},
+				{
+					"filename": "Hero Boy Fly1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 142
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 27,
+						"w": 98,
+						"h": 142
+					},
+					"frame": {
+						"x": 365,
+						"y": 263,
+						"w": 98,
+						"h": 142
+					}
+				},
+				{
+					"filename": "Hero Boy Fly3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 142
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 25,
+						"w": 98,
+						"h": 142
+					},
+					"frame": {
+						"x": 465,
+						"y": 265,
+						"w": 98,
+						"h": 142
+					}
+				},
+				{
+					"filename": "Hero Boy Fly5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 142
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 27,
+						"w": 98,
+						"h": 142
+					},
+					"frame": {
+						"x": 565,
+						"y": 267,
+						"w": 98,
+						"h": 142
+					}
+				},
+				{
+					"filename": "Hero Boy Fly7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 142
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 29,
+						"w": 98,
+						"h": 142
+					},
+					"frame": {
+						"x": 665,
+						"y": 267,
+						"w": 98,
+						"h": 142
+					}
+				},
+				{
+					"filename": "Hero Boy Fly2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 148
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 27,
+						"w": 98,
+						"h": 148
+					},
+					"frame": {
+						"x": 765,
+						"y": 267,
+						"w": 98,
+						"h": 148
+					}
+				},
+				{
+					"filename": "Hero Boy Fly6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 98,
+						"h": 148
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 27,
+						"w": 98,
+						"h": 148
+					},
+					"frame": {
+						"x": 865,
+						"y": 269,
+						"w": 98,
+						"h": 148
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:10d5644f3449453772c048106a7c1c1b:42a44da6f95862fff6c745a205cc2a45:eec64b416d3f54b5cb5181ef71d8f236$"
+	}
+}
