@@ -33,7 +33,6 @@ import PlataformaHorizontal from './PlataformaHorizontal.js';
 import PlataformaTiempo from './plataformaTiempo.js';
 import cofre from './cofre.js';
 import energiaRosa from './energiaRosa.js';
-import cuevaMetal from './cuevaMetal.js'
 
 /**hola esto es una prueba* */
 
@@ -105,14 +104,8 @@ export default class LevelClass extends Phaser.Scene {
    
         }   
     }
-<<<<<<< HEAD
     this.groundLayer.setCollisionByExclusion(-1, true);
     // this.groundLayer.setCollisionByProperty({collides : true});    
-=======
-    this.groundLayer.setCollisionByExclusion(-1,true);
-    //this.groundLayer.setCollisionByProperty({collides : true}); 
-    //this.groundLayer.setCollisionByProperty({collider : true});    
->>>>>>> alvaro
     // this.physics.world.setBounds(0,0,16000,3000);
     this.cargarObjetos();
 
@@ -140,7 +133,7 @@ export default class LevelClass extends Phaser.Scene {
             break;
             }
             case 'Metal': { 
-              this.objects.add(new cuevaMetal(this,x,y,this.scene.key))
+              this.objects.add(new cuevaAzul(this,x,y,this.scene.key))
             break;
             }
             default:{
