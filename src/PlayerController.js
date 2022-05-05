@@ -55,14 +55,16 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           right:Phaser.Input.Keyboard.KeyCodes.RIGHT,
           space:Phaser.Input.Keyboard.KeyCodes.SPACE,
           E:Phaser.Input.Keyboard.KeyCodes.E,
-          ESC:Phaser.Input.Keyboard.KeyCodes.ESC
+          ESC:Phaser.Input.Keyboard.KeyCodes.ESC,
+          C:Phaser.Input.Keyboard.KeyCodes.C
         });
         
 
         // this.obstacles = this.scene;
         this.hasKey = false;
         this.lastEnemy;
-        this.damage;
+        this.damageBala = 1;
+        this.damageBalaPower = 2;
         this.energy = 0;
         this.energyPlus = 0;
         this.health = 6;
@@ -73,10 +75,15 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         //     visible: false,
         //     key: 'bullet'
         // });
-        this.bullets = this.scene.physics.add.group({
+        this.balas = this.scene.physics.add.group({
           classType: Phaser.Physics.Arcade.Image 
         });
-        this.scene.physics.add.collider(this.bullets,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
+        this.balas_potenciadas = this.scene.physics.add.group({
+          classType: Phaser.Physics.Arcade.Image 
+        });
+        this.scene.physics.add.collider(this.balas,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
+        this.scene.physics.add.collider(this.balas_potenciadas,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this.scene)
+
         this.scene.physics.add.overlap(this,this.scene.enemies,this.handlePlayerEnemiesCollision,undefined,this.scene)
 
         
@@ -217,27 +224,17 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
 
     }
-    handlePlayerEnemiesCollision(player,enemigo){
-      console.log('Poisiton PBE ' + player.body.y);
-      console.log('Poisiton PE ' + player.y);
-      console.log('Poisiton PDBE ' + player.body.deltaY());
-      console.log('Poisiton BE ' + enemigo.body.y);
-      console.log('Poisiton E ' + enemigo.y);
-      console.log('Poisiton DBE ' + enemigo.body.deltaY());
-    
+    handlePlayerEnemiesCollision(player,enemigo){    
       if (player.body.deltaY()>enemigo.body.deltaY()) {
         player.setVelocityY(-400)
-        // events.emit('alien-down', enemigo)
-        // enemigo.setState('death')
         enemigo.destroy()
-        
-        
       }else if ((player.body.x < enemigo.body.x && enemigo.body.deltaX()<0) || (player.body.x > enemigo.body.x && enemigo.body.deltaX()>0)) {
         if (player.body.x < enemigo.body.x) {
           player.setVelocityX(-400)
         } else {
           player.setVelocityX(400)
         }
+        console.log(enemigo);
         switch(enemigo.type){
           case 'alien':
             this.health -=  1;
@@ -272,7 +269,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     }
     walkOnUpdate(){
       this.play('player-walk', true)
-      const speed = 200
+      const speed = 300
       // console.log('Poisiton PBE ' + this.body.y);
       // console.log('Poisiton PE ' + this.y);
       // console.log('Poisiton DPE ' + this.body.deltaY());
@@ -438,13 +435,17 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
       this.NewStateMachine.setState('idle')
     }
-    setBullets(bullets){
-      this.bullets = bullets
+    setBalas(balas){
+      this.balas = balas
+    }
+    setBalasPotenciadas(balas){
+      this.balas_potenciadas = balas
     }
 
     handleheartsplayer(player,objeto){
-
+      console.log(objeto);
       switch (objeto.img) {
+        
         case 'energia':
           this.energy += 1
           events.emit('energy', this.energy)
@@ -452,8 +453,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           events.emit('mensaje-ayuda-energia')
         break;
         case 'energiaRosa':
-          this.energy += 1
-          events.emit('energyPlus', this.energy)
+          this.energyPlus += 5
+          events.emit('energyPlus', this.energyPlus)
           objeto.destroy();
           events.emit('mensaje-ayuda-energia')
         break;
@@ -548,10 +549,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
 
     shoot(){
-      console.log(this.body.deltaX());
-      // sprite.angle = sprite.body.angle;
-      // console.log(this.sprite.body);
-      console.log(this.scaleX);
+
       // console.log(this.sprite.rotation);
       const vector = new Phaser.Math.Vector2(0,0)
       if (this.body.deltaX() < 0) {
@@ -559,34 +557,70 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       }else {
         vector.x = 1
       }
-      this.bullet = this.bullets.get(this.x, this.y, 'bullet');
-      this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
+      this.bala = this.balas.get(this.x, this.y, 'bala');
+      this.scene.physics.add.collider(this.bala,this.scene.enemies,this.handleBalasEnemiesCollision,undefined,this)
       // this.anims.play('bullet')
-      this.bullet.setActive(true)
-      this.bullet.setVisible(true)
-      this.bullet.body.allowGravity = false
-      this.bullet.setRotation(vector.angle())
+      this.bala.setActive(true)
+      this.bala.setVisible(true)
+      this.bala.body.allowGravity = false
+      this.bala.setRotation(vector.angle())
 
       // this.bullet.x += vector.x = 16 
 
 
 
-      this.bullet.setVelocityX(vector.x * 500, 300)
+      this.bala.setVelocityX(vector.x * 500, 300)
       
 
     }
-    handleBulletsGroundCollision(bullet, ground) {
-      bullet.destroy() 
+    shootPower(){
+      // console.log(this.sprite.rotation);
+      const vector = new Phaser.Math.Vector2(0,0)
+      if (this.body.deltaX() < 0) {
+        vector.x = -1
+      }else {
+        vector.x = 1
+      }
+      this.bala_potenciada = this.balas_potenciadas.get(this.x, this.y, 'bala_potenciada');
+      this.scene.physics.add.collider(this.bala_potenciada,this.scene.enemies,this.handleBalasRosasEnemiesCollision,undefined,this)
+      // this.anims.play('bullet')
+      this.bala_potenciada.setActive(true)
+      this.bala_potenciada.setVisible(true)
+      this.bala_potenciada.body.allowGravity = false
+      this.bala_potenciada.setRotation(vector.angle())
+
+      // this.bullet.x += vector.x = 16 
+
+
+
+      this.bala_potenciada.setVelocityX(vector.x * 500, 300)
+      
+
     }
-    handleBulletsEnemiesCollision(bullet, enemy) {
-      console.log(bullet);
-      console.log(enemy);      
-      bullet.destroy()
+    handleBulletsGroundCollision(bala, ground) {
+      bala.destroy() 
+    }
+    handleBalasEnemiesCollision(bala, enemy) {
+    
+      bala.destroy()
+
       if (enemy.triggerTimer != null){
         enemy.triggerTimer.remove()
       }
       // enemy.triggerTimer.remove()
-      enemy.destroy();
+      enemy.health -= this.damageBala
+
+      // enemy.destroy();
+    }
+    handleBalasRosasEnemiesCollision(bala, enemy) {
+    
+      bala.destroy()
+      if (enemy.triggerTimer != null){
+        enemy.triggerTimer.remove()
+      }
+      // enemy.triggerTimer.remove()
+      enemy.health -= this.damageBalaPower   
+      // enemy.destroy();
     }
     update(dt){
 
@@ -594,20 +628,27 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       if (Phaser.Input.Keyboard.JustDown(this.cursors.space)) {
         this.shoot();
       }     
-      if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
+      if (Phaser.Input.Keyboard.JustDown(this.cursors.C)) {
+        if (this.energyPlus > 0) {
+          this.shootPower();
+        this.energyPlus -= 1
+        }
+        
+      }   
+      // if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
        
-          //cuando se acbe el nivel 1
-        this.scene.start('pause')
+      //     //cuando se acbe el nivel 1
+      //   this.scene.start('pause')
      
        
-      } 
+      // } 
       if (!this.body.onFloor() && this.energy >0 && Phaser.Input.Keyboard.JustDown(this.cursors.E)) {
         this.setVelocityY(-600)
         this.energy = this.energy - 1
         events.emit('energy', this.energy)
       }
       events.emit('heart',this.health)
-
+      events.emit('energyPlus',this.energyPlus)
       if (this.health <= 0) {
         console.log('player death');
         this.scene.start('gameover');

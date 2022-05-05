@@ -218,7 +218,7 @@ export default class LevelClass extends Phaser.Scene {
         case 'energia':{
           
 
-          if(objData.type==='Rosa'){
+          if(objData.type==='rosa'){
             this.objects.add(new energiaRosa(this,x, y))
           }
           else{

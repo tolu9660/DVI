@@ -35,7 +35,7 @@ import NewStateMachine from '../newStateMachine.js';
 }
 jwalkLeftOnUpdate(dt){
   this.moveTime += dt
-  this.setVelocityX(-200)
+  this.setVelocityX(-100)
   this.flipX = false;
   if (this.moveTime > 3000) {
     this.NewStateMachine.setState('walk-right');
@@ -51,7 +51,7 @@ jwalkLeftOnUpdate(dt){
 walkRightOnUpdate(dt){
   this.moveTime += dt
 
-  this.setVelocityX(200)
+  this.setVelocityX(100)
   this.flipX = true;
   if (this.moveTime > 3000) {
     this.NewStateMachine.setState('walk-left');

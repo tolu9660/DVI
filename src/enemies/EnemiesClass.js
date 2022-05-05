@@ -19,9 +19,10 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         this.hit= hit
         this.shoot= shoot
         this.rate= rate
+        this.health;
         console.log(this.idle);
         console.log(this.walk);
-        console.log(this.jump);
+        console.log(this.death);
         // this.setDepth(0);
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this);
@@ -137,6 +138,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
       // }
       // this.destroy()
+      this.play('enemy-death',true);
     }
     deathOnUpdate(){
       console.log('muriendo');
@@ -149,7 +151,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
     explotarOnEnter(){
       console.log('entrando a explotar');
-      this.play('enemy-attack');
+      this.play('enemy-attack',true);
       // this.destroy()
     }
 
@@ -157,7 +159,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     explotarOnUpdate(){
           this.on('animationcomplete', () =>{
             console.log('exploto');
-            this.play('enemy-death');
+            this.play('enemy-death',true);
             this.NewStateMachine.setState('death');
             
         })
@@ -188,7 +190,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
     walkLeftOnUpdate(dt){
       this.moveTime += dt
-      this.setVelocityX(-200)
+      this.setVelocityX(-100)
       this.flipX = false;
       if (this.moveTime > 3000) {
         this.NewStateMachine.setState('walk-right');
@@ -204,7 +206,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     walkRightOnUpdate(dt){
       this.moveTime += dt
 
-      this.setVelocityX(200)
+      this.setVelocityX(100)
       this.flipX = true;
       if (this.moveTime > 3000) {
         this.NewStateMachine.setState('walk-left');
@@ -239,6 +241,11 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
 
     update(dt){
       this.NewStateMachine.update(dt);
+      if (this.health <= 0) {
+        console.log(('pedo'));
+        // this.destroy()
+        this.NewStateMachine.setState('death')
+      }
       // console.log(this);
     }
     createEnemyAnimation(){   
