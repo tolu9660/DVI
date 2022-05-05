@@ -86,6 +86,7 @@ shootEnemy(){
       vector.x = -1
     }else {
       vector.x = 1
+      this.flipX=true;
     }
   
     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'grunt_bala');

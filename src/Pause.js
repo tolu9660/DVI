@@ -30,7 +30,7 @@ export default class Pause extends Phaser.Scene{
           .on('pointerout', () => this.enterButtonRestStateReanudar())
           .on('pointerdown', () => this.scene.start('boot') )
     
-        this.reanudarButton = this.add.text(reanudarButton.x, reanudarButton.y , 'Reanudar',)
+        this.reanudarButton = this.add.text(reanudarButton.x, reanudarButton.y , 'Reiniciar',)
           .setOrigin(0.5);
     
     
@@ -55,7 +55,7 @@ export default class Pause extends Phaser.Scene{
           .on('pointerdown', () => this.scene.start(this.scene.start(this.scene.key)) )
         ;
     
-        this.reiniciarButton = this.add.text(reiniciarButton.x, reiniciarButton.y, 'Reiniciar').setOrigin(0.5);
+        this.reiniciarButton = this.add.text(reiniciarButton.x, reiniciarButton.y, 'Reanudar').setOrigin(0.5);
     
         const SalirButton = this.add.image(reiniciarButton.x, reiniciarButton.y + reiniciarButton.displayHeight + 18, 'azul')
         .setDisplaySize(150, 50)
@@ -67,33 +67,35 @@ export default class Pause extends Phaser.Scene{
   
     }
     
-    
       update() {
     
-      }
-      enterButtonHoverStateOpciones() {
+      }enterButtonHoverStateOpciones() {
         this.opcionesButton.setStyle({ fill: '#ff0' });
       }
-    
+
       enterButtonHoverStateReanudar() {
-        this.jugarButton.setStyle({ fill: '#ff0' });
+        this.reanudarButton.setStyle({ fill: '#ff0' });
       };
       enterButtonHoverStateReiniciar() {
-        this.creditosButton.setStyle({ fill: '#ff0' });
+        this.reiniciarButton.setStyle({ fill: '#ff0' });
       }
       enterButtonRestStateReanudar() {
-        this.jugarButton.setStyle({ fill: '#ffff' });
+        this.reanudarButton.setStyle({ fill: '#ffff' });
       };
       enterButtonRestStateOpciones() {
         this.opcionesButton.setStyle({ fill: '#ffff' });
       }
       enterButtonRestStateReanudar() {
-        this.creditosButton.setStyle({ fill: '#ffff' });
+        this.reiniciarButton.setStyle({ fill: '#ffff' });
       }
       enterButtonRestStateSalir() {
-        this.creditosButton.setStyle({ fill: '#ffff' });
+        this.SalirButton.setStyle({ fill: '#ffff' });
       }
       enterButtonHoverStateSalir() {
-        this.creditosButton.setStyle({ fill: '#ff0' });
+        this.SalirButton.setStyle({ fill: '#ff0' });
       }
+      enterButtonRestStateReiniciar() {
+        this.reiniciarButton.setStyle({ fill: '#ffff' });
+      };
+      
     }

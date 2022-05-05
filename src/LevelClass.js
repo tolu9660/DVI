@@ -65,7 +65,8 @@ export default class LevelClass extends Phaser.Scene {
     this.arrayObjects=[];
     this.ArrayTileset=[];
     this.j=0;
-
+    this.MusicaFondo= this.sound.add('sonidoFondo');
+    this.MusicaFondo.play();
   
   }
 
@@ -299,11 +300,6 @@ export default class LevelClass extends Phaser.Scene {
             break;
             case 'drago':
               this.enemies.add(new EnemyControllerDrago(this,x, y,type)) ;
-            break;
-
-            //te sigue y explota
-            case 'feona':
-              this.enemies.add(new EnemyControllerFeona(this,x, y,type)) ;
             break;
             case 'anatort':
               this.enemies.add(new EnemyControllerAnatort(this,x, y,type)) ;

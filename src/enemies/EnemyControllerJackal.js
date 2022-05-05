@@ -106,16 +106,23 @@ jumpOnUpdate(){
 shootEnemy(){
   // console.log(this.body.deltaX());
   // sprite.angle = sprite.body.angle;
-  // console.log(this.sprite.body);
-  console.log(this.scaleX);
-  // console.log(this.sprite.rotation);
-  const vector = new Phaser.Math.Vector2(1,0)
+ 
+  
+   console.log(this.body);
+  const vector = new Phaser.Math.Vector2(1,0) 
   if (this) {
-
-    if (this.x > this.scene.playerController.x) {
+   
+    if (this.x > this.scene.playerController.x) {//si estoy a la izquierda
       vector.x = -1
+      
     }else {
+      
       vector.x = 1
+      this.angle=-180;
+      this.flipY=true;
+     
+      
+     
     }
   
     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'jackal_bala');

@@ -38,8 +38,8 @@ export default class Level1 extends LevelClass {
     this.load.atlas('shangheili','/shangheili.png', '/shangheili.json');
     this.load.atlas('grunt','/grunt.png', '/grunt.json');
     this.load.atlas('sapien','/sapien.png', '/sapien.json');
-    this.load.atlas('feona','/feona.png', '/feona.json');
-    this.load.atlas('bozapatilla','/bozapatilla.png', '/bozapatilla.json');
+    this.load.atlas('anatort','/anatort.png', '/anatort.json');
+    //this.load.atlas('bozapatilla','/bozapatilla.png', '/bozapatilla.json');
     this.load.image('grunt_bala','/grunt_bala.png');
 
     this.load.image('bozapatilla_bala','/bozapatilla_bala.png');
@@ -58,8 +58,7 @@ export default class Level1 extends LevelClass {
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
     super.cargaEnemigos();
-    this.MusicaFondo= this.sound.add('sonidoFondo');
-    this.MusicaFondo.play();
+   
   }
 
   update(t, dt){

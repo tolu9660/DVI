@@ -27,7 +27,8 @@ export default class Opciones extends Phaser.Scene{
           this.sonidoTexto = this.add.text(250, 290, 'Sonido Activado', { fontSize: 24 });
 
           this.musicaButton.setInteractive();
-          this.sonidoButton.setInteractive();
+          this.sonidoButton.setInteractive()
+          .on('pointerdown', () => this.scene.start('inicio')  );
 
           //botones controles
           this.text = this.add.text (600,100,'Controles',{fontSize:30});
