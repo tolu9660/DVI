@@ -691,8 +691,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           //cuando se acbe el nivel 1
           //this.scene.scene.pause(this.scene.scene)
          
-         this.scene.MusicaFondo.pause()
+          //this.scene.MusicaFondo.pause()
           this.scene.scene.launch('pause')
+          //this.scene.MusicaFondo.pause()
           
      
        
@@ -705,7 +706,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       events.emit('heart',this.health)
       events.emit('energyPlus',this.energyPlus)
       if (this.health <= 0) {
-        this.scene.MusicaFondo.stop();
+        //this.scene.MusicaFondo.stop();
+        console.log(this)
         this.scene.scene.start('gameover')
       }
     }

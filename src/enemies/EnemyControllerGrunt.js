@@ -84,6 +84,9 @@ shootEnemy(){
 
     if (this.x > this.scene.playerController.x) {
       vector.x = -1
+    
+      this.flipX=false;
+
     }else {
       vector.x = 1
       this.flipX=true;

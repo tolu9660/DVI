@@ -114,12 +114,17 @@ shootEnemy(){
    
     if (this.x > this.scene.playerController.x) {//si estoy a la izquierda
       vector.x = -1
+       
+       this.angle=180;
+       this.flipY=true;
+       this.flipX=true;
       
     }else {
       
       vector.x = 1
       this.angle=-180;
       this.flipY=true;
+      this.flipX=false;
      
       
      
