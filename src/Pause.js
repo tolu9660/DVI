@@ -67,33 +67,35 @@ export default class Pause extends Phaser.Scene{
   
     }
     
-    
       update() {
     
-      }
-      enterButtonHoverStateOpciones() {
+      }enterButtonHoverStateOpciones() {
         this.opcionesButton.setStyle({ fill: '#ff0' });
       }
-    
+
       enterButtonHoverStateReanudar() {
-        this.jugarButton.setStyle({ fill: '#ff0' });
+        this.reanudarButton.setStyle({ fill: '#ff0' });
       };
       enterButtonHoverStateReiniciar() {
-        this.creditosButton.setStyle({ fill: '#ff0' });
+        this.reiniciarButton.setStyle({ fill: '#ff0' });
       }
       enterButtonRestStateReanudar() {
-        this.jugarButton.setStyle({ fill: '#ffff' });
+        this.reanudarButton.setStyle({ fill: '#ffff' });
       };
       enterButtonRestStateOpciones() {
         this.opcionesButton.setStyle({ fill: '#ffff' });
       }
       enterButtonRestStateReanudar() {
-        this.creditosButton.setStyle({ fill: '#ffff' });
+        this.reiniciarButton.setStyle({ fill: '#ffff' });
       }
       enterButtonRestStateSalir() {
-        this.creditosButton.setStyle({ fill: '#ffff' });
+        this.SalirButton.setStyle({ fill: '#ffff' });
       }
       enterButtonHoverStateSalir() {
-        this.creditosButton.setStyle({ fill: '#ff0' });
+        this.SalirButton.setStyle({ fill: '#ff0' });
       }
+      enterButtonRestStateReiniciar() {
+        this.reiniciarButton.setStyle({ fill: '#ffff' });
+      };
+      
     }

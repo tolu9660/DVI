@@ -489,8 +489,8 @@
   <object id="154" name="enemigo" type="sapien" x="9578" y="3300" width="108" height="136"/>
   <object id="156" name="enemigo" type="grunt" x="13490" y="1508" width="108" height="136"/>
   <object id="157" name="enemigo" type="sapien" x="16266" y="3076" width="108" height="136"/>
-  <object id="158" name="enemigo" type="feona" x="17074" y="2292" width="108" height="136"/>
-  <object id="159" name="enemigo" type="Grunt" x="19450" y="2668" width="108" height="136"/>
+  <object id="158" name="enemigo" type="anatort" x="17074" y="2292" width="108" height="136"/>
+  <object id="159" name="enemigo" type="grunt" x="19450" y="2668" width="108" height="136"/>
   <object id="161" name="enemigo" type="sapien" x="22274" y="1244" width="108" height="136"/>
   <object id="162" name="enemigo" type="shangheili" x="25106" y="2292" width="108" height="136"/>
   <object id="163" name="enemigo" type="grunt" x="26322" y="3332" width="108" height="136"/>
