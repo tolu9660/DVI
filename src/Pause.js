@@ -79,6 +79,9 @@ export default class Pause extends Phaser.Scene{
       enterButtonHoverStateReiniciar() {
         this.reiniciarButton.setStyle({ fill: '#ff0' });
       }
+      enterButtonRestStateReiniciar() {
+        this.reiniciarButton.setStyle({ fill: '#ffff' });
+      };
       enterButtonRestStateReanudar() {
         this.reanudarButton.setStyle({ fill: '#ffff' });
       };

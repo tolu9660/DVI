@@ -88,7 +88,7 @@ const vector = new Phaser.Math.Vector2(1,0)
   }
   this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bozapatilla_bala');
   console.log(this.scene);
-  this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
+  this.scene.physics.add.overlap(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
     this.scene.physics.add.collider(this.bullet,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this)
 
   // this.anims.play('bullet')

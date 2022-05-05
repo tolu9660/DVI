@@ -167,19 +167,19 @@ export default class LevelClass extends Phaser.Scene {
               this.posicion_plataforma_x = this.plataforma.x
               this.posicion_plataforma_y = this.plataforma.y
               console.log( this.plataforma.body)*/
-              this.objects.add(new PlataformaVertical(this,x,y))
+              this.objects.add(new PlataformaVertical(this,x,y,objData.type))
              
             break;
             
             case 'pmh': 
 
-              this.objects.add(new PlataformaHorizontal(this,x,y))
+              this.objects.add(new PlataformaHorizontal(this,x,y,objData.type))
             break;
             
-            // case 'pmt': 
+            case 'pmt': 
 
-            //   this.objects.add(new PlataformaTiempo(this,x,y))
-            // break;
+               this.objects.add(new PlataformaTiempo(this,x,y,objData.type))
+             break;
             
             default:{
               this.objects.add(new PlataformaHorizontal(this,x,y))
