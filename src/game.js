@@ -48,7 +48,7 @@ let config = {
         default: 'arcade',//cambiado el arcade
         arcade: {
             gravity: {y:460},
-            debug: true
+            // debug: true
          }
      }
 };
