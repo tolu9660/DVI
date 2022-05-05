@@ -22,10 +22,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.flipFlop;
         this.scene.cameras.main.startFollow(this, false, 1, 1, 0, 0);
         this.scene.cameras.main.setDeadzone(400, 350);
-
+        
         this.scene.cameras.main.shake(200, 0.05, true, Phaser.Cameras.SHAKE_HORIZONTAL, false);
 
         this.scene.cameras.main.zoom = 0.3;
+       
         // this.scene.cameras.main.setBounds(0, 0, 16000, 3000); //Y = 250
         // this.scene.cameras.main.zoom = 1;
         // this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
@@ -492,6 +493,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           if(this.hasKey){
             events.emit('cueva-in',objeto.getLevel(),objeto.nextLevel())
             objeto.destroy();
+           
          
           }
           
@@ -500,14 +502,14 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           if(this.hasKey){
             events.emit('cueva-in',objeto.getLevel(),objeto.nextLevel())
             objeto.destroy();
-         
+           
           }
           break;
         case 'cuevaM':
           if(this.hasKey){
           events.emit('cueva-in',objeto.getLevel(),objeto.nextLevel())
           objeto.destroy();
-        
+         
           }
         break;
         case 'acido':
@@ -603,6 +605,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       this.bala.setVisible(true)
       this.bala.body.allowGravity = false
       this.bala.setRotation(vector.angle())
+     
+     
 
       // this.bullet.x += vector.x = 16 
 
@@ -678,7 +682,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
        
           //cuando se acbe el nivel 1
-          this.scene.scene.pause(this.scene.scene)
+          //this.scene.scene.pause(this.scene.scene)
+         
+         this.scene.MusicaFondo.pause()
           this.scene.scene.launch('pause')
           
      
@@ -692,6 +698,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       events.emit('heart',this.health)
       events.emit('energyPlus',this.energyPlus)
       if (this.health <= 0) {
+        this.scene.MusicaFondo.stop();
         this.scene.scene.start('gameover')
       }
     }

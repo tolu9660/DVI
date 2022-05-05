@@ -49,6 +49,7 @@ let config = {
         arcade: {
             gravity: {y:460},
             // debug: true
+            
          }
      }
 };

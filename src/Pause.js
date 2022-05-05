@@ -30,7 +30,7 @@ export default class Pause extends Phaser.Scene{
           .on('pointerout', () => this.enterButtonRestStateReanudar())
           .on('pointerdown', () => this.scene.start('boot') )
     
-        this.reanudarButton = this.add.text(reanudarButton.x, reanudarButton.y , 'Reanudar',)
+        this.reanudarButton = this.add.text(reanudarButton.x, reanudarButton.y , 'Reiniciar',)
           .setOrigin(0.5);
     
     
@@ -55,7 +55,7 @@ export default class Pause extends Phaser.Scene{
           .on('pointerdown', () => this.scene.start(this.scene.start(this.scene.key)) )
         ;
     
-        this.reiniciarButton = this.add.text(reiniciarButton.x, reiniciarButton.y, 'Reiniciar').setOrigin(0.5);
+        this.reiniciarButton = this.add.text(reiniciarButton.x, reiniciarButton.y, 'Reanudar').setOrigin(0.5);
     
         const SalirButton = this.add.image(reiniciarButton.x, reiniciarButton.y + reiniciarButton.displayHeight + 18, 'azul')
         .setDisplaySize(150, 50)
