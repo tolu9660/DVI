@@ -484,9 +484,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           }
           
         break;
-         case 'pm':
-          
+        case 'pm':
+         //console.log(objeto)
+        if (objeto.getType()=='pmt'){
          objeto.destroy();
+        }
         break;
         
         case 'cuevaA':

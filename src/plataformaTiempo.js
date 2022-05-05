@@ -6,19 +6,24 @@ import GameObject from './gameobj.js';
  */
  export default class PlataformaTiempo extends GameObject {
   
-  constructor(scene,x,y){
+  constructor(scene,x,y,type){
       super(scene,x,y,'pmAnimacion', 10,'pm', 'Cyber Floating Tile', 1,3);
       this.body.ignoreGravity = true;
       this.body.immovable=true;
       this.posicion_plataforma_x = this.x
       this.posicion_plataforma_y = this.y
       this.baja=false
+      this.type=this.type
     this.scene=scene;
     console.log(this)
     
     
   }
   
+  getType()
+  {
+    return this.type;
+  }
   moveDown(){
     
 }

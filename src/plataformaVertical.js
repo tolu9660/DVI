@@ -6,12 +6,17 @@ import GameObject from './gameobj.js';
  */
  export default class PlataformaVertical extends GameObject {
   
-  constructor(scene,x,y){
+  constructor(scene,x,y,type){
       super(scene,x,y,'pmAnimacion', 10,'pm', 'Cyber Floating Tile', 1,3);
       this.body.ignoreGravity = true;
       this.body.immovable=true;
+      this.type=this.type;
       this.posicion_plataforma_x = this.x
       this.posicion_plataforma_y = this.y
+  }
+  getType()
+  {
+      return this.type;
   }
  
   actu(dt){

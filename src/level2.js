@@ -57,7 +57,7 @@ export default class Level2 extends LevelClass {
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
     super.cargaEnemigos();
-    this.MusicaFondo.reload();
+   // this.MusicaFondo.reload();
    
   }
 
