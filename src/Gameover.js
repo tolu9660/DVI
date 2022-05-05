@@ -3,25 +3,25 @@
  * texto que indica que el juego se ha acabado.
  * Si se pulsa cualquier tecla, se vuelve a iniciar el juego.
  */
-export default class Gameover  extends Phaser.Scene{
+export default class Gameover extends Phaser.Scene {
+  /**
+   * Constructor de la escena
+   */
 
-
-  constructor() {
-    super({ key: 'gameover' });
-  }
 
   /**
    * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
    */
 
 
- 
+   constructor() {
+    super({ key: 'gameover' });
+  }
   preload() {
    
     this.load.image('azul', 'assets/sprites/azul.jpg')
     this.load.image('gameover',"assets/sprites/gameover.jpg");
-    }
-
+  }
   create()
   { const { width, height } = this.scale
      // this.add.image(200,200,'azul');
@@ -38,12 +38,7 @@ export default class Gameover  extends Phaser.Scene{
   .setOrigin(0.5);
 
   }
-}
-  /**
-   * Constructor de la escena
-   */
-  
-/*
+}/*
   create() {
     this.add.text(500, 250, 'Se acabó!\nPulsa cualquier tecla para volver a jugar', { fontSize: '24px',})
         .setOrigin(0.5, 0.5)  // Colocamos el pivote en el centro de cuadro de texto 
@@ -60,3 +55,4 @@ export default class Gameover  extends Phaser.Scene{
 
   }*/
 
+//}

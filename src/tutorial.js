@@ -43,6 +43,7 @@ export default class Tutorial extends LevelClass {
     let a =0;
     this.arrayTileset[0] = 'fondo';
     this.arrayTileset[1] = 'tiles';
+    
     //this.arrayTileset[2] = 'sueloT';
     super.create('tutorial',this.arrayTileset);
     //indico para cada capa que tilesets voy a utilizar
@@ -51,8 +52,7 @@ export default class Tutorial extends LevelClass {
     let Capas=[ground,plataformas];
     super.creacionCapas(Capas);
     super.cargaEnemigos();
-    this.MusicaFondo= this.sound.add('sonidoFondo');
-    this.MusicaFondo.play();
+    
 
   }
 
@@ -63,6 +63,9 @@ export default class Tutorial extends LevelClass {
   }
 
 
- 
+ sinsonido()
+ {
+   this.MusicaFondo.pause();
+ }
   
 }

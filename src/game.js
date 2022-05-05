@@ -1,6 +1,6 @@
+import Preloader from './scenes/Preloader.js'
 import Boot from './boot.js';
 
-import Level from './level.js';
 import Level2 from './level2.js';
 import Level1 from './level1.js';
 import Tutorial from './tutorial.js';
@@ -28,6 +28,8 @@ import TransicionTutorial0 from './transicionTutorial0.js';
 import TransicionTutorial1 from './transicionTutorial1.js';
 
 
+
+
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
  * la clase Game de Phaser, encargada de crear e iniciar el juego. 
@@ -49,6 +51,7 @@ let config = {
         arcade: {
             gravity: {y:460},
             // debug: true
+            
          }
      }
 };
