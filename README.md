@@ -1,14 +1,13 @@
-# Juego simple con Phaser
+# THE KREEPHASER
 
-Este juego ha sido desarrollado por Carlos León Aznar. En este repositorio contiene una reorganización del código y de los assets usados para su desarrollo por Guillermo Jiménez
-
+Numero de grupo 3 (THE KREEPHASER)
 
 # GDD
 
 #### Título:  
 The Kreephaser
 #### Motor gráfico: 
-Phaser 3
+Pagina web desarrollado con Phaser 3
 #### Estilo gráfico: 
 2D	
 #### Género: 
@@ -19,28 +18,31 @@ Pc
 1
 #### Sinopsis de Jugabilidad y Contenido: 
 Vivir la experiencia en distintos mundos de plataformas,  en donde tendrás que usar una llave para rescatar a los distintos miembros de la familia, y reunirlos a todos
-#### Público: Para todos los públicos
+#### Público: 
+Para todos los públicos
 
-### HISTORIAL DE VERSIONES
-#### Hito 0:
-Añadir el rescate de la familia, al introducir una llave en el nivel el usuario la debe obtener para salvar al miembro de la familia, donde la familia está compuesta por 4 miembros y en el último la llave se obtendrá venciendo al boss
-
-### VISIÓN GENERAL DEL JUEGO
-El protagonista de la historia será un padre de familia la cual ha sido secuestrada por unos alienígenas. Este padre debe recorrer distintos mundos para recuperar a su familia al completo y donde se encontrará con distintos obstáculos y enemigos. 
+#### Historia
+Todos los miembros de una familia han sido secuestrados por un alienigena. El padre de esta familia debera recorrer los distintos mundos donde se encuentran sus familiares para salvarlos. El protagonista debera enfrentarse a multitud de enemigos y trampas que le intentaran impedir su avance.
  
 ### MECÁNICA DEL JUEGO 
 #### Mover
-Haciendo uso de los controles del teclado el jugador podrá mover al personaje por los niveles del juego. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance. Podemos encontrar dentro de esta mecánica la mecánica derivada del salto. 
-#### Saltar: 
-El personaje se impulsará hacia arriba  con un salto al pulsar el botón correspondiente. El personaje solo tiene las posibilidades de hacer doble salto y salto simple. El personaje debe volver a tocar una superficie para realizar alguno de los dos posibles saltos.
-### Doble Salto:
+Haciendo uso de los controles del teclado el jugador se podrá mover lateralmente sobre el suelo. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance.
 
-### Dash:
+#### Saltar: 
+El personaje se impulsará hacia arriba  con un salto al pulsar el botón correspondiente. El personaje debe volver a tocar una superficie para realizar el movimiento de salto.
+
+#### Doble Salto:
+El personaje puede hacer un salto en el aire tras un salto realizado con la tecla correspondiente. El personaje solo podra hacer el doble salto si tiene en su inventario como minimo una celula de energia.
+
+#### Dash:
+El personaje puede hacer un dash pulsando el boton correspondiente siempre que este realizando un desplazamiento lateral sobre el suelo.
 
 #### Atacar
-El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos o utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos.Si utiliza la pistola podra disparar de dos formas distintas, la normal y la otra  ahora un daño superior a la normal.
+El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos y utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos. El disparo de la pistola hara daño 1 si se trata de un disparo normal y 2 si se trata de un disparo potenciado. El disparo potenciado solo estara disponible si tiene gemas en su inventario.
+
 #### Interactuar
-El personaje podrá interactuar con 5 objetos distintos. Los cuales serán los corazones, las células de energía,cofres los cuales te puede tocar de forma aleatoria (gema,celula de energia y corazones) las gemas y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
+El personaje podrá interactuar con 5 objetos distintos. Los cuales serán los corazones, las células de energía, cofres los cuales te puede tocar de forma aleatoria (gema, celula de energia y corazones) las gemas y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
+
 #### Pausar el juego
 Al pulsar el botón de pausa (tecla ESC) del juego, toda acción se paralizará. Aparecerá un menú con estas opciones:  
 ##### Reanudar partida
@@ -66,8 +68,8 @@ En esta pantalla tenemos 4 opciones:
 ##### Jugar: 
 Comienza la partida.
 ##### Opciones:
-##### Configuración de sonido y música
-##### Configuración de controles
+###### Configuración de sonido y música
+###### Configuración de controles
 ##### Creditos: 
 Sale una lista de los creadores.
 
