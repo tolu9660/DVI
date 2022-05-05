@@ -36,7 +36,7 @@ export default class Gameover extends Phaser.Scene {
       .on('pointerdown', () => this.scene.start('inicio') );
       this.menuinicialButton = this.add.text(menuinicialButton.x, menuinicialButton.y, 'Menu')
   .setOrigin(0.5);
-
+  
   }
 }/*
   create() {

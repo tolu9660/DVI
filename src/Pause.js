@@ -69,7 +69,8 @@ export default class Pause extends Phaser.Scene{
     
       update() {
     
-      }enterButtonHoverStateOpciones() {
+      }
+      enterButtonHoverStateOpciones() {
         this.opcionesButton.setStyle({ fill: '#ff0' });
       }
 

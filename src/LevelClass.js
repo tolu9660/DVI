@@ -65,8 +65,7 @@ export default class LevelClass extends Phaser.Scene {
     this.arrayObjects=[];
     this.ArrayTileset=[];
     this.j=0;
-    this.MusicaFondo= this.sound.add('sonidoFondo');
-    this.MusicaFondo.play();
+    
   
   }
 

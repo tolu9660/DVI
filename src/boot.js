@@ -11,6 +11,7 @@ export default class Boot extends Phaser.Scene {
    */
   constructor() {
     super({ key: 'boot' });
+
   }
 
   /**
@@ -57,10 +58,7 @@ export default class Boot extends Phaser.Scene {
     
     //carga de sonidos:
     this.load.audio('sonidoFondo', '/sound/level1/musicaEspacio.mp3');
-    this.load.audio('sonidoFondo1', '/sound/level2/musicaEspacio.mp3');
-    this.load.audio('sonidoFondo2', '/sound/level3/musicaEspacio.mp3');
-    this.load.audio('sonidoFondo3', '/sound/level4/musicaEspacio.mp3');
-    this.load.audio('diparo', '/sound/disparo.mp3');
+    
 
     // NIVEL 2:
     this.load.tilemapTiledJSON('level2', '/tilemaps/mapa2/nivel2.json');
@@ -85,9 +83,8 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('tutorial');
-    
-
-
+    this.scene.start('level1');
+    this.MusicaFondo= this.sound.add('sonidoFondo');
+    this.MusicaFondo.play();
   }
 }
