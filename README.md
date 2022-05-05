@@ -127,6 +127,10 @@ En todos los niveles se usa el mismo fondo con una paleta distinta de colores pe
 <img src="assets/sprites/nivel12.png"/>
 
 ### Arquitectura software del juego (UML o similar)
+<img src="assets/sprites/uml1.png"/>
+<img src="assets/sprites/uml2.png"/>
+<img src="assets/sprites/uml3.png"/>
+<img src="assets/sprites/uml4.png"/>
 
 
 ### Breve descripción del sistema y plataformas de comunicación
