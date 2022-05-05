@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+body{
+  background-image: url("/assets/backgrounds/ladrillos.jpg");
+}
+
 svg {
   display: block;
   font: 10.5em 'Montserrat';
@@ -47,9 +51,7 @@ animation-delay: -5s;
 100% {stroke-dashoffset: -35%;}
 }
 
-body{
-  background-image: url("./assets/backgrounds/ladrillos.jpg");
-}
+
 
 #titulo {
   /*font-size: 250%;
