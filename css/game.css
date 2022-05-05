@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 body{
-  background-image: url("./assets/backgrounds/ladrillos.jpg");
+ /* background-image: url("./assets/backgrounds/ladrillos.jpg");*/
+  
+    background-image: url(https://github.com/tolu9660/DVI/blob/99160f3ed6ac6c0c99f5be04b6e44be7c788212d/assets/backgrounds/ladrillos.jpg);
 }
 
 svg {
