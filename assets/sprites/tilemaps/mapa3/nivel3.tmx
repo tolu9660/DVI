@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="298" height="32" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="683">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="298" height="32" tilewidth="128" tileheight="128" infinite="0" nextlayerid="5" nextobjectid="683">
  <editorsettings>
   <export target="nivel3.json" format="json"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <image source="texture.png" width="2048" height="2048"/>
   <tile id="0">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="125" y="3">
@@ -20,12 +20,12 @@
   </tile>
   <tile id="1">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="2">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="1" y="4">
@@ -38,42 +38,42 @@
   </tile>
   <tile id="3">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="4">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="5">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="6">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="7">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="8">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="9">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="10">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0">
@@ -86,17 +86,17 @@
   </tile>
   <tile id="11">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="12">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="13">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="126">
@@ -109,22 +109,22 @@
   </tile>
   <tile id="14">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="15">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="16">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="17">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="1" y="1">
@@ -137,52 +137,52 @@
   </tile>
   <tile id="18">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="19">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="20">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="21">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="22">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="23">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="24">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="25">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="32">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="33">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="4">
@@ -195,7 +195,7 @@
   </tile>
   <tile id="48">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="0">
@@ -208,37 +208,37 @@
   </tile>
   <tile id="49">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="64">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="65">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="80">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="81">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="96">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="97">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="2" y="2">
@@ -251,32 +251,32 @@
   </tile>
   <tile id="112">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="113">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="128">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="129">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="144">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="145">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="3" y="1">
@@ -289,27 +289,27 @@
   </tile>
   <tile id="160">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="161">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="176">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="177">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="192">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="-1" y="2">
@@ -322,37 +322,37 @@
   </tile>
   <tile id="193">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="208">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="209">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="224">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="225">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="240">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="241">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="2" y="3">
@@ -467,7 +467,7 @@
   <object id="33" name="pm" type="pmh" x="34568" y="3360" width="368" height="104"/>
   <object id="35" name="pm" type="pmv" x="35448" y="2584" width="368" height="104"/>
   <object id="36" name="pm" type="pmv" x="36104" y="3344" width="376" height="112"/>
-  <object id="37" name="trampa" type="lava" x="958.455" y="3953.88" width="124" height="104"/>
+  <object id="37" name="trampa" type="lava" x="936.334" y="3954.79" width="124" height="104"/>
   <object id="59" name="limite" x="0" y="0" width="32" height="4096"/>
   <object id="60" name="limite" x="38120" y="8" width="16" height="4088"/>
   <object id="221" name="energia" x="34862" y="1648" width="116" height="112"/>
@@ -479,7 +479,7 @@
   <object id="231" name="energia" type="rosa" x="10278" y="1928" width="116" height="112"/>
   <object id="232" name="energia" type="rosa" x="7350" y="776" width="116" height="112"/>
   <object id="233" name="energia" x="2734" y="656" width="116" height="112"/>
-  <object id="234" name="heroe" x="2459.82" y="3467.94" width="124" height="156"/>
+  <object id="234" name="heroe" x="2091.82" y="3523.94" width="124" height="156"/>
   <object id="235" name="cofre" x="48" y="3592" width="144" height="144"/>
   <object id="236" name="cofre" x="5112" y="2696" width="144" height="144"/>
   <object id="237" name="cofre" x="20520" y="1176" width="144" height="144"/>
@@ -507,25 +507,25 @@
   <object id="259" name="energia" type="rosa" x="17534" y="3368" width="116" height="112"/>
   <object id="260" name="corazon" x="5822" y="118" width="68" height="68"/>
   <object id="263" x="23184.8" y="4027.27" width="36.3636" height="3.0303"/>
-  <object id="264" name="trampa" type="lava" x="1021" y="3951" width="124" height="104"/>
-  <object id="265" name="trampa" type="lava" x="1210" y="3954" width="124" height="104"/>
-  <object id="266" name="trampa" type="lava" x="1336" y="3954" width="124" height="104"/>
-  <object id="267" name="trampa" type="lava" x="1462" y="3953" width="124" height="104"/>
-  <object id="268" name="trampa" type="lava" x="1588" y="3953" width="124" height="104"/>
-  <object id="269" name="trampa" type="lava" x="1709" y="3952" width="124" height="104"/>
-  <object id="270" name="trampa" type="lava" x="1830" y="3952" width="124" height="104"/>
-  <object id="271" name="trampa" type="lava" x="1948" y="3952" width="124" height="104"/>
-  <object id="272" name="trampa" type="lava" x="1984" y="3952" width="124" height="104"/>
-  <object id="273" name="trampa" type="lava" x="1860" y="3951" width="124" height="104"/>
-  <object id="274" name="trampa" type="lava" x="1761" y="3952" width="124" height="104"/>
-  <object id="275" name="trampa" type="lava" x="1640" y="3953" width="124" height="104"/>
-  <object id="276" name="trampa" type="lava" x="1515" y="3950" width="124" height="104"/>
-  <object id="277" name="trampa" type="lava" x="1403" y="3952" width="124" height="104"/>
-  <object id="278" name="trampa" type="lava" x="1277" y="3953" width="124" height="104"/>
-  <object id="279" name="trampa" type="lava" x="1153" y="3951" width="124" height="104"/>
-  <object id="281" name="trampa" type="lava" x="1125" y="3952" width="124" height="104"/>
-  <object id="282" name="trampa" type="lava" x="1067" y="3952" width="124" height="104"/>
-  <object id="283" name="trampa" type="lava" x="971" y="3954" width="124" height="104"/>
+  <object id="264" name="trampa" type="lava" x="998.879" y="3951.91" width="124" height="104"/>
+  <object id="265" name="trampa" type="lava" x="1187.88" y="3954.91" width="124" height="104"/>
+  <object id="266" name="trampa" type="lava" x="1313.88" y="3954.91" width="124" height="104"/>
+  <object id="267" name="trampa" type="lava" x="1439.88" y="3953.91" width="124" height="104"/>
+  <object id="268" name="trampa" type="lava" x="1565.88" y="3953.91" width="124" height="104"/>
+  <object id="269" name="trampa" type="lava" x="1686.88" y="3952.91" width="124" height="104"/>
+  <object id="270" name="trampa" type="lava" x="1807.88" y="3952.91" width="124" height="104"/>
+  <object id="271" name="trampa" type="lava" x="1925.88" y="3952.91" width="124" height="104"/>
+  <object id="272" name="trampa" type="lava" x="1961.88" y="3952.91" width="124" height="104"/>
+  <object id="273" name="trampa" type="lava" x="1837.88" y="3951.91" width="124" height="104"/>
+  <object id="274" name="trampa" type="lava" x="1738.88" y="3952.91" width="124" height="104"/>
+  <object id="275" name="trampa" type="lava" x="1617.88" y="3953.91" width="124" height="104"/>
+  <object id="276" name="trampa" type="lava" x="1492.88" y="3950.91" width="124" height="104"/>
+  <object id="277" name="trampa" type="lava" x="1380.88" y="3952.91" width="124" height="104"/>
+  <object id="278" name="trampa" type="lava" x="1254.88" y="3953.91" width="124" height="104"/>
+  <object id="279" name="trampa" type="lava" x="1130.88" y="3951.91" width="124" height="104"/>
+  <object id="281" name="trampa" type="lava" x="1102.88" y="3952.91" width="124" height="104"/>
+  <object id="282" name="trampa" type="lava" x="1044.88" y="3952.91" width="124" height="104"/>
+  <object id="283" name="trampa" type="lava" x="948.879" y="3954.91" width="124" height="104"/>
   <object id="284" name="trampa" type="lava" x="2878.85" y="3951.75" width="124" height="104"/>
   <object id="285" name="trampa" type="lava" x="2998.85" y="3954.42" width="124" height="104"/>
   <object id="286" name="trampa" type="lava" x="2942.85" y="3951.75" width="124" height="104"/>

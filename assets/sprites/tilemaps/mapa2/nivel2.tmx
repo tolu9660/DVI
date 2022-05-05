@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="360" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="674">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="360" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="674">
  <editorsettings>
   <export target="nivel2.json" format="json"/>
  </editorsettings>
@@ -7,7 +7,7 @@
   <image source="texture.png" width="2048" height="2048"/>
   <tile id="0">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="2" x="1" y="126">
@@ -20,7 +20,7 @@
   </tile>
   <tile id="1">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="2">
@@ -127,12 +127,12 @@
   </tile>
   <tile id="16">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="17">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="2" y="3">
@@ -145,7 +145,7 @@
   </tile>
   <tile id="32">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="1" y="4">
@@ -158,7 +158,7 @@
   </tile>
   <tile id="33">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="1">
@@ -171,37 +171,37 @@
   </tile>
   <tile id="48">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="49">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="64">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="65">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="80">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="81">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="96">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="1" y="2">
@@ -214,7 +214,7 @@
   </tile>
   <tile id="97">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="2" y="3">
@@ -227,12 +227,12 @@
   </tile>
   <tile id="112">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="113">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="1" y="4">
@@ -245,45 +245,45 @@
   </tile>
   <tile id="128">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
     <property name="damage" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="129">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="144">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
     <property name="damage" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="145">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="160">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
     <property name="damage" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="161">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="176">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="177">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="126" y="3">
@@ -296,22 +296,22 @@
   </tile>
   <tile id="192">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="208">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="224">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="240">
    <properties>
-    <property name="collider" type="bool" value="true"/>
+    <property name="collides" type="bool" value="true"/>
    </properties>
    <objectgroup draworder="index" id="2">
     <object id="1" x="0" y="2">

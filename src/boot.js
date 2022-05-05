@@ -88,6 +88,6 @@ export default class Boot extends Phaser.Scene {
 
    // this.scene.start('transicion_0');
     
-   this.scene.start('tutorial');
+   this.scene.start('level3');
   }
 }
