@@ -491,12 +491,21 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
          objeto.destroy();
         break;
         
-        case 'cueva':
-          // this.health += 1
-          // events.emit('cueva-collected',this.health)
-          // objeto.destroy();
-          // events.emit('mensaje-ayuda-corazon')
+        case 'cuevaA':
+          if(this.hasKey){
+            events.emit('cueva-in',objeto.getLevel(),objeto.nextLevel())
+            objeto.destroy();
+         
+          }
+          
         break;
+        case 'cuevaR':
+          if(this.hasKey){
+            events.emit('cueva-in',objeto.getLevel(),objeto.nextLevel())
+            objeto.destroy();
+         
+          }
+          break;
         case 'trampas':
           trampas(player, objeto);
         break;

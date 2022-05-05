@@ -123,21 +123,21 @@ export default class LevelClass extends Phaser.Scene {
         }
 
         case 'cueva':{
-      
+          
            //cambiar plataformaMovil por la clase
            switch ( objData.type) {
             case 'Rojo': { 
               
-              this.objects.add(new cuevaRoja(this,x,y))
+              this.objects.add(new cuevaRoja(this,x,y,this.scene.key))
              
             break;
             }
             case 'Metal': { 
-              this.objects.add(new cuevaAzul(this,x,y))
+              this.objects.add(new cuevaAzul(this,x,y,this.scene.key))
             break;
             }
             default:{
-              this.objects.add(new cuevaAzul(this,x,y))
+              this.objects.add(new cuevaAzul(this,x,y,this.scene.key))
               break; 
             }
           }

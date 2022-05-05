@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="360" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="291">
+<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="360" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="293">
  <editorsettings>
   <export target="nivel2.json" format="json"/>
  </editorsettings>
@@ -545,6 +545,8 @@
   <object id="290" name="heroe" x="1158" y="3684">
    <point/>
   </object>
+  <object id="291" name="heroe" x="351.515" y="533.333" width="33.3333" height="42.4242"/>
+  <object id="292" name="cueva" x="203.03" y="548.485" width="45.4545" height="54.5455"/>
  </objectgroup>
  <objectgroup id="8" name="enemigos">
   <object id="115" name="enemigo" x="17688" y="520"/>

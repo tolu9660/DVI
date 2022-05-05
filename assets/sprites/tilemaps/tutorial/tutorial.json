@@ -162,17 +162,6 @@
                  "width":64,
                  "x":3616,
                  "y":1420
-                }, 
-                {
-                 "height":100,
-                 "id":56,
-                 "name":"cueva",
-                 "rotation":0,
-                 "type":"Metal",
-                 "visible":true,
-                 "width":136,
-                 "x":3744,
-                 "y":1438
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -193,8 +182,8 @@
                  "type":"feona",
                  "visible":true,
                  "width":108,
-                 "x":1934.67868315209,
-                 "y":1554.22553254879
+                 "x":1934.68,
+                 "y":1554.23
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -206,7 +195,7 @@
  "nextobjectid":58,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.8.2",
+ "tiledversion":"1.8.1",
  "tileheight":128,
  "tilesets":[
         {

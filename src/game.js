@@ -10,10 +10,21 @@ import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
 import parallaxScene from './parallaxScene.js';
 import GameUI from './GameUI.js';
-import Transicion from './transicion.js'
-import Transicion1 from './transicion1.js'
+import Transicion from './transicion_0.js'
+import Transicion1 from './transicion_1.js'
 import Pause from './Pause.js';
 import Gameover from'./gameover.js';
+import Transicionnivel3 from './transicionnivel3_0.js';
+import Transicionnivel2_1 from './transicionnivel2_1.js';
+import Transicionnivel2_2 from './transicionnivel2_2.js';
+
+import Transicionnivel1 from './transicionnivel_1.js';
+import Transicionnivel2_0 from './transicionNivel2_0.js';
+import TransicionTutorial2 from './transicionTutorial2.js';
+import transicionnivel4_0 from './transicionNivel4_0.js';
+import Transicionnivel4_1 from './transicionNivel4_1.js';
+import TransicionTutorial0 from './transicionTutorial0.js';
+import TransicionTutorial1 from './transicionTutorial1.js';
 
 
 /**
@@ -29,7 +40,9 @@ let config = {
         autoCenter: Phaser.Scale.CENTER_HORIZONTALLY
     },
     pixelArt: true,
-    scene: [Boot, Pause,Tutorial,GameUI, Creditos, Gameover],
+    scene: [Boot, Tutorial,GameUI,Transicion,Transicion1,Transicionnivel1,Transicionnivel2_0,
+        Transicionnivel2_1,Transicionnivel2_2,Transicionnivel3,transicionnivel4_0,Transicionnivel4_1,TransicionTutorial0,
+        TransicionTutorial1,TransicionTutorial2,Level1,Level2,Level3,Creditos, Gameover],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {

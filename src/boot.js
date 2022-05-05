@@ -79,7 +79,7 @@ export default class Boot extends Phaser.Scene {
    */
   create() {
     
-    this.scene.start('pause');
+    this.scene.start('transicion');
     
   }
 }

@@ -1075,6 +1075,28 @@
                  "width":0,
                  "x":1158,
                  "y":3684
+                }, 
+                {
+                 "height":42.4242424242424,
+                 "id":291,
+                 "name":"heroe",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":33.3333333333333,
+                 "x":351.515151515152,
+                 "y":533.333333333333
+                }, 
+                {
+                 "height":54.5454545454545,
+                 "id":292,
+                 "name":"cueva",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":45.4545454545454,
+                 "x":203.030303030303,
+                 "y":548.484848484848
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1796,7 +1818,7 @@
          "y":0
         }],
  "nextlayerid":16,
- "nextobjectid":292,
+ "nextobjectid":293,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.1",
