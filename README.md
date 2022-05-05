@@ -51,114 +51,21 @@ Al pulsar el botón de pausa (tecla ESC) del juego, toda acción se paralizará.
 ##### Configuración de musica 
 ##### Salir 
 
-### INTERFACES
-#### Transiciones
-En la pantalla saldran diferentes escenas previas a cada nivel, las cuales cuentan un poco el lore del juego.
-#### Pantalla de juego
-En la pantalla del juego podemos ver las vidas qué le quedan al jugador , las células de energía qué tiene, las gemas que ha obtenido y si a conseguido la llave.
-#### Pantalla de pausa
-En esta pantalla tenemos 4 opciones:
-##### Reanudar partida
-##### Reiniciar partida
-##### Configuración de sonido
-##### Configuración de musica 
-##### Salir
-
-#### Menú principal
-##### Jugar: 
-Comienza la partida.
-##### Opciones:
-###### Configuración de sonido y música
-###### Configuración de controles
-##### Creditos: 
-Sale una lista de los creadores.
-
  
 ### NIVELES
-#### Tutorial
-##### Encuentro: 
-Un tutorial, donde el jugador estará en un nivel básico para familiarizarse con los controles y objetivos. En el conocera todas las power ups que se podra encontrar a lo largo de los niveles.
-##### Objetivos: 
-Encontrar la llave para al final del nivel salvar al primer miembro de la familia
-##### Enemigos: 
-3 enemigos (Jackal)
-##### Items: 
-Gemas, cofres, vidas y celulas de energia
-##### Personajes: 
-Personaje principal.
-Jackal, es un enemigo que tiene una resistencia de 3 vidas realiza saltos y te lanza un moco verde, si te da con uno de sus mocos perderas 1 vida 
-##### Música y Efectos de Sonido: 
-
-#### Nivel 1
-##### Encuentro:
-Una pantalla en la cual el jugador debe ir aplicando las distintas acciones que ha ido aprendiendo a lo largo del tutorial. Al mismo tiempo debe enfrentarse a su primer enemigo, este se va a encargar de poner las cosas difíciles al personaje principal
-##### Objetivos:
-Encontrar la llave para al final del nivel salvar al miembro de la familia
-##### Enemigos: 
-Shangheili
-Grunt
-Bozapatilla
-Anatort
-##### Items: 
-Gemas, cofres, vidas y celulas de energia
-##### Personajes: 
-Personaje principal.
-Shangheili, es un enemigo que cuando te tiene localizado no para de moverse hasta pillarte, si te pilla te quitara dos vidas y el tiene una resistencia de 5 vidas.
-Grunt, es un enemigo que te dispara y te persigue, si te alcanza un disparo suyo te quitara una vida y el tendra una resistencia de 3 vidas.
-Bozapatilla,es un enemigo que te dispara, si te alcanza su disparo
-Anatort
-##### Música y Efectos de Sonido: 
-
-#### Nivel 2
-##### Encuentro: 
-Es un nivel, en el que vamos a introducir objetos que realizan un movimiento permitiendo nuevas interacciones con el usuario, y debe ir moviéndose por toda la pantalla para ir recolectando el mayor número de ítems que permiten conocer nuevas acciones que puede hacer el jugador.
-##### Objetivos: 
-Encontrar la llave para al final del nivel salvar al miembro de la familia
-##### Enemigos: 
-4 enemigos npc
-##### Items: 
-Gemas, cofres, vidas y celulas de energia
-##### Personajes: 
-Personaje principal y los 4 marcianos verdes
-##### Música y Efectos de Sonido: 
  
-#### Nivel 3
-##### Encuentro: 
-En este nivel se introduce la animación del fuego el cual daña con 1 vida al protagonista. El fuego solo aparece en las rocas claramente diferentes al resto. 
-##### Objetivos: 
-Encontrar la llave para al final del nivel salvar al miembro de la familia
-##### Enemigos: 
-2 enemigos npc
-##### Items: 
-Vidas, celulas de energia
-##### Personajes: 
-Personaje principal y dos marcianos verdes
-##### Música y Efectos de Sonido: 
-  
-#### Nivel 4
-##### Encuentro: 
-En este nivel vamos a encontrarnos con trampas más difíciles que restan más vida 
-##### Objetivos: 
-Encontrar la llave para al final del nivel salvar al miembro de la familia
-##### Enemigos: 
-1 enemigos npc y el boss
-##### Items: 
-Vidas, celulas de energia
-##### Personajes: 
-Personaje principal y dos marcianos verdes
-##### Música y Efectos de Sonido: 
  
 #### Reglas básicas
 The Kreephaser como todo juego tiene sus propias reglas. A continuación estableceremos las condiciones de victoria y derrota.
 ##### Condiciones de victoria y derrota
-La derrota ocurrirá cuando el jugador pierda todas las vidas. La pérdida de vidas puede ocurrir debido al daño producido por un enemigo, por la caída a un foso o por atravesar el fuego.
+La derrota ocurrirá cuando el jugador pierda todas las vidas. La pérdida de vidas puede ocurrir debido al daño producido por un enemigo o por la caida en alguna de las trampas.
 La victoria ocurrirá cuando el jugador supere todos los niveles del juego recuperando a todos sus familiares y haya derrotado al jefe final. El jefe final se encuentra en el último nivel del videojuego. 
 
 #### PERSONAJES
 En The kreephaser no hay posibilidad de elección del jugador. El protagonista siempre será el padre de la familia.
 
 ##### Vadum
-Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma cuando obtenga células de energía para su funcionamiento.
+Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma siempre y cuando obtenga gemas podra usar el disparo potenciado.
 
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
@@ -184,16 +91,6 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 |    **Lobeznotird**  |  2,5   | Nivel 4   |![Lobeznotird](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Jump_3.png)        |                                                 
 |    **Marinavja**    |   3    | Nivel 4   |![Marinavja](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Hit_1.png)         | 
 
-#####BOSS
-Crawler, es el que tiene secuestrado a los miembros de la familia de Vadum, tiene a su disposicion a un equipo de alinigenas y mutantes para hacerle la vida imposible a nuestro protagonista en su mision de recuperar a su familia. 
-
-| **Nombre** | **Daño** | **Nivel** | **Imagen** |
-| --- | --- | --- | --- |
-| **Crawler** | 4 | 4 | ![boss](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Boss%20Run1.png) |
-
-#### Armas 
-El protagonista tendrá una pistola la cual dispara tiros normales, podrá cargar y disparar con más potencia si recolecta células de energía.
-Los enemigos dispondrán de armas para atacar al protagonista.
 
 #### Objetos
 | **Objeto** | **Descripción** | **Imagen** |
@@ -201,7 +98,7 @@ Los enemigos dispondrán de armas para atacar al protagonista.
 | **Corazón** | Este objeto le dará al jugador la capacidad de recuperar una vida por cada corazón recogido.  | ![corazon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/corazon.png)
 | **Celula de energia** | Este objeto dará al jugador la posibilidad de disparar su arma | ![célula de energía](https://github.com/tolu9660/DVI/blob/main/assets/sprites/energia.png)
 | **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. | ![llave](https://github.com/tolu9660/DVI/blob/main/assets/sprites/key.png)
-| **Muro** | El jugador podrá encontrar muros los cuales podrá desplazar y usarlos como ventajas contra enemigos y obstáculos. | ![muro](https://github.com/tolu9660/DVI/blob/main/assets/sprites/piedra.png)
+| **Gema** | El jugador podrá encontrar gemas las cuales usara para poder realizar el disparo potenciado. | ![gema](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gema.png)
 
 #### LOGROS
 Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
