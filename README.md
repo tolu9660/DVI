@@ -64,32 +64,29 @@ The Kreephaser como todo juego tiene sus propias reglas. A continuación estable
 La derrota ocurrirá cuando el jugador pierda todas las vidas. La pérdida de vidas puede ocurrir debido al daño producido por un enemigo o por la caida en alguna de las trampas.
 La victoria ocurrirá cuando el jugador supere todos los niveles del juego recuperando a todos sus familiares y haya derrotado al jefe final. El jefe final se encuentra en el último nivel del videojuego. 
 
-##### LOGROS
+##### Logros
 Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
 
-##### PERSONAJES
+#### PERSONAJES
 En The kreephaser no hay posibilidad de elección del jugador. El protagonista siempre será el padre de la familia.
 
-##### Vadum
-Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma siempre y cuando obtenga gemas podra usar el disparo potenciado.
- 
-##### Controles
+#### Controles
 Usa las flechas < > laterales para mover al jugador
 Usa la flecha ^ para realizar un salto
 Usa la tecla ESPACIO para realizar un disparo 
 Usa la tecla E para realizar un doble salto (solo si tienes celulas de energia y estas en el aire)
 Usa la tecla D para realizar un dash
 Usa la tecla C para realizar un disparo potenciado (solo si tinees gemas)
- 
- 
 
+#### Vadum
+Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma siempre y cuando obtenga gemas podra usar el disparo potenciado.
 
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
 |    **Vadum**       |   1-2  |   6     |   Todos   |![hero](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Hero-Boy-Run-Shoot1.png) |
                                                                                |
 
-##### ENEMIGOS
+#### ENEMIGOS
 En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mundo.
 |    **Nombres**      |  **Daño**  |   **Nivel**   |                                       **Imagen**                                         |
 |---|---|---|---|
@@ -117,7 +114,9 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 | **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. | ![llave](https://github.com/tolu9660/DVI/blob/main/assets/sprites/key.png)
 | **Gema** | El jugador podrá encontrar gemas las cuales usara para poder realizar el disparo potenciado. | ![gema](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gema.png)
 
-
+#### Resumen de dirección artística
+<img src="assets/sprites/niveltut.png"/>
+<img src="assets/sprites/nivel11.png"/>
 
 
 
