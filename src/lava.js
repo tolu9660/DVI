@@ -9,6 +9,7 @@ export default class lava extends GameObject {
   
     constructor(scene,x,y){
       super(scene,x,y,'Lava', 10,'lava', 'Lava', 1,6);
-        //hay que cambiar los nombres y los numeros de frames TODO
+      this.body.immovable = true;
+      this.body.allowGravity = true;
     }
 }

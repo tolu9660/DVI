@@ -74,5 +74,17 @@ body{
   /*text-align: center;*/
 }
 
+#controles{
+  position: absolute;
+  top: 850px;
+  left: 170px;
+  max-width: 1000px;
+}
+
+#controles h2{
+  font-size: 200%;
+  color: black;
+}
+
 
 

@@ -31,6 +31,8 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('energiaRosa','/objetos/eRosa.png', '/objetos/eRosa.json');
     this.load.atlas('pm','/objetos/pm.png', '/objetos/pm.json');
     this.load.atlas('pinchos','/objetos/pinchos.png', '/objetos/pinchos.json');
+    this.load.atlas('acido','/objetos/acido.png', '/objetos/acido.json');
+    this.load.atlas('lava','/objetos/lava.png', '/objetos/lava.json');
     this.load.atlas('arbusto','/objetos/arbusto.png', '/objetos/arbusto.json');
     this.load.atlas('cofre','/objetos/cofre.png', '/objetos/cofre.json');
     this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");

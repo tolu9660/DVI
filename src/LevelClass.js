@@ -105,8 +105,14 @@ export default class LevelClass extends Phaser.Scene {
    
         }   
     }
+<<<<<<< HEAD
     this.groundLayer.setCollisionByExclusion(-1, true);
     // this.groundLayer.setCollisionByProperty({collides : true});    
+=======
+    this.groundLayer.setCollisionByExclusion(-1,true);
+    //this.groundLayer.setCollisionByProperty({collides : true}); 
+    //this.groundLayer.setCollisionByProperty({collider : true});    
+>>>>>>> alvaro
     // this.physics.world.setBounds(0,0,16000,3000);
     this.cargarObjetos();
 
