@@ -6,7 +6,7 @@ Numero de grupo 2 (THE KREEPHASER)
 <img src="assets/sprites/pantalla.png"/>
 
 ## Enlace al juego
-
+https://tolu9660.github.io/DVI/
 
 # GDD
 
