@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.1" orientation="orthogonal" renderorder="right-down" width="215" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="270">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="215" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="16" nextobjectid="271">
  <editorsettings>
   <export target="nivel1.json" format="json"/>
  </editorsettings>
@@ -410,7 +410,7 @@
   </tile>
  </tileset>
  <tileset firstgid="257" name="fondo" tilewidth="128" tileheight="128" tilecount="0" columns="15">
-  <image source="../../../2. Game Backgrounds/1920x1080/Theme3 Background/PSD/fondo.jpg" width="1920" height="1080"/>
+  <image source="../tutorial/fondo.jpg" width="1920" height="1080"/>
  </tileset>
  <layer id="15" name="fondo" width="215" height="30">
   <data encoding="csv">
@@ -481,20 +481,16 @@
 </data>
  </layer>
  <objectgroup id="9" name="enemigos">
-  <object id="147" name="enemigo" type="feona" x="150" y="2660" width="108" height="136"/>
-  <object id="148" name="enemigo" type="shangheili" x="2050" y="1428" width="108" height="136"/>
+  <object id="148" name="enemigo" type="bozapatilla" x="2050" y="1428" width="108" height="136"/>
   <object id="149" name="enemigo" type="grunt" x="3226" y="3332" width="108" height="136"/>
-  <object id="150" name="enemigo" type="feona" x="6682" y="3444" width="108" height="136"/>
   <object id="151" name="enemigo" type="sapien" x="5346" y="1100" width="108" height="136"/>
   <object id="152" name="enemigo" type="shangheili" x="11226" y="876" width="108" height="136"/>
   <object id="153" name="enemigo" type="shangheili" x="8610" y="3332" width="108" height="136"/>
   <object id="154" name="enemigo" type="sapien" x="9578" y="3300" width="108" height="136"/>
-  <object id="155" name="enemigo" type="feona" x="12874" y="1532" width="108" height="136"/>
   <object id="156" name="enemigo" type="grunt" x="13490" y="1508" width="108" height="136"/>
   <object id="157" name="enemigo" type="sapien" x="16266" y="3076" width="108" height="136"/>
   <object id="158" name="enemigo" type="feona" x="17074" y="2292" width="108" height="136"/>
   <object id="159" name="enemigo" type="Grunt" x="19450" y="2668" width="108" height="136"/>
-  <object id="160" name="enemigo" type="feona" x="21634" y="1268" width="108" height="136"/>
   <object id="161" name="enemigo" type="sapien" x="22274" y="1244" width="108" height="136"/>
   <object id="162" name="enemigo" type="shangheili" x="25106" y="2292" width="108" height="136"/>
   <object id="163" name="enemigo" type="grunt" x="26322" y="3332" width="108" height="136"/>
@@ -526,7 +522,6 @@
   <object id="168" name="corazon" x="13478" y="758" width="68" height="68"/>
   <object id="169" name="corazon" x="8054" y="1990" width="68" height="68"/>
   <object id="170" name="corazon" x="694" y="2110" width="68" height="68"/>
-  <object id="171" name="heroe" x="1074.61" y="1039.27" width="124" height="156"/>
   <object id="172" name="energia" type="rosa" x="7542" y="1144" width="116" height="112"/>
   <object id="173" name="energia" x="4430" y="2320" width="116" height="112"/>
   <object id="174" name="energia" type="rosa" x="11622" y="2432" width="116" height="112"/>
@@ -614,5 +609,6 @@
   <object id="265" name="trampa" type="pinchos" x="24920.2" y="3672.85" width="125.697" height="105.818"/>
   <object id="266" name="trampa" type="pinchos" x="24857.5" y="3674.91" width="125.697" height="105.818"/>
   <object id="269" name="energia" x="8070" y="3240" width="116" height="112"/>
+  <object id="171" name="heroe" x="1074.61" y="1039.27" width="124" height="156"/>
  </objectgroup>
 </map>

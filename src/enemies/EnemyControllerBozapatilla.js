@@ -78,29 +78,29 @@ shootEnemy(){
 console.log(this.scaleX);
 // console.log(this.sprite.rotation);
 const vector = new Phaser.Math.Vector2(1,0)
-if (this) {
+  if (this) {
 
-  if (this.x > this.scene.playerController.x) {
-    vector.x = -1
-  }else {
-    vector.x = 1
+    if (this.x > this.scene.playerController.x) {
+      vector.x = -1
+    }else {
+      vector.x = 1
+    }
   }
+  this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bozapatilla_bala');
+  console.log(this.scene);
+  this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
+    this.scene.physics.add.collider(this.bullet,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this)
 
-this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bozapatilla_bala');
-console.log(this.scene);
-this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
-  this.scene.physics.add.collider(this.bullet,this.scene.groundLayer,this.handleBulletsGroundCollision,undefined,this)
+  // this.anims.play('bullet')
+  this.bullet.setActive(true)
+  this.bullet.setVisible(true)
+  this.bullet.body.allowGravity = false
+  this.bullet.setRotation(vector.angle())
 
-// this.anims.play('bullet')
-this.bullet.setActive(true)
-this.bullet.setVisible(true)
-this.bullet.body.allowGravity = false
-this.bullet.setRotation(vector.angle())
-
-// this.bullet.x += vector.x = 16 
+  // this.bullet.x += vector.x = 16 
 
 
-this.bullet.setVelocityX(vector.x * 500, 300)
+  this.bullet.setVelocityX(vector.x * 500, 300)
 }
 
 
