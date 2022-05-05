@@ -115,7 +115,12 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 | **Gema** | El jugador podrá encontrar gemas las cuales usara para poder realizar el disparo potenciado. | ![gema](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gema.png)
 
 #### Resumen de dirección artística
+En todos los niveles se usa el mismo fondo con una paleta distinta de colores pero en todos se usa una gama de colores oscura. Cuando el jugador baja en los mapas que tienen cuevas se usan las mismas texturas que en la superficie pero con colores mas oscuros para representar lugares con poca iluminación.
+
+Tutorial
 <img src="assets/sprites/niveltut.png"/>
+
+Nivel 1
 <img src="assets/sprites/nivel11.png"/>
 
 
