@@ -1,6 +1,9 @@
 # THE KREEPHASER
 
-Numero de grupo 3 (THE KREEPHASER)
+Numero de grupo 2 (THE KREEPHASER)
+
+# Pantalla del juego
+<img src="assets/sprites/pantalla.png"/>
 
 # GDD
 
@@ -12,14 +15,15 @@ Pagina web desarrollado con Phaser 3
 2D	
 #### Género: 
 Plataformas
+#### Público: 
+Para todos los públicos
 #### Plataforma: 
 Pc
 #### Versión: 
 1
 #### Sinopsis de Jugabilidad y Contenido: 
 Vivir la experiencia en distintos mundos de plataformas,  en donde tendrás que usar una llave para rescatar a los distintos miembros de la familia, y reunirlos a todos
-#### Público: 
-Para todos los públicos
+
 
 #### Historia
 Todos los miembros de una familia han sido secuestrados por un alienigena. El padre de esta familia debera recorrer los distintos mundos donde se encuentran sus familiares para salvarlos. El protagonista debera enfrentarse a multitud de enemigos y trampas que le intentaran impedir su avance.
@@ -52,7 +56,7 @@ Al pulsar el botón de pausa (tecla ESC) del juego, toda acción se paralizará.
 ##### Salir 
 
  
-### NIVELES
+#### NIVELES
  
  
 #### Reglas básicas
