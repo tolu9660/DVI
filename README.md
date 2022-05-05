@@ -30,26 +30,34 @@ El protagonista de la historia será un padre de familia la cual ha sido secuest
  
 ### MECÁNICA DEL JUEGO 
 #### Mover
-Haciendo uso de los controles del teclado el jugador podrá mover al personaje por los niveles del juego. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. Si el personaje se encuentra con un objeto movible podrá desplazar el objeto al moverse. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance. Podemos encontrar dentro de esta mecánica la mecánica derivada del salto. 
+Haciendo uso de los controles del teclado el jugador podrá mover al personaje por los niveles del juego. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance. Podemos encontrar dentro de esta mecánica la mecánica derivada del salto. 
 #### Saltar: 
 El personaje se impulsará hacia arriba  con un salto al pulsar el botón correspondiente. El personaje solo tiene las posibilidades de hacer doble salto y salto simple. El personaje debe volver a tocar una superficie para realizar alguno de los dos posibles saltos.
+### Doble Salto:
+
+### Dash:
+
 #### Atacar
-El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos o utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos.
+El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos o utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos.Si utiliza la pistola podra disparar de dos formas distintas, la normal y la otra  ahora un daño superior a la normal.
 #### Interactuar
-El personaje podrá interactuar con 3 objetos distintos. Los cuales serán los corazones, las células de energía y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
+El personaje podrá interactuar con 5 objetos distintos. Los cuales serán los corazones, las células de energía,cofres los cuales te puede tocar de forma aleatoria (gema,celula de energia y corazones) las gemas y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
 #### Pausar el juego
-Al pulsar el botón de pausa del juego, toda acción se paralizará. Aparecerá un menú con estas opciones:  
+Al pulsar el botón de pausa (tecla ESC) del juego, toda acción se paralizará. Aparecerá un menú con estas opciones:  
 ##### Reanudar partida
+##### Reiniciar partida
 ##### Configuración de sonido
 ##### Configuración de musica 
 ##### Salir 
 
 ### INTERFACES
+#### Transiciones
+En la pantalla saldran diferentes escenas previas a cada nivel, las cuales cuentan un poco el lore del juego.
 #### Pantalla de juego
-En la pantalla del juego podemos ver las vidas qué le quedan al jugador y las células de energía qué tiene.
+En la pantalla del juego podemos ver las vidas qué le quedan al jugador , las células de energía qué tiene, las gemas que ha obtenido y si a conseguido la llave.
 #### Pantalla de pausa
 En esta pantalla tenemos 4 opciones:
 ##### Reanudar partida
+##### Reiniciar partida
 ##### Configuración de sonido
 ##### Configuración de musica 
 ##### Salir
@@ -62,21 +70,21 @@ Comienza la partida.
 ##### Configuración de controles
 ##### Creditos: 
 Sale una lista de los creadores.
-##### Salir: 
-Te mantiene en la pantalla principal.
+
  
 ### NIVELES
 #### Tutorial
 ##### Encuentro: 
-Un tutorial, donde el jugador estará en un nivel básico para familiarizarse con los controles y objetivos
+Un tutorial, donde el jugador estará en un nivel básico para familiarizarse con los controles y objetivos. En el conocera todas las power ups que se podra encontrar a lo largo de los niveles.
 ##### Objetivos: 
 Encontrar la llave para al final del nivel salvar al primer miembro de la familia
 ##### Enemigos: 
-1 enemigo npc
+3 enemigos (Jackal)
 ##### Items: 
-Objetos de empujar, vidas y celulas de energia
+Gemas, cofres, vidas y celulas de energia
 ##### Personajes: 
-Personaje principal y el marciano verde.
+Personaje principal.
+Jackal, es un enemigo que tiene una resistencia de 3 vidas realiza saltos y te lanza un moco verde, si te da con uno de sus mocos perderas 1 vida 
 ##### Música y Efectos de Sonido: 
 
 #### Nivel 1
@@ -85,11 +93,18 @@ Una pantalla en la cual el jugador debe ir aplicando las distintas acciones que 
 ##### Objetivos:
 Encontrar la llave para al final del nivel salvar al miembro de la familia
 ##### Enemigos: 
-1 enemigo npc
+Shangheili
+Grunt
+Bozapatilla
+Anatort
 ##### Items: 
-Objetos de empujar, vidas y celulas de energia
+Gemas, cofres, vidas y celulas de energia
 ##### Personajes: 
-Personaje principal y el marciano verde.
+Personaje principal.
+Shangheili, es un enemigo que cuando te tiene localizado no para de moverse hasta pillarte, si te pilla te quitara dos vidas y el tiene una resistencia de 5 vidas.
+Grunt, es un enemigo que te dispara y te persigue, si te alcanza un disparo suyo te quitara una vida y el tendra una resistencia de 3 vidas.
+Bozapatilla,es un enemigo que te dispara, si te alcanza su disparo
+Anatort
 ##### Música y Efectos de Sonido: 
 
 #### Nivel 2
@@ -100,7 +115,7 @@ Encontrar la llave para al final del nivel salvar al miembro de la familia
 ##### Enemigos: 
 4 enemigos npc
 ##### Items: 
-Objetos de empujar,vidas y celulas de energia
+Gemas, cofres, vidas y celulas de energia
 ##### Personajes: 
 Personaje principal y los 4 marcianos verdes
 ##### Música y Efectos de Sonido: 
