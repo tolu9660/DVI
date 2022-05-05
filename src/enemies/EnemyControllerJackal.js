@@ -109,16 +109,20 @@ shootEnemy(){
  
   
    console.log(this.body);
-  const vector = new Phaser.Math.Vector2(1,0)
+  const vector = new Phaser.Math.Vector2(1,0) 
   if (this) {
-
-    if (this.x > this.scene.playerController.x) {
+   
+    if (this.x > this.scene.playerController.x) {//si estoy a la izquierda
       vector.x = -1
-      this.body.rotation=-1
-      setRotation(vector.angle())
+      
     }else {
-      this.body.rotation=1
+      
       vector.x = 1
+      this.angle=-180;
+      this.flipY=true;
+     
+      
+     
     }
   
     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'jackal_bala');

@@ -28,7 +28,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         this.scene.physics.add.existing(this);
         this.scene.physics.add.collider(this,this.scene.groundLayer)
         this.scene = scene
-
+       
         // this.idle=idle;
         // this.walk= walk;
         // this.imgIdle=imgIdle;
