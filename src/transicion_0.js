@@ -11,12 +11,12 @@
 
     
     constructor() {
-      super({ key: 'transicion' });
+      super({ key: 'transicion_0' });
     }
   
     preload(){
-      this.load.image('Transicion0',"assets/sprites/trasInicioC0.jpg");
-      this.load.image('Transicion1',"assets/sprites/trasInicioC1.jpg");
+     
+      this.load.image('transicion0',"assets/sprites/trasInicioC0.jpg");
     }
     /**
      * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
@@ -26,7 +26,7 @@
        
     create() {
   
-      const backgroundImage=this.add.image(0,0,'Transicion0').setOrigin(0,0);
+      const backgroundImage=this.add.image(0,0,'transicion0').setOrigin(0,0);
      // const backgroundImage=this.add.image(0,0,'Transicion0').setOrigin(0,0);
       // Añadimos el listener para cuando se haya pulsado una tecla. Es probable que no
       // lleguemos a ver el mensaje porque veníamos con una tecla pulsada del juego (al 
@@ -34,7 +34,7 @@
       // añada este listener pasado un segundo
 
       this.input.keyboard.on('keydown', function (event) { 
-        this.scene.start('tutorial')
+        this.scene.start('transicion1')
       }, this);
   
     }
