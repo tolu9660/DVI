@@ -12,14 +12,13 @@ export default class inicio extends Phaser.Scene {
   preload() {
     this.load.image('azul', 'assets/sprites/azul.jpg')
     this.load.image('Inicio',"assets/sprites/inicio.jpg");
-    this.load.image('Inicio2',"assets/sprites/inicio2.jpg");
 
 
   }
 
   create() {
-
-    const backgroundImage=this.add.image(0,0,'Inicio2').setOrigin(0,0);
+    this.scene.bringToTop()
+    const backgroundImage=this.add.image(0,0,'Inicio').setOrigin(0,0);
 
     const { width, height } = this.scale
 
@@ -58,9 +57,10 @@ export default class inicio extends Phaser.Scene {
 
     this.creditosButton = this.add.text(creditosButton.x, creditosButton.y, 'Creditos').setOrigin(0.5);
 
-    const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 18, 'azul')
+   /* const SalirButton = this.add.image(creditosButton.x, creditosButton.y + creditosButton.displayHeight + 18, 'azul')
     .setDisplaySize(150, 50)
     this.SalirButton = this.add.text(SalirButton.x, SalirButton.y, 'Salir').setOrigin(0.5);
+ */
   }
 
 

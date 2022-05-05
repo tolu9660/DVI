@@ -7,8 +7,7 @@ export default class GameUI extends Phaser.Scene {
    * Constructor de la escena
    */
   constructor() {
-    super({ key: 'game-ui' });
-
+    super({ key: 'game-ui' });    
   }
 
   init(){
@@ -22,21 +21,29 @@ export default class GameUI extends Phaser.Scene {
   }
 
   create(){
+    this.scene.bringToTop()
     
-      const corazon = this.add.image(30, 20, 'corazon')
-      this.heartLabel = this.add.text(45, 25, 'x6', {
-        fontSize: '16px'
-      })
-
-      const energia = this.add.image(100, 25, 'energia')
-      //energia.setScale('0.4','0.4')
+    const corazon = this.add.image(30, 20, 'corazon','Heart1.png')
+    this.heartLabel = this.add.text(45, 25, 'x6', {
+      fontSize: '16px'
+    })
+    corazon.scale=0.4
+      const energia = this.add.image(100, 25, 'energia','Blue Crystal2.png')
+      energia.scale=0.4
      this.starsLabel = this.add.text(123 , 26, 'x0', {
         fontSize: '16px'
       })
+      const energiaPlus = this.add.image(170, 25, 'energiaRosa','Red Crystal2.png')
+      energiaPlus.scale=0.4
+     this.starsLabelPlus = this.add.text(195 , 26, 'x0', {
+        fontSize: '16px'
+      })
 
-    events.on('star-collected', this.handleStarCollected, this)
+    events.on('energy', this.handleEnergy, this)
+    events.on('energyPlus', this.handleEnergyPlus, this)
+    // events.on('energy-used', this.handleEnergyUsed, this)
     events.on('key-collected', this.handleKeyCollected, this)
-    events.on('heart-collected', this.handleHeartCollected, this)
+    events.on('heart', this.handleHeart, this)
     //eventos que gestionan el decremento de vida.
     events.on('minus-health', this.handleMinusHealthCollected, this)
     events.on('minus-health2', this.handleMinusHealthCollected2, this)
@@ -48,13 +55,16 @@ export default class GameUI extends Phaser.Scene {
     
     // events.on('mensaje-ayuda', this.handleMensajeAyudaEnergia, this)
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('star-collected', this.handleStarCollected, this)
+      events.off('energy', this.handleEnergy, this)
+    })
+    this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
+      events.off('energyPlus', this.handleEnergyPlus, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
       events.off('key-collected', this.handleKeyCollected, this)
     })
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
-      events.off('heart-collected', this.handleHeartCollected, this)
+      events.off('heart', this.handleHeartCollected, this)
     })
     //creo un evento por cada enemigo
     this.events.once(Phaser.Scenes.Events.DESTROY, ()=>{
@@ -65,23 +75,24 @@ export default class GameUI extends Phaser.Scene {
     })
   }
 
-  handleStarCollected(){
-    ++this.starsCollected
-    this.starsLabel.text = `x${this.starsCollected}`
+  handleEnergy(value){
+    this.starsLabel.text = `x${value}`
+  }
+  handleEnergyPlus(value){
+    this.starsLabelPlus.text = `x${value}`
+  }
+  handleEnergyCollected(value){
+    this.starsLabel.text = `x${value}`
   }
 
   handleKeyCollected(){
-    const image = this.add.image(180, 23, 'llave')
+    const image = this.add.image(250, 23, 'llave')
+    image.scale=0.4
 
   }
 
-  handleHeartCollected(){
-    console.log('hearts collected')
-    if (this.heartsCollected < 6){
-      this.heartsCollected++
-    }
-
-    this.heartLabel.text = `x${this.heartsCollected}`
+  handleHeart(value){
+    this.heartLabel.text = `x${value}`
   }
 
   handleMinusHealthCollected(){
@@ -111,9 +122,9 @@ export default class GameUI extends Phaser.Scene {
 
   }
 
-  handleCuevaIn(){
-    this.scene.pause('level')
-    this.scene.start('end')
+  handleCuevaIn(level,next){
+    this.scene.stop(level)
+    this.scene.start(next)
   }
 
   handleCuevaStop(){
@@ -153,8 +164,8 @@ export default class GameUI extends Phaser.Scene {
     
   }
 
-  handleMensajeAyudaEnergia(){
-    if (!this.messageEnergia) {
+  handleMensajeAyudaEnergia(nivel){
+    if (!this.messageEnergia && nivel == 'tutorial') {
       let bubble;
       let content = [
         "Recopila estas celulas de energia para usar un disparo mas potente",
@@ -187,8 +198,8 @@ export default class GameUI extends Phaser.Scene {
       })
     }
   }
-  handleMensajeAyudaLlave(){
-    if (!this.messageLlave) {
+  handleMensajeAyudaLlave(nivel){
+    if (!this.messageLlave && nivel == 'tutorial') {
       let bubble;
       let content = [
         "Esta llave te permitirá acceder a la cueva para liberar a un miembro de la familia.",
@@ -221,9 +232,9 @@ export default class GameUI extends Phaser.Scene {
       })
     }
   }
-  handleMensajeAyudaCorazon(){    
+  handleMensajeAyudaCorazon(nivel){    
 
-    if (!this.messageCorazon) {
+    if (!this.messageCorazon && nivel == 'tutorial') {
       let bubble;
       let content = [
         "Estos corazones te ayudarán a recuperar la vida perdida. Recuerda que solo dispones de 6 vidas",

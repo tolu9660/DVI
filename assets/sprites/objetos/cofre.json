@@ -1,0 +1,36 @@
+{"frames": [
+
+{
+	"filename": "cofre1.png",
+	"frame": {"x":0,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+{
+	"filename": "cofre2.png",
+	"frame": {"x":128,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+{
+	"filename": "cofre3.png",
+	"frame": {"x":256,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cofre.png",
+	"format": "RGBA8888",
+	"size": {"w":384,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:616ec004db0097b12526f5e72949a620:35ccb0f78e3808cee2e935a29d83df4c:568495fe653782ac00cbe52720442e71$"
+}
+}

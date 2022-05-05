@@ -1,0 +1,303 @@
+{
+  "frames": {
+    "Cyberdoor Closed.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open1.png": {
+      "frame": {
+        "x": 0,
+        "y": 220,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open10.png": {
+      "frame": {
+        "x": 0,
+        "y": 440,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open3.png": {
+      "frame": {
+        "x": 0,
+        "y": 660,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open4.png": {
+      "frame": {
+        "x": 0,
+        "y": 880,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open5.png": {
+      "frame": {
+        "x": 0,
+        "y": 1100,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open6.png": {
+      "frame": {
+        "x": 0,
+        "y": 1320,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open11.png": {
+      "frame": {
+        "x": 0,
+        "y": 220,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open2.png": {
+      "frame": {
+        "x": 0,
+        "y": 440,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open9.png": {
+      "frame": {
+        "x": 0,
+        "y": 660,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open8.png": {
+      "frame": {
+        "x": 0,
+        "y": 880,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Cyberdoor Open7.png": {
+      "frame": {
+        "x": 0,
+        "y": 1100,
+        "w": 152,
+        "h": 220
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 220
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 220
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "texture.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 152,
+      "h": 1540
+    },
+    "scale": 1
+  }
+}

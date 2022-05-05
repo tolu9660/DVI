@@ -19,27 +19,27 @@ svg {
 }
 
 .text-copy:nth-child(1){
-stroke: #4D163D;
+stroke: #0a2e9c; /*#4D163D*/
 animation-delay: -1;
 }
 
 .text-copy:nth-child(2){
-stroke: #840037;
+stroke: #1e2088;/*#840037*/
 animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-stroke: #BD0034;
+stroke: #0d00bd;/*#BD0034*/
 animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-stroke: #BD0034;
+stroke: #3f7df0;/*#BD0034*/
 animation-delay: -4s;
 }
 
 .text-copy:nth-child(5){
-stroke: #FDB731;
+stroke: #31defd;/*#FDB731*/
 animation-delay: -5s;
 }
 
@@ -72,6 +72,18 @@ body{
 }
 #historia p{
   /*text-align: center;*/
+}
+
+#controles{
+  position: absolute;
+  top: 850px;
+  left: 170px;
+  max-width: 1000px;
+}
+
+#controles h2{
+  font-size: 200%;
+  color: black;
 }
 
 

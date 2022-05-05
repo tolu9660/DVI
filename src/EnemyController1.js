@@ -2,7 +2,7 @@
 
 import { sceneEvents as events } from './EventsCenter.js';
 
-import EnemiesClass from './EnemiesClass.js';
+import EnemiesClass from './enemies/EnemiesClass.js';
 import NewStateMachine from './newStateMachine.js';
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
@@ -11,10 +11,10 @@ import NewStateMachine from './newStateMachine.js';
 
  export default class EnemyController1 extends EnemiesClass {
 
-constructor(scene,sprite,tipo){
+constructor(scene,x,y,type){
   //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
-  super(scene, sprite,'enemy1','enemy-idle','enemy-walk','enemigo.png',
-        'jackal_walk_',tipo,1,5,10);
+  super(scene, x,y,'alien','enemy-idle','enemy-walk','predatormask_idle_1.png',
+  'predatormask__0006_walk_','alien',1,6,10);
 }
 
  }

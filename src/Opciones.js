@@ -10,17 +10,20 @@ export default class Opciones extends Phaser.Scene{
         this.load.image('azul', 'assets/sprites/azul.jpg')
         this.load.image('flechas', 'assets/sprites/flechas.png')
         this.load.image('aswd', 'assets/sprites/aswd.png')
+        this.load.image('fondo','assets/sprites/fondoopciones.jpg')
       }
       create()
-      { const { width, height } = this.scale
+      {
+        this.scene.bringToTop()
+        const { width, height } = this.scale
          // this.add.image(200,200,'azul');
-
+         const backgroundImage=this.add.image(0,0,'fondo').setOrigin(0,0);
           //botones musica
           this.text = this.add.text (300,100,'Opciones',{fontSize:30});
           this.musicaButton= this.add.image(200,200,'checkedbox')
           this.musicaTexto = this.add.text(250, 190, 'Musicas Activada', { fontSize: 24 });
 
-         this.sonidoButton = this.add.image(200, 300, 'checkedbox');
+          this.sonidoButton = this.add.image(200, 300, 'checkedbox');
           this.sonidoTexto = this.add.text(250, 290, 'Sonido Activado', { fontSize: 24 });
 
           this.musicaButton.setInteractive();

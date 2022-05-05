@@ -1,0 +1,734 @@
+{
+	"textures": [
+		{
+			"image": "shangheili.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 496,
+				"h": 1350
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Alien_Hit_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 46,
+						"w": 128,
+						"h": 178
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 128,
+						"h": 178
+					}
+				},
+				{
+					"filename": "Alien_Hit_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 86,
+						"y": 46,
+						"w": 128,
+						"h": 178
+					},
+					"frame": {
+						"x": 131,
+						"y": 1,
+						"w": 128,
+						"h": 178
+					}
+				},
+				{
+					"filename": "Alien_Hit_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 46,
+						"w": 128,
+						"h": 178
+					},
+					"frame": {
+						"x": 261,
+						"y": 1,
+						"w": 128,
+						"h": 178
+					}
+				},
+				{
+					"filename": "Alien_Death_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 76,
+						"y": 34,
+						"w": 86,
+						"h": 190
+					},
+					"frame": {
+						"x": 391,
+						"y": 1,
+						"w": 86,
+						"h": 190
+					}
+				},
+				{
+					"filename": "Alien_Idle_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 98,
+						"w": 176,
+						"h": 126
+					},
+					"frame": {
+						"x": 1,
+						"y": 181,
+						"w": 176,
+						"h": 126
+					}
+				},
+				{
+					"filename": "Alien_Attack_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 112,
+						"w": 182,
+						"h": 112
+					},
+					"frame": {
+						"x": 179,
+						"y": 181,
+						"w": 182,
+						"h": 112
+					}
+				},
+				{
+					"filename": "Alien_Death_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 30,
+						"w": 124,
+						"h": 154
+					},
+					"frame": {
+						"x": 363,
+						"y": 193,
+						"w": 124,
+						"h": 154
+					}
+				},
+				{
+					"filename": "Alien_Death_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 102,
+						"w": 162,
+						"h": 122
+					},
+					"frame": {
+						"x": 179,
+						"y": 295,
+						"w": 162,
+						"h": 122
+					}
+				},
+				{
+					"filename": "Alien_Idle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 104,
+						"w": 152,
+						"h": 120
+					},
+					"frame": {
+						"x": 343,
+						"y": 349,
+						"w": 152,
+						"h": 120
+					}
+				},
+				{
+					"filename": "Alien_Idle_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 106,
+						"w": 166,
+						"h": 118
+					},
+					"frame": {
+						"x": 1,
+						"y": 309,
+						"w": 166,
+						"h": 118
+					}
+				},
+				{
+					"filename": "Alien_Attack_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 112,
+						"w": 172,
+						"h": 112
+					},
+					"frame": {
+						"x": 169,
+						"y": 419,
+						"w": 172,
+						"h": 112
+					}
+				},
+				{
+					"filename": "Alien_Death_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 104,
+						"w": 138,
+						"h": 120
+					},
+					"frame": {
+						"x": 343,
+						"y": 471,
+						"w": 138,
+						"h": 120
+					}
+				},
+				{
+					"filename": "Alien_Attack_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 112,
+						"w": 156,
+						"h": 112
+					},
+					"frame": {
+						"x": 1,
+						"y": 429,
+						"w": 156,
+						"h": 112
+					}
+				},
+				{
+					"filename": "Alien_Attack_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 112,
+						"w": 174,
+						"h": 112
+					},
+					"frame": {
+						"x": 159,
+						"y": 533,
+						"w": 174,
+						"h": 112
+					}
+				},
+				{
+					"filename": "Alien_Attack_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 120,
+						"w": 160,
+						"h": 104
+					},
+					"frame": {
+						"x": 335,
+						"y": 593,
+						"w": 160,
+						"h": 104
+					}
+				},
+				{
+					"filename": "Alien_Hit_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 104,
+						"w": 138,
+						"h": 120
+					},
+					"frame": {
+						"x": 1,
+						"y": 543,
+						"w": 138,
+						"h": 120
+					}
+				},
+				{
+					"filename": "Alien_Attack_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 120,
+						"w": 190,
+						"h": 104
+					},
+					"frame": {
+						"x": 141,
+						"y": 647,
+						"w": 190,
+						"h": 104
+					}
+				},
+				{
+					"filename": "Alien_Idle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 104,
+						"w": 138,
+						"h": 120
+					},
+					"frame": {
+						"x": 1,
+						"y": 665,
+						"w": 138,
+						"h": 120
+					}
+				},
+				{
+					"filename": "Alien_Death_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 60,
+						"w": 132,
+						"h": 114
+					},
+					"frame": {
+						"x": 333,
+						"y": 699,
+						"w": 132,
+						"h": 114
+					}
+				},
+				{
+					"filename": "Alien_Attack_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 120,
+						"w": 176,
+						"h": 104
+					},
+					"frame": {
+						"x": 141,
+						"y": 753,
+						"w": 176,
+						"h": 104
+					}
+				},
+				{
+					"filename": "Alien_Death_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 110,
+						"w": 132,
+						"h": 114
+					},
+					"frame": {
+						"x": 1,
+						"y": 787,
+						"w": 132,
+						"h": 114
+					}
+				},
+				{
+					"filename": "Alien_Death_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 132,
+						"w": 176,
+						"h": 92
+					},
+					"frame": {
+						"x": 319,
+						"y": 815,
+						"w": 176,
+						"h": 92
+					}
+				},
+				{
+					"filename": "Alien_Death_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 56,
+						"w": 166,
+						"h": 92
+					},
+					"frame": {
+						"x": 135,
+						"y": 859,
+						"w": 166,
+						"h": 92
+					}
+				},
+				{
+					"filename": "Alien_Death_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 152,
+						"w": 192,
+						"h": 72
+					},
+					"frame": {
+						"x": 303,
+						"y": 909,
+						"w": 192,
+						"h": 72
+					}
+				},
+				{
+					"filename": "Alien_Attack_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 138,
+						"w": 208,
+						"h": 86
+					},
+					"frame": {
+						"x": 1,
+						"y": 953,
+						"w": 208,
+						"h": 86
+					}
+				},
+				{
+					"filename": "Alien_Attack_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 150,
+						"w": 214,
+						"h": 74
+					},
+					"frame": {
+						"x": 211,
+						"y": 983,
+						"w": 214,
+						"h": 74
+					}
+				},
+				{
+					"filename": "Alien_Walk_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 146,
+						"w": 196,
+						"h": 78
+					},
+					"frame": {
+						"x": 1,
+						"y": 1041,
+						"w": 196,
+						"h": 78
+					}
+				},
+				{
+					"filename": "Alien_Attack_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 152,
+						"w": 214,
+						"h": 72
+					},
+					"frame": {
+						"x": 199,
+						"y": 1059,
+						"w": 214,
+						"h": 72
+					}
+				},
+				{
+					"filename": "Alien_Walk_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 150,
+						"w": 194,
+						"h": 74
+					},
+					"frame": {
+						"x": 1,
+						"y": 1121,
+						"w": 194,
+						"h": 74
+					}
+				},
+				{
+					"filename": "Alien_Walk_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 152,
+						"w": 214,
+						"h": 72
+					},
+					"frame": {
+						"x": 197,
+						"y": 1133,
+						"w": 214,
+						"h": 72
+					}
+				},
+				{
+					"filename": "Alien_Walk_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 154,
+						"w": 208,
+						"h": 70
+					},
+					"frame": {
+						"x": 1,
+						"y": 1207,
+						"w": 208,
+						"h": 70
+					}
+				},
+				{
+					"filename": "Alien_Death_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 160,
+						"w": 220,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 1279,
+						"w": 220,
+						"h": 64
+					}
+				},
+				{
+					"filename": "Alien_Walk_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 156,
+						"w": 204,
+						"h": 68
+					},
+					"frame": {
+						"x": 211,
+						"y": 1207,
+						"w": 204,
+						"h": 68
+					}
+				},
+				{
+					"filename": "Alien_eath_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 254,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 152,
+						"w": 198,
+						"h": 72
+					},
+					"frame": {
+						"x": 223,
+						"y": 1277,
+						"w": 198,
+						"h": 72
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:faa2fb129845d4ef1547320220181157:49deee3c35fca6502ed08dac65912fb5:32f6bcba4acc6e90674e8ec25da038b3$"
+	}
+}
