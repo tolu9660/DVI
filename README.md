@@ -88,28 +88,24 @@ Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos e
                                                                                |
 
 #### ENEMIGOS
-1. Jackal
-2. Shangheli
-3. Grunt
-4. Sapien
-5. Drago
+
 En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mundo.
-|    **Nombres**      |  **Daño**  |   **Nivel**   |                                       **Imagen**                                         |
-|---|---|---|---|
-|    **Jackal**      |   1    | Tutorial  |![Jackal](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien1%20Walk1.png)      |
-|    **Shangheli**    |   1    | Nivel 1   |![Shangheli](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien2%20Walk1.png)      |                                                 
-|    **Grunt**        |   1    | Nivel 1   |![Grunt](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien3%20Attack1_1.png)  |
-|    **Sapien**       |  1,5   | Nivel 1   |![Sapien](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien4%20Attack1_01.png) |                                                 
-|    **Feoña**        |  1,5   | Nivel 2   |![Feoña](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien5%20Walk1.png)      |                                                 
-|    **Drago**        |  1,5   | Nivel 2   |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Attack_1.png)      |                                                 
-|    **Ralp**         |   2    | Nivel 2   |![Ralp](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien7%20Death1.png)     |
-|    **Bozapatilla**  |   2    | Nivel 2   |![Bozapatilla](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien8-Idle01.png)       |                                                 
-|    **Galrado**      |  2,5   | Nivel 3-4 |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Idle_1.png)        |                                                 
-|    **Laon**         |   2    | Nivel 3   |![Laon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Idle_2.png)        |                                                 
-|    **Añatort**      |   3    | Nivel 3-4 |![Añatort](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Idle_3.png)        |                                                 
-|    **Cocodry**      |   2    | Nivel 3   |![Cocodry](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Jump_2.png)        |                                                 
-|    **Lobeznotird**  |  2,5   | Nivel 4   |![Lobeznotird](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Jump_3.png)        |                                                 
-|    **Marinavja**    |   3    | Nivel 4   |![Marinavja](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Alien_Hit_1.png)         | 
+
+|    **Nombres**      |                                       **Imagen**                                         |
+|---|---|
+|    **Jackal**       |![Jackal](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien1%20Walk1.png)      |
+|    **Shangheli**    |![Shangheli](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien2%20Walk1.png)      |                                                 
+|    **Grunt**        |![Grunt](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien3%20Attack1_1.png)  |
+|    **Sapien**       |![Sapien](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien4%20Attack1_01.png) |                                                
+|    **Drago**        |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Attack_1.png)      |                                                 
+|    **Ralp**         |![Ralp](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien7%20Death1.png)     |
+|    **Bozapatilla**  |![Bozapatilla](https://github.com/tolu9660/DVI/blob/main/assets/Alien8-Idle01.png)       |                                                 
+|    **Galrado**      |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_1.png)        |                                                 
+|    **Laon**         |![Laon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_2.png)        |                                                 
+|    **Añatort**      |![Añatort](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_3.png)        |                                                 
+|    **Cocodry**      |![Cocodry](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Jump_2.png)        |                                                 
+|    **Lobeznotird**  |![Lobeznotird](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Jump_3.png)        |                                                 
+|    **Marinavja**    |![Marinavja](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Hit_1.png)         | 
 
 
 #### Objetos
