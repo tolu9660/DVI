@@ -2,10 +2,10 @@
 
 Numero de grupo 2 (THE KREEPHASER)
 
-# Pantalla del juego
+## Pantalla del juego
 <img src="assets/sprites/pantalla.png"/>
 
-# Enlace al juego
+## Enlace al juego
 
 
 # GDD
@@ -31,35 +31,49 @@ Vivir la experiencia en distintos mundos de plataformas,  en donde tendrás que 
 #### Historia
 Todos los miembros de una familia han sido secuestrados por un alienigena. El padre de esta familia debera recorrer los distintos mundos donde se encuentran sus familiares para salvarlos. El protagonista debera enfrentarse a multitud de enemigos y trampas que le intentaran impedir su avance.
  
-### MECÁNICA DEL JUEGO 
-#### Mover
+#### MECÁNICA DEL JUEGO 
+##### Mover
 Haciendo uso de los controles del teclado el jugador se podrá mover lateralmente sobre el suelo. El jugador haciendo uso de los controles podrá decidir la dirección de movimiento del personaje. El jugador deberá hacer uso de otras mecánicas debido a qué en los distintos niveles se encontrará con obstáculos qué impedirán su avance.
 
-#### Saltar: 
+##### Saltar: 
 El personaje se impulsará hacia arriba  con un salto al pulsar el botón correspondiente. El personaje debe volver a tocar una superficie para realizar el movimiento de salto.
 
-#### Doble Salto:
+##### Doble Salto:
 El personaje puede hacer un salto en el aire tras un salto realizado con la tecla correspondiente. El personaje solo podra hacer el doble salto si tiene en su inventario como minimo una celula de energia.
 
-#### Dash:
+##### Dash:
 El personaje puede hacer un dash pulsando el boton correspondiente siempre que este realizando un desplazamiento lateral sobre el suelo.
 
-#### Atacar
+##### Atacar
 El personaje podrá atacar a los enemigos de dos maneras. Saltando sobre ellos y utilizando la pistola. Estos ataques no producen daño sobre los objetos del juego, por lo qué no podrá usarlos para romper plataformas y obstáculos qué no sean enemigos. El disparo de la pistola hara daño 1 si se trata de un disparo normal y 2 si se trata de un disparo potenciado. El disparo potenciado solo estara disponible si tiene gemas en su inventario.
 
-#### Interactuar
+##### Interactuar
 El personaje podrá interactuar con 5 objetos distintos. Los cuales serán los corazones, las células de energía, cofres los cuales te puede tocar de forma aleatoria (gema, celula de energia y corazones) las gemas y las llaves. La recogida de estos objetos será automática por lo qué el jugador no tendrá la necesidad de pulsar ningún botón.
 
-#### Pausar el juego
+##### Pausar el juego
 Al pulsar el botón de pausa (tecla ESC) del juego, toda acción se paralizará. Aparecerá un menú con estas opciones:  
-##### Reanudar partida
-##### Reiniciar partida
-##### Configuración de sonido
-##### Configuración de musica 
-##### Salir 
+   Reanudar partida
+   Reiniciar partida
+   Configuración de sonido
+   Configuración de musica 
+  Salir 
 
+##### Reglas básicas
+The Kreephaser como todo juego tiene sus propias reglas. A continuación estableceremos las condiciones de victoria y derrota.
+##### Condiciones de victoria y derrota
+La derrota ocurrirá cuando el jugador pierda todas las vidas. La pérdida de vidas puede ocurrir debido al daño producido por un enemigo o por la caida en alguna de las trampas.
+La victoria ocurrirá cuando el jugador supere todos los niveles del juego recuperando a todos sus familiares y haya derrotado al jefe final. El jefe final se encuentra en el último nivel del videojuego. 
+
+##### LOGROS
+Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
+
+##### PERSONAJES
+En The kreephaser no hay posibilidad de elección del jugador. El protagonista siempre será el padre de la familia.
+
+##### Vadum
+Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma siempre y cuando obtenga gemas podra usar el disparo potenciado.
  
-### Controles
+##### Controles
 Usa las flechas < > laterales para mover al jugador
 Usa la flecha ^ para realizar un salto
 Usa la tecla ESPACIO para realizar un disparo 
@@ -68,17 +82,7 @@ Usa la tecla D para realizar un dash
 Usa la tecla C para realizar un disparo potenciado (solo si tinees gemas)
  
  
-#### Reglas básicas
-The Kreephaser como todo juego tiene sus propias reglas. A continuación estableceremos las condiciones de victoria y derrota.
-##### Condiciones de victoria y derrota
-La derrota ocurrirá cuando el jugador pierda todas las vidas. La pérdida de vidas puede ocurrir debido al daño producido por un enemigo o por la caida en alguna de las trampas.
-La victoria ocurrirá cuando el jugador supere todos los niveles del juego recuperando a todos sus familiares y haya derrotado al jefe final. El jefe final se encuentra en el último nivel del videojuego. 
 
-#### PERSONAJES
-En The kreephaser no hay posibilidad de elección del jugador. El protagonista siempre será el padre de la familia.
-
-##### Vadum
-Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma siempre y cuando obtenga gemas podra usar el disparo potenciado.
 
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
@@ -113,11 +117,9 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 | **Llave** | En cada nivel el protagonista deberá recoger la llave y es necesario para qué el personaje recupere a cada miembro de su familia. | ![llave](https://github.com/tolu9660/DVI/blob/main/assets/sprites/key.png)
 | **Gema** | El jugador podrá encontrar gemas las cuales usara para poder realizar el disparo potenciado. | ![gema](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gema.png)
 
-#### LOGROS
-Cada vez que avanza los niveles, obtiene el logro de poder recuperar a un miembro más de su familia.
 
-#### DETALLES DE PRODUCCIÓN
-El equipo dividió las funciones en tareas y las repartió a los miembros del equipo en forma de spring semanales. En estas imágenes podemos observar las funciones definidas desde el principio hasta el momento.
+
+
 
 #### MIEMBROS DEL EQUIPO
 
