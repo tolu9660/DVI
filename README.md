@@ -81,12 +81,18 @@ Usa la tecla C para realizar un disparo potenciado (solo si tinees gemas)
 #### Vadum
 Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos enemigos. El protagonista de esta historia debe recorrer cada uno de los mundos adquiriendo las llaves necesarias para recuperar a cada miembro de su familia. En su recorrido se enfrentará a distintos enemigos con multitud de habilidades, Vadum podrá usar su pistola de plasma siempre y cuando obtenga gemas podra usar el disparo potenciado.
 
+
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
 |    **Vadum**       |   1-2  |   6     |   Todos   |![hero](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Hero-Boy-Run-Shoot1.png) |
                                                                                |
 
 #### ENEMIGOS
+1. Jackal
+2. Shangheli
+3. Grunt
+4. Sapien
+5. Drago
 En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mundo.
 |    **Nombres**      |  **Daño**  |   **Nivel**   |                                       **Imagen**                                         |
 |---|---|---|---|
@@ -125,6 +131,14 @@ En todos los niveles se usa el mismo fondo con una paleta distinta de colores pe
 
 #### Nivel 1 Zona Cueva
 <img src="assets/sprites/nivel12.png"/>
+
+### Arquitectura software del juego (UML o similar)
+
+
+### Breve descripción del sistema y plataformas de comunicación
+
+
+### Informe de pruebas
 
 
 
