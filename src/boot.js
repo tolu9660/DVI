@@ -57,9 +57,9 @@ export default class Boot extends Phaser.Scene {
     
     //carga de sonidos:
     this.load.audio('sonidoFondo', '/sound/level1/musicaEspacio.mp3');
-    this.load.audio('sonidoFondo', '/sound/level2/musicaEspacio.mp3');
-    this.load.audio('sonidoFondo', '/sound/level3/musicaEspacio.mp3');
-    this.load.audio('sonidoFondo', '/sound/level4/musicaEspacio.mp3');
+    this.load.audio('sonidoFondo1', '/sound/level2/musicaEspacio.mp3');
+    this.load.audio('sonidoFondo2', '/sound/level3/musicaEspacio.mp3');
+    this.load.audio('sonidoFondo3', '/sound/level4/musicaEspacio.mp3');
     this.load.audio('diparo', '/sound/disparo.mp3');
 
     // NIVEL 2:
@@ -89,7 +89,7 @@ export default class Boot extends Phaser.Scene {
    // this.scene.start('transicion_0');
     
 
-   this.scene.start('level3');
+   this.scene.start('tutorial');
 
   }
 }

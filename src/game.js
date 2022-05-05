@@ -1,7 +1,6 @@
 import Preloader from './scenes/Preloader.js'
 import Boot from './boot.js';
 
-import Level from './level.js';
 import Level2 from './level2.js';
 import Level1 from './level1.js';
 import Tutorial from './tutorial.js';
@@ -29,7 +28,7 @@ import TransicionTutorial0 from './transicionTutorial0.js';
 import TransicionTutorial1 from './transicionTutorial1.js';
 
 
-import GameUI from './scenes/GameUI.js'
+
 
 /**
  * Inicio del juego en Phaser. Creamos el archivo de configuración del juego y creamos
