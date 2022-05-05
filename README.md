@@ -98,8 +98,7 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 |    **Grunt**        |![Grunt](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien3%20Attack1_1.png)  |
 |    **Sapien**       |![Sapien](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien4%20Attack1_01.png) |                                                
 |    **Drago**        |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Attack_1.png)      |                                                 
-|    **Ralp**         |![Ralp](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien7%20Death1.png)     |
-|    **Bozapatilla**  |![Bozapatilla](https://github.com/tolu9660/DVI/blob/main/assets/Alien8-Idle01.png)       |                                                 
+|    **Ralp**         |![Ralp](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien7%20Death1.png)     |                                             
 |    **Galrado**      |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_1.png)        |                                                 
 |    **Laon**         |![Laon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_2.png)        |                                                 
 |    **Añatort**      |![Añatort](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_3.png)        |                                                 
@@ -132,9 +131,29 @@ En todos los niveles se usa el mismo fondo con una paleta distinta de colores pe
 
 ### Breve descripción del sistema y plataformas de comunicación
 
+1. Discord: Para las reuniones que el equipo organizaba cada dos semanas.
+2. Whatsapp: Para organizar las reuniones y la comunicación habitual.
+3. GitHub: Para llevar un control, cada uno tenía su rama en la que hacer sus cambios y la rama main en la que unir todos esos cambios.
+4. Drive: Para hacer y guardar las presentaciones de los distintos Hitos.  
+
 
 ### Informe de pruebas
+Los usuarios que han probado el juego han sido los padres de uno de los miembros del equipo que no son jugadores habituales de PC y un amigo de este mismo miembro el cual si que es jugador habitual de PC.
 
+Los tres usuarios pasan de largo de los enemigos que no les impiden el paso sin pelear con ellos.
+- La posible solución a esta situación seria haciendo que al matar a un enemigo este suelte un objeto al azar. De esta manera podemos hacer que lso usuarios tengan un incentivo a enfrentarse con los distintos enemigos.
+
+Los usuarios al no conocer el daño que hacen las trampas(matan al instante), se les notaba un tanto molestos ya que debian empezar de nuevo.
+- Esto se podría solucionar reduciendo el daño de las trampas o habilitando un punto de control en el que aparecer sin tener que iniciar de nuevo.
+
+Al recolectar las gemas sumaban demasiadas al inventario por lo que no se les acababa dando uso en el nivel.
+- Esto se pudo solucionar reduciendo el numero de gemas que adquiria el usuario.
+
+Los usuarios en algunos momentos se les veia algo perdidos debido a que las texturas eran muy grandes y el usuario no podia ver lo que había por delante o por debajo. Eso unido a lo comentado de las trampas generaba un estado de incertidumbre por parte de los usuarios.
+- Esto se puede solucionar reduciendo las texturas o haciendo que la camara capte mas zona del juego.
+
+Los mapas son grandes y con diferentes alturas por lo que los usuarios tenian que recorrer muchas partes del mapa sin saber si ya habian pasado por ahi. Esto unido a la poca parte del mapa que capta la camara crea un problema para llegar a encontrar la llave.
+- Una solucion a esto podria ser poner pequeñas señales que lleven hasta la llave y la cueva o hacer el mapa en uno o dos niveles unicamente para que no se vuelva un laberinto para el usuario. 
 
 
 #### MIEMBROS DEL EQUIPO
