@@ -13,7 +13,7 @@ import GameObject from './gameobj.js';
       this.posicion_plataforma_x = this.x
       this.posicion_plataforma_y = this.y
       this.baja=false
-      this.type=this.type
+      this.type=type
     this.scene=scene;
     console.log(this)
     

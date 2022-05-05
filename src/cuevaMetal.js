@@ -5,8 +5,8 @@ export default class cuevaMetal extends GameObject {
     constructor(scene,x,y,level){
    //azul:
    super(scene, x,y,'cuevaGiro', 10,'cuevaM', 'Cyberdoor Open', 1,11);
-    //this.body.ignoreGravity = true;
-    //this.body.immovable=true;
+    this.body.ignoreGravity = true;
+    this.body.immovable=true;
       this.level=level;
       this
   }

@@ -90,7 +90,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
         
 
-        this.scene.physics.add.overlap(this,this.scene.objects,this.handleheartsplayer,undefined,this)
+        this.scene.physics.add.collider(this,this.scene.objects,this.handleheartsplayer,undefined,this)
 
         this.createAlienAnimation();
 
@@ -485,7 +485,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           
         break;
         case 'pm':
-         //console.log(objeto)
         if (objeto.getType()=='pmt'){
          objeto.destroy();
         }

@@ -10,7 +10,7 @@ import GameObject from './gameobj.js';
       super(scene,x,y,'pmAnimacion', 10,'pm', 'Cyber Floating Tile', 1,3);
       this.body.ignoreGravity = true;
       this.body.immovable=true;
-      this.type=this.type;
+      this.type=type;
       this.posicion_plataforma_x = this.x
       this.posicion_plataforma_y = this.y
   }
@@ -23,8 +23,6 @@ import GameObject from './gameobj.js';
       // this.cameras.main.scrollX = this.alien.x - 400;
       // this.cameras.main.scrollY = 0;
       // console.log(this.plataforma.y);
-      console.log(this.posicion_plataforma_y);
-      console.log(this.posicion_plataforma_x);
       if (this.x == this.posicion_plataforma_x){
       console.log('poedo');
       this.direccionPlataforma = 3

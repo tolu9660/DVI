@@ -6,7 +6,8 @@ export default class cuevaRoja extends GameObject {
      
    //roja:
     super(scene,x,y,'cuevaGiro', 10,'cuevaR', 'Cave1_', 1,6);
-    
+    this.body.ignoreGravity = true;
+    this.body.immovable=true;
     this.level=level;
     }
     getLevel(){

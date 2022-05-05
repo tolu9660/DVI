@@ -142,17 +142,6 @@
                  "y":280
                 }, 
                 {
-                 "height":156,
-                 "id":45,
-                 "name":"heroe",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":124,
-                 "x":236,
-                 "y":1372
-                }, 
-                {
                  "height":112,
                  "id":50,
                  "name":"energia",
@@ -193,8 +182,30 @@
                  "type":"",
                  "visible":true,
                  "width":136,
-                 "x":15138.1,
-                 "y":1589.39
+                 "x":15109.0808473593,
+                 "y":1537.15552524666
+                }, 
+                {
+                 "height":100,
+                 "id":56,
+                 "name":"cueva",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":136,
+                 "x":750.340104468949,
+                 "y":1435.78061520604
+                }, 
+                {
+                 "height":156,
+                 "id":45,
+                 "name":"heroe",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":124,
+                 "x":236,
+                 "y":1372
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -247,10 +258,10 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":56,
+ "nextobjectid":57,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.8.1",
+ "tiledversion":"1.8.2",
  "tileheight":128,
  "tilesets":[
         {
@@ -852,7 +863,7 @@
          "margin":0,
          "name":"fondo",
          "spacing":0,
-         "tilecount":120,
+         "tilecount":0,
          "tileheight":128,
          "tilewidth":128
         }],
