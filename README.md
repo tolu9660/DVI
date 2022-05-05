@@ -84,7 +84,7 @@ Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos e
 
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
-|    **Vadum**       |   1-2  |   6     |   Todos   |![hero](https://github.com/tolu9660/DVI/blob/main/assets/sprites/gdd/Hero-Boy-Run-Shoot1.png) |
+|    **Vadum**       |   1-2  |   6     |   Todos   |![hero](https://github.com/tolu9660/DVI/blob/main/assets/sprites/hero1.png) |
                                                                                |
 
 #### ENEMIGOS
@@ -154,6 +154,9 @@ Los usuarios en algunos momentos se les veia algo perdidos debido a que las text
 
 Los mapas son grandes y con diferentes alturas por lo que los usuarios tenian que recorrer muchas partes del mapa sin saber si ya habian pasado por ahi. Esto unido a la poca parte del mapa que capta la camara crea un problema para llegar a encontrar la llave.
 - Una solucion a esto podria ser poner pequeñas señales que lleven hasta la llave y la cueva o hacer el mapa en uno o dos niveles unicamente para que no se vuelva un laberinto para el usuario. 
+
+Hay zonas de los ultimos niveles donde los usuarios con poca experiencia no lograban pasar por ciertas zonas y tenian que dar la vuelta para pasar por otro lado.
+- Podemos mantener esos niveles de dificultad en ciertas zonas pero al ser algo mas complicadas debemos dejar otras zonas de paso para los usuarios con poca experiencia. Pero estas zonas las mantendriamos debido a que ciertos usuarios podrian intentar pasar por esas zonas a modo de "reto".
 
 
 #### MIEMBROS DEL EQUIPO
