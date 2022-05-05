@@ -5,6 +5,9 @@ Numero de grupo 2 (THE KREEPHASER)
 # Pantalla del juego
 <img src="assets/sprites/pantalla.png"/>
 
+# Enlace al juego
+
+
 # GDD
 
 #### Título:  
@@ -56,7 +59,13 @@ Al pulsar el botón de pausa (tecla ESC) del juego, toda acción se paralizará.
 ##### Salir 
 
  
-#### NIVELES
+### Controles
+Usa las flechas < > laterales para mover al jugador
+Usa la flecha ^ para realizar un salto
+Usa la tecla ESPACIO para realizar un disparo 
+Usa la tecla E para realizar un doble salto (solo si tienes celulas de energia y estas en el aire)
+Usa la tecla D para realizar un dash
+Usa la tecla C para realizar un disparo potenciado (solo si tinees gemas)
  
  
 #### Reglas básicas
