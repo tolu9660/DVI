@@ -591,7 +591,16 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
       // console.log(this.sprite.rotation);
       const vector = new Phaser.Math.Vector2(0,0)
-      if (this.body.deltaX() < 0) {
+      console.log(this.flipX)
+      //izquierda this-flipx=true
+      //derecha this.flipX=false;
+     /* if (this.body.deltaX() < 0) {
+        vector.x = -1
+      }else {
+        vector.x = 1
+      }*/
+      //con esto permitimos que el disparo salga en el sentido en el que mira el jugador 
+      if (this.flipX ) {
         vector.x = -1
       }else {
         vector.x = 1
@@ -615,7 +624,12 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     shootPower(){
       // console.log(this.sprite.rotation);
       const vector = new Phaser.Math.Vector2(0,0)
-      if (this.body.deltaX() < 0) {
+     /* if (this.body.deltaX() < 0) {
+        vector.x = -1
+      }else {
+        vector.x = 1
+      }*/
+      if (this.flipX ) {
         vector.x = -1
       }else {
         vector.x = 1

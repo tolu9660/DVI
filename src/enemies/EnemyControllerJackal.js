@@ -106,15 +106,18 @@ jumpOnUpdate(){
 shootEnemy(){
   // console.log(this.body.deltaX());
   // sprite.angle = sprite.body.angle;
-  // console.log(this.sprite.body);
-  console.log(this.scaleX);
-  // console.log(this.sprite.rotation);
+ 
+  
+   console.log(this.body);
   const vector = new Phaser.Math.Vector2(1,0)
   if (this) {
 
     if (this.x > this.scene.playerController.x) {
       vector.x = -1
+      this.body.rotation=-1
+      setRotation(vector.angle())
     }else {
+      this.body.rotation=1
       vector.x = 1
     }
   
