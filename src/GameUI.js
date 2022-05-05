@@ -122,9 +122,11 @@ export default class GameUI extends Phaser.Scene {
 
   }
 
-  handleCuevaIn(){
-    this.scene.pause('level')
-    this.scene.start('end')
+  handleCuevaIn(level,next){
+    console.log(level)
+    console.log(next)
+    this.scene.stop(level)
+    this.scene.start(next)
   }
 
   handleCuevaStop(){

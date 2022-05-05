@@ -409,8 +409,8 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="257" name="fondo" tilewidth="128" tileheight="128" tilecount="0" columns="15">
-  <image source="../../../2. Game Backgrounds/1920x1080/Theme3 Background/PSD/fondo.jpg" width="1920" height="1080"/>
+ <tileset firstgid="257" name="fondo" tilewidth="128" tileheight="128" tilecount="120" columns="15">
+  <image source="../tutorial/fondo.jpg" width="1920" height="1080"/>
  </tileset>
  <layer id="15" name="fondo" width="215" height="30">
   <data encoding="csv">
@@ -614,6 +614,6 @@
   <object id="265" name="trampa" type="pinchos" x="24920.2" y="3672.85" width="125.697" height="105.818"/>
   <object id="266" name="trampa" type="pinchos" x="24857.5" y="3674.91" width="125.697" height="105.818"/>
   <object id="269" name="energia" x="8070" y="3240" width="116" height="112"/>
-  <object id="270" name="energia" type="rosa" x="606" y="968" width="116" height="112"/>
+  <object id="270" name="cueva" x="256" y="1056" width="48" height="128"/>
  </objectgroup>
 </map>
