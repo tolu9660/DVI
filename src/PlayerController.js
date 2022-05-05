@@ -641,7 +641,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         vector.x = 1
       }
       this.bala_potenciada = this.balas_potenciadas.get(this.x, this.y, 'bala_potenciada');
-      this.scene.physics.add.collider(this.bala_potenciada,this.scene.enemies,this.handleBalasRosasEnemiesCollision,undefined,this)
+      this.scene.physics.add.overlap(this.bala_potenciada,this.scene.enemies,this.handleBalasRosasEnemiesCollision,undefined,this)
       // this.anims.play('bullet')
       this.bala_potenciada.setActive(true)
       this.bala_potenciada.setVisible(true)
@@ -662,25 +662,17 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     handleBalasEnemiesCollision(bala, enemy) {
     
       bala.destroy()
-
+      if (enemy.health<=0){
       if (enemy.triggerTimer != null){
         enemy.triggerTimer.remove()
       }
+    }
       // enemy.triggerTimer.remove()
       enemy.health -= this.damageBala
 
       // enemy.destroy();
     }
-    handleBalasRosasEnemiesCollision(bala, enemy) {
-    
-      bala.destroy()
-      if (enemy.triggerTimer != null){
-        enemy.triggerTimer.remove()
-      }
-      // enemy.triggerTimer.remove()
-      enemy.health -= this.damageBalaPower   
-      // enemy.destroy();
-    }
+
     update(dt){
 
       this.NewStateMachine.update(dt);
