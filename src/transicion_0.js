@@ -34,7 +34,7 @@
       // añada este listener pasado un segundo
 
       this.input.keyboard.on('keydown', function (event) { 
-        this.scene.start('tutorial')
+        this.scene.start('transicion1')
       }, this);
   
     }
