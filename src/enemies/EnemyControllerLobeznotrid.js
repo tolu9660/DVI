@@ -14,7 +14,7 @@ export default class EnemyControllerLobeznotrid extends EnemiesClass {
     // this.body.setOffset(this.width,this.height);
     this.damage = 3;
     this.health = 5;
-    console.log(this.NewStateMachine);
+
     this.scene = scene
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image
@@ -61,7 +61,7 @@ export default class EnemyControllerLobeznotrid extends EnemiesClass {
       }
 
       this.bullet = this.bulletsEnemy.get(this.x, this.y, 'lobeznotrid_bala');
-      console.log(this.scene);
+  
       this.scene.physics.add.overlap(this.bullet, this.scene.playerController, this.handleBulletsEnemiesCollision, undefined, this)
       this.scene.physics.add.collider(this.bullet, this.scene.groundLayer, this.handleBulletsGroundCollision, undefined, this)
       this.bullet.setActive(true)

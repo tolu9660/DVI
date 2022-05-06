@@ -20,15 +20,13 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.scene.physics.add.existing(this);
         // this.scene.physics.add.sprite(x + (this.width),y, 'hero')
         this.flipFlop;
-        this.scene.cameras.main.startFollow(this, false, 1, 1, 0, 0);
+        this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
         this.scene.cameras.main.setDeadzone(400, 350);
         
         this.scene.cameras.main.shake(200, 0.05, true, Phaser.Cameras.SHAKE_HORIZONTAL, false);
 
         this.scene.cameras.main.zoom = 0.3;
        
-        // this.scene.cameras.main.setBounds(0, 0, 16000, 3000); //Y = 250
-        // this.scene.cameras.main.zoom = 1;
         // this.scene.cameras.main.startFollow(this, false, 0.05, 0.5);
         // this.scene.cameras.main.fadeIn(1000);
 
@@ -36,19 +34,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.scene.physics.add.collider(this,this.scene.groundLayer)
         // this.scene.cameras.main.startFollow(this)
 
-        // console.log(this);
-        // console.log(this.displayWidth());
-
         this.scaleX = -1
-        //Establecemos tamaño y hitbox
-        // this.setSize(this.width,this.height);
-        // this.body.setSize(this.width,this.height);
-        // this.body.setOffset(128,128);
-        // this.body.setSize(this.width/2,this.height/2);
-        // this.body.setSize(this.width,this.height);
         this.setOffset(this.width,0);
-        // this.body.updateFromGameObject();
-        // this.cursors = this.scene.input.keyboard.createCursorKeys();
         this.cursors = this.scene.input.keyboard.addKeys({
           up:Phaser.Input.Keyboard.KeyCodes.UP,
           down:Phaser.Input.Keyboard.KeyCodes.DOWN,
@@ -60,9 +47,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           ESC:Phaser.Input.Keyboard.KeyCodes.ESC,
           C:Phaser.Input.Keyboard.KeyCodes.C
         });
-        
-
-        // this.obstacles = this.scene;
         this.hasKey = false;
         this.lastEnemy;
         this.damageBala = 1;
@@ -70,13 +54,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.energy = 0;
         this.energyPlus = 0;
         this.health = 6;
-        // this.bullets = this.scene.physics.add.group({
-        //   classType: Phaser.Physics.Arcade.Image,
-        //   frameQuantity:50,
-        //     active: false,
-        //     visible: false,
-        //     key: 'bullet'
-        // });
         this.balas = this.scene.physics.add.group({
           classType: Phaser.Physics.Arcade.Image 
         });
@@ -93,12 +70,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         this.scene.physics.add.collider(this,this.scene.objects,this.handleObjectsplayer,undefined,this)
 
         this.createAlienAnimation();
-
-        // this.scene.physics.add.overlap(this, this.scene.arrayEnemies,(player, enemigo)=>{
-        //   console.log(player);
-        //   console.log(enemigo);
-        // })
-
 
         this.NewStateMachine = new NewStateMachine(this, 'player');
 
@@ -451,7 +422,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       }
       this.bala = this.balas.get(this.x, this.y, 'bala');
       this.scene.physics.add.overlap(this.bala,this.scene.enemies,this.handleBalasEnemiesCollision,undefined,this)
-      // this.anims.play('bullet')
       this.bala.setActive(true)
       this.bala.setVisible(true)
       this.bala.body.allowGravity = false
@@ -462,28 +432,19 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
     }
     shootPower(){
-      // console.log(this.sprite.rotation);
       const vector = new Phaser.Math.Vector2(0,0)
-     /* if (this.body.deltaX() < 0) {
-        vector.x = -1
-      }else {
-        vector.x = 1
-      }*/
+
       if (this.flipX ) {
         vector.x = -1
       }else {
         vector.x = 1
       }
       this.bala_potenciada = this.balas_potenciadas.get(this.x, this.y, 'bala_potenciada');
-      this.scene.physics.add.overlap(this.bala_potenciada,this.scene.enemies,this.handleBalasRosasEnemiesCollision,undefined,this)
-      // this.anims.play('bullet')
+      this.scene.physics.add.overlap(this.bala_potenciada,this.scene.enemies,this.handleBalasEnemiesCollision,undefined,this)
       this.bala_potenciada.setActive(true)
       this.bala_potenciada.setVisible(true)
       this.bala_potenciada.body.allowGravity = false
       this.bala_potenciada.setRotation(vector.angle())
-
-      // this.bullet.x += vector.x = 16 
-
 
 
       this.bala_potenciada.setVelocityX(vector.x * 500, 300)
@@ -519,16 +480,9 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         
       }   
       if (Phaser.Input.Keyboard.JustDown(this.cursors.ESC)) {
-       
-          //cuando se acbe el nivel 1
-          //this.scene.scene.pause(this.scene.scene)
-         
-          //this.scene.MusicaFondo.pause()
+
           this.scene.scene.launch('pause')
-          //this.scene.MusicaFondo.pause()
-          
-     
-       
+         
       } 
       if (!this.body.onFloor() && this.energy >0 && Phaser.Input.Keyboard.JustDown(this.cursors.E)) {
         this.setVelocityY(-600)
@@ -538,18 +492,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       events.emit('heart',this.health)
       events.emit('energyPlus',this.energyPlus)
       if (this.health <= 0) {
-        //this.scene.MusicaFondo.stop();
-        console.log(this)
         this.scene.scene.start('gameover')
       }
     }
 
     createAlienAnimation(){
-
-      // this.anims.create({
-      //   key: 'player-idle',
-      //   frames: [{key: 'hero', frame: 'Hero_Boy_Idle8.png'}]
-      // });
       this.anims.create({
         key:'player-idle',
         frameRate: 10,
@@ -573,18 +520,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         }),
         repeat: -1
       })
-
-      // this.anims.create({
-      //   key:'bullet',
-      //   frameRate: 3,
-      //   frames:this.anims.generateFrameNames('hero', {
-      //     start: 1,
-      //     end: 3,
-      //     prefix: 'bullet_',
-      //     suffix: '.png'
-      //   }),
-      //   repeat: -1
-      // })
 
     }
   

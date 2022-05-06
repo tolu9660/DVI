@@ -20,15 +20,10 @@ import GameObject from './gameobj.js';
  }
   actu(dt){
    
-      // this.cameras.main.scrollX = this.alien.x - 400;
-      // this.cameras.main.scrollY = 0;
-      // console.log(this.plataforma.y);
       if (this.x == this.posicion_plataforma_x){
-      console.log('poedo');
       this.direccionPlataforma = 3
       }
       if (this.x == this.posicion_plataforma_x + 900){
-      console.log('final');
       this.direccionPlataforma = -3
       }
       this.x += this.direccionPlataforma;

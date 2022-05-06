@@ -12,7 +12,7 @@ export default class EnemyControllerCocodry extends EnemiesClass {
     super(scene, x, y, type, [1, 12], [1, 8], [1, 4], [1, 11], [1, 9], [1, 5], null, 10);
     this.setSize(this.width / 2, this.height / 2)
     // this.body.setOffset(this.width,this.height);
-    console.log(this.NewStateMachine);
+
     this.damage = 2;
     this.health = 5;
     this.scene = scene
@@ -63,7 +63,7 @@ export default class EnemyControllerCocodry extends EnemiesClass {
       }
     }
     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'cocodry_bala');
-    console.log(this.scene);
+
     this.scene.physics.add.overlap(this.bullet, this.scene.playerController, this.handleBulletsEnemiesCollision, undefined, this)
     this.scene.physics.add.collider(this.bullet, this.scene.groundLayer, this.handleBulletsGroundCollision, undefined, this)
 

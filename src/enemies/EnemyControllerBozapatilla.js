@@ -14,7 +14,7 @@ export default class EnemyControllerBozapatilla extends EnemiesClass {
     this.setSize(this.width / 2, this.height / 2)
     this.damage = 2;
     this.health = 3;
-    console.log(this.NewStateMachine);
+
     this.scene = scene
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image
@@ -47,7 +47,6 @@ export default class EnemyControllerBozapatilla extends EnemiesClass {
     }
   }
   shootEnemy() {
-    console.log(this);
     const vector = new Phaser.Math.Vector2(1, 0)
     if (this) {
 
@@ -62,7 +61,7 @@ export default class EnemyControllerBozapatilla extends EnemiesClass {
       }
     }
     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bozapatilla_bala');
-    console.log(this.scene);
+
     this.scene.physics.add.overlap(this.bullet, this.scene.playerController, this.handleBulletsEnemiesCollision, undefined, this)
     this.scene.physics.add.collider(this.bullet, this.scene.groundLayer, this.handleBulletsGroundCollision, undefined, this)
 
@@ -82,8 +81,7 @@ export default class EnemyControllerBozapatilla extends EnemiesClass {
 
 
   handleBulletsEnemiesCollision(bullet, player) {
-    console.log(bullet);
-    console.log(player);
+
     bullet.destroy()
     player.damage();
 

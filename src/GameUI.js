@@ -96,10 +96,8 @@ export default class GameUI extends Phaser.Scene {
   }
 
   handleMinusHealthCollected(){
-    console.log('hearts - collected')
 
     --this.heartsCollected
-    console.log(this.heartsCollected)
     if (this.heartsCollected == 0){
       this.scene.pause('level')
     
@@ -109,10 +107,8 @@ export default class GameUI extends Phaser.Scene {
 
   }
   handleMinusHealthCollected2(){
-    console.log('hearts - collected2')
 
    this.heartsCollected=this.heartsCollected-2
-    console.log(this.heartsCollected)
     if (this.heartsCollected == 0){
       this.scene.pause('level')
     

@@ -177,7 +177,6 @@ export default class LevelClass extends Phaser.Scene {
         }
         case 'trampa':{
           //cambiar plataformaMovil por la clase
-          console.log(objData.type);
           switch ( objData.type) {
             case 'acido': { 
               this.objects.add(new Acido(this,x, y,objData.type))

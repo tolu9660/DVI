@@ -6,7 +6,7 @@ import EnemiesClass from './EnemiesClass.js';
  export default class EnemyControllerAnatort extends EnemiesClass {
 
   constructor(scene,x,y,type){
-    console.log(type);
+
 
     //le paso a la clase padre la key con la que voy a idenificar a mi enemigo
     //scene,x,y,type,idle,walk,jump,attack,death,hit,shoot,10
@@ -19,8 +19,6 @@ import EnemiesClass from './EnemiesClass.js';
         this.damage=3;
         this.setSize(this.width/2,this.height/2)
         this.flipX = true;
-        // this.body.setOffset(this.width,this.height);
-        console.log(this.NewStateMachine);
         this.scene = scene
 }
 
@@ -80,7 +78,6 @@ seguirOnUpdate(){
     }
 
     if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
-      console.log('exploto');
       
       this.body.setVelocityX(0);
       this.NewStateMachine.setState('explotar');
@@ -90,70 +87,5 @@ seguirOnUpdate(){
     // })
   }
 }
-// jumpOnEnter(){
-//   // this.setVelocityY(-50)
 
-// }
-
-// jumpOnUpdate(){
-//   // this.setBounceY(1)
-//   // this.shootEnemy()
-  
-//   // console.log(Math.abs(this.x - this.scene.playerController.x));
-  
-//   // console.log(this.x);
-//   // console.log(this.scene.playerController.x);
-//   // if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
-//   //   this.body.setVelocityX(0);
-//   //   this.on('animationcomplete', () =>{
-      
-//   //     console.log('exploto');
-//   //   })
-    
-//   // }
-// }
-// // update(dt){
-// //   console.log('pedo');
-// //   console.log(this.body.y);
-// //   console.log('pedo');  
-// // }
-// shootEnemy(){
-//   // console.log(this.body.deltaX());
-//   // sprite.angle = sprite.body.angle;
-//   // console.log(this.sprite.body);
-//   console.log(this.scaleX);
-//   // console.log(this.sprite.rotation);
-//   const vector = new Phaser.Math.Vector2(1,0)
-//   if (this) {
-//     // if (this.body.deltaX() < 0) {
-//     //   vector.x = -1
-//     // }else {
-//     //   vector.x = 1
-//     // }
-//     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bullet');
-//     console.log(this.scene);
-//     this.scene.physics.add.collider(this.bullet,this.scene.playerController,this.handleBulletsEnemiesCollision,undefined,this)
-//     // this.anims.play('bullet')
-//     this.bullet.setActive(true)
-//     this.bullet.setVisible(true)
-//     this.bullet.body.allowGravity = false
-//     this.bullet.setRotation(vector.angle())
-  
-//     // this.bullet.x += vector.x = 16 
-  
-  
-  
-//     this.bullet.setVelocityX(vector.x * 500, 300)
-//   }
-
-  
-
-// }
-// handleBulletsEnemiesCollision(bullet, player) {
-//   console.log(bullet);
-//   console.log(player);      
-//   bullet.destroy()
-//   player.damage();
-
-// }
  }

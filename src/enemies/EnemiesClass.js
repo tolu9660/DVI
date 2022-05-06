@@ -76,7 +76,6 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     }
     waitingOnEnter(){
       // this.setVelocityY(-50)
-      console.log('experando a explotar');
     }
     waitingOnUpdate(){
     }
@@ -88,12 +87,10 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
       // this.setBounceY(1)
     }
     seguirOnEnter(){
-      console.log('a la caza');
 
       // this.destroy()
     }
     seguirOnUpdate(){
-      console.log('siguiendo');
 
         if(this.x < this.scene.playerController.x) 
         {
@@ -118,7 +115,6 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
       this.play('enemy-death',true);
     }
     deathOnUpdate(){
-      console.log('muriendo');
       this.on('animationcomplete', () =>{
         this.destroy()
         
@@ -127,14 +123,12 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     }
 
     explotarOnEnter(){
-      console.log('entrando a explotar');
       this.play('enemy-attack',true);
     }
 
 
     explotarOnUpdate(){
           this.on('animationcomplete', () =>{
-            console.log('exploto');
             this.play('enemy-death',true);
             this.NewStateMachine.setState('death');
             
@@ -152,16 +146,10 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         this.NewStateMachine.setState('walk-right')
       }
     }
-    // idleOnUpdate(){
-    //     this.NewStateMachine.setState('walk')
-    // }
 
     walkLeftOnEnter(){
       this.moveTime = 0
       this.play('enemy-walk',true)
-      // console.log('Poisiton BE ' + this.body.y);
-      // console.log('Poisiton E ' + this.y);
-      // console.log('Poisiton DBE ' + this.body.deltaY());
     }
 
     walkLeftOnUpdate(dt){
@@ -193,9 +181,7 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
       
       console.log('Este es el valor que guarda el atributo:');
       
-      console.log(this.type);
       if (this!== enemy) {
-        console.log('pepe'); 
       }
       switch(this.type){
         case 'alien':
@@ -218,17 +204,11 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     update(dt){
       this.NewStateMachine.update(dt);
       if (this.health <= 0) {
-        console.log(('pedo'));
         // this.destroy()
         this.NewStateMachine.setState('death')
       }
-      // console.log(this);
     }
     createEnemyAnimation(){   
-      // this.anims.create({
-      //   key:'enemy-idle',
-      //   frames: [{key: this.type, frame: 'Alien_Idle_1.png'}]
-      // })
       if (this.idle != null) {
         this.anims.create({
           key:'enemy-idle',
@@ -271,7 +251,6 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         })
       }
       if (this.attack) {
-        console.log(this.attack);
       this.anims.create({
         key:'enemy-attack',
         frameRate: this.rate,

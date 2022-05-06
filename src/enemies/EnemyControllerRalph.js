@@ -11,7 +11,7 @@ export default class EnemyControllerRalph extends EnemiesClass {
     this.damage = 2;
     this.health = 4;
     this.setSize(this.width / 2, this.height / 2)
-    console.log(this.NewStateMachine);
+
     this.scene = scene
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image
@@ -59,7 +59,7 @@ export default class EnemyControllerRalph extends EnemiesClass {
       }
 
       this.bullet = this.bulletsEnemy.get(this.x, this.y, 'ralph_bala');
-      console.log(this.scene);
+  
       this.scene.physics.add.overlap(this.bullet, this.scene.playerController, this.handleBulletsEnemiesCollision, undefined, this)
       this.scene.physics.add.collider(this.bullet, this.scene.groundLayer, this.handleBulletsGroundCollision, undefined, this)
       // this.anims.play('bullet')
@@ -74,8 +74,7 @@ export default class EnemyControllerRalph extends EnemiesClass {
 
   }
   handleBulletsEnemiesCollision(bullet, player) {
-    console.log(bullet);
-    console.log(player);
+
     bullet.destroy()
     player.damage();
 

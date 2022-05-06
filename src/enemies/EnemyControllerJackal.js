@@ -13,7 +13,7 @@ export default class EnemyControllerJackal extends EnemiesClass {
     this.setSize(this.width / 2, this.height / 2)
     this.damage = 1;
     this.health = 3;
-    console.log(this.NewStateMachine);
+
     this.scene = scene
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image

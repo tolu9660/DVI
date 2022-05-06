@@ -16,14 +16,11 @@ export default class cofre extends GameObject {
   
     }
     random(){
-        console.log('vamos a dar recompensas')
         let num =Phaser.Math.Between(1, 2)
         if(num==2){
-          console.log("regalo corazones");
           return 2;
         }
         else{
-          console.log("regalo gemas");
           return 1;
         }
     
