@@ -19,7 +19,7 @@ export default class EnemyControllerBozapatilla extends EnemiesClass {
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image
     });
-    this.triggerShoot;
+    this.triggerShoot = null;
   }
   idleOnEnter() {
     this.play('enemy-idle', true)
@@ -53,8 +53,12 @@ export default class EnemyControllerBozapatilla extends EnemiesClass {
 
       if (this.x > this.scene.playerController.x) {
         vector.x = -1
+
+        this.flipX = false;
+
       } else {
         vector.x = 1
+        this.flipX = true;
       }
     }
     this.bullet = this.bulletsEnemy.get(this.x, this.y, 'bozapatilla_bala');

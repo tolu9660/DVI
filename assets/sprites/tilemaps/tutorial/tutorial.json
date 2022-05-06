@@ -186,17 +186,6 @@
                  "y":1537.15552524666
                 }, 
                 {
-                 "height":100,
-                 "id":56,
-                 "name":"cueva",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":136,
-                 "x":750.340104468949,
-                 "y":1435.78061520604
-                }, 
-                {
                  "height":81.25362739408,
                  "id":57,
                  "name":"pm",
@@ -269,7 +258,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":58,
+ "nextobjectid":59,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",

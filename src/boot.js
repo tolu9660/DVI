@@ -41,7 +41,10 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('cuevaA','/objetos/cuevaA.png', '/objetos/cuevaA.json');
     this.load.atlas('cuevaR','/objetos/cuevaR.png', '/objetos/cuevaR.json');
     this.load.atlas('cuevaM','/objetos/cuevaM.png', '/objetos/cuevaM.json');
-
+    //Tutorial:
+    this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
+    this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
+    this.load.atlas('tiles','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
 
     
     // NIVEL 1:
@@ -70,7 +73,7 @@ export default class Boot extends Phaser.Scene {
    * nivel del juego
    */
   create() {    
-    this.scene.start('tutorial');
+    this.scene.start('transicion_0');
     this.MusicaFondo= this.sound.add('sonidoFondo');
     this.MusicaFondo.play();
   }

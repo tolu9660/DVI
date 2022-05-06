@@ -18,7 +18,7 @@ export default class EnemyControllerJackal extends EnemiesClass {
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image
     });
-    this.triggerShoot;
+    this.triggerShoot = null;
 
   }
   idleOnEnter() {
@@ -53,20 +53,14 @@ export default class EnemyControllerJackal extends EnemiesClass {
     const vector = new Phaser.Math.Vector2(1, 0)
     if (this) {
 
-      if (this.x > this.scene.playerController.x) {//si estoy a la izquierda
+      if (this.x > this.scene.playerController.x) {
         vector.x = -1
 
-        this.angle = 180;
-        this.flipY = true;
-        this.flipX = true;
-
-      } else {
-
-        vector.x = 1
-        this.angle = -180;
-        this.flipY = true;
         this.flipX = false;
 
+      } else {
+        vector.x = 1
+        this.flipX = true;
       }
 
       this.bullet = this.bulletsEnemy.get(this.x, this.y, 'jackal_bala');

@@ -18,7 +18,7 @@ export default class EnemyControllerGrunt extends EnemiesClass {
     this.bulletsEnemy = this.scene.physics.add.group({
       classType: Phaser.Physics.Arcade.Image
     });
-    this.triggerShoot;
+    this.triggerShoot = null;
   }
   idleOnEnter() {
     this.play('enemy-idle', true)

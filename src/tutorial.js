@@ -21,11 +21,6 @@ export default class Tutorial extends LevelClass {
 
  
   preload(){
-    this.load.setPath('assets/sprites/');
-        //Tutorial:
-        this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
-        this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
-        this.load.atlas('tiles','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
     this.load.setPath('assets/sprites/enemies');
     this.load.atlas('jackal','/jackal.png', '/jackal.json');
     this.load.image('jackal_bala','/jackal_bala.png');
