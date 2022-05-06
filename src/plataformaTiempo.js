@@ -14,10 +14,8 @@ import GameObject from './gameobj.js';
       this.posicion_plataforma_y = this.y
       this.baja=false
       this.type=type
-    this.scene=scene;
-    console.log(this)
-    
-    
+      this.scene=scene;  
+
   }
   
   getType()
@@ -30,6 +28,8 @@ import GameObject from './gameobj.js';
   actu(dt){
 
   }
+
+
    
 }
 

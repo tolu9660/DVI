@@ -23,11 +23,10 @@ import GameObject from './gameobj.js';
    
      
       if (this.y == this.posicion_plataforma_y){
-      console.log('poedo');
+
       this.direccionPlataforma = 3
       }
       if (this.y == this.posicion_plataforma_y + 900){
-      console.log('final');
       this.direccionPlataforma = -3
       }
       this.y += this.direccionPlataforma;

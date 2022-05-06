@@ -107,15 +107,13 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     seguirOnUpdate(){
       console.log('siguiendo');
 
-        if(this.x < this.scene.playerController.x) //Jugador a la derecha
+        if(this.x < this.scene.playerController.x) 
         {
-          // this.play('move-skeleton', true);
           this.play('enemy-walk',true)
           this.body.setVelocityX(200);
         }
-        else//Jugador a la izquierda
+        else
         {
-          // this.play('move-skeleton', true);
           this.play('enemy-walk',true)
             this.body.setVelocityX(-200);
         }
@@ -129,15 +127,6 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     // }
 
     deathOnEnter(){
-      // console.log('enemigo muerto');
-
-      // if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
-      //   this.scene.playerController.setVelocityY(-300)
-      //   this.scene.playerController.NewStateMachine.setState('enemy-hit');
-      //   this.scene.playerController.health -=1
-
-      // }
-      // this.destroy()
       this.play('enemy-death',true);
     }
     deathOnUpdate(){
@@ -152,7 +141,6 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
     explotarOnEnter(){
       console.log('entrando a explotar');
       this.play('enemy-attack',true);
-      // this.destroy()
     }
 
 

@@ -65,7 +65,8 @@ export default class LevelClass extends Phaser.Scene {
     this.arrayObjects=[];
     this.ArrayTileset=[];
     this.j=0;
-    
+    this.MusicaFondo= this.sound.add('sonidoFondo');
+    this.MusicaFondo.play();
   
   }
 
@@ -106,7 +107,7 @@ export default class LevelClass extends Phaser.Scene {
     }
     this.groundLayer.setCollisionByExclusion(-1, true);
     // this.groundLayer.setCollisionByProperty({collides : true});    
-    // this.physics.world.setBounds(0,0,16000,3000);
+    // this.physics.world.setBounds(0,0,1000,2000);
     this.cargarObjetos();
 
     
@@ -181,7 +182,7 @@ export default class LevelClass extends Phaser.Scene {
              break;
             
             default:{
-              this.objects.add(new PlataformaHorizontal(this,x,y))
+              this.objects.add(new PlataformaHorizontal(this,x,y,objData.type))
               break; 
             }
           }

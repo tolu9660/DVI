@@ -27,16 +27,6 @@ import NewStateMachine from '../newStateMachine.js';
         // this.body.setOffset(this.width,this.height);
         console.log(this.NewStateMachine);
         this.scene = scene
-
-      //   this.triggerTimer = this.scene.time.addEvent({
-      //     callback: this.shootEnemy,
-      //     callbackScope: this,
-      //     //delay: 2000,// + getRandom(0, 1000), // 1000 = 1 second
-      //     delay: Math.random() * (2000 - 1000) + 1000,
-      //     loop: true
-      // });
-      
-      // this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
 }
 
 walkLeftOnUpdate(dt){
@@ -67,7 +57,6 @@ walkRightOnUpdate(dt){
   }
 }
 deathOnEnter(){
-  console.log('enemigo muerto');
 
   if(Math.abs(this.x - this.scene.playerController.x) < 200 ) {
     this.scene.playerController.setVelocityY(-300)

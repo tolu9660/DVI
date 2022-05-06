@@ -23,7 +23,7 @@ import Transicionnivel1 from './transicionnivel_1.js';
 import Transicionnivel2_0 from './transicionNivel2_0.js';
 import TransicionTutorial2 from './transicionTutorial2.js';
 import transicionnivel4_0 from './transicionNivel4_0.js';
-import Transicionnivel4_1 from './transicionNivel4_1.js';
+import TransicionFinal from './transicionFinal.js';
 import TransicionTutorial0 from './transicionTutorial0.js';
 import TransicionTutorial1 from './transicionTutorial1.js';
 
@@ -44,7 +44,7 @@ let config = {
     },
     pixelArt: true,
     scene: [Inicio,Boot,Opciones,Pause, Tutorial,GameUI,Transicion,Transicion1,Transicionnivel1,Transicionnivel2_0,
-        Transicionnivel2_1,Transicionnivel2_2,Transicionnivel3,transicionnivel4_0,Transicionnivel4_1,TransicionTutorial0,
+        Transicionnivel2_1,Transicionnivel2_2,Transicionnivel3,transicionnivel4_0,TransicionFinal,TransicionTutorial0,
         TransicionTutorial1,TransicionTutorial2,Level1,Level2,Level3,LevelBoss,Creditos, Gameover],
     physics: {
         default: 'arcade',//cambiado el arcade

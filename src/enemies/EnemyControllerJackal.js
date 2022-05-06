@@ -72,31 +72,7 @@ jumpOnUpdate(){
     this.NewStateMachine.setState('idle');
     this.triggerTimer.remove()
   }
-  // console.log(Math.abs(this.x - this.scene.playerController.x));
-  // if(Math.abs(this.x - this.scene.playerController.x) < 800 && Math.abs(this.x - this.scene.playerController.x) > 150) {
-  //   if(this.x < this.scene.playerController.x) //Jugador a la derecha
-  //   {
-  //     // this.play('move-skeleton', true);
-  //     this.play('enemy-walk',true)
-  //     this.body.setVelocityX(200);
-  //   }
-  //   else//Jugador a la izquierda
-  //   {
-  //     // this.play('move-skeleton', true);
-  //     this.play('enemy-walk',true)
-  //       this.body.setVelocityX(-200);
-  //   }
-  // }
-  // console.log(this.x);
-  // console.log(this.scene.playerController.x);
-  // if(Math.abs(this.x - this.scene.playerController.x) < 100 ) {
-  //   this.body.setVelocityX(0);
-  //   this.on('animationcomplete', () =>{
-      
-  //     console.log('exploto');
-  //   })
-    
-  // }
+  
 }
 // update(dt){
 //   console.log('pedo');

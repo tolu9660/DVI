@@ -7,7 +7,7 @@ export default class Transicionnivel4_0 extends Phaser.Scene {
     }
   
     preload(){
-      this.load.image('Transicionnivel4_0',"assets/sprites/TransicionNivel14C0.jpg");
+      this.load.image('Transicionnivel4_0',"assets/sprites/TransicionNivel4C0.jpg");
     }
     /**
      * Creación de la escena. Tan solo contiene el texto que indica que el juego se ha acabado
@@ -21,7 +21,7 @@ export default class Transicionnivel4_0 extends Phaser.Scene {
       // añada este listener pasado un segundo
       this.input.keyboard.on('keydown', function (event) { 
           //cuando se acbe el nivel 1
-        this.scene.start('Creditos')
+        this.scene.start('transicionfinal')
       }, this);
   
     }

@@ -1,14 +1,4 @@
-//import Platform from './platform.js';
-//import Player from './player.js';
-////import piedra from './piedra.js';
-import PlayerController from './PlayerController.js'
-import enemyController from './EnemyController1.js'
-import corazon from './corazon.js';
-import ObstaclesController from './ObstaclesController.js';
-import energia from './energia.js';
-import PlataformaMovil from './plataformaVertical.js';
-import llave from './llave.js';
-import cueva from './cuevaRoja.js'
+
 import LevelClass from './LevelClass.js';
 
 

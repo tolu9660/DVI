@@ -197,6 +197,17 @@
                  "y":1435.78061520604
                 }, 
                 {
+                 "height":81.25362739408,
+                 "id":57,
+                 "name":"pm",
+                 "rotation":0,
+                 "type":"pmt",
+                 "visible":true,
+                 "width":330.818340104469,
+                 "x":2518.86244921648,
+                 "y":1027.2780034823
+                }, 
+                {
                  "height":156,
                  "id":45,
                  "name":"heroe",
@@ -258,7 +269,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":57,
+ "nextobjectid":58,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.8.2",

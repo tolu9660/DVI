@@ -90,7 +90,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
 
         
 
-        this.scene.physics.add.collider(this,this.scene.objects,this.handleheartsplayer,undefined,this)
+        this.scene.physics.add.collider(this,this.scene.objects,this.handleObjectsplayer,undefined,this)
 
         this.createAlienAnimation();
 
@@ -128,101 +128,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           .setState('idle');
           
 
-          // this.sprite.setOnCollide((data) => {
-          //   const body = data.bodyB;
-          //   const gameObject = body.gameObject
-          //   if (this.obstacles.is('spikes', body)) {
-          //     this.NewStateMachine.setState('spike-hit')
-          //      return
-          //   }
-            
-          //   if (this.obstacles.is('enemy', body)) {
-          //     console.log(body);
-          //     this.lastEnemy = body.gameObject
-          //     //console.log(this.sprite.body.position.y);
-          //     //console.log(this.lastEnemy.body.position.y);
-          //     if (this.sprite.body.position.x < this.lastEnemy.body.position.x) {
-          //       console.log(this.lastEnemy);            
-          //       events.emit('alien-down', this.lastEnemy)
-                
-          //     } else {
-                
-          //       this.NewStateMachine.setState('enemy-hit')
-          //     }
-             
-          //      return
-          //   }
-
-          //   if (!gameObject) {
-          //     return
-          //   }
-          //   if (gameObject instanceof Phaser.Physics.Matter.TileBody) {
-          //     if (this.NewStateMachine.isCurrentState('jump')) {
-          //       this.NewStateMachine.setState('idle')
-          //     }
-          //     return
-          //   }
-          //     const sprite = gameObject;
-          //     const type = gameObject.getData('type')
-          //     switch (type) {
-          //       case 'energia':
-          //         events.emit('star-collected')
-          //         gameObject.destroy();
-          //         events.emit('mensaje-ayuda-energia')
-          //         break;
-
-          //         case 'llave':
-          //           events.emit('key-collected')
-          //           gameObject.destroy();
-          //           events.emit('mensaje-ayuda-llave')
-          //           this.key = true;
-          //           break;
-
-          //           case 'corazon':
-          //             events.emit('heart-collected')
-          //             gameObject.destroy();
-          //             events.emit('mensaje-ayuda-corazon')
-          //             break;
-                    
-          //           case 'cueva':
-          //            console.log('collyde with vueva')
-          //           if (this.key) {
-          //             events.emit('cueva-in')
-          //           }
-          //           else{
-          //             events.emit('cueva-stop')
-          //           }
-                   
-          //       default:
-          //         break;
-
-                  
-          //     }
-              
-          // })
-
-
-      //     this.scene.physics.add.collider( this, this.scene.enemies, (player, enemigo) => {
-        
-           
-      //  }
-      
-      
-      // if (player.body.deltaX() > 0 && !enemigo.body.deltaX()<0) {
-      //        console.log('pedo');
-      //      }
-      //      if (player.body.deltaX() > 0 && enemigo.body.deltaX()<0) {
-      //       player.setState('enemy-hit')
-      //     }
-      //     //   if (player.body.deltaY()>enemigo.body.deltaY()) {
-      
-      //     //    enemigo.destroy()
-      //     //  }else if (player.body.deltaX()<enemigo.body.deltaX()) {
-      
-      //     //   player.setState('enemy-hit')
-      //     // }
-      //       // enemigo.destroy()
-          // });
+          
 
 
     }
@@ -239,7 +145,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         } else {
           player.setVelocityX(400)
         }
-        console.log(enemigo);
         switch(enemigo.type){
           case 'alien':
             this.health -=  1;
@@ -258,7 +163,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     idleOnEnter(){
       this.play('player-idle',true)
       this.setVelocity(0)
-      // console.log('Poisiton DPE ' + this.body.deltaY());
     }
     idleOnUpdate(){
       if (this.cursors.left.isDown || this.cursors.right.isDown ){
@@ -275,10 +179,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     walkOnUpdate(){
       this.play('player-walk', true)
       const speed = 300
-      // console.log('Poisiton PBE ' + this.body.y);
-      // console.log('Poisiton PE ' + this.y);
-      // console.log('Poisiton DPE ' + this.body.deltaY());
-
       
       if (this.cursors.left.isDown) {
         this.flipX = true;
@@ -406,19 +306,6 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
           this.NewStateMachine.setState('idle')
         }
       })
-      // log
-      // switch(tipo){
-      //   case 'alien':
-      //     this.damage=1;
-      //     events.emit('minus-health')
-      //     break;
-      //   case 'alien1':
-      //     this.damage=2;
-      //     events.emit('minus-health2')
-      //     break;
-          
-      // }
-
     }
     enemyHitOnUpdate() {
       
@@ -440,7 +327,7 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       this.balas_potenciadas = balas
     }
 
-    handleheartsplayer(player,objeto){
+    handleObjectsplayer(player,objeto){
       switch (objeto.img) {
         
         case 'energia':
@@ -486,7 +373,19 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         break;
         case 'pm':
         if (objeto.getType()=='pmt'){
-         objeto.destroy();
+          if (player.body.deltaY()>objeto.body.deltaY()) {
+            objeto.body.ignoreGravity = false;
+            objeto.body.immovable=false;
+            this.scene.time.addEvent({
+              callback: () =>{
+                objeto.destroy();
+              },
+              callbackScope: this,
+              delay: 1500,
+              loop: false
+            });
+          }
+            
         }
         break;
         
@@ -542,66 +441,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
       }
     }
 
-    trampas(player, objeto){
-      
-      switch(objeto.img){
-        case 'acido':
-          this.health -=  1;
-          events.emit('heart',this.health)
-        break;
-        case 'pinchos':
-          this.health -= 2;
-          events.emit('heart', this.health)
-        break;
-        case 'lava':
-          this.health -= 1;
-          events.emit('heart', this.health)
-        break;
-        case 'arbusto':
-          this.health -= 1;
-          events.emit('heart', this.health)
-          player.body.setVelocityY(-200);
-          player.NewStateMachine.setState('enemy-hit');
-        break;
-    }
-
-    }
-
-          //         case 'llave':
-          //           events.emit('key-collected')
-          //           gameObject.destroy();
-          //           events.emit('mensaje-ayuda-llave')
-          //           this.key = true;
-          //           break;
-
-          //           case 'corazon':
-          //             events.emit('heart-collected')
-          //             gameObject.destroy();
-          //             events.emit('mensaje-ayuda-corazon')
-          //             break;
-                    
-          //           case 'cueva':
-          //            console.log('collyde with vueva')
-          //           if (this.key) {
-          //             events.emit('cueva-in')
-          //           }
-          //           else{
-          //             events.emit('cueva-stop')
-          //           }
-
-
     shoot(){
-
-      // console.log(this.sprite.rotation);
       const vector = new Phaser.Math.Vector2(0,0)
-      console.log(this.flipX)
-      //izquierda this-flipx=true
-      //derecha this.flipX=false;
-     /* if (this.body.deltaX() < 0) {
-        vector.x = -1
-      }else {
-        vector.x = 1
-      }*/
       //con esto permitimos que el disparo salga en el sentido en el que mira el jugador 
       if (this.flipX ) {
         vector.x = -1
@@ -609,19 +450,13 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
         vector.x = 1
       }
       this.bala = this.balas.get(this.x, this.y, 'bala');
-      this.scene.physics.add.collider(this.bala,this.scene.enemies,this.handleBalasEnemiesCollision,undefined,this)
+      this.scene.physics.add.overlap(this.bala,this.scene.enemies,this.handleBalasEnemiesCollision,undefined,this)
       // this.anims.play('bullet')
       this.bala.setActive(true)
       this.bala.setVisible(true)
       this.bala.body.allowGravity = false
       this.bala.setRotation(vector.angle())
-     
-     
-
-      // this.bullet.x += vector.x = 16 
-
-
-
+   
       this.bala.setVelocityX(vector.x * 500, 300)
       
 
@@ -662,14 +497,11 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     
       bala.destroy()
       if (enemy.health<=0){
-      if (enemy.triggerTimer != null){
-        enemy.triggerTimer.remove()
+        if (enemy.triggerTimer != null) {
+          enemy.triggerTimer.remove()
+        }
       }
-    }
-      // enemy.triggerTimer.remove()
       enemy.health -= this.damageBala
-
-      // enemy.destroy();
     }
 
     update(dt){
