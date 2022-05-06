@@ -6,7 +6,7 @@ Numero de grupo 2 (THE KREEPHASER)
 <img src="assets/sprites/pantalla.png"/>
 
 ## Enlace al juego
-
+https://tolu9660.github.io/DVI/
 
 # GDD
 
@@ -85,7 +85,7 @@ Vadum es el marido y padre de una familia la cual ha sido secuestrada por unos e
 |    **Nombre**       |  **Daño**  |  **Vida**   |   **Nivel**   |                                       **Imagen**                                          |
 |---|---|---|---|---|
 |    **Vadum**       |   1-2  |   6     |   Todos   |![hero](https://github.com/tolu9660/DVI/blob/main/assets/sprites/hero1.png) |
-                                                                               |
+                                                                             
 
 #### ENEMIGOS
 
@@ -97,10 +97,9 @@ En cada nivel de juegos nos encontraremos diferentes enemigos propios de cada mu
 |    **Shangheli**    |![Shangheli](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien2%20Walk1.png)      |                                                 
 |    **Grunt**        |![Grunt](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien3%20Attack1_1.png)  |
 |    **Sapien**       |![Sapien](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien4%20Attack1_01.png) |                                                
-|    **Drago**        |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Attack_1.png)      |                                                 
+|    **Drago**        |![Drago](https://github.com/tolu9660/DVI/blob/main/assets/sprites/drago.png)      |                                                 
 |    **Ralp**         |![Ralp](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien7%20Death1.png)     |                                             
-|    **Galrado**      |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_1.png)        |                                                 
-|    **Laon**         |![Laon](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_2.png)        |                                                 
+|    **Galrado**      |![Galrado](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_1.png)        |                                              
 |    **Añatort**      |![Añatort](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Idle_3.png)        |                                                 
 |    **Cocodry**      |![Cocodry](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Jump_2.png)        |                                                 
 |    **Lobeznotird**  |![Lobeznotird](https://github.com/tolu9660/DVI/blob/main/assets/sprites/Alien_Jump_3.png)        |                                                 
@@ -127,6 +126,10 @@ En todos los niveles se usa el mismo fondo con una paleta distinta de colores pe
 <img src="assets/sprites/nivel12.png"/>
 
 ### Arquitectura software del juego (UML o similar)
+<img src="assets/sprites/uml1.png"/>
+<img src="assets/sprites/uml2.png"/>
+<img src="assets/sprites/uml3.png"/>
+<img src="assets/sprites/uml5.png"/>
 
 
 ### Breve descripción del sistema y plataformas de comunicación
@@ -157,6 +160,8 @@ Los mapas son grandes y con diferentes alturas por lo que los usuarios tenian qu
 
 Hay zonas de los ultimos niveles donde los usuarios con poca experiencia no lograban pasar por ciertas zonas y tenian que dar la vuelta para pasar por otro lado.
 - Podemos mantener esos niveles de dificultad en ciertas zonas pero al ser algo mas complicadas debemos dejar otras zonas de paso para los usuarios con poca experiencia. Pero estas zonas las mantendriamos debido a que ciertos usuarios podrian intentar pasar por esas zonas a modo de "reto".
+
+Los usuarios han encontrado bugs con algunos objetos animados a lo largo de los uno de los participantes a comentado que el muñeco podria desplazarse mas deprisa. Por esto y todo lo comentado anteriormente al juego aun le quedan cosas que pulir y solucionar.
 
 
 #### MIEMBROS DEL EQUIPO
