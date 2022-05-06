@@ -16,7 +16,6 @@ import EnemyControllerAnatort from './enemies/EnemyControllerAnatort.js'
 import corazon from './corazon.js';
 import ObstaclesController from './ObstaclesController.js';
 import energia from './energia.js';
-//import PlataformaMovil from './plataformaMovil.js';
 import Lava from './lava.js';
 import Acido from './acido.js';
 import Pinchos from './pinchos.js';
@@ -32,7 +31,6 @@ import PlataformaHorizontal from './PlataformaHorizontal.js';
 import PlataformaTiempo from './plataformaTiempo.js';
 import cofre from './cofre.js';
 import energiaRosa from './energiaRosa.js';
-import EnemyControllerCrawler from './enemies/EnemyControllerCrawler.js'
 
 /**hola esto es una prueba* */
 
@@ -107,7 +105,7 @@ export default class LevelClass extends Phaser.Scene {
     }
     this.groundLayer.setCollisionByExclusion(-1, true);
     // this.groundLayer.setCollisionByProperty({collides : true});    
-    // this.physics.world.setBounds(0,0,1000,2000);
+    // this.physics.world.setBounds(0,0,16000,3000);
     this.cargarObjetos();
 
     
@@ -154,19 +152,8 @@ export default class LevelClass extends Phaser.Scene {
         break;
         }
         case 'pm':{
-          //this.plataforma = this.physics.add.staticSprite(x + (width),y, objData.type)
-        
-         // this.physics.add.collider(this.plataforma,this.groundLayer)
-
-         //cambiar plataformaMovil por la clase
           switch ( objData.type) {
             case 'pmv': 
-               /*this.plataforma = this.physics.add.staticSprite(x, y , 'pm');
-              this.plataforma.body.ignoreGravity = true;
-              
-              this.posicion_plataforma_x = this.plataforma.x
-              this.posicion_plataforma_y = this.plataforma.y
-              console.log( this.plataforma.body)*/
               this.objects.add(new PlataformaVertical(this,x,y,objData.type))
              
             break;
@@ -182,15 +169,13 @@ export default class LevelClass extends Phaser.Scene {
              break;
             
             default:{
-              this.objects.add(new PlataformaHorizontal(this,x,y,objData.type))
+              this.objects.add(new PlataformaHorizontal(this,x,y))
               break; 
             }
           }
          break;
         }
         case 'trampa':{
-
-          // .setFixedRotation();
           //cambiar plataformaMovil por la clase
           console.log(objData.type);
           switch ( objData.type) {
@@ -233,16 +218,6 @@ export default class LevelClass extends Phaser.Scene {
 
         case 'llave': {
           this.objects.add(new llave(this,x, y))
-          // this.k = this.physics.add.staticSprite(x + (width),y, 'llave')
-          // .setScale('1.5')  
-          // // .setFixedRotation();
-          // this.physics.add.collider(this.k,this.groundLayer)
-
-          // this.k.setData('type', 'llave')
-          // this.c = new llave(this,this.k)
-          // this.arrayObjects[this.j]=this.c;
-
-          // this.j++;
 
           break;
         }
@@ -304,8 +279,8 @@ export default class LevelClass extends Phaser.Scene {
             case 'anatort':
               this.enemies.add(new EnemyControllerAnatort(this,x, y,type)) ;
             break;
-            case 'crawler':
-              this.enemies.add(new EnemyControllerCrawler(this,x, y,type)) ;
+            default:
+              this.enemies.add(new EnemyControllerJackal(this,x, y,type)) ;
             break;
           }
     }

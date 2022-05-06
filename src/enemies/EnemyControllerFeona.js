@@ -1,13 +1,8 @@
-
-import { sceneEvents as events } from '../EventsCenter.js';
-
 import EnemiesClass from './EnemiesClass.js';
-import NewStateMachine from '../newStateMachine.js';
+//PROBLEMAS CON ESTE ENEMY
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
  */
-
-
  export default class EnemyControllerFeona extends EnemiesClass {
 
   constructor(scene,x,y,type){
@@ -23,15 +18,7 @@ import NewStateMachine from '../newStateMachine.js';
         console.log(this.NewStateMachine);
 
         this.scene = scene
-      //   this.triggerTimer = this.scene.time.addEvent({
-      //     callback: this.shootEnemy,
-      //     callbackScope: this,
-      //     //delay: 2000,// + getRandom(0, 1000), // 1000 = 1 second
-      //     delay: Math.random() * (2000 - 1000) + 1000,
-      //     loop: true
-      // });
-      
-      // this.scene.physics.add.collider(this.bullet,this.scene.enemies,this.handleBulletsEnemiesCollision,undefined,this)
+
 }
 
 // walkLeftOnUpdate(dt){

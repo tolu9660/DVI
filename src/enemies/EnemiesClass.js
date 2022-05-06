@@ -20,23 +20,11 @@ export default class EnemiesClass extends Phaser.Physics.Arcade.Sprite  {
         this.shoot= shoot
         this.rate= rate
         this.health;
-        console.log(this.idle);
-        console.log(this.walk);
-        console.log(this.death);
-        // this.setDepth(0);
         this.scene.add.existing(this);
         this.scene.physics.add.existing(this);
         this.scene.physics.add.collider(this,this.scene.groundLayer)
         this.scene = scene
        
-        // this.idle=idle;
-        // this.walk= walk;
-        // this.imgIdle=imgIdle;
-        // this.imgWalk=imgWalk;
-        // this.img=img;
-        // this.starFrate= startFrate;
-        // this.endFrate= endFrate;
-        // this.rate=rate
         this.moveTime = 0;
 
         this.createEnemyAnimation();

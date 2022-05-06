@@ -135,8 +135,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     handlePlayerEnemiesCollision(player,enemigo){    
       if (player.body.deltaY()>enemigo.body.deltaY()) {
         player.setVelocityY(-400)
-        if (enemigo.triggerTimer != null){
-          enemigo.triggerTimer.remove()
+        if (enemigo.triggerShoot != null){
+          enemigo.triggerShoot.remove()
         }
         enemigo.destroy()
       }else if ((player.body.x < enemigo.body.x && enemigo.body.deltaX()<0) || (player.body.x > enemigo.body.x && enemigo.body.deltaX()>0)) {
@@ -497,8 +497,8 @@ export default class PlayerController extends Phaser.Physics.Arcade.Sprite {
     
       bala.destroy()
       if (enemy.health<=0){
-        if (enemy.triggerTimer != null) {
-          enemy.triggerTimer.remove()
+        if (enemy.triggerShoot != null) {
+          enemy.triggerShoot.remove()
         }
       }
       enemy.health -= this.damageBala

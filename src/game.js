@@ -5,7 +5,6 @@ import Level2 from './level2.js';
 import Level1 from './level1.js';
 import Tutorial from './tutorial.js';
 import Level3 from './level3.js';
-import LevelBoss from './levelBoss.js';
 import Inicio from './Inicio.js'
 import Opciones from './Opciones.js';
 import Creditos from './Creditos.js';
@@ -45,7 +44,7 @@ let config = {
     pixelArt: true,
     scene: [Inicio,Boot,Opciones,Pause, Tutorial,GameUI,Transicion,Transicion1,Transicionnivel1,Transicionnivel2_0,
         Transicionnivel2_1,Transicionnivel2_2,Transicionnivel3,transicionnivel4_0,TransicionFinal,TransicionTutorial0,
-        TransicionTutorial1,TransicionTutorial2,Level1,Level2,Level3,LevelBoss,Creditos, Gameover],
+        TransicionTutorial1,TransicionTutorial2,Level1,Level2,Level3,Creditos, Gameover],
     physics: {
         default: 'arcade',//cambiado el arcade
         arcade: {

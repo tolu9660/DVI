@@ -1,13 +1,8 @@
-
-import { sceneEvents as events } from '../EventsCenter.js';
-
 import EnemiesClass from './EnemiesClass.js';
-import NewStateMachine from '../newStateMachine.js';
+
 /**
  * Clase que representa el Enemigo del juego,Tiene un movimiento semi-automático
  */
-
-
  export default class EnemyControllerAnatort extends EnemiesClass {
 
   constructor(scene,x,y,type){

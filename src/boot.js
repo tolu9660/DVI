@@ -24,6 +24,8 @@ export default class Boot extends Phaser.Scene {
     
     //characters:
      this.load.atlas('hero','/PCharacters/hero.png', '/PCharacters/hero.json');
+     this.load.image('bala','/PCharacters/bala.png')
+     this.load.image('bala_potenciada','/PCharacters/bala_potenciada.png')
    
     //Objetos: 
     this.load.atlas('corazon','/objetos/corazon.png', '/objetos/corazon.json');
@@ -36,19 +38,11 @@ export default class Boot extends Phaser.Scene {
     this.load.atlas('lava','/objetos/lava.png', '/objetos/lava.json');
     this.load.atlas('arbusto','/objetos/arbusto.png', '/objetos/arbusto.json');
     this.load.atlas('cofre','/objetos/cofre.png', '/objetos/cofre.json');
-    this.load.image('ui-heart-empty',"/objetos/ui_heart_empty.png");
-    this.load.image('ui-heart-full',"/objetos/ui_heart_full.png");
-    //
-  //  this.load.atlas('cueva','/objetos/cueva.png', '/objetos/cueva.json');
     this.load.atlas('cuevaA','/objetos/cuevaA.png', '/objetos/cuevaA.json');
     this.load.atlas('cuevaR','/objetos/cuevaR.png', '/objetos/cuevaR.json');
     this.load.atlas('cuevaM','/objetos/cuevaM.png', '/objetos/cuevaM.json');
-    //Tutorial:
-    this.load.tilemapTiledJSON('tutorial', '/tilemaps/tutorial/tutorial.json');
-    this.load.image('fondo','/tilemaps/tutorial/fondo.jpg');
-    this.load.atlas('tiles','/tilemaps/tutorial/texture.png', '/tilemaps/tutorial/texture.json');  
-    this.load.image('bala','/PCharacters/bala.png')
-    this.load.image('bala_potenciada','/PCharacters/bala_potenciada.png')
+
+
     
     // NIVEL 1:
     
@@ -69,12 +63,6 @@ export default class Boot extends Phaser.Scene {
     this.load.image('fondo3','/tilemaps/mapa3/fondo.jpg');
     this.load.atlas('tiles3','/tilemaps/mapa3/texture.png', '/tilemaps/mapa3/texture.json'); 
     
-    // BOSS
-    this.load.tilemapTiledJSON('levelBoss', '/tilemaps/boss/levelboss.json');
-    this.load.image('fondoBoss','/tilemaps/boss/fondo.jpg');
-    this.load.atlas('tilesBoss','/tilemaps/boss/texture.png', '/tilemaps/boss/texture.json'); 
-
-
   }
 
   /**
