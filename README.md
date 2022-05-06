@@ -168,7 +168,7 @@ Los usuarios han encontrado bugs con algunos objetos animados a lo largo de los 
 
 |Nombre                       | Diseño | Gestion | Arte | Comunicación | Implementación |
 |---|---|---|---|---|---|
-|Jesús Vélez Ayuso            |   22   |    25   |  10  |      25      |       40       |
-|Álvaro Gómez Morán           |   30   |    20   |  30  |      25      |       20       |
-|Luis Gabriel Román Santillán |   22   |    30   |  25  |      25      |       20       |
-|David Domínguez Gutiérrez    |   26   |    25   |  35  |      25      |       20       |
+|Jesús Vélez Ayuso            |   20   |    25   |  15  |      25      |       40       |
+|Álvaro Gómez Morán           |   30   |    20   |  40  |      25      |       15       |
+|Luis Gabriel Román Santillán |   20   |    30   |  15  |      25      |       30       |
+|David Domínguez Gutiérrez    |   30   |    25   |  30  |      25      |       25       |
